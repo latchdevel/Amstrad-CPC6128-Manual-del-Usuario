@@ -1,0 +1,682 @@
+<!DOCTYPE HTML>
+<html lang="es" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Léxico inglés-castellano y glosario - Amstrad CPC6128 Manual del Usuario</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="Manual de usuario del micro ordenenador Amstrad modelo CPC6128">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Home.html">Inicio</a></li><li class="chapter-item expanded affix "><a href="0.01.-Introducción.html">Introducción</a></li><li class="chapter-item expanded affix "><a href="0.02.-Importante.html">Importante</a></li><li class="chapter-item expanded "><a href="1.00.-Capítulo-1.-Curso-de-introducción.html"><strong aria-hidden="true">1.</strong> Curso se introducción</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="1.01.-Instalación-y-mantenimiento.html"><strong aria-hidden="true">1.1.</strong> Instalación y mantenimiento</a></li><li class="chapter-item expanded "><a href="1.02.-Conexión-de-los-periféricos.html"><strong aria-hidden="true">1.2.</strong> Conexión de los periféricos</a></li><li class="chapter-item expanded "><a href="1.03.-En-cuanto-a-los-discos.html"><strong aria-hidden="true">1.3.</strong> En cuanto a los discos</a></li><li class="chapter-item expanded "><a href="1.04.-Manos-al-teclado.html"><strong aria-hidden="true">1.4.</strong> Manos al teclado</a></li><li class="chapter-item expanded "><a href="1.05.-Carga-de-programas.html"><strong aria-hidden="true">1.5.</strong> Carga de programas</a></li><li class="chapter-item expanded "><a href="1.06.-Empecemos-a-trabajar.html"><strong aria-hidden="true">1.6.</strong> Empecemos a trabajar</a></li><li class="chapter-item expanded "><a href="1.07.-Grábelo-en-disco.html"><strong aria-hidden="true">1.7.</strong> Grábelo en disco</a></li><li class="chapter-item expanded "><a href="1.08.-Introducción-a-los-modos-de-pantalla,-colores-y-gráficos.html"><strong aria-hidden="true">1.8.</strong> Introducción a los modos de pantalla, colores y gráficos</a></li><li class="chapter-item expanded "><a href="1.09.-Sonidos.html"><strong aria-hidden="true">1.9.</strong> Sonidos</a></li><li class="chapter-item expanded "><a href="1.10.-Introducción-a-los-sistemas-operativos-AMSDOS-y-CPM.html"><strong aria-hidden="true">1.10.</strong> Introducción a los sistemas operativos AMSDOS y CPM</a></li><li class="chapter-item expanded "><a href="1.11.-Introducción-al-gestor-de-bancos-de-memoria.html"><strong aria-hidden="true">1.11.</strong> Introducción al gestor de bancos de memoria</a></li></ol></li><li class="chapter-item expanded "><a href="2.01.-La-génesis-de-un-programa.html"><strong aria-hidden="true">2.</strong> La génesis de un programa</a></li><li class="chapter-item expanded "><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html"><strong aria-hidden="true">3.</strong> Lista completa de las palabras clave del BASIC de AMSTRAD</a></li><li class="chapter-item expanded "><a href="4.00.-Capítulo-4.-Discos-y-cintas.html"><strong aria-hidden="true">4.</strong> Discos y cintas</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="4.01.-Discos.html"><strong aria-hidden="true">4.1.</strong> Parte 1: Discos</a></li><li class="chapter-item expanded "><a href="4.02.-Cintas.html"><strong aria-hidden="true">4.2.</strong> Parte 2: Cintas</a></li></ol></li><li class="chapter-item expanded "><a href="5.00.-Capítulo-5.-AMSDOS-y-CP-M.html"><strong aria-hidden="true">5.</strong> AMSDOS y CP/M</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="5.01.-AMSDOS.html"><strong aria-hidden="true">5.1.</strong> Parte 1: AMSDOS</a></li><li class="chapter-item expanded "><a href="5.02.-CP-M.html"><strong aria-hidden="true">5.2.</strong> Parte 2: CP/M</a></li></ol></li><li class="chapter-item expanded "><a href="6.01.-Introducción-a-LOGO.html"><strong aria-hidden="true">6.</strong> Introducción a LOGO</a></li><li class="chapter-item expanded "><a href="7.00.-Capítulo-7.-Para-su-referencia.html"><strong aria-hidden="true">7.</strong> Para su referencia</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="7.01.-Posiciones-del-cursor-y-códigos-ampliados-de-control-en-BASIC.html"><strong aria-hidden="true">7.1.</strong> Posiciones del cursor y códigos ampliados de control en BASIC</a></li><li class="chapter-item expanded "><a href="7.02.-El-sistema-operativo.html"><strong aria-hidden="true">7.2.</strong> El sistema operativo</a></li><li class="chapter-item expanded "><a href="7.03.-Interrupciones.html"><strong aria-hidden="true">7.3.</strong> Interrupciones</a></li><li class="chapter-item expanded "><a href="7.04.-Caracteres-ASCII-y-caracteres-gráficos-en-BASIC.html"><strong aria-hidden="true">7.4.</strong> Caracteres ASCII y caracteres gráficos en BASIC</a></li><li class="chapter-item expanded "><a href="7.05.-Esquemas-de-teclado.html"><strong aria-hidden="true">7.5.</strong> Esquemas de teclado</a></li><li class="chapter-item expanded "><a href="7.06.-Sonidos.html"><strong aria-hidden="true">7.6.</strong> Sonidos</a></li><li class="chapter-item expanded "><a href="7.07.-Mensajes-de-error-de-BASIC.html"><strong aria-hidden="true">7.7.</strong> Mensajes de error de BASIC</a></li><li class="chapter-item expanded "><a href="7.08.-Palabras-reservadas-de-BASIC.html"><strong aria-hidden="true">7.8.</strong> Palabras reservadas de BASIC</a></li><li class="chapter-item expanded "><a href="7.09.-Plantillas.html"><strong aria-hidden="true">7.9.</strong> Plantillas</a></li><li class="chapter-item expanded "><a href="7.10.-Conexiones.html"><strong aria-hidden="true">7.10.</strong> Conexiones</a></li><li class="chapter-item expanded "><a href="7.11.-Impresoras.html"><strong aria-hidden="true">7.11.</strong> Impresoras</a></li><li class="chapter-item expanded "><a href="7.12.-Joysticks.html"><strong aria-hidden="true">7.12.</strong> Joysticks</a></li><li class="chapter-item expanded "><a href="7.13.-Organización-de-los-discos.html"><strong aria-hidden="true">7.13.</strong> Organización de los discos</a></li><li class="chapter-item expanded "><a href="7.14.-Ampliaciones-del-sistema-residentes-RSX.html"><strong aria-hidden="true">7.14.</strong> Ampliaciones del sistema residentes RSX</a></li><li class="chapter-item expanded "><a href="7.15.-Memoria.html"><strong aria-hidden="true">7.15.</strong> Memoria</a></li><li class="chapter-item expanded "><a href="7.16.-Emulador-de-consola-CP-M-Plus.html"><strong aria-hidden="true">7.16.</strong> Emulador de consola CP/M Plus</a></li><li class="chapter-item expanded "><a href="7.17.-Juego-de-caracteres-de-CP-M-Plus.html"><strong aria-hidden="true">7.17.</strong> Juego de caracteres de CP-M Plus</a></li></ol></li><li class="chapter-item expanded "><a href="8.00.-Capítulo-8.-Más-sobre-el-gestor-de-bancos-de-memoria.html"><strong aria-hidden="true">8.</strong> Más sobre el gestor de bancos de memoria</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="8.01.-Almacenamiento-de-imágenes-de-pantalla.html"><strong aria-hidden="true">8.1.</strong> Almacenamiento de imágenes de pantalla</a></li><li class="chapter-item expanded "><a href="8.02.-Ficheros-en-RAM.html"><strong aria-hidden="true">8.2.</strong> Ficheros en RAM</a></li></ol></li><li class="chapter-item expanded "><a href="9.00.-Capítulo-9.-Cuando-usted-guste.html"><strong aria-hidden="true">9.</strong> Cuando usted guste</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="9.01.-En-términos-generales.html"><strong aria-hidden="true">9.1.</strong> En términos generales</a></li><li class="chapter-item expanded "><a href="9.02.-Más-en-concreto-sobre-el-CPC6128.html"><strong aria-hidden="true">9.2.</strong> Más en concreto sobre el CPC6128</a></li></ol></li><li class="chapter-item expanded "><a href="10.0.-Para-más-información.html"><strong aria-hidden="true">10.</strong> Para más información</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 1</li><li class="chapter-item expanded "><a href="A01.-Digital-Research-y-AMSTRAD.html"><strong aria-hidden="true">11.</strong> Digital Research y AMSTRAD</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 2</li><li class="chapter-item expanded "><a href="A02.-Léxico-inglés-castellano-y-glosario.html" class="active"><strong aria-hidden="true">12.</strong> Léxico inglés-castellano y glosario</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 3. Que usted lo disfrute</li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Rebotes.html"><strong aria-hidden="true">13.</strong> Rebotes</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Bombardero.html"><strong aria-hidden="true">14.</strong> Bombardero</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Tele-tenis.html"><strong aria-hidden="true">15.</strong> Tele tenis</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Esgrima-eléctrico.html"><strong aria-hidden="true">16.</strong> Esgrima eléctrico</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Amthello.html"><strong aria-hidden="true">17.</strong> Amthello</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Guante-blanco.html"><strong aria-hidden="true">18.</strong> Guante blanco</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 4</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="A04.-Indice.html">Índice</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Amstrad CPC6128 Manual del Usuario</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/latchdevel/Amstrad-CPC6128-Manual-del-Usuario" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="apéndice-2"><a class="header" href="#apéndice-2">Apéndice 2</a></h1>
+<h2 id="léxico-inglés-castellano-y-glosario"><a class="header" href="#léxico-inglés-castellano-y-glosario">Léxico inglés-castellano y glosario</a></h2>
+<p><strong>Contenido:</strong></p>
+<ul>
+<li><a href="#l%C3%A9xico-ingl%C3%A9s-castellano-y-glosario">Léxico inglés-castellano y glosario</a>.</li>
+</ul>
+<hr />
+<h3 id="léxico-inglés-castellano-y-glosario-1"><a class="header" href="#léxico-inglés-castellano-y-glosario-1">Léxico inglés-castellano y glosario</a></h3>
+<p>Algunos términos que se utilizan frecuentemente en informática, explicados para los usuarios del CPC6128. </p>
+<h3 id="accumulator--acumulador"><a class="header" href="#accumulator--acumulador">Accumulator / Acumulador</a></h3>
+<p>Una parte del microprocesador, en el corazón del ordenador, en el que se almacenan temporalmente los datos mientras se los está procesando. Se lo utiliza en la programación en código de máquina. Los usuarios de BASIC ni siquiera necesitan saber que existe. </p>
+<h3 id="acoustic-coupler--acoplador-acústico"><a class="header" href="#acoustic-coupler--acoplador-acústico">Acoustic coupler / Acoplador acústico</a></h3>
+<p>También denominado &quot;modem acústico&quot;. Dispositivo electrónico mediante el cual se puede conectar el ordenador a la red telefónica. De esta forma el ordenador se puede integrar en una red de comunicación pública, o bien comunicarse con otros usuarios de ordenadores domésticos para el intercambio de información o programas. </p>
+<h3 id="address--dirección"><a class="header" href="#address--dirección">Address / Dirección</a></h3>
+<p>Número que identifica la posición de una célula de la memoria del ordenador. Mediante la dirección se selecciona una célula concreta para leer su contenido o, en el caso de la memoria RAM, para leer o escribir un valor en ella. </p>
+<h3 id="adventure-game--juego-de-aventura"><a class="header" href="#adventure-game--juego-de-aventura">Adventure game / Juego de aventura</a></h3>
+<p>Una pasión para algunos, un aburrimiento para otros. Un juego de ordenador en el que se invita al jugador a participar en una serie de sucesos pseudoaleatorios con el objetivo de salir de un laberinto. </p>
+<h3 id="algorithm--algoritmo"><a class="header" href="#algorithm--algoritmo">Algorithm / Algoritmo</a></h3>
+<p>Nombre grandilocuente que se da a una fórmula o a una suma complicada. Secuencia de operaciones lógicas y aritméticas con las que se realiza una determinada tarea informática. </p>
+<h3 id="alphanumeric--alfanumérico"><a class="header" href="#alphanumeric--alfanumérico">Alphanumeric / Alfanumérico</a></h3>
+<p>Adjetivo que describe la diferencia entre una letra o un dígito y un carácter gráfico. </p>
+<h3 id="alu-arithmetic-and-logic-unit--unidad-aritmética-y-lógica"><a class="header" href="#alu-arithmetic-and-logic-unit--unidad-aritmética-y-lógica">ALU (Arithmetic and Logic Unit) / Unidad aritmética y lógica</a></h3>
+<p>Parte del microprocesador que realiza las operaciones lógicas y aritméticas. De interés solamente para la programación en código de máquina. </p>
+<h3 id="ambiguous-file-name--nombre-de-fichero-ambiguo"><a class="header" href="#ambiguous-file-name--nombre-de-fichero-ambiguo">Ambiguous File Name / Nombre de fichero ambiguo</a></h3>
+<p>Un nombre de fichero que contiene uno o varios símbolos comodín. Los nombres de fichero ambiguos pueden representar al mismo tiempo varios ficheros cuyos nombres tienen algo en común. </p>
+<h3 id="amsdos"><a class="header" href="#amsdos">AMSDOS</a></h3>
+<p>AMStrad Disc Operating System. Sistema operativo de disco AMSTRAD. Es el programa que permite que el BASIC de Locomotive acceda a los ficheros de disco. </p>
+<h3 id="amsoft"><a class="header" href="#amsoft">AMSOFT</a></h3>
+<p>División de AMSTRAD especializada en el apoyo a los usuarios de los ordenadores; suministra programas, periféricos y publicaciones, específicamente con objeto de potenciar el CPC6128 y sus muchas aplicaciones. </p>
+<h3 id="analog--analógico"><a class="header" href="#analog--analógico">Analog / Analógico</a></h3>
+<p>Adjetivo que caracteriza los fenómenos en los que las transiciones entre el estado inicial y el final se realizan de forma gradual o continua. Los ordenadores son dispositivos digitales, mientras que los fenómenos naturales son en su mayoría analógicos; así pues, el ordenador tiene que realizar una conversión A/D antes de poder procesar los datos recibidos de una fuente analógica. </p>
+<h3 id="animation--animación"><a class="header" href="#animation--animación">Animation / Animación</a></h3>
+<p>Los dibujos animados son el mejor ejemplo. La animación en los ordenadores consiste en mover gráficos por la pantalla, tratando de simular los movimientos de los seres reales. </p>
+<h3 id="applications-program--programa-de-aplicaciones"><a class="header" href="#applications-program--programa-de-aplicaciones">Applications program / Programa de aplicaciones</a></h3>
+<p>Programa escrito para realizar una tarea específica, a diferencia de los programas de &quot;utilidad&quot;, tales como ensambladores, controladores de impresora, etc., que son de interés más general. </p>
+<h3 id="arcade-game--juego-gráfico-de-salón"><a class="header" href="#arcade-game--juego-gráfico-de-salón">Arcade game / Juego gráfico de salón</a></h3>
+<p>Juego de ordenador basado en el movimiento de gráficos (invasores espaciales, monstruos al acecho en un laberinto, etc.). El usuario tiene que evitar la &quot;muerte&quot; de los &quot;buenos&quot;. Generalmente sirven para ejercitar los reflejos, pero no tienen ningún valor didáctico para los estudiantes de informática. </p>
+<h3 id="architecture--arquitectura"><a class="header" href="#architecture--arquitectura">Architecture / Arquitectura</a></h3>
+<p>Término que designa la organización general de un ordenador (relaciones entre el bus de datos, la UCP y los periféricos). </p>
+<h3 id="argument--argumento"><a class="header" href="#argument--argumento">Argument / Argumento</a></h3>
+<p>Una variable independiente. Por ejemplo, en <strong>SIN</strong>(x) la x es el argumento de la función <strong>SIN</strong>. </p>
+<h3 id="array--matriz"><a class="header" href="#array--matriz">Array / Matriz</a></h3>
+<p>Combinación de elementos de un mismo tipo dispuestos en una o varias dimensiones. En el caso unidimensional se denominan &quot;vectores&quot;. </p>
+<h3 id="artificial-intelligence-ai--inteligencia-artificial"><a class="header" href="#artificial-intelligence-ai--inteligencia-artificial">Artificial intelligence AI / Inteligencia artificial</a></h3>
+<p>Técnica de programación que permite al programa aprender por la experiencia. </p>
+<h3 id="ascii"><a class="header" href="#ascii">ASCII</a></h3>
+<p>American Standard Code for Information Interchange. Código estadounidense estándar para el intercambio de información. Forma habitual de representar dígitos, letras y otros símbolos mediante códigos numéricos. </p>
+<h3 id="assembler--ensamblador"><a class="header" href="#assembler--ensamblador">Assembler / Ensamblador</a></h3>
+<p>Programa que facilita la programación en código de máquina. Las instrucciones son los llamados &quot;nemónicos&quot;: grupos de letras que se recuerdan e interpretan fácilmente porque dan una idea de la función que realiza cada instrucción. </p>
+<h3 id="backup--copia-de-seguridad"><a class="header" href="#backup--copia-de-seguridad">Backup / Copia de seguridad</a></h3>
+<p>Copia que se hace de los programas o ficheros de datos en previsión de que se borre o deteriore accidentalmente el original. </p>
+<h3 id="bar-code--código-de-barras"><a class="header" href="#bar-code--código-de-barras">Bar code / Código de barras</a></h3>
+<p>Código impreso legible por ordenador mediante técnicas ópticas tales como láser de baja potencia. (Ejemplo: el grupo de rayas verticales que se imprime en la cubierta de algunas revistas.) </p>
+<h3 id="base--base"><a class="header" href="#base--base">Base / Base</a></h3>
+<p>Es el número de dígitos que se utilizan en cada sistema de representación numérica. En el sistema decimal es 10; en el binario, 2; en el hexadecimal, 16. </p>
+<h3 id="basic"><a class="header" href="#basic">BASIC</a></h3>
+<p>Beginners All-purpose Symbolic Instruction Code. Código de instrucciones simbólicas de uso general para principiantes. Es un lenguaje de programación interpretado que se incorpora en la mayor parte de los ordenadores domésticos. BASIC fue diseñado primordialmente como ayuda para la enseñanza, pues permite la comprobación de los programas en cualquier momento de su desarrollo. En esto se distingue de los programas compilados, que no pueden ser probados parcialmente mientras el programa no esté completo. </p>
+<h3 id="baud--baudio"><a class="header" href="#baud--baudio">Baud / Baudio</a></h3>
+<p>Unidad de medida de la velocidad de transmisión de datos. Es un concepto distinto del de bit por segundo, aunque en muchos casos sus valores coinciden. </p>
+<h3 id="bcd-binary-coded-decimal--decimal-codificado-en-binario"><a class="header" href="#bcd-binary-coded-decimal--decimal-codificado-en-binario">BCD (Binary Coded Decimal) / Decimal codificado en binario</a></h3>
+<p>Sistema de codificación para números decimales en el que cada dígito se representa por un grupo de cuatro bits. </p>
+<h3 id="bdos"><a class="header" href="#bdos">BDOS</a></h3>
+<p>Basic Disc Operating System. Sistema operativo básico de disco. Parte del sistema operativo CP/M que proporciona un interfaz para que el programa del usuario pueda utilizar las funciones de CP/M. </p>
+<h3 id="benchmark--prueba-patrón"><a class="header" href="#benchmark--prueba-patrón">Benchmark / Prueba patrón</a></h3>
+<p>Una tarea estándar que se realiza con distintos ordenadores para comparar su velocidad, precisión, etc. Por ejemplo, elevar al cuadrado el número 99999 y luego calcular la raíz cuadrada. </p>
+<h3 id="binary--binario"><a class="header" href="#binary--binario">Binary / Binario</a></h3>
+<p>Sistema de numeración de base 2, en el que los números se representan como combinaciones de solamente dos dígitos: el 0 y el 1. (Véase la <a href="9.01.-En-t%C3%A9rminos-generales.html">parte 1</a> del capítulo <a href="9.00.-Cap%C3%ADtulo-9.-Cuando-usted-guste.html">Cuando usted guste</a>)</p>
+<h3 id="binary-number--número-binario"><a class="header" href="#binary-number--número-binario">Binary number / Número binario</a></h3>
+<p>Un número representado en el sistema binario. En el BASIC del CPC6128 se los identifica por el prefijo <strong>&amp;X</strong>; por ejemplo, <strong>&amp;X0101</strong> = 5 (decimal). </p>
+<h3 id="bios"><a class="header" href="#bios">BIOS</a></h3>
+<p>Basic Input/Output System. Sistema básico de entrada/salida. Es la parte de CP/M que se escribe específicamente para cada ordenador concreto. Gestiona todas las entradas y salidas: pantalla, teclado, disco, etc. </p>
+<h3 id="bit"><a class="header" href="#bit">Bit</a></h3>
+<p>Forma abreviada de BInary digiT (dígito binario). Un dígito binario es uno de los dos símbolos (el 0 y el 1) con los que se representan los números en el sistema de base 2. </p>
+<h3 id="bit-significant--interpretable-bit-a-bit"><a class="header" href="#bit-significant--interpretable-bit-a-bit">Bit significant / Interpretable bit a bit</a></h3>
+<p>Hace referencia a los casos en los que se puede extraer información de un número examinando el estado de cada uno de sus bits. El valor global en decimal no tiene significado evidente. </p>
+<h3 id="boolean-algebra--algebra-de-boole"><a class="header" href="#boolean-algebra--algebra-de-boole">Boolean algebra / Algebra de Boole</a></h3>
+<p>Estructura algebraica sobre variables que pueden tomar dos valores distintos: verdadero/falso, 1/0, etc. </p>
+<h3 id="boot--carga-inicial"><a class="header" href="#boot--carga-inicial">Boot / Carga inicial</a></h3>
+<p>Proceso de carga de un sistema operativo en la memoria del ordenador. Cuando se carga CP/M desde BASIC, lo primero que se lee es un pequeño programa autocargador, el cual realiza la carga del sistema operativo propiamente dicho. </p>
+<h3 id="booting-bootstrapping--autocarga"><a class="header" href="#booting-bootstrapping--autocarga">Booting, Bootstrapping / Autocarga</a></h3>
+<p>Los programas y sistemas operativos no se cargan a sí mismos, sino gracias a una rutina (generalmente grabada en ROM) que inicia el proceso de carga a partir de una determinada posición de memoria. </p>
+<h3 id="buffer--tampón"><a class="header" href="#buffer--tampón">Buffer / Tampón</a></h3>
+<p>Área de memoria reservada para el almacenamiento temporal en los procesos de transferencia de la información. </p>
+<h3 id="bug--error-de-programación"><a class="header" href="#bug--error-de-programación">Bug / Error de programación</a></h3>
+<p>Un problema no previsto en un programa: puede ir desde una &quot;característica inesperada&quot; (por ejemplo, si se pulsan cuatro teclas a un tiempo la pantalla cambia de color) hasta una secuencia de instrucciones que provoca la pérdida del control de la máquina. </p>
+<h3 id="built-in-commands--Órdenes-internas-o-incorporadas"><a class="header" href="#built-in-commands--Órdenes-internas-o-incorporadas">Built-in commands / Órdenes internas o incorporadas</a></h3>
+<p>Órdenes que forman parte del sistema operativo. Son de ejecución más rápida que las órdenes externas, pues no tienen que ser cargadas del disco. </p>
+<h3 id="bus"><a class="header" href="#bus">Bus</a></h3>
+<p>Grupo de conexiones, internas al ordenador o de entrada/salida, por las que se transmite información acerca del estado de la UCP, de la RAM o de cualquier otra parte del hardware. EL bus del CPC6128 es accesible a través del zócalo <strong>EXPANSIÓN</strong> que está en la cara posterior del ordenador. </p>
+<h3 id="byte--byte-octeto"><a class="header" href="#byte--byte-octeto">Byte / Byte, octeto.</a></h3>
+<p>Grupo de 8 bits. Es la menor porción de información que una UCP puede intercambiar con la memoria. </p>
+<h3 id="cad-computer-aided-design--diseño-asistido-por-ordenador"><a class="header" href="#cad-computer-aided-design--diseño-asistido-por-ordenador">CAD, Computer Aided Design / Diseño asistido por ordenador</a></h3>
+<p>Generalmente, un programa interactivo que convierte el ordenador en un tablero de dibujo electrónico que además es capaz de realizar cálculos matemáticos. </p>
+<h3 id="cae-computer-aided-education--enseñanza-asistida-por-ordenador"><a class="header" href="#cae-computer-aided-education--enseñanza-asistida-por-ordenador">CAE, Computer Aided Education / Enseñanza asistida por ordenador</a></h3>
+<p>Programa que facilita la enseñanza en general sirviéndose de los ordenadores.</p>
+<h3 id="cartridge--cartucho"><a class="header" href="#cartridge--cartucho">Cartridge / Cartucho</a></h3>
+<p>Dispositivo de memoria externo compacto conectable al ordenador (v. g., programas en ROM, cuya ventaja es la gran velocidad de carga, pero que son más caros que los suministrados en disco). </p>
+<h3 id="cassette"><a class="header" href="#cassette">Cassette</a></h3>
+<p>Cinta encapsulada, ya sea virgen o con programas comerciales. </p>
+<h3 id="ccp--intérprete-de-consola"><a class="header" href="#ccp--intérprete-de-consola">CCP / Intérprete de consola</a></h3>
+<p>Console Command processor. Procesador de órdenes de consola. Es el módulo de CP/M que interpreta y ejecuta las entradas por el teclado. </p>
+<h3 id="character--carácter"><a class="header" href="#character--carácter">Character / Carácter</a></h3>
+<p>Cualquier símbolo que pueda ser manejado y visualizado por el ordenador: dígitos, letras y otros signos, incluidos los símbolos gráficos. </p>
+<h3 id="character-set--juego-de-caracteres"><a class="header" href="#character-set--juego-de-caracteres">Character set / Juego de caracteres</a></h3>
+<p>Conjunto de todos los signos y símbolos disponibles en un ordenador o una impresora. El hecho de que un ordenador tenga un símbolo determinado no implica que éste sea reproducible en la impresora. </p>
+<h3 id="character-string--cadena-literal"><a class="header" href="#character-string--cadena-literal">Character string / Cadena literal</a></h3>
+<p>Grupo de caracteres que pueden ser almacenados y tratados en bloque, v. g. una palabra o grupo de palabras. </p>
+<h3 id="chip--pastilla"><a class="header" href="#chip--pastilla">Chip / Pastilla</a></h3>
+<p>Término popular, aunque incorrectamente utilizado, para designar un circuito integrado monolítico. La &quot;pastilla&quot; es en realidad un trozo de silicio en el que se graba el circuito. </p>
+<h3 id="clock--reloj"><a class="header" href="#clock--reloj">Clock / Reloj</a></h3>
+<p>Sistema temporizador de referencia del ordenador que controla y sincroniza la secuencia de operaciones. Un reloj de tiempo real es el que mantiene la hora, fecha, etc. </p>
+<h3 id="code--código"><a class="header" href="#code--código">Code / Código</a></h3>
+<p>Aparte de otros significados, forma abreviada de referirse al &quot;código de máquina&quot;. </p>
+<h3 id="cold-start--arranque-en-frío"><a class="header" href="#cold-start--arranque-en-frío">Cold start / Arranque en frío</a></h3>
+<p>Proceso de carga e inicialización de un sistema operativo. El arranque en frío de CP/M se realiza cuando se ejecuta la orden |<strong>CPM</strong> de AMSDOS. </p>
+<h3 id="command--orden"><a class="header" href="#command--orden">Command / Orden</a></h3>
+<p>Instrucción de programa o instrucción directa de teclado. </p>
+<h3 id="compiler--compilador"><a class="header" href="#compiler--compilador">Compiler / Compilador</a></h3>
+<p>Un programa complejo que convierte programas completos escritos en un lenguaje de alto nivel, tal como BASIC, en códigos directamente utilizables por el microprocesador, con el consiguiente incremento de la velocidad de ejecución. </p>
+<h3 id="computer-generations--generaciones-de-ordenadores"><a class="header" href="#computer-generations--generaciones-de-ordenadores">Computer generations / Generaciones de ordenadores</a></h3>
+<p>Diversos hitos tecnológicos han delimitado las etapas de la evolución de la tecnología informática; los ordenadores fabricados con un nivel de sofisticación similar forman una &quot;generación&quot;. </p>
+<h3 id="console-mode--modo-de-consola"><a class="header" href="#console-mode--modo-de-consola">Console mode / Modo de consola</a></h3>
+<p>Modo directo de CP/M; en la pantalla aparece el mensaje inductor <strong>A&gt;</strong> para indicar que el sistema está esperando que se teclee una orden interna o el nombre de un programa de ayuda. </p>
+<h3 id="corruption--corrupción"><a class="header" href="#corruption--corrupción">Corruption / Corrupción</a></h3>
+<p>Destrucción o alteración del contenido de un fichero o de la memoria, indeseada y posiblemente irremediable. </p>
+<h3 id="cpm"><a class="header" href="#cpm">CP/M</a></h3>
+<p>Control Program for Microcomputers. Programa de control para microordenadores. Sistema operativo basado en disco, desarrollado por Digital Research, que proporciona un interfaz con el que utilizar una gran variedad de programas. </p>
+<h3 id="cpu-central-processing-unit--unidad-central-de-proceso"><a class="header" href="#cpu-central-processing-unit--unidad-central-de-proceso">CPU, Central Processing Unit / Unidad central de proceso</a></h3>
+<p>Núcleo del sistema informático que interpreta las instrucciones y hace que sean obedecidas. En los microordenadores la UCP es el propio microprocesador. </p>
+<h3 id="cursor"><a class="header" href="#cursor">Cursor</a></h3>
+<p>Símbolo móvil que indica en qué lugar de la pantalla aparecerá el próximo carácter que se envíe a ella. </p>
+<h3 id="cursor-control-keys--teclas-de-movimiento-del-cursor"><a class="header" href="#cursor-control-keys--teclas-de-movimiento-del-cursor">Cursor control keys / Teclas de movimiento del cursor</a></h3>
+<p>Teclas con las que se hace que el cursor se mueva por la pantalla. Frecuentemente se las utiliza también en los juegos gráficos. </p>
+<h3 id="daisy-wheel-printer--impresora-de-margarita"><a class="header" href="#daisy-wheel-printer--impresora-de-margarita">Daisy-wheel printer / Impresora de margarita</a></h3>
+<p>Impresora que escribe con calidad de máquina de escribir. Los caracteres están preformados, cada uno en un brazo de la &quot;margarita&quot;, y se los transfiere al papel al golpear el brazo con un martillo. </p>
+<h3 id="database--base-de-datos"><a class="header" href="#database--base-de-datos">Database / Base de datos</a></h3>
+<p>Colección de datos estructurados, integrados y coherentes, utilizables por el ordenador. </p>
+<h3 id="data-capture--captación-de-datos"><a class="header" href="#data-capture--captación-de-datos">Data capture / Captación de datos</a></h3>
+<p>Recolección de datos enviados al ordenador desde fuentes externas. </p>
+<h3 id="debugging--depuración"><a class="header" href="#debugging--depuración">Debugging / Depuración</a></h3>
+<p>Proceso de detección y eliminación de errores de los programas. </p>
+<h3 id="decimal-notation--notación-decimal"><a class="header" href="#decimal-notation--notación-decimal">Decimal notation / Notación decimal</a></h3>
+<p>Sistema decimal de numeración, de base 10, que utiliza los dígitos del 0 al 9. Es el sistema ordinario. </p>
+<h3 id="default--prescrito-implícito-por-defecto"><a class="header" href="#default--prescrito-implícito-por-defecto">Default / Prescrito, implícito, por defecto</a></h3>
+<p>Valor que el ordenador supone en ausencia de otra especificación por parte del usuario. Por ejemplo, en CP/M la unidad de disco implícita es la <strong>A:</strong>. </p>
+<h3 id="delimiter"><a class="header" href="#delimiter">Delimiter</a></h3>
+<p>Véase <a href="#separator-separador">Separator</a>. </p>
+<h3 id="diagnostic--diagnóstico"><a class="header" href="#diagnostic--diagnóstico">Diagnostic / Diagnóstico</a></h3>
+<p>Mensaje emitido automáticamente por el ordenador para señalar e identificar un error de un programa. </p>
+<h3 id="digital"><a class="header" href="#digital">Digital</a></h3>
+<p>Es el término opuesto a &quot;analógico&quot;. Describe la transición brusca entre dos estados de un proceso. </p>
+<h3 id="digitiser--digitalizador"><a class="header" href="#digitiser--digitalizador">Digitiser / Digitalizador</a></h3>
+<p>Método de conversión de información analógica en digital. </p>
+<h3 id="directory--directorio"><a class="header" href="#directory--directorio">Directory / Directorio</a></h3>
+<p>Sección de un disco que contiene las reseñas (títulos y características) de los ficheros grabados en él. Lista del contenido de un disco. </p>
+<h3 id="disc-disk--disco"><a class="header" href="#disc-disk--disco">Disc, disk / Disco</a></h3>
+<p>Hoja de plástico circular, fina y plana, recubierta de material magnético, que se utiliza como medio de almacenamiento de la información. El disco está incluido en una envoltura protectora en la que hay una &quot;ventana&quot; para la cabeza lectora. En el disco de 3 pulgadas la ventana está cubierta por un obturador metálico que se abre automáticamente cuando se introduce el disco en la unidad. </p>
+<h3 id="disc-drive--unidad-de-disco"><a class="header" href="#disc-drive--unidad-de-disco">Disc drive / Unidad de disco</a></h3>
+<p>Mecanismo y circuitos electrónicos con los que se mueve el disco para leer o grabar datos en él. </p>
+<h3 id="documentation--documentación"><a class="header" href="#documentation--documentación">Documentation / Documentación</a></h3>
+<p>Manuales suministrados con los ordenadores o los programas, en los que se explica su funcionamiento. </p>
+<h3 id="dos-disc-operating-system--sistema-operativo-basado-en-disco"><a class="header" href="#dos-disc-operating-system--sistema-operativo-basado-en-disco">DOS (Disc Operating System) / Sistema operativo basado en disco</a></h3>
+<p>Programas que controlan todas las operaciones de la unidad de disco. </p>
+<h3 id="dot-matrix--matriz-de-puntos"><a class="header" href="#dot-matrix--matriz-de-puntos">Dot matrix / Matriz de puntos</a></h3>
+<p>Retícula rectangular de puntos con la que se puede visualizar cada carácter seleccionando los puntos adecuados. </p>
+<h3 id="double-sided--de-doble-cara"><a class="header" href="#double-sided--de-doble-cara">Double sided / De doble cara</a></h3>
+<p>Hace referencia a los discos en los que se puede almacenar información en ambas caras. Una unidad de doble cara puede acceder a ambas caras del disco sin necesidad de extraer y darle la vuelta a éste. </p>
+<h3 id="dr-logo"><a class="header" href="#dr-logo">Dr. LOGO</a></h3>
+<p>Versión de LOGO elaborada por Digital Research. LOGO es un lenguaje de programación caracterizado por sus &quot;gráficos de tortuga&quot;. </p>
+<h3 id="dumb-terminal--terminal-pasivo"><a class="header" href="#dumb-terminal--terminal-pasivo">Dumb terminal / Terminal pasivo</a></h3>
+<p>Terminal de ordenador que actúa solamente como medio de entrada o salida, pero sin procesar la información. </p>
+<h3 id="edit--editar-corregir"><a class="header" href="#edit--editar-corregir">Edit / Editar, corregir</a></h3>
+<p>Corregir o modificar datos, programas o textos. </p>
+<h3 id="editor"><a class="header" href="#editor">Editor</a></h3>
+<p>Un programa, generalmente grabado en la ROM del ordenador, que permite realizar el proceso de edición. </p>
+<h3 id="eprom"><a class="header" href="#eprom">EPROM</a></h3>
+<p>Erasable Programmable Read only Memory. Memoria borrable y programable de &quot;sólo lectura&quot;. Similar a la PROM, pero tal que su contenido se puede borrar con luz ultravioleta para luego grabar en ella un nuevo programa. Una EEPROM puede ser borrada por medios electrónicos. </p>
+<h3 id="expression--expresión"><a class="header" href="#expression--expresión">Expression / Expresión</a></h3>
+<p>Fórmula utilizada en un programa para realizar cierta operación con los datos. La propia expresión indica normalmente la naturaleza de los datos que puede manejar. En Dr. LOGO una expresión consiste en el nombre de un procedimiento seguido de las entradas requeridas. </p>
+<h3 id="fifth-generation-computers--ordenadores-de-la-quinta-generación"><a class="header" href="#fifth-generation-computers--ordenadores-de-la-quinta-generación">Fifth generation computers / Ordenadores de la quinta generación</a></h3>
+<p>Grandes ordenadores que estarán disponibles en el futuro y tendrán, como característica distintiva, la capacidad de utilizar ampliamente las técnicas de la inteligencia artificial. </p>
+<h3 id="file--fichero"><a class="header" href="#file--fichero">File / Fichero</a></h3>
+<p>Colección de datos, de estructura homogénea, generalmente grabada en cinta o disco. </p>
+<h3 id="file-name--nombre-de-fichero"><a class="header" href="#file-name--nombre-de-fichero">File name / Nombre de fichero</a></h3>
+<p>En Dr. LOGO el nombre de un fichero puede estar formado por un máximo de 8 caracteres alfanuméricos. En CP/M se permiten otros tres caracteres, precedidos por un punto. </p>
+<h3 id="firmware"><a class="header" href="#firmware">Firmware</a></h3>
+<p>Software contenido en ROM: un híbrido de software y hardware. </p>
+<h3 id="fixed-point-number--número-en-coma-fija"><a class="header" href="#fixed-point-number--número-en-coma-fija">Fixed-point number / Número en coma fija</a></h3>
+<p>Un número que se representa, manipula y almacena con el punto decimal en una posición determinada. </p>
+<h3 id="floating-point-number--número-en-coma-flotante"><a class="header" href="#floating-point-number--número-en-coma-flotante">Floating-point number / Número en coma flotante</a></h3>
+<p>Número que se representa, manipula y almacena con la coma decimal en la posición más conveniente (en forma de mantisa y exponente). </p>
+<h3 id="floppy-disc"><a class="header" href="#floppy-disc">Floppy disc</a></h3>
+<p>Véase <a href="#disc-disk-disco">Disc</a>. </p>
+<h3 id="flowchart--ordinograma"><a class="header" href="#flowchart--ordinograma">Flowchart / Ordinograma</a></h3>
+<p>Representación esquemática de la evolución de las acciones de un programa. </p>
+<h3 id="forth"><a class="header" href="#forth">Forth</a></h3>
+<p>Lenguaje de programación de alta velocidad de ejecución. Tanto la velocidad como la complejidad están a medio camino entre los lenguajes de alto nivel y el código de máquina. No es un lenguaje para principiantes. </p>
+<h3 id="function-key--tecla-de-función"><a class="header" href="#function-key--tecla-de-función">Function key / Tecla de función</a></h3>
+<p>Tecla que tiene asignada una tarea específica, que puede ejecutar en lugar (o además) de la función grabada sobre ella. </p>
+<h3 id="gate--puerta-lógica"><a class="header" href="#gate--puerta-lógica">Gate / Puerta lógica</a></h3>
+<p>Las puertas lógicas permiten el paso de datos cuando se cumplen ciertas condiciones. Hay varios tipos de puertas lógicas: OR, AND, XOR, etc. </p>
+<h3 id="graphics--gráficos"><a class="header" href="#graphics--gráficos">Graphics / Gráficos</a></h3>
+<p>Dibujo de puntos, rectas, circunferencias, etc.; es decir, todo lo que aparece en la pantalla que no sean &quot;caracteres&quot;. </p>
+<h3 id="graphics-character--carácter-gráfico"><a class="header" href="#graphics-character--carácter-gráfico">Graphics character / Carácter gráfico</a></h3>
+<p>Símbolo asignado a un carácter que es en sí mismo un dibujo. </p>
+<h3 id="graphics-cursor--cursor-gráfico"><a class="header" href="#graphics-cursor--cursor-gráfico">Graphics cursor / Cursor gráfico</a></h3>
+<p>Concepto similar al de &quot;cursor de texto&quot;, pero invisible (en el 6128) y referido a la pantalla gráfica. </p>
+<h3 id="graphics-mode--modo-gráfico"><a class="header" href="#graphics-mode--modo-gráfico">Graphics mode / Modo gráfico</a></h3>
+<p>Los ordenadores más antiguos tenían que ser puestos explícitamente en este modo para poder manejar gráficos. En cambio, los ordenadores personales modernos pueden mezclar textos con gráficos. </p>
+<h3 id="graphics-tablet--tablero-gráfico"><a class="header" href="#graphics-tablet--tablero-gráfico">Graphics tablet / Tablero gráfico</a></h3>
+<p>Periférico que convierte un dibujo en una forma manipulable por el ordenador. Es una forma de conversión A/D (analógica a digital). </p>
+<h3 id="handshaking--intercambio-de-indicativos-y-señales-de-control"><a class="header" href="#handshaking--intercambio-de-indicativos-y-señales-de-control">Handshaking / Intercambio de indicativos y señales de control</a></h3>
+<p>Secuencia de señales electrónicas que inicia, comprueba y sincroniza el intercambio de datos entre un ordenador y un periférico o entre dos ordenadores. </p>
+<h3 id="hard-copy--copia-en-papel"><a class="header" href="#hard-copy--copia-en-papel">Hard copy / Copia en papel</a></h3>
+<p>Listado por impresora de un programa o un texto, o volcado en papel de la pantalla gráfica. </p>
+<h3 id="hardware--equipos-máquinas"><a class="header" href="#hardware--equipos-máquinas">Hardware / Equipos, máquinas</a></h3>
+<p>Componentes electrónicos o mecánicos de un sistema informático: todo lo que tiene volumen y peso. </p>
+<h3 id="hexadecimal-hex"><a class="header" href="#hexadecimal-hex">Hexadecimal (HEX)</a></h3>
+<p>Sistema numérico de base 16. Los números hexadecimales se identifican en el CPC6128 por los prefijos <strong>&amp;</strong> y <strong>&amp;H</strong>. Por ejemplo, <strong>&amp;FF</strong> = 255 (decimal). (Véase la <a href="9.01.-En-t%C3%A9rminos-generales.html">parte 1</a> del capítulo <a href="9.00.-Cap%C3%ADtulo-9.-Cuando-usted-guste.html">Cuando usted guste</a>.) </p>
+<h3 id="hex-file--fichero-hex"><a class="header" href="#hex-file--fichero-hex">Hex file / Fichero HEX</a></h3>
+<p>Representación ASCII de un fichero de orden externo o de código de máquina. </p>
+<h3 id="high-level-language--lenguaje-de-alto-nivel"><a class="header" href="#high-level-language--lenguaje-de-alto-nivel">High-level language / Lenguaje de alto nivel</a></h3>
+<p>Lenguajes del tipo de BASIC, en los que las instrucciones son más próximas al lenguaje ordinario. Son más lentos que el código de máquina, pero mucho más sencillos de entender y programar. </p>
+<h3 id="ieee-488"><a class="header" href="#ieee-488">IEEE-488</a></h3>
+<p>Uno de los interfaces estándar para la conexión de dispositivos externos a un ordenador. Similar al Centronics, pero no totalmente compatible con él. </p>
+<h3 id="information-technology--tecnología-de-la-información"><a class="header" href="#information-technology--tecnología-de-la-información">Information technology / Tecnología de la información</a></h3>
+<p>Todo lo relativo a la utilización de los ordenadores en el proceso de la información y las comunicaciones: proceso de textos, transmisión de datos, videotexto, teletexto, etc. </p>
+<h3 id="initialise--inicializar"><a class="header" href="#initialise--inicializar">Initialise / Inicializar</a></h3>
+<p>Poner en marcha un sistema. O dar valores concretos a variables antes de empezar la ejecución del núcleo central de un programa; por ejemplo, dimensionar matrices, declarar tipos de variables, etc. </p>
+<h3 id="input--entrada"><a class="header" href="#input--entrada">Input / Entrada</a></h3>
+<p>Datos de todo tipo que entran en el ordenador procedentes del disco, del teclado, de una puerta RS-232, etc. </p>
+<h3 id="instruction--instrucción"><a class="header" href="#instruction--instrucción">Instruction / Instrucción</a></h3>
+<p>Orden que manda al ordenador que realice alguna operación o tarea. Un conjunto de instrucciones forma un programa. </p>
+<h3 id="instruction-set--juego-de-instrucciones"><a class="header" href="#instruction-set--juego-de-instrucciones">Instruction set / Juego de instrucciones</a></h3>
+<p>Conjunto de procesos lógicos y matemáticos fundamentales que puede realizar el microprocesador. Toda instrucción de un lenguaje de alto nivel (y también los nemónicos de ensamblador) tiene que ser convertible a una instrucción o serie de instrucciones que la UCP pueda reconocer. </p>
+<h3 id="integer--entero"><a class="header" href="#integer--entero">Integer / Entero</a></h3>
+<p>Número sin parte decimal. </p>
+<h3 id="integrated-circuit--circuito-integrado"><a class="header" href="#integrated-circuit--circuito-integrado">Integrated circuit / Circuito integrado</a></h3>
+<p>Conjunto de componentes electrónicos miniaturizados, grabados en una pastilla de silicio. (Véase también <a href="#chip-pastilla">Chip</a>.) </p>
+<h3 id="intelligent-terminal--terminal-inteligente"><a class="header" href="#intelligent-terminal--terminal-inteligente">Intelligent terminal / Terminal inteligente</a></h3>
+<p>Un terminal que, además de gestionar entradas y salidas para un ordenador central, puede realizar ciertas tareas de proceso de datos cuando el ordenador está &quot;fuera de línea&quot;. </p>
+<h3 id="interactive--interactivo"><a class="header" href="#interactive--interactivo">Interactive / Interactivo</a></h3>
+<p>Hace referencia a los programas que solicitan del usuario la introducción de información de modo inmediato: desde el control de naves espaciales en juegos gráficos hasta las res puestas en programas educativos. La acción del usuario tiene efecto en &quot;tiempo real&quot; sobre la evolución del programa. </p>
+<h3 id="interface--interfaz"><a class="header" href="#interface--interfaz">Interface / Interfaz</a></h3>
+<p>Vía de entrada y salida del ordenador, tanto para las señales eléctricas como para las acciones y reacciones del usuario. En el CPC6128, el teclado, la pantalla y las conexiones para periféricos. </p>
+<h3 id="interpreter--intérprete"><a class="header" href="#interpreter--intérprete">Interpreter / Intérprete</a></h3>
+<p>Una analogía más entre las instrucciones de ordenador y los idiomas. Es el elemento del sistema que interpreta el lenguaje de alto nivel y lo convierte a una forma utilizable por UCP de modo inmediato. </p>
+<h3 id="io--entradasalida-es"><a class="header" href="#io--entradasalida-es">I/O / Entrada/Salida (E/S)</a></h3>
+<p>Input/Output. Entrada/Salida. </p>
+<h3 id="iteration--iteración"><a class="header" href="#iteration--iteración">Iteration / Iteración</a></h3>
+<p>Uno de los mecanismos básicos de la informática. Consiste en la repetición de tareas (bucles), en las que generalmente se va modificando el valor de una variable, hasta que se cumple determinada condición. </p>
+<h3 id="joystick--bastoncillo-de-mando"><a class="header" href="#joystick--bastoncillo-de-mando">Joystick / Bastoncillo de mando</a></h3>
+<p>Dispositivo de entrada al ordenador que generalmente sustituye las teclas del cursor y hace que los juegos gráficos sean más fáciles y rápidos de controlar. </p>
+<h3 id="k"><a class="header" href="#k">K</a></h3>
+<p>Forma abreviada y aproximada del prefijo &quot;kilo&quot; (1000). Representa un &quot;kilobyte&quot;, que en realidad es 1024 bytes. (1024 es la base del sistema binario, 2, elevada a la décima potencia.) </p>
+<h3 id="keyboard--teclado"><a class="header" href="#keyboard--teclado">Keyboard / Teclado</a></h3>
+<p>Matriz de interruptores alfanuméricos a través de la cual se introduce información en el ordenador. </p>
+<h3 id="keyword--palabra-clave"><a class="header" href="#keyword--palabra-clave">Keyword / Palabra clave</a></h3>
+<p>Palabra que un programa o lenguaje de programación reserva para una función u orden específica. </p>
+<h3 id="least-significant-bit--bit-menos-significativo"><a class="header" href="#least-significant-bit--bit-menos-significativo">Least significant bit / Bit menos significativo</a></h3>
+<p>En un número binario, el bit de menor peso; es decir, el que está más a la derecha en la representación matemática habitual. </p>
+<h3 id="light-pen--lápiz-óptico"><a class="header" href="#light-pen--lápiz-óptico">Light pen / Lápiz óptico</a></h3>
+<p>Otro dispositivo de entrada al ordenador que sirve para indicar una selección de zonas de la pantalla o para leer códigos de barras. </p>
+<h3 id="line-number--número-de-línea"><a class="header" href="#line-number--número-de-línea">Line number / Número de línea</a></h3>
+<p>Los programas de BASIC y de algunos otros lenguajes tienen las instrucciones numeradas para indicar al ordenador el orden de ejecución. </p>
+<h3 id="lisp"><a class="header" href="#lisp">LISP</a></h3>
+<p>Acrónimo de “LISt Processor language&quot; (lenguaje de proceso de cadenas de predicados). Otro lenguaje de alto nivel. </p>
+<h3 id="logic--lógica"><a class="header" href="#logic--lógica">Logic / Lógica</a></h3>
+<p>Entre otras acepciones, conjunto de componentes electrónicos que realizan las operaciones lógicas elementales en las que en último término se basa el funcionamiento del ordenador. </p>
+<h3 id="logical-device--dispositivo-lógico"><a class="header" href="#logical-device--dispositivo-lógico">Logical device / Dispositivo lógico</a></h3>
+<p>La representación de un dispositivo puede no coincidir con su forma física. Por ejemplo, el dispositivo lógico <strong>LST</strong> de CP/M puede ser asignado a la puerta Centronics, pero también a la pantalla del monitor. </p>
+<h3 id="logo"><a class="header" href="#logo">LOGO</a></h3>
+<p>Nombre de un lenguaje de programación tomado del término griego &quot;logos&quot;, que significa &quot;palabra&quot;. LOGO ha sido diseñado para servir como ayuda en la enseñanza de la informática elemental. </p>
+<h3 id="loop--bucle"><a class="header" href="#loop--bucle">Loop / Bucle</a></h3>
+<p>Sección de un programa que se ejecuta reiteradamente hasta que se cumple determinada condición. </p>
+<h3 id="low-level-language--lenguaje-de-bajo-nivel"><a class="header" href="#low-level-language--lenguaje-de-bajo-nivel">Low-level language / Lenguaje de bajo nivel</a></h3>
+<p>Por ejemplo, el lenguaje ensamblador. Un lenguaje en el que cada instrucción corresponde a una instrucción de código de máquina. </p>
+<h3 id="lsb-least-significant-bit--bit-menos-significativo-bms"><a class="header" href="#lsb-least-significant-bit--bit-menos-significativo-bms">LSB, Least Significant Bit / Bit menos significativo, bms</a></h3>
+<p>En un número binario, el bit de menor peso, es decir, el que está más a la derecha en la representación matemática habitual. </p>
+<h3 id="lsi-large-scale-integration--integración-a-gran-escala"><a class="header" href="#lsi-large-scale-integration--integración-a-gran-escala">LSI, Large Scale Integration / Integración a gran escala</a></h3>
+<p>Etapa avanzada del desarrollo de circuitos integrados, en la que incorporan miles de componentes electrónicos en una sola pastilla de silicio. </p>
+<h3 id="machine-code--código-de-máquina"><a class="header" href="#machine-code--código-de-máquina">Machine code / Código de máquina</a></h3>
+<p>Lenguaje de programación que es directamente comprensible y utilizable por el microprocesador. </p>
+<h3 id="machine-readable--accesible-a-la-máquina"><a class="header" href="#machine-readable--accesible-a-la-máquina">Machine readable / Accesible a la máquina</a></h3>
+<p>Este término hace referencia a datos e información que puedan ser introducidos directamente en la máquina, sin necesidad de conversión. </p>
+<h3 id="man-machine-interface--interfaz-hombre-máquina"><a class="header" href="#man-machine-interface--interfaz-hombre-máquina">Man-machine interface / Interfaz hombre-máquina</a></h3>
+<p>Dispositivo que facilita la interacción entre el usuario y el ordenador (teclado, sonido, etc.) </p>
+<h3 id="matrix--matriz"><a class="header" href="#matrix--matriz">Matrix / Matriz</a></h3>
+<p>Disposición de los puntos con los que se forman los caracteres en la pantalla o en las impresoras de &quot;matriz de puntos&quot;. En otra acepción, variables que con un solo nombre pueden contener múltiples valores, a los que se accede mediante los &quot;índices&quot;. </p>
+<h3 id="memory--memoria"><a class="header" href="#memory--memoria">Memory / Memoria</a></h3>
+<p>Especie de &quot;aparcamiento&quot; en la máquina, en la que ésta almacena los programas y los datos. La memoria puede ser RAM (memoria de acceso aleatorio), en la que se puede escribir y leer, o ROM (memoria de &quot;sólo lectura&quot;), en la que solamente se puede leer. </p>
+<h3 id="memory-map--mapa-de-memoria"><a class="header" href="#memory-map--mapa-de-memoria">Memory map / Mapa de memoria</a></h3>
+<p>Esquema en que se indica qué zonas de memoria están dedicadas a las diversas funciones: pantalla, sistema operativo, variables, etc. </p>
+<h3 id="menu--menú"><a class="header" href="#menu--menú">Menu / Menú</a></h3>
+<p>Lista de opciones que se ofrece al usuario de un programa. </p>
+<h3 id="microprocessor--microprocesador"><a class="header" href="#microprocessor--microprocesador">Microprocessor / Microprocesador</a></h3>
+<p>Circuito integrado que controla el funcionamiento del ordenador. Recibe y ejecuta las instrucciones que le entrega el intérprete de BASIC y controla todas las interfaces. </p>
+<h3 id="modem-modulatordemodulator--moduladordemodulador-modem"><a class="header" href="#modem-modulatordemodulator--moduladordemodulador-modem">Modem, Modulator/Demodulator / Modulador/demodulador, modem</a></h3>
+<p>Dispositivo que permite conectar el ordenador a una línea telefónica o comunicarlo con otros ordenadores o terminales remotos. </p>
+<h3 id="monitor"><a class="header" href="#monitor">Monitor</a></h3>
+<p>Pantalla en la que se visualizan los gráficos, listados, mensajes, etc. También el programa que permite observar la operación básica del ordenador. </p>
+<h3 id="mouse--ratón"><a class="header" href="#mouse--ratón">Mouse / Ratón</a></h3>
+<p>Seguidor boca abajo, o bola rodante. Al desplazarlo con la mano sobre una superficie plana, mueve el cursor por la pantalla. </p>
+<h3 id="msb-most-significant-bit--bit-más-significativo-bms"><a class="header" href="#msb-most-significant-bit--bit-más-significativo-bms">MSB, Most Significant Bit / Bit más significativo, BMS</a></h3>
+<p>En un número binario, el bit de mayor peso; es decir, el que está más a la izquierda. </p>
+<h3 id="network--red"><a class="header" href="#network--red">Network / Red</a></h3>
+<p>Cuando se interconectan varios ordenadores para intercambiar programas y datos, vía modem, cable, etc., se forma una &quot;red&quot;. </p>
+<h3 id="nibble--cuarteto"><a class="header" href="#nibble--cuarteto">Nibble / Cuarteto</a></h3>
+<p>Medio byte, es decir, un número binario de cuatro bits. </p>
+<h3 id="node--nodo"><a class="header" href="#node--nodo">Node / Nodo</a></h3>
+<p>Unidad de espacio de trabajo en LOGO. Generalmente un nodo consume 4 bytes de espacio de memoria. </p>
+<h3 id="noise--ruido"><a class="header" href="#noise--ruido">Noise / Ruido</a></h3>
+<p>El sistema de sonido del CPC6128 permite generar ruidos aleatorios para simular efectos sonoros tales como explosiones, disparos, etc. </p>
+<h3 id="numeric-keypad--teclado-numérico"><a class="header" href="#numeric-keypad--teclado-numérico">Numeric keypad / Teclado numérico</a></h3>
+<p>Grupo de teclas numéricas destinadas a facilitar la introducción de números en el ordenador. En el caso del CPC6128, estas teclas son además definibles por el usuario. </p>
+<h3 id="ocr-optical-character-recognition--lectura-óptica-de-caracteres"><a class="header" href="#ocr-optical-character-recognition--lectura-óptica-de-caracteres">OCR, Optical Character Recognition / Lectura óptica de caracteres</a></h3>
+<p>Sistema de lectura automática de caracteres escritos y de conversión a datos utilizables por el ordenador. </p>
+<h3 id="octal"><a class="header" href="#octal">Octal</a></h3>
+<p>Sistema de numeración de base 8 en que cada dígito (del 0 al 7) se presenta con tres dígitos binarios. </p>
+<h3 id="off-line--fuera-de-línea"><a class="header" href="#off-line--fuera-de-línea">Off line / Fuera de línea</a></h3>
+<p>Situación en la que se encuentra un periférico cuando no está activamente conectado al ordenador. </p>
+<h3 id="on-line--en-línea"><a class="header" href="#on-line--en-línea">On line / En línea</a></h3>
+<p>Término opuesto a Off line/Fuera de línea. </p>
+<h3 id="operating-system--sistema-operativo"><a class="header" href="#operating-system--sistema-operativo">Operating system / Sistema operativo</a></h3>
+<p>Programa que gestiona el manejo de la memoria, la ejecución de programas, prioridades, control de tiempos, etc. Interfaz entre la máquina y los programas del usuario. </p>
+<h3 id="operator--operador"><a class="header" href="#operator--operador">Operator / Operador</a></h3>
+<p>Parte de una operación aritmética o lógica que describe en qué consiste la operación. </p>
+<h3 id="output--salida"><a class="header" href="#output--salida">Output / Salida</a></h3>
+<p>Todo lo que sale del ordenador como resultado de algún proceso o cálculo. </p>
+<h3 id="overwrite--sobreescribir"><a class="header" href="#overwrite--sobreescribir">Overwrite / Sobreescribir</a></h3>
+<p>Escribir borrando lo anterior. Borrar parte de la memoria o la pantalla, a veces involuntariamente, al escribir nuevos datos en ella. </p>
+<h3 id="paddle--empuñadura"><a class="header" href="#paddle--empuñadura">Paddle / Empuñadura</a></h3>
+<p>Mando principal del joystick. </p>
+<h3 id="page-zero--página-cero"><a class="header" href="#page-zero--página-cero">Page zero / Página cero</a></h3>
+<p>Zona de memoria, en CP/M entre las posiciones &amp;0000 y &amp;0100, en la que se almacenan parámetros esenciales del sistema operativo. </p>
+<h3 id="parallel-interface--interfaz-paralelo"><a class="header" href="#parallel-interface--interfaz-paralelo">Parallel interface / Interfaz paralelo</a></h3>
+<p>Sistema de conexión del que es ejemplo el interfaz para impresora del CPC6128. Cada línea del bus de datos se conecta a la correspondiente patilla del corrector de la impresora. Los datos se transmiten en grupos simultáneos. Este método de transmisión es mucho más rápido que el que se consigue con un interfaz serie, en que los dígitos binarios se envían uno tras otro, por una sola línea. </p>
+<h3 id="pascal"><a class="header" href="#pascal">Pascal</a></h3>
+<p>Lenguaje estructurado de alto nivel que ha de ser compilado antes de su ejecución y que, por consiguiente, es muy rápido. Es el lenguaje que habitualmente se estudia después de BASIC. </p>
+<h3 id="peek"><a class="header" href="#peek">PEEK</a></h3>
+<p>Función de BASIC que examina una posición de memoria especificada e informa de su contenido. </p>
+<h3 id="peripheral--periférico"><a class="header" href="#peripheral--periférico">Peripheral / Periférico</a></h3>
+<p>Impresoras, modems, joysticks, magnetófonos, etc.; cualquier aparato que pueda ser conectado al ordenador para hacerlo más útil. </p>
+<h3 id="physical-device--dispositivo-físico"><a class="header" href="#physical-device--dispositivo-físico">Physical device / Dispositivo físico</a></h3>
+<p>Dispositivo que realmente existe (o sea, pieza de hardware), representable por un dispositivo lógico. </p>
+<h3 id="pixel-picture-element--punto-gráfico"><a class="header" href="#pixel-picture-element--punto-gráfico">Pixel (picture element) / Punto gráfico</a></h3>
+<p>La menor área de la pantalla que puede ser controlada con independencia de las demás. </p>
+<h3 id="plotter--trazador-automático"><a class="header" href="#plotter--trazador-automático">Plotter / Trazador automático</a></h3>
+<p>Trazador especial que dibuja con plumas, tanto caracteres como dibujos propiamente dichos. </p>
+<h3 id="poke"><a class="header" href="#poke">POKE</a></h3>
+<p>Orden de BASIC que escribe un valor en una posición de memoria especificada. </p>
+<h3 id="port--puerta"><a class="header" href="#port--puerta">Port / Puerta</a></h3>
+<p>Lugar específicamente direccionable de un interfaz para la entrada o salida de datos. </p>
+<h3 id="portability--adaptabilidad"><a class="header" href="#portability--adaptabilidad">Portability / Adaptabilidad</a></h3>
+<p>Característica de un lenguaje o programa que hace fácil su adaptación a otra máquina, generalmente como consecuencia de la compatibilidad del sistema operativo (v. g., el CP/M de Digital Research). </p>
+<h3 id="primitives--primitivas"><a class="header" href="#primitives--primitivas">Primitives / Primitivas</a></h3>
+<p>Procedimientos, operaciones u órdenes básicos en los que consiste Dr. LOGO. </p>
+<h3 id="printer--impresora"><a class="header" href="#printer--impresora">Printer / Impresora</a></h3>
+<p>Máquina que escribe en papel los datos enviados por el ordenador. </p>
+<h3 id="procedure--procedimiento"><a class="header" href="#procedure--procedimiento">Procedure / Procedimiento</a></h3>
+<p>Serie de expresiones o instrucciones que indican al ordenador cómo realizar una tarea. </p>
+<h3 id="program--programa"><a class="header" href="#program--programa">Program / Programa</a></h3>
+<p>Conjunto de instrucciones que gobiernan el funcionamiento del ordenador para hacer que realice una tarea. Puede tratarse de una simple rutina en código de máquina o de una aplicación completa, tal como un paquete de contabilidad o un procesador de textos. </p>
+<h3 id="programming-language--lenguaje-de-programación"><a class="header" href="#programming-language--lenguaje-de-programación">Programming language / Lenguaje de programación</a></h3>
+<p>Lenguaje en el que escribe un programa, consistente en un conjunto de reglas que indican cómo se utilizan las palabras y los números. </p>
+<h3 id="prom"><a class="header" href="#prom">PROM</a></h3>
+<p>Programmable Read Only Memory. Memoria programable de &quot;sólo lectura&quot;. Circuito integrado de memoria que, una vez grabado, ya no se puede borrar. (Véase también EPROM.) </p>
+<h3 id="prompt--mensaje-inductor"><a class="header" href="#prompt--mensaje-inductor">Prompt / Mensaje inductor</a></h3>
+<p>Un corto mensaje o grupo de caracteres que recuerda al lector que el ordenador está esperando una entrada. Por ejemplo, en CP/M es &gt;; en LOGO, ?. </p>
+<h3 id="psu-power-supply-unit--fuente-de-alimentación"><a class="header" href="#psu-power-supply-unit--fuente-de-alimentación">PSU, Power Supply Unit / Fuente de alimentación</a></h3>
+<p>Circuito que convierte la tensión alterna de la red a una tensión continua adecuada para los circuitos del ordenador (y de los periféricos). </p>
+<h3 id="qwerty-keyboard--teclado-tipo-qwerty"><a class="header" href="#qwerty-keyboard--teclado-tipo-qwerty">QWERTY keyboard / Teclado tipo QWERTY</a></h3>
+<p>Teclado del tipo de las máquinas de escribir estándar. </p>
+<h3 id="ram"><a class="header" href="#ram">RAM</a></h3>
+<p>Random Access Memory. Memoria de acceso aleatorio. Memoria de la que se puede leer y en la que se puede escribir en el curso normal de la ejecución de un programa, en cualquier dirección y en cualquier orden. </p>
+<h3 id="random-access--acceso-aleatorio"><a class="header" href="#random-access--acceso-aleatorio">Random access / Acceso aleatorio</a></h3>
+<p>Término que hace referencia a la posibilidad de leer o escribir datos en un disco en el orden que se desee. </p>
+<h3 id="random-number--número-aleatorio"><a class="header" href="#random-number--número-aleatorio">Random number / Número aleatorio</a></h3>
+<p>Número generado por el ordenador que no es ni repetible ni predecible. El CPC6128 genera una sucesión de números pseudoaleatorios. </p>
+<h3 id="raster-scan--barrido-de-trama"><a class="header" href="#raster-scan--barrido-de-trama">Raster scan / Barrido de trama</a></h3>
+<p>Sistema de &quot;escritura&quot; en la pantalla, en que las imágenes se forman mediante un barrido de líneas horizontales. </p>
+<h3 id="ro-read-only--de-sólo-lectura"><a class="header" href="#ro-read-only--de-sólo-lectura">R/O, Read only / De &quot;sólo lectura&quot;</a></h3>
+<p>Atributo de un disco, de un fichero, de una unidad de disco, etc., que impide la escritura y la modificación de los datos. </p>
+<h3 id="rw-read-write--de-lecturaescritura"><a class="header" href="#rw-read-write--de-lecturaescritura">R/W, Read write / De lectura/escritura</a></h3>
+<p>Atributo de un disco, de un fichero o de una unidad de disco que permite tanto la lectura como la escritura o la modificación de los datos. </p>
+<h3 id="real-number--número-real"><a class="header" href="#real-number--número-real">Real number / Número real</a></h3>
+<p>Número que consta (o puede constar) de parte entera y parte decimal. </p>
+<h3 id="real-time--en-tiempo-real"><a class="header" href="#real-time--en-tiempo-real">Real time / En tiempo real</a></h3>
+<p>Efectos que ocurren en el momento presente, a diferencia de aquellos que sólo se aprecian cuando ha terminado el proceso que los provocó. </p>
+<h3 id="record--registro"><a class="header" href="#record--registro">Record / Registro</a></h3>
+<p>Unidad de medida de ficheros. En CP/M los registros son de 128 bytes. </p>
+<h3 id="recursion--recursividad"><a class="header" href="#recursion--recursividad">Recursion / Recursividad</a></h3>
+<p>Serie de etapas repetidas de un programa o una rutina, tales que cada una está relacionada con la anterior. </p>
+<h3 id="refresh--renovación-refresco"><a class="header" href="#refresh--renovación-refresco">Refresh / Renovación, refresco</a></h3>
+<p>Actualización de la información, ya sea de la pantalla o de la memoria. No siempre es un proceso destructivo; puede tratarse de una confirmación de la situación actual, en dispositivos que de otro modo perderían la información. </p>
+<h3 id="register--registro-de-máquina"><a class="header" href="#register--registro-de-máquina">Register / Registro de máquina</a></h3>
+<p>Posición de memoria transitoria de la UCP utilizada para almacenamiento provisional de los datos. </p>
+<h3 id="rem-remark--comentario-observación"><a class="header" href="#rem-remark--comentario-observación">REM, Remark / Comentario, observación</a></h3>
+<p>Instrucción de un programa que el ordenador no ejecuta; sirve para que el programador escriba anotaciones, o para escribir la fecha o número de versión del programa. </p>
+<h3 id="reserved-word--palabra-reservada"><a class="header" href="#reserved-word--palabra-reservada">Reserved word / Palabra reservada</a></h3>
+<p>Una palabra que tiene un significado especial para un programa, y que por consiguiente no se puede utilizar fuera del contexto predefinido. Por ejemplo, BASIC no puede aceptar <strong>NEW</strong> como nombre de una variable, pues esa palabra está reservada para otro propósito. </p>
+<h3 id="resolution--resolución"><a class="header" href="#resolution--resolución">Resolution / Resolución</a></h3>
+<p>La resolución es tanto mayor cuanto menor sea el tamaño de los pixels. Da una idea de cómo de &quot;finos&quot; pueden ser los gráficos en un ordenador. </p>
+<h3 id="reverse-polish-notation--notación-polaca-inversa"><a class="header" href="#reverse-polish-notation--notación-polaca-inversa">Reverse Polish notation / Notación polaca inversa</a></h3>
+<p>Método de escribir operaciones aritméticas, adoptado por ciertos fabricantes de calculadoras, en el que los operadores (+, -, *, /) se ponen después de los operandos. </p>
+<h3 id="rf-modulator--modulador-de-radiofrecuencia"><a class="header" href="#rf-modulator--modulador-de-radiofrecuencia">RF Modulator / Modulador de radiofrecuencia</a></h3>
+<p>Método por el cual las señales de vídeo del ordenador se codifican y transmiten a la entrada de antena de un televisor. </p>
+<h3 id="rom"><a class="header" href="#rom">ROM</a></h3>
+<p>Read only Memory. Memoria de &quot;sólo lectura&quot;. Memoria que no se puede borrar. </p>
+<h3 id="routine--rutina"><a class="header" href="#routine--rutina">Routine / Rutina</a></h3>
+<p>Una parte del programa que realiza una tarea específica. Un subprograma contenido en un programa más general, o que se ha escrito de forma independiente y puede ser incorporado a otros programas. </p>
+<h3 id="rs-232c"><a class="header" href="#rs-232c">RS-232C</a></h3>
+<p>Un sistema concreto estandarizado para los interfaces de comunicación en serie. Los dispositivos que están en los dos extremos de la línea deben estar configurados de acuerdo con las normas EIA RS-232C. </p>
+<h3 id="screen-editor--editor-de-pantalla"><a class="header" href="#screen-editor--editor-de-pantalla">Screen editor / Editor de pantalla</a></h3>
+<p>Editor de textos o de programas que permite llevar el cursor a cualquier lugar de la pantalla para modificar su contenido. </p>
+<h3 id="scrolling--desplazamiento-vertical-rodadura"><a class="header" href="#scrolling--desplazamiento-vertical-rodadura">Scrolling / Desplazamiento vertical, rodadura</a></h3>
+<p>Término que describe la forma en que la pantalla &quot;rueda&quot; hacia arriba cuando se ha llegado a la última línea y se necesita una nueva. </p>
+<h3 id="sector"><a class="header" href="#sector">Sector</a></h3>
+<p>Memoria mínima direccionable en un disco. El sistema de AMSTRAD está basado en sectores de 512 bytes. </p>
+<h3 id="separator--separador"><a class="header" href="#separator--separador">Separator / Separador</a></h3>
+<p>Signo que marca el límite entre palabras reservadas y otros elementos del programa. </p>
+<h3 id="serial-interface--interfaz-serie"><a class="header" href="#serial-interface--interfaz-serie">Serial interface / Interfaz serie</a></h3>
+<p>Este término hace referencia normalmente al estándar RS-232C, aunque existen otros métodos de transmisión en serie de datos. </p>
+<h3 id="simulation--simulación"><a class="header" href="#simulation--simulación">Simulation / Simulación</a></h3>
+<p>Técnica de emulación de los procesos reales en un ordenador; por ejemplo, simulación de vuelo, de la conducción de automóviles, etc. </p>
+<h3 id="singled-sided--de-una-sola-cara"><a class="header" href="#singled-sided--de-una-sola-cara">Singled sided / De una sola cara</a></h3>
+<p>Hace referencia al tipo de disco en el que sólo se pueden grabar datos en una cara. </p>
+<h3 id="software--programación-software"><a class="header" href="#software--programación-software">Software / Programación, software</a></h3>
+<p>Conjunto de programas que hacen que el ordenador funcione; en disco, cinta, ROM, etcétera. </p>
+<h3 id="software-engineering--ingeniería-de-programación"><a class="header" href="#software-engineering--ingeniería-de-programación">Software engineering / Ingeniería de programación</a></h3>
+<p>Técnicas de programación consideradas desde un punto de vista científico, para distinguir las de las no organizadas o arbitrarias. </p>
+<h3 id="sound-generator--generador-de-sonido"><a class="header" href="#sound-generator--generador-de-sonido">Sound generator / Generador de sonido</a></h3>
+<p>Parte de un ordenador (circuitos o programas) que genera sonido y ruido. </p>
+<h3 id="speech-recognition--reconocimiento-de-voz"><a class="header" href="#speech-recognition--reconocimiento-de-voz">Speech recognition / Reconocimiento de voz</a></h3>
+<p>Conversión de la palabra hablada en información reconocible por el ordenador. </p>
+<h3 id="speech-synthesis--síntesis-de-voz"><a class="header" href="#speech-synthesis--síntesis-de-voz">Speech synthesis / Síntesis de voz</a></h3>
+<p>Generación de voces simuladas mediante una combinación de circuitos y programas. </p>
+<h3 id="spread-sheet--hoja-electrónica"><a class="header" href="#spread-sheet--hoja-electrónica">Spread sheet / Hoja electrónica</a></h3>
+<p>Un programa que permite introducir datos numéricos para disponerlos en filas y columnas y para hacer con ellos manipulaciones aritméticas. Al modificar uno de los datos se rehacen los cálculos para actualizar los resultados por filas y columnas. </p>
+<h3 id="sprite--agente-gráfico-móvil"><a class="header" href="#sprite--agente-gráfico-móvil">Sprite / Agente gráfico móvil</a></h3>
+<p>Objeto gráfico que se puede mover libremente por la pantalla, generado por software o por hardware de forma tal que pueda aparecer y desaparecer de modo aparentemente aleatorio. </p>
+<h3 id="stack--pila"><a class="header" href="#stack--pila">Stack / Pila</a></h3>
+<p>Área de memoria utilizada para almacenar datos provisionalmente y organizada de forma que el último dato depositado en ella es el primero que se recupera. </p>
+<h3 id="stream--canal"><a class="header" href="#stream--canal">Stream / Canal</a></h3>
+<p>Vía de salida del ordenador; por ejemplo, la pantalla, la impresora o el disco. </p>
+<h3 id="string--cadena-literal"><a class="header" href="#string--cadena-literal">String / Cadena literal</a></h3>
+<p>Un objeto formado por caracteres cualesquiera que el programa no puede tratar como numérico. Puede constar solamente de dígitos, pero el ordenador no lo considera como número mientras no se lo convierta a número mediante la instrucción adecuada. </p>
+<h3 id="structured-programming--programación-estructurada"><a class="header" href="#structured-programming--programación-estructurada">Structured programming / Programación estructurada</a></h3>
+<p>Técnica de programación lógica y premeditada con la que se escriben programas que fluyen de principio a fin en etapas bien diferenciadas. </p>
+<h3 id="sub-routine"><a class="header" href="#sub-routine">Sub-routine</a></h3>
+<p>Véase <a href="#routine-rutina">Routine, rutina</a>. </p>
+<h3 id="syntax-error--error-de-sintaxis"><a class="header" href="#syntax-error--error-de-sintaxis">Syntax error / Error de sintaxis</a></h3>
+<p>Cuando se infringen las reglas sobre la utilización de palabras clave y variables, BASIC emite este mensaje. </p>
+<h3 id="system-tracks--pistas-del-sistema"><a class="header" href="#system-tracks--pistas-del-sistema">System tracks / Pistas del sistema</a></h3>
+<p>Pistas reservadas en el disco para el sistema CP/M. </p>
+<h3 id="terminal"><a class="header" href="#terminal">Terminal</a></h3>
+<p>Teclado de entrada con pantalla, o bien con teletipo de salida. </p>
+<h3 id="tpa-transient-program-area--Área-para-programas-transitorios"><a class="header" href="#tpa-transient-program-area--Área-para-programas-transitorios">TPA, Transient Program Area / Área para programas transitorios</a></h3>
+<p>Área de memoria que empieza en &amp;0100, en la que en CP/M se almacena los programas de usuario y los datos por éstos generados. </p>
+<h3 id="track--pista"><a class="header" href="#track--pista">Track / Pista</a></h3>
+<p>Las pistas son coronas circulares del disco. Cada una se divide en un número fijo de sectores. Las pistas y sectores se inscriben en áreas específicas del disco en el proceso de inicialización. </p>
+<h3 id="transient-program--programa-transitorio"><a class="header" href="#transient-program--programa-transitorio">Transient program / Programa transitorio</a></h3>
+<p>Un programa de ayuda de CP/M, tal como <strong>PIP</strong>, que puede ser cargado en la TPA sin más que escribir su nombre en el teclado. </p>
+<h3 id="truncated--truncado"><a class="header" href="#truncated--truncado">Truncated / Truncado</a></h3>
+<p>Hace referencia a un número o una cadena que han sido recortados por la izquierda o por la derecha. Cuando el truncamiento es intencionado, suele incluir el redondeo del número. Si es intencionado, los caracteres sobrantes se eliminan para encajar el número o la cadena en el espacio disponible. </p>
+<h3 id="truth-table--tabla-de-verdad"><a class="header" href="#truth-table--tabla-de-verdad">Truth table / Tabla de verdad</a></h3>
+<p>El resultado de toda operación lógica puede ser &quot;verdadero&quot; o &quot;falso&quot; (para el ordenador, 1 o 0). La tabla de verdad da todos los resultados posibles de la operación en función del valor de los operandos. </p>
+<h3 id="turtle--tortuga"><a class="header" href="#turtle--tortuga">Turtle / Tortuga</a></h3>
+<p>Un símbolo con forma de punta de flecha que funciona como cursor gráfico en la pantalla gráfica de Dr. LOGO. </p>
+<h3 id="turtle-graphics--gráficos-de-tortuga"><a class="header" href="#turtle-graphics--gráficos-de-tortuga">Turtle graphics / Gráficos de tortuga</a></h3>
+<p>Imagen que deja la tortuga de Dr. LOGO al moverse por la pantalla. </p>
+<h3 id="udk-user-defined-keys--teclas-definidas-por-el-usuario"><a class="header" href="#udk-user-defined-keys--teclas-definidas-por-el-usuario">UDK, User Defined Keys / Teclas definidas por el usuario</a></h3>
+<p>En el CPC6128 hay 32 teclas a las que se pueden asignar tareas concretas, que el ordenador realiza en cuanto el usuario las pulsa. </p>
+<h3 id="unsigned-number--número-entero-sin-signo"><a class="header" href="#unsigned-number--número-entero-sin-signo">Unsigned number / Número entero sin signo</a></h3>
+<p>Número entero interpretado como positivo. </p>
+<h3 id="utility--programa-de-ayuda"><a class="header" href="#utility--programa-de-ayuda">Utility / Programa de ayuda</a></h3>
+<p>Un programa completo con el que se realiza una operación común a varias aplicaciones; por ejemplo, ordenar alfabéticamente o copiar ficheros. </p>
+<h3 id="variable"><a class="header" href="#variable">Variable</a></h3>
+<p>Un dato o grupo de datos puede ser identificado en un programa mediante un nombre; su valor puede variar como consecuencia de la ejecución del programa. </p>
+<h3 id="warm-start--arranque-en-caliente"><a class="header" href="#warm-start--arranque-en-caliente">Warm start / Arranque en caliente</a></h3>
+<p>Es el que se realiza cuando se pulsa <strong>[CTRL] [C]</strong> en CP/M. Reinicializa el subsistema de disco y devuelve el control al modo directo de consola de CP/M. </p>
+<h3 id="wildcard-character--símbolo-comodín"><a class="header" href="#wildcard-character--símbolo-comodín">Wildcard character / Símbolo comodín</a></h3>
+<p>Este término hace referencia a los símbolos <strong>*</strong> y <strong>?</strong>. Dr. LOGO solamente admite el <strong>?</strong>. El <strong>*</strong> representa cierto número de símbolos <strong>?</strong>. Al mencionar nombres de ficheros, se pueden construir nombres ambiguos poniendo símbolos <strong>?</strong> en lugar de caracteres. </p>
+<h3 id="write-protection--protección-contra-escritura"><a class="header" href="#write-protection--protección-contra-escritura">Write protection / Protección contra escritura</a></h3>
+<p>Un mecanismo que impide escribir en un disco o fichero. Un disco protegido contra escritura es un disco de &quot;sólo lectura&quot;. </p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="A01.-Digital-Research-y-AMSTRAD.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="A03.-Que-usted-lo-disfrute.-Rebotes.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="A01.-Digital-Research-y-AMSTRAD.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="A03.-Que-usted-lo-disfrute.-Rebotes.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

@@ -1,0 +1,1446 @@
+<!DOCTYPE HTML>
+<html lang="es" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Introducción a LOGO - Amstrad CPC6128 Manual del Usuario</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="Manual de usuario del micro ordenenador Amstrad modelo CPC6128">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Home.html">Inicio</a></li><li class="chapter-item expanded affix "><a href="0.01.-Introducción.html">Introducción</a></li><li class="chapter-item expanded affix "><a href="0.02.-Importante.html">Importante</a></li><li class="chapter-item expanded "><a href="1.00.-Capítulo-1.-Curso-de-introducción.html"><strong aria-hidden="true">1.</strong> Curso se introducción</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="1.01.-Instalación-y-mantenimiento.html"><strong aria-hidden="true">1.1.</strong> Instalación y mantenimiento</a></li><li class="chapter-item expanded "><a href="1.02.-Conexión-de-los-periféricos.html"><strong aria-hidden="true">1.2.</strong> Conexión de los periféricos</a></li><li class="chapter-item expanded "><a href="1.03.-En-cuanto-a-los-discos.html"><strong aria-hidden="true">1.3.</strong> En cuanto a los discos</a></li><li class="chapter-item expanded "><a href="1.04.-Manos-al-teclado.html"><strong aria-hidden="true">1.4.</strong> Manos al teclado</a></li><li class="chapter-item expanded "><a href="1.05.-Carga-de-programas.html"><strong aria-hidden="true">1.5.</strong> Carga de programas</a></li><li class="chapter-item expanded "><a href="1.06.-Empecemos-a-trabajar.html"><strong aria-hidden="true">1.6.</strong> Empecemos a trabajar</a></li><li class="chapter-item expanded "><a href="1.07.-Grábelo-en-disco.html"><strong aria-hidden="true">1.7.</strong> Grábelo en disco</a></li><li class="chapter-item expanded "><a href="1.08.-Introducción-a-los-modos-de-pantalla,-colores-y-gráficos.html"><strong aria-hidden="true">1.8.</strong> Introducción a los modos de pantalla, colores y gráficos</a></li><li class="chapter-item expanded "><a href="1.09.-Sonidos.html"><strong aria-hidden="true">1.9.</strong> Sonidos</a></li><li class="chapter-item expanded "><a href="1.10.-Introducción-a-los-sistemas-operativos-AMSDOS-y-CPM.html"><strong aria-hidden="true">1.10.</strong> Introducción a los sistemas operativos AMSDOS y CPM</a></li><li class="chapter-item expanded "><a href="1.11.-Introducción-al-gestor-de-bancos-de-memoria.html"><strong aria-hidden="true">1.11.</strong> Introducción al gestor de bancos de memoria</a></li></ol></li><li class="chapter-item expanded "><a href="2.01.-La-génesis-de-un-programa.html"><strong aria-hidden="true">2.</strong> La génesis de un programa</a></li><li class="chapter-item expanded "><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html"><strong aria-hidden="true">3.</strong> Lista completa de las palabras clave del BASIC de AMSTRAD</a></li><li class="chapter-item expanded "><a href="4.00.-Capítulo-4.-Discos-y-cintas.html"><strong aria-hidden="true">4.</strong> Discos y cintas</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="4.01.-Discos.html"><strong aria-hidden="true">4.1.</strong> Parte 1: Discos</a></li><li class="chapter-item expanded "><a href="4.02.-Cintas.html"><strong aria-hidden="true">4.2.</strong> Parte 2: Cintas</a></li></ol></li><li class="chapter-item expanded "><a href="5.00.-Capítulo-5.-AMSDOS-y-CP-M.html"><strong aria-hidden="true">5.</strong> AMSDOS y CP/M</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="5.01.-AMSDOS.html"><strong aria-hidden="true">5.1.</strong> Parte 1: AMSDOS</a></li><li class="chapter-item expanded "><a href="5.02.-CP-M.html"><strong aria-hidden="true">5.2.</strong> Parte 2: CP/M</a></li></ol></li><li class="chapter-item expanded "><a href="6.01.-Introducción-a-LOGO.html" class="active"><strong aria-hidden="true">6.</strong> Introducción a LOGO</a></li><li class="chapter-item expanded "><a href="7.00.-Capítulo-7.-Para-su-referencia.html"><strong aria-hidden="true">7.</strong> Para su referencia</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="7.01.-Posiciones-del-cursor-y-códigos-ampliados-de-control-en-BASIC.html"><strong aria-hidden="true">7.1.</strong> Posiciones del cursor y códigos ampliados de control en BASIC</a></li><li class="chapter-item expanded "><a href="7.02.-El-sistema-operativo.html"><strong aria-hidden="true">7.2.</strong> El sistema operativo</a></li><li class="chapter-item expanded "><a href="7.03.-Interrupciones.html"><strong aria-hidden="true">7.3.</strong> Interrupciones</a></li><li class="chapter-item expanded "><a href="7.04.-Caracteres-ASCII-y-caracteres-gráficos-en-BASIC.html"><strong aria-hidden="true">7.4.</strong> Caracteres ASCII y caracteres gráficos en BASIC</a></li><li class="chapter-item expanded "><a href="7.05.-Esquemas-de-teclado.html"><strong aria-hidden="true">7.5.</strong> Esquemas de teclado</a></li><li class="chapter-item expanded "><a href="7.06.-Sonidos.html"><strong aria-hidden="true">7.6.</strong> Sonidos</a></li><li class="chapter-item expanded "><a href="7.07.-Mensajes-de-error-de-BASIC.html"><strong aria-hidden="true">7.7.</strong> Mensajes de error de BASIC</a></li><li class="chapter-item expanded "><a href="7.08.-Palabras-reservadas-de-BASIC.html"><strong aria-hidden="true">7.8.</strong> Palabras reservadas de BASIC</a></li><li class="chapter-item expanded "><a href="7.09.-Plantillas.html"><strong aria-hidden="true">7.9.</strong> Plantillas</a></li><li class="chapter-item expanded "><a href="7.10.-Conexiones.html"><strong aria-hidden="true">7.10.</strong> Conexiones</a></li><li class="chapter-item expanded "><a href="7.11.-Impresoras.html"><strong aria-hidden="true">7.11.</strong> Impresoras</a></li><li class="chapter-item expanded "><a href="7.12.-Joysticks.html"><strong aria-hidden="true">7.12.</strong> Joysticks</a></li><li class="chapter-item expanded "><a href="7.13.-Organización-de-los-discos.html"><strong aria-hidden="true">7.13.</strong> Organización de los discos</a></li><li class="chapter-item expanded "><a href="7.14.-Ampliaciones-del-sistema-residentes-RSX.html"><strong aria-hidden="true">7.14.</strong> Ampliaciones del sistema residentes RSX</a></li><li class="chapter-item expanded "><a href="7.15.-Memoria.html"><strong aria-hidden="true">7.15.</strong> Memoria</a></li><li class="chapter-item expanded "><a href="7.16.-Emulador-de-consola-CP-M-Plus.html"><strong aria-hidden="true">7.16.</strong> Emulador de consola CP/M Plus</a></li><li class="chapter-item expanded "><a href="7.17.-Juego-de-caracteres-de-CP-M-Plus.html"><strong aria-hidden="true">7.17.</strong> Juego de caracteres de CP-M Plus</a></li></ol></li><li class="chapter-item expanded "><a href="8.00.-Capítulo-8.-Más-sobre-el-gestor-de-bancos-de-memoria.html"><strong aria-hidden="true">8.</strong> Más sobre el gestor de bancos de memoria</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="8.01.-Almacenamiento-de-imágenes-de-pantalla.html"><strong aria-hidden="true">8.1.</strong> Almacenamiento de imágenes de pantalla</a></li><li class="chapter-item expanded "><a href="8.02.-Ficheros-en-RAM.html"><strong aria-hidden="true">8.2.</strong> Ficheros en RAM</a></li></ol></li><li class="chapter-item expanded "><a href="9.00.-Capítulo-9.-Cuando-usted-guste.html"><strong aria-hidden="true">9.</strong> Cuando usted guste</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="9.01.-En-términos-generales.html"><strong aria-hidden="true">9.1.</strong> En términos generales</a></li><li class="chapter-item expanded "><a href="9.02.-Más-en-concreto-sobre-el-CPC6128.html"><strong aria-hidden="true">9.2.</strong> Más en concreto sobre el CPC6128</a></li></ol></li><li class="chapter-item expanded "><a href="10.0.-Para-más-información.html"><strong aria-hidden="true">10.</strong> Para más información</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 1</li><li class="chapter-item expanded "><a href="A01.-Digital-Research-y-AMSTRAD.html"><strong aria-hidden="true">11.</strong> Digital Research y AMSTRAD</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 2</li><li class="chapter-item expanded "><a href="A02.-Léxico-inglés-castellano-y-glosario.html"><strong aria-hidden="true">12.</strong> Léxico inglés-castellano y glosario</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 3. Que usted lo disfrute</li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Rebotes.html"><strong aria-hidden="true">13.</strong> Rebotes</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Bombardero.html"><strong aria-hidden="true">14.</strong> Bombardero</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Tele-tenis.html"><strong aria-hidden="true">15.</strong> Tele tenis</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Esgrima-eléctrico.html"><strong aria-hidden="true">16.</strong> Esgrima eléctrico</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Amthello.html"><strong aria-hidden="true">17.</strong> Amthello</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Guante-blanco.html"><strong aria-hidden="true">18.</strong> Guante blanco</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 4</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="A04.-Indice.html">Índice</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Amstrad CPC6128 Manual del Usuario</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/latchdevel/Amstrad-CPC6128-Manual-del-Usuario" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="capítulo-6-introducción-a-logo"><a class="header" href="#capítulo-6-introducción-a-logo">Capítulo 6. Introducción a LOGO</a></h1>
+<h2 id="parte-1-introducción-a-logo"><a class="header" href="#parte-1-introducción-a-logo">Parte 1: Introducción a LOGO</a></h2>
+<p><strong>Contenido:</strong></p>
+<ul>
+<li><a href="#qu%C3%A9-es-logo">¿Qué es LOGO?</a>.</li>
+<li><a href="#dr-logo">Dr. LOGO</a>.</li>
+<li><a href="#carga-de-logo">Carga de LOGO</a>.</li>
+<li><a href="#primeros-pasos">Primeros pasos</a>.</li>
+<li><a href="#procedimientos-en-dr-logo">Procedimientos en Dr. LOGO</a>.</li>
+<li><a href="#un-procedimiento-sencillo">Un procedimiento sencillo</a>.</li>
+<li><a href="#procedimientos-con-par%C3%A1metros">Procedimientos con parámetros</a>.</li>
+<li><a href="#utilizaci%C3%B3n-de-variables-para-recordar-valores">Utilización de variables para recordar valores</a>.</li>
+<li><a href="#edici%C3%B3n-de-programas-y-procedimientos">Edición de programas y procedimientos</a>.</li>
+<li><a href="#sugerencias-para-el-trabajo-con-dr-logo">Sugerencias para el trabajo con Dr. LOGO</a>.</li>
+<li><a href="#lista-de-las-primitivas-de-dr-logo">Lista de las primitivas de Dr. LOGO</a>.</li>
+<li><a href="#proceso-de-palabras-y-listas">Proceso de palabras y listas</a>.</li>
+<li><a href="#operaciones-aritm%C3%A9ticas">Operaciones aritméticas</a>.</li>
+<li><a href="#operaciones-l%C3%B3gicas">Operaciones lógicas</a>.</li>
+<li><a href="#variables">Variables</a>.</li>
+<li><a href="#procedimientos">Procedimientos</a>.</li>
+<li><a href="#edici%C3%B3n">Edición</a>.</li>
+<li><a href="#funciones-de-la-impresora">Funciones de la impresora</a>.</li>
+<li><a href="#pantalla-de-texto">Pantalla de texto</a>.</li>
+<li><a href="#pantalla-gr%C3%A1fica">Pantalla gráfica</a>.</li>
+<li><a href="#gr%C3%A1ficos-de-tortuga">Gráficos de tortuga</a>.</li>
+<li><a href="#gesti%C3%B3n-del-espacio-de-trabajo">Gestión del espacio de trabajo</a>.</li>
+<li><a href="#listas-de-propiedades">Listas de propiedades</a>.</li>
+<li><a href="#ficheros-en-disco">Ficheros en disco</a>.</li>
+<li><a href="#teclado-y-joystick">Teclado y joystick</a>.</li>
+<li><a href="#sonido">Sonido</a>.</li>
+<li><a href="#control-de-ejecuci%C3%B3n">Control de ejecución</a>.</li>
+<li><a href="#gesti%C3%B3n-de-excepcioneserrores">Gestión de excepciones/errores</a>.</li>
+<li><a href="#primitivas-del-sistema">Primitivas del sistema</a>.</li>
+<li><a href="#variables-del-sistema">Variables del sistema</a>.</li>
+<li><a href="#propiedades-del-sistema">Propiedades del sistema</a>.</li>
+</ul>
+<hr />
+<p>En esta sección vamos a presentar los conceptos básicos de LOGO, apoyados en ejemplos, y a dar la relación de las instrucciones disponibles. No pretende ser un libro de texto ni una guía de referencia exhaustiva. Le sugerimos que consulte las diversas publicaciones de Amsoft y de otros editores sobre este tema. </p>
+<h3 id="qué-es-logo"><a class="header" href="#qué-es-logo">¿Qué es LOGO?</a></h3>
+<p>LOGO es un lenguaje de programación que está ganando rápidamente gran popularidad por lo fácil que es de aprender y de usar.</p>
+<p>Es el lenguaje ideal para aprender las técnicas de programación, cualquiera que sea su experiencia.</p>
+<p>Los programas de LOGO se construyen por bloques a base de <em>procedimientos</em>. El propio Dr. LOGO es una colección de procedimientos, denominados <em>primitivas</em>, que el programador combina para formar sus programas.</p>
+<p>Durante la década de los 70, un grupo de informáticos y educadores, dirigidos por Seymour Papert, desarrolló el lenguaje LOGO, con sus <em>gráficos de tortuga</em>, como medio de aprendizaje de la informática destinado a niños muy pequeños.</p>
+<p>Incluyeron la tortuga para que los jóvenes estudiantes tuvieran, como dice Papert, &quot;un objeto con el que pensar, una herramienta que les ayudara a aprender de forma innovadora&quot;.</p>
+<p>La tortuga, un dibujo con forma de punta de flecha, puede ser movida por la pantalla y controlada con órdenes muy sencillas.</p>
+<h3 id="dr-logo"><a class="header" href="#dr-logo">Dr. LOGO</a></h3>
+<p>Dr. LOGO es una bien meditada implementación de LOGO que ha sido especialmente adaptada al ordenador AMSTRAD para hacerla aun más fácil de programar. Incluye ampliaciones del lenguaje con las que se puede aprovechar la capacidad sonora del CPC6128; la edición de los programas se facilita al poderse utilizar las teclas de movimiento del cursor.</p>
+<h3 id="carga-de-logo"><a class="header" href="#carga-de-logo">Carga de LOGO</a></h3>
+<p>Para cargar Dr. LOGO, inserte en la unidad de disco una copia de la cara 1 del juego de discos del sistema y escriba </p>
+<pre><code>|CPM
+</code></pre>
+<p>Cuando aparezca el mensaje <strong>A&gt;</strong>, extraiga el disco (cara 1) e inserte una copia de la cara 3 (Dr. LOGO y HELP).</p>
+<p>Para ejecutar Dr. LOGO escriba</p>
+<pre><code>SUBMIT LOGO3
+</code></pre>
+<p>Al cabo de unos segundos aparecerá el mensaje de presentación, seguido del inductor, que en LOGO es el signo de interrogación <strong>?</strong>. </p>
+<table>
+<tr><td>
+<b>Dr. LOGO para CP/M 2.2</b><br />
+<i>Nota</i>. En la cara 4 del juego de discos del sistema hemos incluido otra versión de Dr. LOGO por si usted necesitara utilizar este lenguaje con CP/M 2.2 (que es el disponible en los modelos CPC664 y CPC464+DDI1). En general, no es deseable utilizar la versión de LOGO de la cara 4 en el CPC6128. La versión recomendada, esto es, la de la cara 3, es la versión completa del Dr. LOGO de Digital Research.
+<br />
+Si a pesar de todo quiere cargar la versión de CP/M 2.2, inserte en la unidad una copia de la cara 4 y escriba 
+<br />
+<b>   |CPM</b>
+<br />
+Cuando aparezca el mensaje <b>A></b>, escriba <br />
+<b>SUBMIT LOGO2</b><br />
+Al cabo de unos segundos aparecerá el mensaje de presentación, seguido del mensaje inductor, <b>?</b>. 
+</td></tr>
+</table>
+<h3 id="primeros-pasos"><a class="header" href="#primeros-pasos">Primeros pasos</a></h3>
+<p>El mensaje <strong>?</strong> indica que Dr. LOGO está esperando que usted escriba algo en el teclado.</p>
+<p>Escriba (en minúsculas) lo siguiente:</p>
+<pre><code>fd 60
+</code></pre>
+<p>y verá cómo aparece la tortuga y cómo se mueve hacia delante 60 unidades, dibujando al mismo tiempo. La pantalla se ha borrado y ha reservado una zona amplia para los gráficos y una más pequeña para el texto, con el signo <strong>?</strong> cerca del borde inferior de la pantalla.</p>
+<p>Dr. LOGO decide en ocasiones redistribuir la pantalla para asignar mayor superficie a los gráficos o al texto, según convenga.</p>
+<p>Escriba: </p>
+<pre><code>rt 90
+</code></pre>
+<p>y la tortuga girará 90 grados hacia la derecha.</p>
+<p>Escriba ahora:</p>
+<pre><code>fd 60
+</code></pre>
+<p>y verá cómo la tortuga dibuja otra recta de 60 unidades de longitud perpendicular a la primera.</p>
+<p>Experimente con estas sencillas instrucciones, <strong>fd</strong> (de <em>forward</em>, adelante), <strong>bk</strong> (de <em>backward</em>, atrás), <strong>rt</strong> (de <em>right</em>, derecha) y <strong>It</strong> (de <em>left</em>, izquierda), y observe la pantalla.</p>
+<h3 id="procedimientos-en-dr-logo"><a class="header" href="#procedimientos-en-dr-logo">Procedimientos en Dr. LOGO</a></h3>
+<p>Un <em>procedimiento</em> es una lista de instrucciones que explica a Dr. LOGO cómo realizar cierta tarea.</p>
+<p>Los procedimientos que usted escriba irán ampliando la lista de los incorporados a Dr. LOGO, que son las denominadas <em>primitivas</em>. </p>
+<p><strong>fd</strong>, <strong>bk</strong>, <strong>rt</strong> y <strong>lt</strong> son primitivas incorporadas que se pueden incluir en nuevos procedimientos.</p>
+<p>Otra primitiva útil es <strong>cs</strong>, que borra la pantalla y envía la tortuga a su situación (posición y orientación) inicial.</p>
+<h3 id="un-procedimiento-sencillo"><a class="header" href="#un-procedimiento-sencillo">Un procedimiento sencillo</a></h3>
+<p>Fácilmente se comprende que si repetimos cuatro veces las instrucciones</p>
+<pre><code>fd 60 rt 90
+</code></pre>
+<p>obtendremos un cuadrado de 60 unidades de lado.</p>
+<p>El mismo efecto se consigue escribiendo</p>
+<pre><code>repeat 4 [fd 60 rt 90]
+</code></pre>
+<p>(<em>repeat</em>=repetir). Borre la pantalla, teclee esta instrucción y observe qué ocurre.</p>
+<p>Podemos asignar esa fórmula a un nuevo procedimiento, que denominaremos <strong>cuadrado</strong>. Escriba lo siguiente:</p>
+<pre><code>to cuadrado
+repeat 4 [fd 60 rt 90]
+end
+</code></pre>
+<p>A partir de ahora, Dr. LOGO entenderá <strong>cuadrado</strong> como si fuera una primitiva; cada vez que encuentre esa palabra, dibujará un cuadrado. Al procedimiento le podríamos haber dado cualquier otro nombre, pero éste nos recuerda cuál es la tarea que el procedimiento realiza.</p>
+<p>Dr. LOGO permite que se teclee una serie de instrucciones seguidas, en una misma lí nea. Así,</p>
+<pre><code>cuadrado rt 45 cuadrado
+</code></pre>
+<p>dibuja dos cuadrados intercalando un giro de 45 grados entre ellos.</p>
+<h3 id="procedimientos-con-parámetros"><a class="header" href="#procedimientos-con-parámetros">Procedimientos con parámetros</a></h3>
+<p>Un procedimiento como el que acabamos de definir no nos serviría de mucho si no pudiéramos decirle de qué tamaño queremos que sea el cuadrado. Para ello podemos definir nuestro procedimiento de la siguiente manera:</p>
+<pre><code>to cualquiercuadrado :lado
+repeat 4 [fd :lado rt 90]
+end 
+</code></pre>
+<p>con lo que hemos introducido la idea de variable, llamada, en este caso, <strong>:lado</strong>.</p>
+<p>Observe que el nombre va precedido del signo de dos puntos, lo que indica a Dr. LOGO que <strong>:lado</strong> es una variable, no una orden.</p>
+<p>Cuando utilicemos este procedimiento, tendremos que suministrarle un valor de entrada. Por ejemplo, <strong>cualquiercuadrado 150</strong> dibujará un cuadrado de 150 unidades de lado.</p>
+<p>Enlacemos ahora dos procedimientos: </p>
+<pre><code>cs cualquiercuadrado 100 rt 45 cualquiercuadrado 150
+</code></pre>
+<p>La tortuga ha dibujado los dos cuadrados, girando el segundo 45 grados con respecto al primero.</p>
+<p>Observe que Dr. LOGO escribe el signo de admiración <strong>!</strong> para indicar que una línea es continuación de la anterior.</p>
+<h3 id="utilización-de-variables-para-recordar-valores"><a class="header" href="#utilización-de-variables-para-recordar-valores">Utilización de variables para recordar valores</a></h3>
+<p>Dr. LOGO utiliza las variables, no sólo para recordar valores, sino también para suministrar valores de entrada a los procedimientos.</p>
+<p>Empecemos por definir un nuevo procedimiento:</p>
+<pre><code>to triangulo
+repeat 3 [fd :lado rt 120]
+end
+</code></pre>
+<p>Para probarlo podemos escribir:</p>
+<pre><code>make &quot;lado 100
+triangulo
+</code></pre>
+<p>(<em>make</em>=hacer).</p>
+<p>Si queremos averiguar qué valor tiene asignado actualmente la variable <strong>:lado</strong>, basta con que tecleemos <strong>:lado</strong> a la derecha de <strong>?</strong> y Dr. LOGO escribirá su valor.</p>
+<p>También podemos utilizar la variable <strong>:lado</strong> en un procedimiento distinto. Observe en el siguiente procedimiento cómo vamos incrementando el valor de <strong>:lado</strong> a cada paso para que el dibujo vaya siendo cada vez mayor:</p>
+<pre><code>to dibujo
+triangulo lt 60 triangulo rt 60
+make &quot;lado :lado+4
+dibujo
+end
+make &quot;lado 10
+cs dibujo
+</code></pre>
+<p>Pulse <strong>[ESC]</strong> cuando quiera detener el programa.</p>
+<h3 id="edición-de-programas-y-procedimientos"><a class="header" href="#edición-de-programas-y-procedimientos">Edición de programas y procedimientos</a></h3>
+<p>Dr. LOGO permite corregir los errores de mecanografía y modificar los procedimientos definidos previamente. Las teclas de edición son los siguientes:</p>
+<ul>
+<li>
+<p>Las teclas del cursor, <strong>[↑] [↓] [←] [→]</strong>, que mueven el cursor carácter o línea a línea.</p>
+</li>
+<li>
+<p>Las teclas del cursor, <strong>[↑] [↓] [←] [→]</strong>, combinadas con <strong>[CONTROL]</strong>, llevan el cursor al principio o al final de la página, o a la izquierda o a la derecha de la línea. </p>
+</li>
+<li>
+<p><strong>[CLR]</strong> borra el carácter que está en la posición del cursor; <strong>[←BORR]</strong> borra el carácter que está a la izquierda del cursor.</p>
+</li>
+<li>
+<p><strong>[RETURN]</strong> indica a Dr. LOGO que se ha terminado de editar una línea de órdenes; cuando se está editando un procedimiento, intercala una línea en blanco.</p>
+</li>
+<li>
+<p><strong>[ESC]</strong> abandona la edición.</p>
+</li>
+<li>
+<p><strong>[COPIA]</strong> indica a Dr. LOGO que ha terminado la edición del procedimiento.</p>
+</li>
+</ul>
+<p>Cuando esté introduciendo órdenes o procedimientos nuevos, corrija el texto de la línea actual con las teclas descritas. Todos los caracteres que teclee, a excepción de los mencionados, serán insertados en la posición del cursor.</p>
+<p>Para editar un procedimiento definido previamente, utilice la orden <strong>ed</strong>. Dr. LOGO escribe la versión antigua del procedimiento y permite que se utilicen los recursos descritos para mover el cursor por la pantalla y modificar lo que se desee. Modifique el procedimiento dibujo tecleando </p>
+<p>Cuando esté introduciendo órdenes o procedimientos nuevos, corrija el texto de la línea actual con las teclas descritas. Todos los caracteres que teclee, a excepción de los men cionados, serán insertados en la posición del cursor. Para editar un procedimiento definido previamente, utilice la orden ed. Dr. LOGO escribe la versión antigua del procedimiento y permite que se utilicen los recursos descritos para mover el cursor por la pantalla y modificar lo que se desee.</p>
+<p>Modifique el procedimiento <strong>dibujo</strong> tecleando</p>
+<pre><code>ed &quot;dibujo
+</code></pre>
+<p>Practique con las diferentes teclas de edición. Cuando haya terminado, pulse <strong>[ESC]</strong>; Dr. LOGO abandonará lo que hay en la pantalla y conservará la versión anterior del procedimiento.</p>
+<p>Teclee otra vez <strong>ed &quot;dibujo</strong>, ponga un 8 en lugar del 4, pulse <strong>[COPY]</strong> para terminar la edición y vuelva a ejecutar el procedimiento para observar el efecto de la modificación. No olvide asignar un valor inicial a <strong>:lado</strong>.</p>
+<h3 id="sugerencias-para-el-trabajo-con-dr-logo"><a class="header" href="#sugerencias-para-el-trabajo-con-dr-logo">Sugerencias para el trabajo con Dr. LOGO</a></h3>
+<p>La memoria utilizada por Dr. LOGO está dividida en <em>nodos</em>. Para averiguar cuántos quedan libres escriba: </p>
+<pre><code>nodes
+</code></pre>
+<p>En ocasiones, cuando Dr. LOGO ha utilizado casi todos los nodos disponibles, dedica unos instantes a reorganizar la memoria, durante los cuales se puede observar cómo se para la tortuga. El usuario puede pedir a Dr. LOGO que reorganice la memoria escribiendo la orden</p>
+<pre><code>recycle
+</code></pre>
+<p>Esto generalmente permite continuar después de que Dr. LOGO se haya quejado de que no le quedan más nodos libres.</p>
+<p>Si piensa grabar sus procedimientos en disco, asegúrese antes de que en el disco haya suficiente espacio libre. Puede para ello utilizar la orden <strong>CAT</strong> de AMSDOS (véase la <a href="1.07.-Gr%C3%A1belo-en-disco.html">parte 7</a> del <a href="1.00.-Cap%C3%ADtulo-1.-Curso-de-introducci%C3%B3n.html">Curso de introducción</a>).</p>
+<p>Eche un vistazo a las páginas siguientes y pruebe alguno de los ejemplos; no espere entenderlo todo al primer intento. A medida que vaya familiarizándose con Dr. LOGO irá siendo capaz de utilizar nuevas instrucciones.</p>
+<p>Cuando desee concluir su sesión de trabajo con Dr. LOGO escriba:</p>
+<pre><code>bye
+</code></pre>
+<h3 id="lista-de-las-primitivas-de-dr-logo"><a class="header" href="#lista-de-las-primitivas-de-dr-logo">Lista de las primitivas de Dr. LOGO</a></h3>
+<p>En esta sección damos la relación de las primitivas de Dr. LOGO, agrupadas en clases y ordenadas alfabéticamente dentro de cada grupo. Para la mayor parte de ellas se incluyen ejemplos de aplicación.</p>
+<table>
+<tr><td>
+<b>Nota</b>
+<br />
+Las primitivas que en esta lista aparecen marcadas con un asterisco (<b>*</b>) <b>no</b> están disponibles en la versión de Dr. LOGO para CP/M 2.2 (cara 4 del juego de discos del sistema). Por consiguiente, los programas que utilicen esas primitivas no serán ejecutables en el CPC664 ni en el CPC464+DDI1, en los cuales sólo se puede utilizar CP/M 2.2 (no CP/M Plus).
+</td></tr>
+</table>
+<h3 id="proceso-de-palabras-y-listas"><a class="header" href="#proceso-de-palabras-y-listas">Proceso de palabras y listas</a></h3>
+<p>(Observe que en los ejemplos hemos incluido los signos ? y &gt; donde corresponde.)</p>
+<h4 id="ascii"><a class="header" href="#ascii">ascii</a></h4>
+<p>Da el código ASCII del primer carácter de la palabra de entrada.</p>
+<pre><code>?ascii &quot;G
+71
+?ascii &quot;g
+103
+</code></pre>
+<h4 id="bf"><a class="header" href="#bf">bf</a></h4>
+<p>(<em>but first</em>, todos menos el primero). Da como salida todos los caracteres de la entrada, salvo el primero. </p>
+<pre><code>?bf &quot;trama
+rama
+?bf [1 2 3]
+[2 3]
+</code></pre>
+<h4 id="bl"><a class="header" href="#bl">bl</a></h4>
+<p>(<em>but last</em>, todos menos el último). Da como salida todos los caracteres de la entrada, salvo el último.</p>
+<pre><code>?bl &quot;tramas
+trama
+?bl [1 2 3 4]
+[1 2 3]
+</code></pre>
+<h4 id="char"><a class="header" href="#char">char</a></h4>
+<p>Da el carácter cuyo código ASCII es el número de entrada.</p>
+<pre><code>?char 83
+S
+</code></pre>
+<h4 id="count"><a class="header" href="#count">count</a></h4>
+<p>(<em>contar</em>). Da el número de elementos de que consta el objeto de entrada. </p>
+<pre><code>?count &quot;dos
+3 
+?count [0 1 2 3]
+4
+</code></pre>
+<h4 id="emptyp"><a class="header" href="#emptyp">emptyp</a></h4>
+<p>(<em>empty property</em>, propiedad de vacío). Da como salida <strong>TRUE</strong> (verdadero) si la entrada es una palabra vacía o una lista vacía, y <strong>FALSE</strong> (falso) en caso contrario.</p>
+<pre><code>?emptyp &quot;
+TRUE
+?emptyp []
+TRUE
+?emptyp [x]
+FALSE 
+?make &quot;x []
+emptyp :x
+TRUE
+</code></pre>
+<h4 id="first"><a class="header" href="#first">first</a></h4>
+<p>(<em>primero</em>). Da como salida el primer elemento del objeto de entrada (sin tener en cuenta los corchetes). </p>
+<pre><code>?first &quot;kilo
+k
+?first [1 2 3]
+1
+</code></pre>
+<h4 id="fput"><a class="header" href="#fput">fput</a></h4>
+<p>(<em>firsput</em>, poner el primero). Da como salida un objeto formado poniendo el primer objeto de entrada como primer elemento del segundo objeto de entrada.</p>
+<pre><code>?fput &quot;t &quot;rama
+trama
+?fput 1 [2 3]
+[1 2 3]
+</code></pre>
+<h4 id="item"><a class="header" href="#item">item</a></h4>
+<p>(<em>elemento</em>). Da como salida el elemento especificado del objeto de entrada.</p>
+<pre><code>?item 4 &quot;grande
+n
+</code></pre>
+<h4 id="last-"><a class="header" href="#last-">last (*)</a></h4>
+<p>(<em>último</em>). Da como salida el último elemento del objeto de entrada (cfr. <strong>first</strong>).</p>
+<pre><code>?last &quot;pez
+z
+</code></pre>
+<h4 id="lc-"><a class="header" href="#lc-">lc (*)</a></h4>
+<p>(<em>lower case</em>, minúsculas). Da como salida la palabra de entrada, pero convirtiendo las mayúsculas a minúsculas. (Véase también <strong>uc</strong>.)</p>
+<pre><code>?lc &quot;NortE
+norte
+</code></pre>
+<h4 id="list"><a class="header" href="#list">list</a></h4>
+<p>Da como salida una lista consistente en los objetos de entrada; conserva los corchetes externos de la lista (compárese con <strong>se</strong>).</p>
+<pre><code>?(list 1 2 3 4)
+[1 2 3 4]
+?list &quot;garcia [javier]
+[garcia [javier]]
+?(list)
+[]
+</code></pre>
+<h4 id="listp-"><a class="header" href="#listp-">listp (*)</a></h4>
+<p>(<em>list property</em>, propiedad de lista). Da como salida <strong>TRUE</strong> (verdadero) si la entrada es una lista, y <strong>FALSE</strong> (falso) en caso contrario.</p>
+<pre><code>?listp &quot;madre
+FALSE
+?listp [padre hermano hermana)
+TRUE
+</code></pre>
+<h4 id="lput-"><a class="header" href="#lput-">lput (*)</a></h4>
+<p>(<em>last put</em>, poner el último.) Da como salida un objeto formado poniendo el primer objeto de entrada como último elemento del segundo objeto de entrada.</p>
+<pre><code>?lput &quot;r &quot;recto
+rector
+?lput &quot;r [recto]
+[recto r]
+</code></pre>
+<h4 id="memberp-"><a class="header" href="#memberp-">memberp (*)</a></h4>
+<p>(<em>member property</em>, propiedad de pertenencia). Da como salida <strong>TRUE</strong> (verdadero) si el primer objeto de entrada es un elemento del segundo objeto de entrada, y <strong>FALSE</strong> en caso contrario. </p>
+<pre><code>?memberp &quot;b &quot;palabra
+TRUE
+?memberp &quot;chocolate [[vainilla][chocolate][fresa]]
+FALSE
+?memberp [chocolate] [[vainilla][chocolate][fresa]]
+TRUE
+</code></pre>
+<h4 id="numberp"><a class="header" href="#numberp">numberp</a></h4>
+<p>(<em>number property</em>, propiedad de número). Da como salida <strong>TRUE</strong> (verdadero) si el objeto de entrada es un número, y <strong>FALSE</strong> (falso) en caso contrario.</p>
+<pre><code>?numberp 374.926
+TRUE
+?numberp &quot;siete
+FALSE
+?numberp first [2 4 6 8]
+TRUE
+</code></pre>
+<h4 id="piece-"><a class="header" href="#piece-">piece (*)</a></h4>
+<p>Da como salida un objeto consistente en los elementos especificados del objeto de entrada. </p>
+<pre><code>?piece 2 5 &quot;procedimiento
+roce
+?piece 3 5 [Tito Juan Miguel Margarita Paco]
+[Miguel Margarita Paco]
+</code></pre>
+<h4 id="se"><a class="header" href="#se">se</a></h4>
+<p>(<em>sentence</em>, frase). Da como salida una lista consistente en todos los objetos de entrada; elimina los corchetes externos de la lista (compárese con <strong>list</strong>).</p>
+<pre><code>?make &quot;lista_instrucciones rl
+repeat 4 [fd 50 rt 90]
+?run (se &quot;cs :lista_instrucciones &quot;ht)
+</code></pre>
+<p>El signo de subrayar que figura entre <strong>lista</strong> e <strong>instrucciones</strong> se obtiene con <strong>[SHIFT] 0</strong>.</p>
+<h4 id="shuffle-"><a class="header" href="#shuffle-">shuffle (*)</a></h4>
+<p>(<strong>barajar</strong>). Da como salida una lista que consta de los mismos elementos que la lista de entrada, pero dispuestos en orden aleatorio.</p>
+<pre><code>?shuffle [a b c d]
+[c b d a]
+</code></pre>
+<h4 id="uc-"><a class="header" href="#uc-">uc (*)</a></h4>
+<p>(<em>upper case</em>, mayúsculas). Da como salida la palabra de entrada, pero convirtiendo las minúsculas a mayúsculas. (Véase también <strong>lc</strong>.) </p>
+<pre><code>?uc &quot;Letras
+LETRAS
+</code></pre>
+<h4 id="where-"><a class="header" href="#where-">where (*)</a></h4>
+<p>(<em>dónde</em>). Da como salida el número calculado en la expresión <strong>memberp</strong> más reciente que haya dado resultado <strong>TRUE</strong>. </p>
+<pre><code>?memberp &quot;r &quot;Amstrad
+TRUE
+?show where
+5
+</code></pre>
+<h4 id="word"><a class="header" href="#word">word</a></h4>
+<p>(<em>palabra</em>). Da una palabra formada con las palabras de entrada.</p>
+<pre><code>?word &quot;nueva &quot;mente
+nuevamente
+</code></pre>
+<h4 id="wordp"><a class="header" href="#wordp">wordp</a></h4>
+<p>Da como salida <strong>TRUE</strong> (verdadero) si el objeto de entrada es una palabra o un número. </p>
+<pre><code>?wordp &quot;hola
+TRUE
+?wordp []
+FALSE
+</code></pre>
+<h3 id="operaciones-aritméticas"><a class="header" href="#operaciones-aritméticas">Operaciones aritméticas</a></h3>
+<h4 id="arctan-"><a class="header" href="#arctan-">arctan (*)</a></h4>
+<p>Da como salida el arco (en grados) cuya tangente es el número de entrada. </p>
+<pre><code>?arctan 0
+0
+?arctan 1
+45
+</code></pre>
+<h4 id="cos"><a class="header" href="#cos">cos</a></h4>
+<p>Da como salida el coseno del ángulo de entrada (considerado en grados).</p>
+<pre><code>?cos 60
+0.5
+</code></pre>
+<h4 id="int"><a class="header" href="#int">int</a></h4>
+<p>Da la parte entera del número de entrada. </p>
+<pre><code>?int 4/3
+1
+</code></pre>
+<h4 id="quotient-"><a class="header" href="#quotient-">quotient (*)</a></h4>
+<p>(<em>cociente</em>). Da el cociente de la división entera de los dos números de entrada. </p>
+<pre><code>?quotient 14
+4
+?14/4
+3.5
+</code></pre>
+<h4 id="random"><a class="header" href="#random">random</a></h4>
+<p>Da un entero aleatorio no negativo menor que el número de entrada. </p>
+<pre><code>?random 20
+7
+</code></pre>
+<h4 id="remainder-"><a class="header" href="#remainder-">remainder (*)</a></h4>
+<p>(<em>resto</em>). Da el resto de la división entera de los dos números de entrada, (el primero dividido por el segundo). </p>
+<pre><code>?remainder 7
+3
+?remainder 8
+4
+</code></pre>
+<h4 id="rerandom-"><a class="header" href="#rerandom-">rerandom (*)</a></h4>
+<p>Hace que una expresión <strong>random</strong> ulterior reproduzca la misma sucesión aleatoria (<strong>char 9</strong> es un tabulador horizontal para espacios.)</p>
+<pre><code>?repeat 10 [(type random 10 char 9)]
+3    7     5     3     2     0     4     2     6
+?repeat 10 [(type random 10 char 9)]
+9    9     1     0     6     1     3     5     1
+?rerandom
+?repeat 10 [(type random 10 char 9)] 
+2    2     0     3     1     6     2     3     7
+?rerandom
+?repeat 10 [(type random 10 char 9)]
+2    2     0     3     1     6     2     3     7
+</code></pre>
+<h4 id="round-"><a class="header" href="#round-">round (*)</a></h4>
+<p>(<em>redondear</em>). Da como salida el número de entrada redondeado al entero más próximo.</p>
+<pre><code>?round 3.333333
+3
+?round 3.5
+4
+</code></pre>
+<h4 id="sin"><a class="header" href="#sin">sin</a></h4>
+<p>Da como salida el seno del ángulo de entrada (considerado en grados).</p>
+<pre><code>?sin 30
+0.5
+</code></pre>
+<h4 id=""><a class="header" href="#">+</a></h4>
+<p>Da la suma de los números de entrada.</p>
+<pre><code>?+ 2 2
+4
+?2+2
+4
+</code></pre>
+<h4 id="-"><a class="header" href="#-">-</a></h4>
+<p>Da la diferencia de los dos números de entrada.</p>
+<pre><code>?- 10 5
+?10-5
+5
+</code></pre>
+<h4 id="-1"><a class="header" href="#-1">*</a></h4>
+<p>Da el producto de los números de entrada.</p>
+<pre><code>?* 4 6
+24
+?4*6
+24
+</code></pre>
+<h4 id="-2"><a class="header" href="#-2">/</a></h4>
+<p>Da el cociente de los dos números de entrada.</p>
+<pre><code>?/ 25 5
+5
+?25/5
+5
+</code></pre>
+<h3 id="operaciones-lógicas"><a class="header" href="#operaciones-lógicas">Operaciones lógicas</a></h3>
+<h4 id="and"><a class="header" href="#and">and</a></h4>
+<p>Da como salida <strong>TRUE</strong> (verdadero) si el valor lógico de todas las expresiones de entrada es &quot;verdadero&quot;, y <strong>FALSE</strong> (falso) en cualquier otro caso.</p>
+<pre><code>?and (3&lt;4) (7&gt;4)
+TRUE
+</code></pre>
+<h4 id="not"><a class="header" href="#not">not</a></h4>
+<p>Da como salida <strong>TRUE</strong> si la expresión de entrada es &quot;falsa&quot;. </p>
+<p>Da como salida <strong>FALSE</strong> si la expresión de entrada es &quot;verdadera&quot;. </p>
+<pre><code>?not (3=4)
+TRUE
+?not (3=3)
+FALSE
+</code></pre>
+<h4 id="or"><a class="header" href="#or">or</a></h4>
+<p>Da como salida <strong>FALSE</strong> (falso) si todas las expresiones de entrada son &quot;falsas&quot;, y <strong>TRUE</strong> en cualquier otro caso. </p>
+<pre><code>?or &quot;TRUE &quot;FALSE
+TRUE
+?or (3=4) (1=2)
+FALSE
+</code></pre>
+<h4 id="-3"><a class="header" href="#-3">=</a></h4>
+<p>Da como salida <strong>TRUE</strong> (verdadero) si los dos objetos de entrada son iguales, y <strong>FALSE</strong> en caso contrario. </p>
+<pre><code>?= &quot;LOGO &quot;LOGO
+TRUE
+?1=2
+FALSE
+</code></pre>
+<h4 id="-4"><a class="header" href="#-4">&gt;</a></h4>
+<p>Da como salida <strong>TRUE</strong> (verdadero) si la primera palabra de entrada es mayor que la segunda, y <strong>FALSE</strong> en caso contrario.</p>
+<pre><code>?&gt;19 20
+FALSE
+?20&gt;19
+TRUE
+</code></pre>
+<h4 id="-5"><a class="header" href="#-5">&lt;</a></h4>
+<p>Da como salida <strong>TRUE</strong> (verdadero) si la primera palabra de entrada es menor que la segunda, y <strong>FALSE</strong> en caso contrario.</p>
+<pre><code>?&lt; 27 13
+FALSE
+?13&lt;27
+TRUE
+</code></pre>
+<h3 id="variables"><a class="header" href="#variables">Variables</a></h3>
+<h4 id="local"><a class="header" href="#local">local</a></h4>
+<p>Hace que la variable o variables de entrada sean accesibles solamente al procedimiento actual y a los procedimientos por él invocados.</p>
+<pre><code>&gt;(local &quot;x &quot;y &quot;z)
+</code></pre>
+<h4 id="make"><a class="header" href="#make">make</a></h4>
+<p>(<em>hacer</em>). Asigna a la variable de entrada el valor del objeto de entrada. </p>
+<pre><code>?make &quot;lado 50
+?:lado
+50
+</code></pre>
+<h4 id="namep-"><a class="header" href="#namep-">namep (*)</a></h4>
+<p>(<em>name property</em>, propiedad de nombre). Da como salida <strong>TRUE</strong> (verdadero) si la palabra de entrada es el nombre de una variable, y <strong>FALSE</strong> en caso contrario.</p>
+<pre><code>?make &quot;sabor &quot;chocolate
+?:sabor
+chocolate
+?namep &quot;sabor
+TRUE
+?namep &quot;chocolate
+FALSE
+</code></pre>
+<h4 id="thing-"><a class="header" href="#thing-">thing (*)</a></h4>
+<p>(<em>cosa</em>). Da el valor de la variable citada.</p>
+<pre><code>?make &quot;ordenador &quot;amstrad
+?thing &quot;ordenador
+amstrad
+</code></pre>
+<h3 id="procedimientos"><a class="header" href="#procedimientos">Procedimientos</a></h3>
+<h4 id="define-"><a class="header" href="#define-">define (*)</a></h4>
+<p>(<em>definir</em>). Toma como definición del procedimiento especificado la lista de entrada.</p>
+<pre><code>?define &quot;cuadrado [[] [repeat 4 [fd 50 rt 90]]]
+?po &quot;cuadrado
+to cuadrado
+repeat 4 [ fd 50 rt 90 ]
+end
+?text &quot;cuadrado
+[[] [repeat 4 [fd 50 mt 90]]]
+</code></pre>
+<h4 id="end"><a class="header" href="#end">end</a></h4>
+<p>Indica el final de la definición de un procedimiento; la palabra <strong>end</strong> debe figurar sola al principio de la última línea. </p>
+<pre><code>?to cuadrado
+&gt;repeat 4 [fd 50 rt 90]
+&gt;end
+cuadrado defined
+?cuadrado
+</code></pre>
+<h4 id="po"><a class="header" href="#po">po</a></h4>
+<p>(<em>print out</em>, listar). Da el listado de la definición de los procedimientos o variables especificados.</p>
+<pre><code>?po &quot;cuadrado
+to cuadrado
+repeat 4 [fd 50 pt 90]
+end
+?make &quot;x 3
+?po &quot;x
+x is 3
+</code></pre>
+<h4 id="pots"><a class="header" href="#pots">pots</a></h4>
+<p>(<em>print out titles</em>, listar títulos). Da la lista de los nombres y títulos de todos los procedimientos que hay en el espacio de trabajo. </p>
+<pre><code>?pots
+</code></pre>
+<h4 id="text-"><a class="header" href="#text-">text (*)</a></h4>
+<p>Da la lista de la definición del procedimiento especificado.</p>
+<pre><code>?to estrella ;estrella de cinco puntas
+&gt;repeat 5 [fd 30 rt 144 fd 30 lt 72]
+&gt;end
+estrella defined
+?text &quot;estrella
+[[] [repeat 5 [fd 30 rt 144 fd 30 lt 72]]] 
+</code></pre>
+<h4 id="to"><a class="header" href="#to">to</a></h4>
+<p>Señala el inicio de la definición de un procedimiento. </p>
+<pre><code>?to cuadrado
+&gt;repeat 4 [fd 50 rt 90]
+&gt;end
+cuadrado defined
+</code></pre>
+<h3 id="edición"><a class="header" href="#edición">Edición</a></h3>
+<h4 id="ed"><a class="header" href="#ed">ed</a></h4>
+<p>(<em>edit</em>, editar, corregir). Carga los procedimientos o variables especificados en el tampón del editor de pantalla.</p>
+<pre><code>?ed &quot;cuadrado
+</code></pre>
+<h4 id="edall-"><a class="header" href="#edall-">edall (*)</a></h4>
+<p>(<em>edit all</em>, editar todos). Carga todas las variables y procedimientos en el tampón del editor de pantalla y entra en el modo de edición.</p>
+<pre><code>?edall
+</code></pre>
+<h4 id="edf-"><a class="header" href="#edf-">edf (*)</a></h4>
+<p>(<em>edit file</em>, editar fichero). Lee en el disco el fichero especificado y lo carga en el editor de pantalla. Si no existe ese fichero, lo crea y entra en el modo de edición con el tampón vacío.</p>
+<pre><code>?edf &quot;estrella
+</code></pre>
+<h3 id="funciones-de-la-impresora"><a class="header" href="#funciones-de-la-impresora">Funciones de la impresora</a></h3>
+<h4 id="copyon-"><a class="header" href="#copyon-">copyon (*)</a></h4>
+<p>(<em>copia activada</em>). Activa el modo &quot;eco&quot;, en el que todos los caracteres que aparecen en la pantalla son reproducidos en la impresora.</p>
+<pre><code>?copyon
+</code></pre>
+<h4 id="copyoff-"><a class="header" href="#copyoff-">copyoff (*)</a></h4>
+<p>(copia desactivada). Desactiva el modo &quot;eco&quot;. </p>
+<pre><code>?copyoft
+</code></pre>
+<h3 id="pantalla-de-texto"><a class="header" href="#pantalla-de-texto">Pantalla de texto</a></h3>
+<h4 id="ct"><a class="header" href="#ct">ct</a></h4>
+<p>(<em>clear text</em>, borrar texto). Borra la ventana en la que está actualmente el cursor; lleva el cursor al extremo superior izquierdo de la ventana. </p>
+<pre><code>?ct
+</code></pre>
+<h4 id="cursor-"><a class="header" href="#cursor-">cursor (*)</a></h4>
+<p>Da como salida una lista de coordenadas que consiste en los números de columna y fila de la posición actual del cursor en la ventana de texto. </p>
+<pre><code>?ct
+?cursor
+[0 1]
+?(type [La posicion del cursor es\ ]) show cursor
+La posición del cursor es [26 4]
+</code></pre>
+<h4 id="pr"><a class="header" href="#pr">pr</a></h4>
+<p>(<em>print</em>, escribir). Escribe en la pantalla de texto los objetos de entrada; suprime los corchetes externos de las listas; efectúa un retorno del carro después de escribir el último objeto. (Compárese con <strong>show</strong> y <strong>type</strong>.) </p>
+<pre><code>?pr [a b c]
+a b c
+</code></pre>
+<h4 id="setcursor-"><a class="header" href="#setcursor-">setcursor (*)</a></h4>
+<p>Sitúa el cursor en la posición especificada por la lista de entrada, que se interpreta como lista de coordenadas de texto.</p>
+<pre><code>?ct
+?to imagen
+&gt;make &quot;x random 20
+&gt;make &quot;y random 12
+&gt;setcursor list :x :y pr &quot;*
+&gt;end
+? imagen
+</code></pre>
+<h4 id="setsplit"><a class="header" href="#setsplit">setsplit</a></h4>
+<p>Especifica el número de líneas de texto que debe tener la pantalla mixta. (Véase <strong>ss</strong>.) </p>
+<pre><code>?setsplit 10
+</code></pre>
+<h4 id="show"><a class="header" href="#show">show</a></h4>
+<p>(<em>mostrar</em>). Escribe en la pantalla de texto el objeto de entrada; mantiene los corchetes externos de las listas; efectúa un retorno del carro. (Compárese con <strong>pr</strong> y <strong>type</strong>.) </p>
+<pre><code>?show [a b c]
+[a b c]
+</code></pre>
+<h4 id="ts"><a class="header" href="#ts">ts</a></h4>
+<p>(<em>text screen</em>, pantalla de texto). Asigna la pantalla completa como pantalla de texto. </p>
+<pre><code>?ts
+</code></pre>
+<h4 id="type"><a class="header" href="#type">type</a></h4>
+<p>(<em>mecanografiar</em>). Escribe en la pantalla los objetos de entrada; suprime los corchetes externos de las listas; no efectúa un retorno del carro después de escribir el último objeto. (Compárese con <em>pr</em> y <em>show</em>.) </p>
+<pre><code>?type [a b c]
+a b c
+</code></pre>
+<h3 id="pantalla-gráfica"><a class="header" href="#pantalla-gráfica">Pantalla gráfica</a></h3>
+<p>Como puede observar, la pantalla está en modo 1, con cuatro colores posibles; el sistema de coordenadas es igual al de BASIC. Las coordenadas se redondean al número par más próximo correspondiente a un punto de la pantalla. Los colores rojo, verde y azul se pueden graduar con los números <strong>0</strong>, <strong>1</strong> y <strong>2</strong>. </p>
+<h4 id="clean"><a class="header" href="#clean">clean</a></h4>
+<p>(<em>limpiar</em>). Borra la pantalla gráfica sin afectar a la tortuga.</p>
+<pre><code>?fd 50
+?clean
+</code></pre>
+<h4 id="cs"><a class="header" href="#cs">cs</a></h4>
+<p>(<em>clear screen</em>, borrar pantalla). Borra la pantalla gráfica y restablece la situación inicial de la tortuga: posición en el punto <strong>[0,0]</strong> y rumbo <strong>0</strong> grados (norte), pluma abajo.</p>
+<pre><code>?rt 90 fd 50
+?cs
+</code></pre>
+<h4 id="dot"><a class="header" href="#dot">dot</a></h4>
+<p>(<em>punto</em>). Dibuja un punto en la posición especificada por la lista de coordenadas con el color de pluma actual.</p>
+<pre><code>?dot [50 10]
+</code></pre>
+<h4 id="dotc-"><a class="header" href="#dotc-">dotc (*)</a></h4>
+<p>(<em>dot colour</em>, color del punto). Da como salida el número del color que hay en el punto de coordenadas especificadas por la lista de entrada. Si el punto está fuera de la pantalla, da -1. </p>
+<pre><code>?cs
+?setpc 1
+?dot -50 50
+?setpc 2
+?dot 50 50
+?setpc 3
+?dot 50 -50
+?dotc 50 50
+2
+?dotc -50 -50
+0
+?dotc 1000 3000
+-1
+</code></pre>
+<h4 id="fence"><a class="header" href="#fence">fence</a></h4>
+<p>(<em>valla</em>). Establece un límite que confina la posición de la tortuga a la pantalla gráfica visible. Ese límite se suprime con <strong>window</strong>. </p>
+<pre><code>?fence
+?fd 300
+Turtle out of bounds
+</code></pre>
+<h4 id="fill-"><a class="header" href="#fill-">fill (*)</a></h4>
+<ul>
+<li>No implementada en la versión actual de CP/M Plus.</li>
+</ul>
+<p>(<em>rellenar</em>). Rellena un área con el color actual de la pluma; para ello cambia el color del punto que está bajo la tortuga (y todos los puntos contiguos que sean del mismo color) utilizando el estado actual de la pluma. </p>
+<pre><code>?make &quot;x 5
+?cs
+?st
+?pd
+?repeat 30 [fd :x rt 90 make &quot;x :x + 5]
+?fd 20 rt 90
+?fd 10
+?pu
+?home
+?bk 2
+?pd
+?setpc 2
+?fill
+</code></pre>
+<h4 id="fs"><a class="header" href="#fs">fs</a></h4>
+<p>(<em>full screen</em>, pantalla completa). Asigna la pantalla entera a los gráficos. </p>
+<pre><code>?fs
+</code></pre>
+<h4 id="pal"><a class="header" href="#pal">pal</a></h4>
+<p>(<em>palette</em>, paleta). Escribe la lista de los números que representan las proporciones de los colores rojo, verde y azul asignadas a la pluma especificada. </p>
+<pre><code>?pal 2
+[0 2 2]
+</code></pre>
+<h4 id="setbg-"><a class="header" href="#setbg-">setbg (*)</a></h4>
+<p>(<em>set background</em>, definir fondo). Asigna al color del fondo de la pantalla gráfica el número especificado. </p>
+<pre><code>?sf
+[0 SS 5 FENCE 1]
+</code></pre>
+<p>(Esto muestra que el color del fondo es cero.) </p>
+<pre><code>?pal 0
+[0 0 1]
+?setbg 2
+?st
+[2 SS 5 FENCE 1]
+</code></pre>
+<h4 id="setpal"><a class="header" href="#setpal">setpal</a></h4>
+<p>(<em>set palette</em>, definir paleta). Asigna una combinación de colores a la paleta utilizada por la pluma especificada. La lista representa las proporciones de rojo, verde y azul. </p>
+<pre><code>?setpal 3[1 1 2]
+?pal 3
+[1 1 2]
+</code></pre>
+<h4 id="setscrunch-"><a class="header" href="#setscrunch-">setscrunch (*)</a></h4>
+<p>(<em>set scrunch</em>, definir relación de escalas; <em>scrunch</em> significa &quot;estrujar&quot; y hace referencia a la deformación que se produce en las imágenes de la pantalla cuando las escalas vertical y horizontal son distintas). Establece la relación entre las escalas vertical y horizontal en la pantalla gráfica. </p>
+<pre><code>?sf
+[0 SS 5 FENCE 1]
+?to circunferencia
+&gt;repeat 360 [fd 1 rt 1]
+&gt;end
+circunferencia defined
+?setscrunch 2
+?sf
+[0 SS 5 FENCE 2]
+?circunferencia
+?setscrunch 2.5
+?circunferencia
+</code></pre>
+<h4 id="sf"><a class="header" href="#sf">sf</a></h4>
+<p>(<em>screen facts</em>, datos de pantalla). Escribe en la pantalla toda la información relativa a la pantalla gráfica. El formato es: [&lt;color de fondo&gt; &lt;estado de pantalla&gt; &lt;líneas texto&gt; &lt;estado de ventana&gt; &lt;relación de escalas&gt;].</p>
+<ul>
+<li>&lt;color de fondo&gt; es el número de pluma para el fondo (siempre igual a 0 en CP/M 2.2).</li>
+<li>&lt;estado de pantalla&gt; puede ser <strong>SS</strong> (pantalla mixta), <strong>FS</strong> (pantalla completa para gráficos) o <strong>TS</strong> (pantalla completa para texto).</li>
+<li>&lt;líneas texto&gt; es el número de líneas reservadas para texto en la pantalla mixta.</li>
+<li>&lt;estado de ventana&gt; indica el modo <strong>WINDOW</strong>, <strong>WRAP</strong> o <strong>FENCE</strong>.</li>
+<li>&lt;relación de escalas&gt; representa la relación entre las escalas vertical y horizontal de la pantalla gráfica. Su valor se puede modificar con <strong>setscrunch</strong> (no en CP/M 2.2).</li>
+</ul>
+<pre><code>?st
+[0 SS 5 FENCE 2.5)
+</code></pre>
+<h4 id="ss"><a class="header" href="#ss">ss</a></h4>
+<p>(<em>split screen</em>, pantalla mixta). Establece una ventana para texto dentro de la pantalla gráfica. </p>
+<pre><code>?ss
+</code></pre>
+<h4 id="window"><a class="header" href="#window">window</a></h4>
+<p>(ventana). Permite que la tortuga se salga de los límites de la pantalla gráfica visible después de una orden <strong>wrap</strong> o <strong>fence</strong>. </p>
+<pre><code>?fence fd 300
+Turtle out of bounds
+?window
+?fd 300
+</code></pre>
+<h4 id="wrap"><a class="header" href="#wrap">wrap</a></h4>
+<p>(superponer borde con borde). Hace que la tortuga aparezca por el lado opuesto de la pantalla cuando sobrepasa algún borde. </p>
+<pre><code>?cs wrap
+?rt 5 fd 1000
+?cs window
+?rt 5 fd 1000
+</code></pre>
+<h3 id="gráficos-de-tortuga"><a class="header" href="#gráficos-de-tortuga">Gráficos de tortuga</a></h3>
+<h4 id="bk"><a class="header" href="#bk">bk</a></h4>
+<p>(<em>backward</em>, atrás). Mueve la tortuga el número de pasos especificado por el número de entrada, en sentido opuesto al señalado por su rumbo. </p>
+<pre><code>?cs fd 150
+?bk 50
+</code></pre>
+<h4 id="fd"><a class="header" href="#fd">fd</a></h4>
+<p>(<em>forward</em>, adelante). Mueve la tortuga el número de pasos especificado por el número de entrada, en el sentido señalado por su rumbo. </p>
+<pre><code>?fd 80
+</code></pre>
+<h4 id="home-"><a class="header" href="#home-">home (*)</a></h4>
+<p>Lleva la tortuga a su situación inicial: posición [0 0] (centro de la pantalla gráfica) y rumbo 0 (norte). </p>
+<pre><code>?fd 100
+?rt 45
+?fd 100
+?home
+</code></pre>
+<h4 id="ht"><a class="header" href="#ht">ht</a></h4>
+<p>(<em>hide turtle</em>, ocultar tortuga). Hace la tortuga invisible, con lo que los dibujos son menos confusos y se realizan a mayor velocidad.</p>
+<pre><code>?ht
+?cs fd 50
+?st 
+</code></pre>
+<h4 id="lt"><a class="header" href="#lt">lt</a></h4>
+<p>(<em>left</em>, izquierda). Gira el rumbo de la tortuga hacia la izquierda el número de grados especificado por el número de entrada. </p>
+<pre><code>?lt 90
+</code></pre>
+<h4 id="pd"><a class="header" href="#pd">pd</a></h4>
+<p>(<em>pen down</em>, bajar pluma). Baja la pluma de la tortuga para que ésta dibuje al moverse.</p>
+<pre><code>?fd 20 pu fd 20
+?pd
+?fd 20
+</code></pre>
+<h4 id="pe"><a class="header" href="#pe">pe</a></h4>
+<p>(<em>pen erase</em>, pluma de borrar). Cambia el color de la pluma de la tortuga al color del fondo; la tortuga borra lo que encuentra dibujado en su camino. </p>
+<pre><code>?fd 50
+?pe
+?bk 25
+?fd 50
+?pd fd 25
+</code></pre>
+<h4 id="pu"><a class="header" href="#pu">pu</a></h4>
+<p>(<em>pen up</em>, subir pluma). Sube la pluma de la tortuga para que ésta no dibuje al moverse. </p>
+<pre><code>?fd 30
+?рu
+?fd 30
+?pd fd 30
+</code></pre>
+<h4 id="px"><a class="header" href="#px">px</a></h4>
+<p>(<em>pen exchange</em>, pluma de inversión). Hace que la tortuga cambie el color de los pixels que encuentra coloreados en su camino por el color complementario o inverso. </p>
+<pre><code>?fd 20 pu fd 20
+?pd setpc 3 fd 20
+?px 
+?bk 80
+?fd 80
+?pd bk 100
+</code></pre>
+<h4 id="rt"><a class="header" href="#rt">rt</a></h4>
+<p>(<em>right</em>, derecha). Gira el rumbo de la tortuga hacia la derecha el número de grados especificado por el número de entrada.</p>
+<pre><code>?rt 90
+</code></pre>
+<h4 id="seth"><a class="header" href="#seth">seth</a></h4>
+<p>(<em>set heading</em>, establecer rumbo). Orienta la tortuga en el rumbo absoluto especificado por el número de entrada (en grados). Los números positivos la hacen girar en el sentido de las agujas del reloj; los negativos, en el sentido contrario. </p>
+<pre><code>?seth 90
+</code></pre>
+<h4 id="setpc"><a class="header" href="#setpc">setpc</a></h4>
+<p>(<em>set pen colour</em>, establecer color de pluma). Asigna a la tortuga la pluma especificada por el número de entrada. </p>
+<pre><code>?setpc 1
+</code></pre>
+<h4 id="setpos"><a class="header" href="#setpos">setpos</a></h4>
+<p>(<em>set position</em>, establecer posición). Lleva la tortuga al punto especificado por la lista de coordenadas de entrada. </p>
+<pre><code>?setpos [30 20]
+</code></pre>
+<h4 id="setx-"><a class="header" href="#setx-">setx (*)</a></h4>
+<p>Lleva la tortuga a un punto cuya coordenada X es la especificada, sin modificar la coordenada Y. (Véase también <strong>sety</strong>.)</p>
+<pre><code>?setx 80
+?fd 100
+?setx -50
+?fd 50
+</code></pre>
+<h4 id="sety-"><a class="header" href="#sety-">sety (*)</a></h4>
+<p>Lleva la tortuga a un punto cuya coordenada Y es la especificada, sin modificar la coordenada X. (Véase también <strong>setx</strong>.) </p>
+<pre><code>?sety 90
+?fd 20
+?sety -50
+?fd 50
+</code></pre>
+<h4 id="st"><a class="header" href="#st">st</a></h4>
+<p>(<em>show turtle</em>, mostrar tortuga). Hace la tortuga visible, si estaba oculta.</p>
+<pre><code>?ht
+?fd 50
+?st
+</code></pre>
+<h4 id="tf"><a class="header" href="#tf">tf</a></h4>
+<p>(<em>turtle facts</em>, datos de tortuga). Escribe en la pantalla la información relativa a la tortuga. El formato es: [&lt;coor x&gt; &lt;coor y&gt; &lt;rumbo&gt; &lt;estado de pluma&gt; &lt;pluma n&gt; &lt;visible&gt;].</p>
+<ul>
+<li>&lt;coor x&gt; y &lt;coor y&gt; son las coordenadas de la posición actual de la tortuga.</li>
+<li>&lt;rumbo&gt; es la orientación actual de la tortuga.</li>
+<li>&lt;estado de pluma&gt; indica <strong>PD</strong> (pluma bajada), <strong>PE</strong> (pluma de borrar), <strong>PX</strong> (pluma de inversión) o <strong>PU</strong> (pluma subida). </li>
+<li>&lt;pluma n&gt; indica el número de pluma de la tortuga.</li>
+<li>&lt;visible&gt; es TRUE (verdadero) si la tortuga es visible. </li>
+</ul>
+<pre><code>?setpos [15 30]
+?rt 60
+?setpc 3
+?pe
+?ht
+?tf
+[15 30 60 PE 3 FALSE)
+</code></pre>
+<h4 id="towards-"><a class="header" href="#towards-">towards (*)</a></h4>
+<p>(hacia). Da como salida un rumbo tal que, si la tortuga lo tuviera, &quot;miraría&quot; hacia la posición especificada con la lista de coordenadas. </p>
+<pre><code>  ?seth towards list :x :y
+</code></pre>
+<h3 id="gestión-del-espacio-de-trabajo"><a class="header" href="#gestión-del-espacio-de-trabajo">Gestión del espacio de trabajo</a></h3>
+<h4 id="er"><a class="header" href="#er">er</a></h4>
+<p>(<em>erase</em>, borrar). Borra del espacio de trabajo los procedimientos especificados. </p>
+<pre><code>?er &quot;cuadrado
+</code></pre>
+<h4 id="erall-"><a class="header" href="#erall-">erall (*)</a></h4>
+<p>(<em>erase all</em>, borra todos). Borra del espacio de trabajo todos los procedimientos y variables. </p>
+<pre><code>?erall
+</code></pre>
+<h4 id="ern"><a class="header" href="#ern">ern</a></h4>
+<p>(<em>erase name</em>, borrar nombre). Borra del espacio de trabajo las variables especificadas. </p>
+<pre><code>?make &quot;lado [100]
+?make &quot;angulo [45]
+?:lado :angulo
+[100]
+[45]
+?ern [lado angulo]
+?:lado
+lado has vo value
+</code></pre>
+<h4 id="nodes"><a class="header" href="#nodes">nodes</a></h4>
+<p>Da el número de nodos que quedan libres en el espacio de trabajo. </p>
+<pre><code>?nodes
+</code></pre>
+<h4 id="noformat-"><a class="header" href="#noformat-">noformat (*)</a></h4>
+<p>Elimina del espacio de trabajo el formato de los procedimientos, incluidos los comentarios, con el fin de liberar nodos. </p>
+<pre><code>?to cuadrado
+&gt;pd 
+&gt;repeat 4
+&gt;  [fd 50 ; esto es lo
+&gt;  rt 90] ; que se repite
+&gt;pu
+&gt;end
+cuadrado defined
+?noformat
+?po &quot;cuadrado
+to cuadrado
+pd
+repeat 4 [fd 50 rt 90]
+pu
+end
+</code></pre>
+<h4 id="poall-"><a class="header" href="#poall-">poall (*)</a></h4>
+<p>Muestra las definiciones de todos los procedimientos y variables del espacio de trabajo. </p>
+<pre><code>?poall
+</code></pre>
+<h4 id="pons-"><a class="header" href="#pons-">pons (*)</a></h4>
+<p>Muestra los nombres y valores de todas las variables globales del espacio de trabajo. </p>
+<pre><code>?pons
+medio es 40
+pequeno es 20
+grande es 80
+</code></pre>
+<h4 id="pops-"><a class="header" href="#pops-">pops (*)</a></h4>
+<p>Muestra los nombres y definiciones de todos los procedimientos del espacio de trabajo. </p>
+<pre><code>?pops
+</code></pre>
+<h4 id="recycle"><a class="header" href="#recycle">recycle</a></h4>
+<p>Libera el mayor número posible de nodos y reorganiza el espacio de trabajo. </p>
+<pre><code>?recycle
+?nodes
+</code></pre>
+<h3 id="listas-de-propiedades"><a class="header" href="#listas-de-propiedades">Listas de propiedades</a></h3>
+<h4 id="glist"><a class="header" href="#glist">glist</a></h4>
+<p>(<em>get list</em>, obtener lista). Da una relación de todos los objetos del espacio de trabajo que tienen la propiedad de nombre especificado en sus respectivas listas de propiedades. </p>
+<pre><code>?glist &quot;.DEF
+</code></pre>
+<h4 id="gprop"><a class="header" href="#gprop">gprop</a></h4>
+<p>(<em>get property</em>, obtener propiedad). Da el valor que tiene en el objeto de entrada la propiedad cuyo nombre se especifica. </p>
+<pre><code>?make &quot;estatura &quot;172
+?gprop &quot;estatura &quot;.APV
+172
+</code></pre>
+<h4 id="plist"><a class="header" href="#plist">plist</a></h4>
+<p>(<em>property list</em>, lista de propiedades). Escribe la lista de propiedades del objeto de entrada.</p>
+<pre><code>?plist &quot;estatura
+[.APV 172]
+</code></pre>
+<h4 id="pprop"><a class="header" href="#pprop">pprop</a></h4>
+<p>(<em>put property</em>, poner propiedad). Pone el par de propiedades de entrada en la lista de propiedades del objeto especificado. </p>
+<pre><code>?pprop &quot;usted &quot;.APV &quot;lector
+?:usted
+lector
+</code></pre>
+<h4 id="pps-"><a class="header" href="#pps-">pps (*)</a></h4>
+<p>(<em>property pairs</em>, pares de propiedades). Muestra todos los pares de propiedades no estándar de todos los objetos que hay en el espacio de trabajo.</p>
+<pre><code>?pprop &quot;Sally &quot;extension 213
+?pps
+Sally's extension is 213
+?plist &quot;Sally
+[extension 213]
+</code></pre>
+<h4 id="remprop"><a class="header" href="#remprop">remprop</a></h4>
+<p>(<em>remove property</em>, retirar propiedad). Suprime la propiedad especificada de la lista de propiedades del objeto de entrada. </p>
+<pre><code>?remprop &quot;usted &quot;.APV
+</code></pre>
+<h3 id="ficheros-en-disco"><a class="header" href="#ficheros-en-disco">Ficheros en disco</a></h3>
+<h4 id="changef-"><a class="header" href="#changef-">changef (*)</a></h4>
+<p>(<em>change file</em>, cambiar fichero). Cambia el nombre de un fichero en el directorio de un disco. </p>
+<pre><code>?dir
+[CUADRADO CIRCULO ESTRELLA]
+?changef &quot;circunferencia &quot;circulo
+?dir
+[CUADRADO CIRCUNFERENCIA ESTRELLA]
+</code></pre>
+<h4 id="defaultd-"><a class="header" href="#defaultd-">defaultd (*)</a></h4>
+<p>(<em>default drive</em>, unidad implícita). Da el nombre de la unidad de disco implícita.</p>
+<pre><code>?defaultd
+A:
+</code></pre>
+<h4 id="dir"><a class="header" href="#dir">dir</a></h4>
+<p>(<em>directory</em>, directorio). Da la lista de todos los nombres de ficheros creados por Dr. LOGO que se encuentran en la unidad de disco implícita; acepta símbolos comodín.</p>
+<pre><code>?dir &quot;a:????????
+</code></pre>
+<p>(Consulte la <a href="5.01.-AMSDOS.html">parte 1</a> del capítulo <a href="5.00.-Cap%C3%ADtulo-5.-AMSDOS-y-CP-M.html">AMSDOS y CP/M</a>, donde se explica cómo utilizar los símbolos comodín; Dr. LOGO no acepta el *.) </p>
+<h4 id="dirpic-"><a class="header" href="#dirpic-">dirpic (*)</a></h4>
+<p>(<em>picture</em>, imagen). Da la lista de los nombres de los ficheros que contienen imágenes de pantalla en la unidad especificada (o en la implícita, si no se especifica otra). Acepta símbolos comodín. </p>
+<pre><code>?dirpic
+[JUEGO CUADRADOS CIUDAD ESFERA_RELOJ]
+</code></pre>
+<h4 id="load"><a class="header" href="#load">load</a></h4>
+<p>Lee el fichero especificado y lo carga en el espacio de trabajo.</p>
+<pre><code>?load &quot;prueba
+?load &quot;b:dibujos
+</code></pre>
+<h4 id="loadpic-"><a class="header" href="#loadpic-">loadpic (*)</a></h4>
+<p>Lee el fichero de imagen especificado y forma la imagen correspondiente en la pantalla. </p>
+<pre><code>?loadpic &quot;juego
+?loadpic &quot;b:juego
+</code></pre>
+<h4 id="save"><a class="header" href="#save">save</a></h4>
+<p>Graba en el disco el contenido del espacio de trabajo, con el nombre de fichero especificado.</p>
+<pre><code>?save &quot;dibujos
+</code></pre>
+<table>
+<tr><td>
+<b>Nota.</b>
+<br />
+Antes de grabar, inserte un disco inicializado en el que quede espacio suficiente para el fichero que vaya a grabar. No grabe nunca nada en el disco maestro (de hecho, los orificios de protección de los discos maestros deben estar siempre cerrados).
+<br />
+Si está utilizando la versión de Dr. LOGO para CP/M 2.2 (cara 4), no podrá cambiar el disco a mitad de la sesión de trabajo. En este caso es aún más importante disponer de un disco de trabajo con CP/M 2.2 y Dr. LOGO en el que haya abundante espacio libre para grabar programas.
+</td></tr>
+</table>
+<h4 id="savepic-"><a class="header" href="#savepic-">savepic (*)</a></h4>
+<p>Graba en el disco información completa sobre la imagen que hay en la pantalla, con el nombre de fichero especificado. </p>
+<pre><code>?savepic &quot;estera reloj
+?savepic &quot;b:estera reloj
+</code></pre>
+<table>
+<tr><td>
+<b>Nota.</b>
+<br />
+Antes de grabar, inserte un disco inicializado en el que quede espacio suficiente para el fichero que vaya a grabar. No grabe nunca nada en el disco maestro (de hecho, los orificios de protección de los discos maestros deben estar siempre cerrados).
+<br />
+Si está utilizando la versión de Dr. LOGO para CP/M 2.2 (cara 4), no podrá cambiar el disco a mitad de la sesión de trabajo. En este caso es aún más importante disponer de un disco de trabajo con CP/M 2.2 y Dr. LOGO en el que haya abundante espacio libre para grabar programas.
+</td></tr>
+</table>
+<h4 id="setd-"><a class="header" href="#setd-">setd (*)</a></h4>
+<p>(definir unidad). Establece como unidad implícita la especificada.</p>
+<pre><code>?defaultd
+A:
+?dir
+[CUADRADO CIRCUNFERENCIA ESTRELLA]
+?setd b:
+?defaultd
+B:
+?dir
+[TRIANGULO CASA]
+</code></pre>
+<h3 id="teclado-y-joystick"><a class="header" href="#teclado-y-joystick">Teclado y joystick</a></h3>
+<h4 id="buttonp"><a class="header" href="#buttonp">buttonp</a></h4>
+<p>(<em>button pressed</em>, botón pulsado). Da como salida el valor lógico <strong>TRUE</strong> (verdadero) si está pulsado el botón del joystick cuyo número se especifica (<strong>0</strong> o <strong>1</strong>).</p>
+<pre><code>?to disparo
+&gt;label &quot;bucle
+&gt;if (buttonp 0) [pr [fuego el 0!]]
+&gt;if (buttonp 1) [pr [fuego el 1!]]
+&gt;go &quot;bucle
+&gt;end
+</code></pre>
+<p>La situación de la empuñadura se determina con <strong>paddle</strong>.</p>
+<h4 id="keyp"><a class="header" href="#keyp">keyp</a></h4>
+<p>(<em>key pressed</em>, tecla pulsada). Da como salida el valor lógico <strong>TRUE</strong> (verdadero) si se ha tecleado alguna tecla y está en espera de ser leída.</p>
+<pre><code>?to tecla
+&gt;if keyp [op rc] [op &quot;]
+&gt;end
+</code></pre>
+<h4 id="paddle"><a class="header" href="#paddle">paddle</a></h4>
+<p>Determina la situación del joystick <strong>0</strong> o el <strong>1</strong>. El significado de los valores generados es el siguiente: </p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Valor</th><th>Significado</th></tr></thead><tbody>
+<tr><td style="text-align: center">255</td><td>Inactivo</td></tr>
+<tr><td style="text-align: center">0</td><td>Arriba</td></tr>
+<tr><td style="text-align: center">1</td><td>Arriba y a la derecha</td></tr>
+<tr><td style="text-align: center">2</td><td>A la derecha</td></tr>
+<tr><td style="text-align: center">3</td><td>Abajo y a la izquierda</td></tr>
+<tr><td style="text-align: center">4</td><td>Abajo</td></tr>
+<tr><td style="text-align: center">5</td><td>Abajo y a la izquierda</td></tr>
+<tr><td style="text-align: center">6</td><td>A la izquierda</td></tr>
+<tr><td style="text-align: center">7</td><td>Arriba y a la izquierda</td></tr>
+</tbody></table>
+</div>
+<pre><code>?paddle 0
+255
+</code></pre>
+<p>Los botones de disparo se comprueban con <strong>buttonp</strong>.</p>
+<h4 id="rc"><a class="header" href="#rc">rc</a></h4>
+<p>(<em>read character</em>, leer carácter). Da como salida el primer carácter que se teclee a continuación.</p>
+<pre><code>?make &quot;tecla rc
+</code></pre>
+<p>... ahora teclee una <strong>X</strong> ... </p>
+<pre><code>?:tecla
+X
+</code></pre>
+<h4 id="rl"><a class="header" href="#rl">rl</a></h4>
+<p>(<em>read list</em>, leer lista). Da como salida una lista que consiste en la línea que se va a teclear a continuación. La entrada tiene que terminar con un retorno del carro.</p>
+<pre><code>?make &quot;lista_instrucciones rl
+repeat 4 [fd 50 rt 90]
+?:lista_instrucciones
+[repeat 4 [fd 50 rt 90]
+</code></pre>
+<h4 id="rq"><a class="header" href="#rq">rq</a></h4>
+<p>(<em>read quote</em>, leer literalmente). Da como salida una palabra que consiste en la línea que se va a teclear a continuación. La entrada tiene que terminar con un retorno del carro.</p>
+<pre><code>?make &quot;orden rq
+repeat 3 [fd 60 rt 120]
+?:orden
+repeat 3 [fd 60 rt 120]
+</code></pre>
+<h3 id="sonido"><a class="header" href="#sonido">Sonido</a></h3>
+<p>Las órdenes de sonido son peculiares de la implementación para AMSTRAD de Dr. LOGO; son similares a sus análogos en BASIC.</p>
+<p>Consulte la <a href="1.09.-Sonidos.html">parte 9</a> del <a href="1.00.-Cap%C3%ADtulo-1.-Curso-de-introducci%C3%B3n.html">Curso de introducción</a>. </p>
+<h4 id="sound"><a class="header" href="#sound">sound</a></h4>
+<p>Envía un sonido a la cola de sonidos. El formato es: [&lt;situación de canales&gt; &lt;periodo de tono&gt; &lt;duración&gt; &lt;volumen&gt; &lt;envolvente de volumen&gt; &lt;envolvente de tono&gt; &lt;ruido&gt;]. Solamente los dos primeros parámetros son obligatorios. </p>
+<pre><code>?sound [1 20 50]
+</code></pre>
+<h4 id="env"><a class="header" href="#env">env</a></h4>
+<p>Define una envolvente de volumen. El formato es: [&lt;número de la envolvente&gt; &lt;secciones de envolvente&gt;].</p>
+<pre><code>?env [1 100 2 20]
+?sound [1 200 300 5 1]
+</code></pre>
+<h4 id="ent"><a class="header" href="#ent">ent</a></h4>
+<p>Define una envolvente de tono. El formato es: [&lt;número de la envolvente&gt; &lt;secciones de envolvente&gt;].</p>
+<pre><code>?ent [1 100 2 20]
+?sound [1 200 300 5 1]
+</code></pre>
+<h4 id="release"><a class="header" href="#release">release</a></h4>
+<p>Libera los canales de sonido que han sido retenidos en una orden <strong>sound</strong>. Los canales que se liberan son: </p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Valor de entrada</th><th>Canales liberados</th></tr></thead><tbody>
+<tr><td style="text-align: center">0</td><td>Ninguno</td></tr>
+<tr><td style="text-align: center">1</td><td>A</td></tr>
+<tr><td style="text-align: center">2</td><td>B</td></tr>
+<tr><td style="text-align: center">3</td><td>A y B</td></tr>
+<tr><td style="text-align: center">4</td><td>C</td></tr>
+<tr><td style="text-align: center">5</td><td>A y C</td></tr>
+<tr><td style="text-align: center">6</td><td>B y C</td></tr>
+<tr><td style="text-align: center">7</td><td>A, B y C</td></tr>
+</tbody></table>
+</div>
+<pre><code>?release 1
+</code></pre>
+<h3 id="control-de-ejecución"><a class="header" href="#control-de-ejecución">Control de ejecución</a></h3>
+<h4 id="bye"><a class="header" href="#bye">bye</a></h4>
+<p>Da por terminada la actual sesión de trabajo con Dr. LOGO.</p>
+<pre><code>?bye
+</code></pre>
+<h4 id="со"><a class="header" href="#со">со</a></h4>
+<p>Reanuda la ejecución tras una pausa provocada por <strong>[CONTROL] Z</strong>, <strong>pause</strong> o <strong>ERRACT</strong>. </p>
+<pre><code>?co
+</code></pre>
+<h4 id="go"><a class="header" href="#go">go</a></h4>
+<p>Ejecuta la línea del procedimiento actual que está identificada por la etiqueta que se menciona como entrada. </p>
+<pre><code>&gt;go &quot;bucle
+</code></pre>
+<h4 id="if"><a class="header" href="#if">if</a></h4>
+<p>Ejecuta una de dos listas de instrucciones, dependiendo del valor lógico de la expresión de entrada; las instrucciones deben ser listas literales entre corchetes. La segunda lista es opcional. </p>
+<pre><code>&gt;if (a&gt;b) [pr [a es mayor]]
+&gt;[pr [b es mayor]]
+</code></pre>
+<h4 id="label"><a class="header" href="#label">label</a></h4>
+<p>Identifica una línea para que pueda ser ejecutada por una instrucción go.</p>
+<pre><code>&gt; label &quot;bucle
+</code></pre>
+<h4 id="op"><a class="header" href="#op">op</a></h4>
+<p>(<em>output</em>, salida). Convierte el objeto de entrada en la salida del procedimiento y da por terminada la ejecución de éste. </p>
+<pre><code>?op [resultado]
+</code></pre>
+<h4 id="repeat"><a class="header" href="#repeat">repeat</a></h4>
+<p>Ejecuta la lista de instrucciones el número de veces especificado. </p>
+<pre><code>?repeat 4 [fd 50 rt 90]
+</code></pre>
+<h4 id="run"><a class="header" href="#run">run</a></h4>
+<p>Ejecuta la lista de instrucciones especificada.</p>
+<pre><code>?make &quot;lista_instrucciones [fd 40 rt 90]
+?run :lista_instrucciones
+</code></pre>
+<h4 id="stop"><a class="header" href="#stop">stop</a></h4>
+<p>Detiene la ejecución del procedimiento actual y retorna a <strong>TOPLEVEL</strong> (nivel exterior, donde aparece el signo <strong>?</strong>) o al procedimiento que lo invocó.</p>
+<pre><code>?stop
+</code></pre>
+<h4 id="wait"><a class="header" href="#wait">wait</a></h4>
+<p>Introduce en la ejecución del procedimiento una pausa de duración especificada (en unidades de 0.022 segundos).</p>
+<pre><code>?wait 200
+</code></pre>
+<h3 id="gestión-de-excepcioneserrores"><a class="header" href="#gestión-de-excepcioneserrores">Gestión de excepciones/errores</a></h3>
+<h4 id="catch"><a class="header" href="#catch">catch</a></h4>
+<p>Intercepta errores y situaciones especiales que ocurran durante la ejecución de la lista de entrada. </p>
+<pre><code>&gt;catch &quot;error [+ [] []]
+&gt;pr [aqui estoy]
+aqui estoy
+</code></pre>
+<h4 id="error"><a class="header" href="#error">error</a></h4>
+<p>Da una lista cuyos elementos describen el error más reciente. </p>
+<pre><code>&gt;catch &quot;error [seguir.hasta.error]
+&gt;show error
+</code></pre>
+<h4 id="notrace-"><a class="header" href="#notrace-">notrace (*)</a></h4>
+<p>Desactiva el modo &quot;trace&quot; de ejecución de los procedimientos. (Véase <strong>trace</strong>.)</p>
+<pre><code>?notrace
+</code></pre>
+<h4 id="nowatch-"><a class="header" href="#nowatch-">nowatch (*)</a></h4>
+<p>Desactiva el modo &quot;watch&quot; de ejecución de los procedimientos. (Véase <strong>watch</strong>.)</p>
+<pre><code>?nowatch
+</code></pre>
+<h4 id="pause"><a class="header" href="#pause">pause</a></h4>
+<p>Suspende la ejecución del procedimiento actual para permitir la interacción con el intérprete o el editor.</p>
+<pre><code>&gt;if :lado&gt;5 [pause]
+</code></pre>
+<h4 id="throw"><a class="header" href="#throw">throw</a></h4>
+<p>Ejecuta la línea identificada por el nombre de entrada de una expresión <strong>catch</strong> anterior. </p>
+<pre><code>?throw &quot;TOPLEVEL
+</code></pre>
+<h4 id="trace-"><a class="header" href="#trace-">trace (*)</a></h4>
+<p>Establece un modo de ejecución de procedimientos consistente en que en la pantalla se indica que procedimiento está siendo ejecutado en cada momento. </p>
+<pre><code>?trace
+</code></pre>
+<h4 id="watch-"><a class="header" href="#watch-">watch (*)</a></h4>
+<p>Establece un modo de ejecución de procedimientos consistente en que en la pantalla se indica que instrucción va a ser ejecutada y se hace una pausa para que el usuario observe o modifique la evolución del procedimiento. </p>
+<pre><code>?watch
+</code></pre>
+<h3 id="primitivas-del-sistema"><a class="header" href="#primitivas-del-sistema">Primitivas del sistema</a></h3>
+<h4 id="contents"><a class="header" href="#contents">.contents</a></h4>
+<p>Muestra el contenido del espacio para símbolos de Dr. LOGO.</p>
+<h4 id="deposit"><a class="header" href="#deposit">.deposit</a></h4>
+<p>Escribe el segundo número de entrada en la posición absoluta de memoria especificada por el primero. </p>
+<h4 id="examine"><a class="header" href="#examine">.examine</a></h4>
+<p>Muestra el contenido de la posición absoluta de memoria especificada.</p>
+<h4 id="in-"><a class="header" href="#in-">.in (*)</a></h4>
+<p>Lee el valor presente en la puerta especificada.</p>
+<h4 id="out-"><a class="header" href="#out-">.out (*)</a></h4>
+<p>Envía el valor especificado a la puerta especificada.</p>
+<h3 id="variables-del-sistema"><a class="header" href="#variables-del-sistema">Variables del sistema</a></h3>
+<h4 id="erract"><a class="header" href="#erract">ERRACT</a></h4>
+<p>Si tiene el valor lógico <strong>TRUE</strong> (verdadero), introduce una pausa cuando se produce un error y luego retorna a <strong>TOPLEVEL</strong>.</p>
+<h4 id="false"><a class="header" href="#false">FALSE</a></h4>
+<p>Valor de sistema. (Falso.)</p>
+<h4 id="redefp"><a class="header" href="#redefp">REDEFP</a></h4>
+<p>Si tiene el valor lógico <strong>TRUE</strong> (verdadero), permite la redefinición de primitivas. </p>
+<h4 id="toplevel"><a class="header" href="#toplevel">TOPLEVEL</a></h4>
+<p><strong>throw &quot;TOPLEVEL</strong> provoca la salida de todos los procedimientos pendientes (volviendo al nivel exterior). </p>
+<h4 id="true"><a class="header" href="#true">TRUE</a></h4>
+<p>Valor de sistema. (Verdadero.)</p>
+<h3 id="propiedades-del-sistema"><a class="header" href="#propiedades-del-sistema">Propiedades del sistema</a></h3>
+<h4 id="apv"><a class="header" href="#apv">.APV</a></h4>
+<p>Valor de propiedad asociado; es el valor de una variable global.</p>
+<h4 id="def"><a class="header" href="#def">.DEF</a></h4>
+<p>Definición de un procedimiento,</p>
+<h4 id="enl-"><a class="header" href="#enl-">.ENL (*)</a></h4>
+<p>Fin de una línea de procedimiento que está partida por un retorno del carro o por espacios. </p>
+<h4 id="emt-"><a class="header" href="#emt-">.EMT (*)</a></h4>
+<p>Principio de una línea de procedimiento que está partida por un retorno del carro o por espacios. </p>
+<h4 id="prm"><a class="header" href="#prm">.PRM</a></h4>
+<p>Identifica una primitiva.</p>
+<h4 id="rem-o-bien--"><a class="header" href="#rem-o-bien--">.REM (o bien ;) (*)</a></h4>
+<p>Observaciones o comentarios. </p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="5.02.-CP-M.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="7.00.-Capítulo-7.-Para-su-referencia.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="5.02.-CP-M.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="7.00.-Capítulo-7.-Para-su-referencia.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

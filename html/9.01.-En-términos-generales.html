@@ -1,0 +1,343 @@
+<!DOCTYPE HTML>
+<html lang="es" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>En términos generales - Amstrad CPC6128 Manual del Usuario</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="Manual de usuario del micro ordenenador Amstrad modelo CPC6128">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Home.html">Inicio</a></li><li class="chapter-item expanded affix "><a href="0.01.-Introducción.html">Introducción</a></li><li class="chapter-item expanded affix "><a href="0.02.-Importante.html">Importante</a></li><li class="chapter-item expanded "><a href="1.00.-Capítulo-1.-Curso-de-introducción.html"><strong aria-hidden="true">1.</strong> Curso se introducción</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="1.01.-Instalación-y-mantenimiento.html"><strong aria-hidden="true">1.1.</strong> Instalación y mantenimiento</a></li><li class="chapter-item expanded "><a href="1.02.-Conexión-de-los-periféricos.html"><strong aria-hidden="true">1.2.</strong> Conexión de los periféricos</a></li><li class="chapter-item expanded "><a href="1.03.-En-cuanto-a-los-discos.html"><strong aria-hidden="true">1.3.</strong> En cuanto a los discos</a></li><li class="chapter-item expanded "><a href="1.04.-Manos-al-teclado.html"><strong aria-hidden="true">1.4.</strong> Manos al teclado</a></li><li class="chapter-item expanded "><a href="1.05.-Carga-de-programas.html"><strong aria-hidden="true">1.5.</strong> Carga de programas</a></li><li class="chapter-item expanded "><a href="1.06.-Empecemos-a-trabajar.html"><strong aria-hidden="true">1.6.</strong> Empecemos a trabajar</a></li><li class="chapter-item expanded "><a href="1.07.-Grábelo-en-disco.html"><strong aria-hidden="true">1.7.</strong> Grábelo en disco</a></li><li class="chapter-item expanded "><a href="1.08.-Introducción-a-los-modos-de-pantalla,-colores-y-gráficos.html"><strong aria-hidden="true">1.8.</strong> Introducción a los modos de pantalla, colores y gráficos</a></li><li class="chapter-item expanded "><a href="1.09.-Sonidos.html"><strong aria-hidden="true">1.9.</strong> Sonidos</a></li><li class="chapter-item expanded "><a href="1.10.-Introducción-a-los-sistemas-operativos-AMSDOS-y-CPM.html"><strong aria-hidden="true">1.10.</strong> Introducción a los sistemas operativos AMSDOS y CPM</a></li><li class="chapter-item expanded "><a href="1.11.-Introducción-al-gestor-de-bancos-de-memoria.html"><strong aria-hidden="true">1.11.</strong> Introducción al gestor de bancos de memoria</a></li></ol></li><li class="chapter-item expanded "><a href="2.01.-La-génesis-de-un-programa.html"><strong aria-hidden="true">2.</strong> La génesis de un programa</a></li><li class="chapter-item expanded "><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html"><strong aria-hidden="true">3.</strong> Lista completa de las palabras clave del BASIC de AMSTRAD</a></li><li class="chapter-item expanded "><a href="4.00.-Capítulo-4.-Discos-y-cintas.html"><strong aria-hidden="true">4.</strong> Discos y cintas</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="4.01.-Discos.html"><strong aria-hidden="true">4.1.</strong> Parte 1: Discos</a></li><li class="chapter-item expanded "><a href="4.02.-Cintas.html"><strong aria-hidden="true">4.2.</strong> Parte 2: Cintas</a></li></ol></li><li class="chapter-item expanded "><a href="5.00.-Capítulo-5.-AMSDOS-y-CP-M.html"><strong aria-hidden="true">5.</strong> AMSDOS y CP/M</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="5.01.-AMSDOS.html"><strong aria-hidden="true">5.1.</strong> Parte 1: AMSDOS</a></li><li class="chapter-item expanded "><a href="5.02.-CP-M.html"><strong aria-hidden="true">5.2.</strong> Parte 2: CP/M</a></li></ol></li><li class="chapter-item expanded "><a href="6.01.-Introducción-a-LOGO.html"><strong aria-hidden="true">6.</strong> Introducción a LOGO</a></li><li class="chapter-item expanded "><a href="7.00.-Capítulo-7.-Para-su-referencia.html"><strong aria-hidden="true">7.</strong> Para su referencia</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="7.01.-Posiciones-del-cursor-y-códigos-ampliados-de-control-en-BASIC.html"><strong aria-hidden="true">7.1.</strong> Posiciones del cursor y códigos ampliados de control en BASIC</a></li><li class="chapter-item expanded "><a href="7.02.-El-sistema-operativo.html"><strong aria-hidden="true">7.2.</strong> El sistema operativo</a></li><li class="chapter-item expanded "><a href="7.03.-Interrupciones.html"><strong aria-hidden="true">7.3.</strong> Interrupciones</a></li><li class="chapter-item expanded "><a href="7.04.-Caracteres-ASCII-y-caracteres-gráficos-en-BASIC.html"><strong aria-hidden="true">7.4.</strong> Caracteres ASCII y caracteres gráficos en BASIC</a></li><li class="chapter-item expanded "><a href="7.05.-Esquemas-de-teclado.html"><strong aria-hidden="true">7.5.</strong> Esquemas de teclado</a></li><li class="chapter-item expanded "><a href="7.06.-Sonidos.html"><strong aria-hidden="true">7.6.</strong> Sonidos</a></li><li class="chapter-item expanded "><a href="7.07.-Mensajes-de-error-de-BASIC.html"><strong aria-hidden="true">7.7.</strong> Mensajes de error de BASIC</a></li><li class="chapter-item expanded "><a href="7.08.-Palabras-reservadas-de-BASIC.html"><strong aria-hidden="true">7.8.</strong> Palabras reservadas de BASIC</a></li><li class="chapter-item expanded "><a href="7.09.-Plantillas.html"><strong aria-hidden="true">7.9.</strong> Plantillas</a></li><li class="chapter-item expanded "><a href="7.10.-Conexiones.html"><strong aria-hidden="true">7.10.</strong> Conexiones</a></li><li class="chapter-item expanded "><a href="7.11.-Impresoras.html"><strong aria-hidden="true">7.11.</strong> Impresoras</a></li><li class="chapter-item expanded "><a href="7.12.-Joysticks.html"><strong aria-hidden="true">7.12.</strong> Joysticks</a></li><li class="chapter-item expanded "><a href="7.13.-Organización-de-los-discos.html"><strong aria-hidden="true">7.13.</strong> Organización de los discos</a></li><li class="chapter-item expanded "><a href="7.14.-Ampliaciones-del-sistema-residentes-RSX.html"><strong aria-hidden="true">7.14.</strong> Ampliaciones del sistema residentes RSX</a></li><li class="chapter-item expanded "><a href="7.15.-Memoria.html"><strong aria-hidden="true">7.15.</strong> Memoria</a></li><li class="chapter-item expanded "><a href="7.16.-Emulador-de-consola-CP-M-Plus.html"><strong aria-hidden="true">7.16.</strong> Emulador de consola CP/M Plus</a></li><li class="chapter-item expanded "><a href="7.17.-Juego-de-caracteres-de-CP-M-Plus.html"><strong aria-hidden="true">7.17.</strong> Juego de caracteres de CP-M Plus</a></li></ol></li><li class="chapter-item expanded "><a href="8.00.-Capítulo-8.-Más-sobre-el-gestor-de-bancos-de-memoria.html"><strong aria-hidden="true">8.</strong> Más sobre el gestor de bancos de memoria</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="8.01.-Almacenamiento-de-imágenes-de-pantalla.html"><strong aria-hidden="true">8.1.</strong> Almacenamiento de imágenes de pantalla</a></li><li class="chapter-item expanded "><a href="8.02.-Ficheros-en-RAM.html"><strong aria-hidden="true">8.2.</strong> Ficheros en RAM</a></li></ol></li><li class="chapter-item expanded "><a href="9.00.-Capítulo-9.-Cuando-usted-guste.html"><strong aria-hidden="true">9.</strong> Cuando usted guste</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="9.01.-En-términos-generales.html" class="active"><strong aria-hidden="true">9.1.</strong> En términos generales</a></li><li class="chapter-item expanded "><a href="9.02.-Más-en-concreto-sobre-el-CPC6128.html"><strong aria-hidden="true">9.2.</strong> Más en concreto sobre el CPC6128</a></li></ol></li><li class="chapter-item expanded "><a href="10.0.-Para-más-información.html"><strong aria-hidden="true">10.</strong> Para más información</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 1</li><li class="chapter-item expanded "><a href="A01.-Digital-Research-y-AMSTRAD.html"><strong aria-hidden="true">11.</strong> Digital Research y AMSTRAD</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 2</li><li class="chapter-item expanded "><a href="A02.-Léxico-inglés-castellano-y-glosario.html"><strong aria-hidden="true">12.</strong> Léxico inglés-castellano y glosario</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 3. Que usted lo disfrute</li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Rebotes.html"><strong aria-hidden="true">13.</strong> Rebotes</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Bombardero.html"><strong aria-hidden="true">14.</strong> Bombardero</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Tele-tenis.html"><strong aria-hidden="true">15.</strong> Tele tenis</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Esgrima-eléctrico.html"><strong aria-hidden="true">16.</strong> Esgrima eléctrico</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Amthello.html"><strong aria-hidden="true">17.</strong> Amthello</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Guante-blanco.html"><strong aria-hidden="true">18.</strong> Guante blanco</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 4</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="A04.-Indice.html">Índice</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Amstrad CPC6128 Manual del Usuario</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/latchdevel/Amstrad-CPC6128-Manual-del-Usuario" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="capítulo-9-cuando-usted-guste"><a class="header" href="#capítulo-9-cuando-usted-guste">Capítulo 9. Cuando usted guste</a></h1>
+<h2 id="parte-1-en-términos-generales"><a class="header" href="#parte-1-en-términos-generales">Parte 1: En términos generales</a></h2>
+<p><strong>Contenido:</strong></p>
+<ul>
+<li><a href="#fulmina-el-bicho">¡Fulmina el bicho!</a>.</li>
+<li><a href="#por-qu%C3%A9-es-un-ordenador-mejor-que-otro">¿Por qué es un ordenador mejor que otro?</a>.
+<ul>
+<li><a href="#resoluci%C3%B3n-de-la-pantalla-tama%C3%B1o-del-menor-elemento-discernible">Resolución de la pantalla: tamaño del menor elemento discernible.</a>.</li>
+<li><a href="#el-int%C3%A9rprete-de-basic">El intérprete de BASIC</a>.</li>
+<li><a href="#ampliabilidad">Ampliabilidad</a>.</li>
+<li><a href="#sonidos">Sonidos</a>.</li>
+</ul>
+</li>
+<li><a href="#por-qu%C3%A9-no-puede">¿Por qué no puede?</a>.</li>
+<li><a href="#ese-teclado-me-suena">Ese teclado me suena</a>.</li>
+<li><a href="#qui%C3%A9n-teme-a-la-jerga">¿Quién teme a la jerga?</a>.</li>
+<li><a href="#lo-b%C3%A1sico-de-basic">Lo básico de BASIC</a>.</li>
+<li><a href="#n%C3%BAmeros">Números</a>.</li>
+<li><a href="#bits-y-bytes">Bits y bytes</a>.</li>
+<li><a href="#sin-embargo">Sin embargo</a>.</li>
+</ul>
+<hr />
+<h3 id="fulmina-el-bicho"><a class="header" href="#fulmina-el-bicho">¡Fulmina el bicho!</a></h3>
+<p>Aun cuando lo único que le interese de su CPC6128 sea disfrutar de los sofisticados juegos de ordenador que se venden en las tiendas, es posible que se pregunte qué tiene la máquina dentro, es decir, qué es eso del hardware.</p>
+<p>Hardware es lo que usted puede coger y llevarse bajo el brazo (es un decir): la caja gris donde está el teclado, el monitor, los cables, etc. Más en general, todo lo que no sea específicamente software: programas, manuales e información grabada en cinta o en disco.</p>
+<p>Ciertos aspectos del funcionamiento del ordenador están estrechamente ligados al hardware; por ejemplo, la imagen de color que usted puede ver en la pantalla. En cambio, es responsabilidad del software controlar el hardware para producir los caracteres y dibujos deseados. </p>
+<p>Es el hardware el que dirige el haz de electrones a la superficie electroluminiscente de que está recubierto el interior del tubo del televisor; el software aporta la organización y la inteligencia para decir al hardware cómo y cuándo debe hacerlo. Añade además el control de los tiempos y de las secuencias de acciones para que usted pueda ver la nave espacial despegando, o para algo tan mundano como que aparezca una letra en la pantalla cada vez que usted pulsa una tecla. </p>
+<h3 id="por-qué-es-un-ordenador-mejor-que-otro"><a class="header" href="#por-qué-es-un-ordenador-mejor-que-otro">¿Por qué es un ordenador mejor que otro?</a></h3>
+<p>El hardware sin el software es completamente inútil, y viceversa. El ordenador empieza a servir para algo cuando hardware y software se ponen de acuerdo para llevar a cabo sus cometidos. Hay algunas consideraciones básicas que se pueden tener en cuenta para valorar la calidad tanto de uno como del otro. </p>
+<p>Los puntos de referencia generalmente aceptados para los ordenadores personales son: </p>
+<h4 id="resolución-de-la-pantalla-tamaño-del-menor-elemento-discernible"><a class="header" href="#resolución-de-la-pantalla-tamaño-del-menor-elemento-discernible">Resolución de la pantalla: tamaño del menor elemento discernible</a></h4>
+<p>El concepto de resolución es una mezcla de diversos factores: número de colores disponibles para el programador, número de áreas discernibles en la pantalla (pixels) y número de caracteres de texto que caben en ella.</p>
+<p>Usted puede comprobar que su CPC6128 es superior a este respecto a los otros ordenadores de su nivel de precio. </p>
+<h4 id="el-intérprete-de-basic"><a class="header" href="#el-intérprete-de-basic">El intérprete de BASIC</a></h4>
+<p>Prácticamente todos los ordenadores domésticos incluyen un intérprete de BASIC que permite al usuario crear programas con los que controlar el hardware. El lenguaje de programación que viene con la máquina, BASIC, no es más que un programa, pero un programa extremadamente complejo que ha evolucionado a lo largo de los años, desde que se &quot;inventó&quot; el BASIC en los Estados Unidos. El &quot;Beginners&quot; All-purpose Symbolic Instruction Code&quot; (código de instrucciones simbólicas de uso general para principiantes) es el lenguaje de ordenador más ampliamente utilizado en el mundo entero; como todos los lenguajes, tiene sus dialectos locales.</p>
+<p>La versión utilizada en el CPC6128 es una de las de mayor compatibilidad; puede ejecutar programas escritos para funcionar bajo control del sistema operativo de disco CP/M. Es una versión muy rápida de BASIC, lo que quiere decir que realiza los cálculos muy deprisa. A usted quizá no le parezca demasiado impresionante que un ordenador tarde 0.05 segundos en multiplicar 3 por 5 y escribir la respuesta, mientras que otro ordenador tarda 0.075 segundos en hacer lo mismo. Pero cuando se trata de dibujar gráficos en la pantalla, tarea que puede requerir millares de cálculos repetitivos, la diferencia entre 0.05 y 0.075 segundos es decisiva.</p>
+<p>Usted oirá hablar frecuentemente de &quot;códigos de máquina&quot;. El código de máquina es una forma de suministrar instrucciones directamente al microprocesador. La velocidad de ejecución es entre 5 y 15 veces mayor en código de máquina que en BASIC, pero el tiempo que se tarda en escribir un programa puede ser hasta 50 veces mayor en código de máquina que en BASIC.</p>
+<p>El BASIC de Amstrad es de los más rápidos y completos que se pueden encontrar en ordenadores personales, e incorpora muchos recursos que ayudan al programador experto a superar parte de la lentitud inherente a todos los lenguajes de alto nivel para producir efectos visuales y sonoros sorprendentemente dinámicos. </p>
+<h4 id="ampliabilidad"><a class="header" href="#ampliabilidad">Ampliabilidad</a></h4>
+<p>Casi todos los ordenadores prestan atención a la necesidad de conectar periféricos tales como impresoras, joysticks y unidades de disco. Sin embargo, muchos de los más populares ordenadores domésticos necesitan interfaces externas para que se les pueda conectar una simple impresora o un joystick.</p>
+<p>El comprador no siempre prevé las necesidades futuras, pero un ordenador que incorpore un interfaz para impresora o un conector para joystick puede ser más barato a la larga que otro por el que tenga que pagar menos en el momento de la adquisición.</p>
+<p>El CPC6128 tiene incorporada una puerta de salida para impresora (tipo Centronics), una salida para segunda unidad de disco, una salida para cinta (con control de motor), un conector para dos joysticks, una salida de sonido estereofónico y una puerta de expansión a la que se puede conectar un interfaz serie (modelo RS232C de Amstrad), un modem, un sintetizador de voz (modelo SSA2 de Amstrad), un lápiz óptico, etc. </p>
+<h4 id="sonidos"><a class="header" href="#sonidos">Sonidos</a></h4>
+<p>Las características sonoras de un ordenador determinan si &quot;suena a lata&quot; o si puede producir una imitación aceptable de un instrumento musical electrónico. </p>
+<p>El CPC6128 está dotado de un generador de sonido de 3 canales y 8 octavas, que puede dar una calidad musical muy aceptable y permite el control completo de las envolventes de tono y de volumen. Además, el sonido se puede obtener en una configuración estereofónica, con canal izquierdo, canal derecho y canal común. </p>
+<p>Esto permite programar el sonido para coordinarlo con el movimiento de objetos por la pantalla. </p>
+<p>En último extremo, es usted quien tiene que decidir qué características le son más necesarias. Esperamos que las pruebe todas, para así aprovechar al máximo su ordenador. </p>
+<h3 id="por-qué-no-puede"><a class="header" href="#por-qué-no-puede">¿Por qué no puede?</a></h3>
+<p>Sabiendo lo poderosa que es la tecnología actual, los usuarios se preguntan frecuentemente por qué una máquina tan avanzada como el CPC6128 es incapaz de imitar las imágenes de un televisor de color. Por ejemplo, ¿por qué no puede un ordenador mostrar en la pantalla la imagen de una persona caminando con naturalidad? ¿Es que los ordenadores no son capaces de dar movimiento más que a unos burdos monigotes? </p>
+<p>La respuesta es fácil, aunque compleja. No crea usted que la pantalla de su ordenador puede tener la misma riqueza de detalles que la de un televisor. Los televisores funcionan con una información &quot;analógica&quot;, que puede describir, con resolución casi ilimitada, todos los grados posibles de intensidad de todos los colores del espectro visible. En términos informáticos, esto representa que la &quot;memoria&quot; necesaria para almacenar una imagen de televisión es unas veinte veces mayor que la que se le dedica a un ordenador doméstico. </p>
+<p>Pero esto es sólo una parte del problema. Para dar movimiento a una imagen, hay que procesar toda esa información a gran velocidad (del orden de 50 veces por segundo). No es imposible, pero para ello se necesitan máquinas que cuestan unos cuantos miles de veces más que un ordenador doméstico, al menos en la actualidad. </p>
+<p>Hasta que el precio de la memoria de alta capacidad baje drásticamente (lo que ocurrirá algún día), los ordenadores pequeños tienen que arreglárselas con una memoria relativamente pequeña para controlar la pantalla, lo que representa menor resolución y movimientos más espásticos. Optimizando el hardware y el software se puede paliar considerablemente estas limitaciones, pero de momento tendremos que seguir conformándonos con imágenes torpes que ni siquiera llegan a parecerse a las de una película de dibujos animados de regular calidad. </p>
+<h3 id="ese-teclado-me-suena"><a class="header" href="#ese-teclado-me-suena">Ese teclado me suena</a></h3>
+<p>¿Por qué no puedo sentarme ante el ordenador y escribir una sencilla página de texto?</p>
+<p>No se deje engañar por el hecho de que el ordenador se parece a una máquina de escribir electrónica con pantalla. La pantalla no es una hoja de papel electrónico: es una &quot;consola de órdenes&quot;, expresión técnica que quiere decir que es una vía de comunicación entre el usuario y el lenguaje de programación que está en la memoria de la máquina.</p>
+<p>Mientras no se le mande otra cosa, el ordenador tratará de entender todo lo que se le comunique a través del teclado, pues supone que son instrucciones. Cuando usted pulsa <strong>[RETURN]</strong>, el ordenador examina lo tecleado; si no es inteligible para el BASIC residente, lo rechaza y emite el mensaje: </p>
+<pre><code>Syntax error
+</code></pre>
+<p>Ahora bien, puede ocurrir que el programa actualmente presente en la memoria sea un procesador de textos; en tal caso usted podrá escribir las palabras que desee, pulsar <strong>[RETURN]</strong> y seguir escribiendo a sus anchas, exactamente igual que si el ordenador fuera una máquina de escribir que utilizara papel electrónico. Pero, para que esto sea posible, antes se debe haber cargado en la memoria un programa de proceso de textos. </p>
+<p>El ordenador parece combinar aparatos que nos resultan familiares de tanto verlos en casa y en la oficina, como son la pantalla y el teclado. Pero recuerde que la similitud normalmente es superficial y que el ordenador es una combinación de elementos con personalidad propia. </p>
+<p><img src="png/c09-p01-i01.png" alt="" /></p>
+<h3 id="quién-teme-a-la-jerga"><a class="header" href="#quién-teme-a-la-jerga">¿Quién teme a la jerga?</a></h3>
+<p>Como ocurre con todas las ramas especializadas de la industria, la informática ha desarrollado una jerga propia para facilitar la comunicación de conceptos complejos que de otra forma requerirían muchas palabras de lenguaje ordinario. Esto no ocurre solamente en el campo de la alta tecnología; todos hemos topado con barreras de este tipo levantadas por los profesionales de distintas áreas. </p>
+<p>En el caso de la informática, la confusión se debe más a la forma de utilizar las palabras que a las palabras en sí. (Y en castellano, a la imposibilidad de traducir ciertas palabras inglesas o a que no nos tomamos la molestia de intentarlo.) Casi todos los que llegan a familiarizarse con la terminología de la informática se esfuerzan por utilizar las palabras de la forma más directa posible, con objeto de minimizar la dificultad de la comunicación. Pero no crea que el lenguaje informático es lo mismo que el lenguaje literario; la informática no es literatura, sino una ciencia precisa; aparte la sintaxis, la estructura de la comunicación en informática es directa y sencilla, y de ningún modo confusa o ambigua. Como no es literatura, la informática no ha necesitado desarrollar una asignatura de &quot;comentario de textos&quot; para analizar el significado exacto del significado de los programas.</p>
+<p>Independientemente de si el significado de un programa es obvio o no lo es, hay muchos aspectos de la programación que se pueden calificar de embarullados o de elegantes; ahora que se está asentando el revuelo inicial causado por la aparición de los microordenadores, se está prestando mayor atención a los aspectos formales de la construcción de programas.</p>
+<p>La informática está penetrando en las mentes de muchos jóvenes que valoran la precisión y la sencillez de las ideas y de la forma de comunicarlas. No hay demasiados niños que a los diez años sean ya abogados, pero sí muchos que a esa edad saben programar. </p>
+<p><img src="png/c09-p01-i02.png" alt="" /></p>
+<h3 id="lo-básico-de-basic"><a class="header" href="#lo-básico-de-basic">Lo básico de BASIC</a></h3>
+<p>Casi todos los ordenadores domésticos tienen incorporado el lenguaje BASIC, que hoy por hoy es lo más próximo al lenguaje ordinario. El nombre del lenguaje no implica ninguna limitación en cuanto a sus posibilidades; de hecho, se ha escrito programas extremadamente complejos y potentes en BASIC.</p>
+<p>Sin embargo, es evidente que el nombre ha atraído a muchos principiantes, que esperaban encontrar en BASIC un buen punto de partida entre el laberinto de los lenguajes de programación; y esto ha contribuido en gran medida a su universalidad.</p>
+<p>BASIC es un lenguaje informático que interpreta un reducido número de órdenes, como resultado de las cuales realiza operaciones con los datos según se va ejecutando el programa. A diferencia del vocabulario humano medio, que consta de entre 5000 y 8000 palabras (además de la conjugación de los verbos, plurales, diminutivos, etc.), BASIC tiene que arreglárselas con sólo un par de centenares. Los programas escritos en BASIC tienen que ajustarse a reglas muy estrictas en cuanto a la forma de utilizar esas palabras. La sintaxis es muy precisa; todo intento de comunicarse con el ordenador en lenguaje coloquial producirá el frío mensaje: </p>
+<pre><code>Syntax error
+</code></pre>
+<p>Esto no representa una limitación seria, ya que BASIC está diseñado para trabajar con números. Las palabras son básicamente una generalización de las operaciones matemáticas elementales (+, -, etc.). El concepto más importante que tienen que asimilar los principiantes es que el ordenador sólo puede manejar datos numéricos. Es decir, la información que se envía a la CPU (unidad central de proceso) tiene que estar en forma numérica. </p>
+<h3 id="números"><a class="header" href="#números">Números</a></h3>
+<p>Si empleáramos un ordenador para almacenar las obras completas de Shakespeare, en todo el sistema no encontraríamos ni una sola letra o palabra. Todo elemento de información debe ser convertido a número antes de que el ordenador pueda reconocerlo y manipularlo. </p>
+<p>BASIC interpreta las palabras como si fueran números; para procesarlas, el ordenador no dispone de más medios que la suma, la resta y la lógica de Boole, con la cual puede hacer comparaciones y seleccionar atributos; en otras palabras, averiguar si un número es menor o igual que otro, o realizar determinada tarea si un número cumple cierta condición. </p>
+<p>A través del programa, el ordenador desmenuza todas las tareas en sus componentes más elementales. </p>
+<p><img src="png/c09-p01-i03.png" alt="" /></p>
+<p>Si todo esto le parece farragoso, está en lo cierto. Ha descubierto la primera y más importante verdad de la informática. Un ordenador es una herramienta que sirve para realizar tareas elementales y repetitivas a gran velocidad y con precisión absoluta. Así, BASIC interpreta las instrucciones que se le dan por medio del programa y las traduce al lenguaje que la CPU (unidad central de proceso) puede entender. La lógica del ordenador sólo distingue dos estados: sí y no; en notación binaria, 1 y 0; en notación de Boole, &quot;verdadero&quot; y &quot;falso&quot;. No hay estados intermedios del tipo &quot;quizá&quot;. </p>
+<p>El proceso de conmutación entre esos dos estados es la esencia del término &quot;digital&quot;. En la naturaleza casi todos los procesos evolucionan gradualmente de un estado &quot;estable&quot; a otro. En cambio, en la situación digital ideal, la transición de un estado a otro es instantánea. Sin embargo, las leyes de la física de semiconductores imponen un pequeño retardo, el retardo de propagación, que es el causante del tiempo que tarda el ordenador en procesar la información antes de dar la respuesta. </p>
+<p>En todo caso, el ordenador tiene que esperar hasta que concluya una tarea antes de poder abordar la siguiente, lo que representa que siempre se le impone un retardo artificial. El proceso digital es &quot;blanco&quot; o &quot;negro&quot;, y las fases de transición por los diversos grados de &quot;gris&quot; no tienen ninguna importancia. En cambio, los procesos analógicos se realizan precisamente a través de esas fases de &quot;gris&quot;.</p>
+<p>Si la respuesta final sólo puede ser 0 o 1, no es posible que el resultado sea &quot;casi&quot; correcto. El hecho de que los ordenadores cometan errores en ocasiones se debe a la limitación del tamaño de los números que pueden procesar; los números con demasiados dígitos tienen que ser &quot;comprimidos&quot; para que encajen en el espacio disponible, lo que conduce a errores de redondeo. </p>
+<p>En un mundo en el que sólo existen los dígitos 0 y 1, ¿cómo se cuenta más allá de 1? </p>
+<h4 id="bits-y-bytes"><a class="header" href="#bits-y-bytes">Bits y bytes</a></h4>
+<p>Estamos habituados a entender los números solamente cuando están expresados en el sistema decimal, en el que el punto de referencia es el número 10 y en el que se dispone de 10 dígitos (del 0 al 9) para representar los números. El sistema binario es conceptualmente análogo al decimal, pero con sólo dos dígitos; las unidades con las que opera este sistema son los denominados <em>bits</em> (forma contraída de <em>BInary digiT</em>, dígito binario). </p>
+<p>La relación entre bits y números decimales es sencilla y vamos a estudiarla. </p>
+<p>Es habitual declarar el máximo número de bits que vamos a usar para representar los números, y añadir ceros por la izquierda para completar la expresión. Por ejemplo, el número decimal 7 se convierte en el binario </p>
+<ul>
+<li>00111</li>
+</ul>
+<p>en notación de 5 bits. </p>
+<p>En el sistema binario, los dígitos se pueden considerar como indicadores dispuestos en columnas para especificar si una determinada potencia de 2 está presente o no lo está: </p>
+<p><img src="svg/c09-p01-i02.svg" alt="" /></p>
+<p>de modo que las columnas tienen el siguiente aspecto:</p>
+<p><img src="svg/c09-p01-i03.svg" alt="" /></p>
+<p>Para abreviar la terminología al hablar de información binaria se introduce el concepto de &quot;byte&quot;, que es una sucesión de 8 bits. El mayor número que se puede representar con un byte es 11111111 (binario) o 255 (decimal). Si contamos también el 00000000, resulta un total de 256 números distintos, que son datos perfectamente válidos para el ordenador.</p>
+<p>Los ordenadores prefieren manejar los bits en grupos de 8. El número 256 es demasiado pequeño, y por eso, para poder controlar la memoria, se utilizan dos bytes que se interpretan en forma matricial. Cada posición de memoria tiene una dirección vertical y otra horizontal, y entre las dos caracterizan sin ambigüedad la posición. Por ejemplo, la siguiente matriz </p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center"></th><th style="text-align: center">0</th><th style="text-align: center">1</th><th style="text-align: center">2</th><th style="text-align: center">3</th><th style="text-align: center">4</th><th style="text-align: center">5</th><th style="text-align: center">6</th><th style="text-align: center">7</th><th style="text-align: center">8</th><th style="text-align: center">9</th></tr></thead><tbody>
+<tr><td style="text-align: center"><strong>0</strong></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center"><strong>1</strong></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center"><strong>2</strong></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center"><strong>3</strong></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center"><strong>4</strong></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center"><strong>5</strong></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center">1</td><td style="text-align: center"></td><td style="text-align: center">1</td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center"><strong>6</strong></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center"><strong>7</strong></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center"><strong>8</strong></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center"><strong>9</strong></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+</tbody></table>
+</div>
+<p>puede caracterizar hasta 10x10 elementos de información utilizando números de dirección comprendidos entre 0 y 9. El elemento almacenado en la posición 3,5 es un &quot;1&quot;, lo mismo que el que está en la posición 5,5.</p>
+<p>Análogamente, una matriz binaria de 256x256 puede caracterizar 65536 posiciones utilizando direcciones de 8 bits para los ejes vertical y horizontal de la matriz. Nuestros elementos iniciales, &quot;0&quot; y &quot;1&quot;, han progresado hasta ser capaces de identificar 65536 elementos diferentes. </p>
+<p>El siguiente nivel de abreviatura en terminología binaria es el K, que representa 1024 bytes. El número 1024 es la potencia de 2 más próxima a nuestro &quot;kilo&quot; (1000), y explica por qué se dice que un ordenador es de 64K cuando en realidad tiene una memoria de 65536 bytes (64x1024). </p>
+<p>Afortunadamente, el intérprete de BASIC se encarga de todas estas conversiones. Es perfectamente posible llegar a ser un programador aunque no se domine el sistema binario. No obstante, unos conocimientos del sistema binario pueden ayudar a desenmascarar la magia de ciertos números clave que inevitablemente nos encontramos en informática. </p>
+<p>Vale la pena dedicar algún tiempo a entender el sistema binario y a comprender el por qué de números tales como el 255 o el 1024, pues parece evidente que estos números seguirán siendo el fundamento de la informática, al menos en el futuro previsible. La fiabilidad y sencillez que proporciona el sistema binario se seguirá imponiendo a la complejidad que implicaría cualquier otro sistema de numeración. </p>
+<h4 id="sin-embargo"><a class="header" href="#sin-embargo">Sin embargo</a></h4>
+<p>Por sencilla y elegante que sea, la notación binaria induce a confusión a los humanos, porque no somos capaces de leer de un golpe de vista los números binarios. Hay algunos otros sistemas de numeración que los programadores utilizan con mayor facilidad. Un sistema muy utilizado en microordenadores es el hexadecimal (HEX). Su base es el número 16. La correspondencia entre dígitos decimales y hexadecimales es la siguiente: </p>
+<p><img src="svg/c09-p01-i05.svg" alt="" /></p>
+<p>El sistema hexadecimal puede dividir los 8 bits de un byte en dos bloques de 4 bits, ya que 15 es un número de 4 bits: 1111 en binario. El primer bloque indica el número de unidades completas de &quot;15&quot;; el segundo bloque indica el &quot;resto&quot;. Y aquí es donde empieza a aparecer la elegancia de los sistemas binario y hexadecimal. A continuación damos una tabla de conversión entre los tres sistemas para los primeros números: </p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: right">Decimal</th><th>Binario</th><th style="text-align: center">Hexadecimal</th></tr></thead><tbody>
+<tr><td style="text-align: right">0</td><td>0</td><td style="text-align: center">0</td></tr>
+<tr><td style="text-align: right">1</td><td>1</td><td style="text-align: center">1</td></tr>
+<tr><td style="text-align: right">2</td><td>10</td><td style="text-align: center">2</td></tr>
+<tr><td style="text-align: right">3</td><td>11</td><td style="text-align: center">3</td></tr>
+<tr><td style="text-align: right">4</td><td>100</td><td style="text-align: center">4</td></tr>
+<tr><td style="text-align: right">5</td><td>101</td><td style="text-align: center">5</td></tr>
+<tr><td style="text-align: right">6</td><td>110</td><td style="text-align: center">6</td></tr>
+<tr><td style="text-align: right">7</td><td>111</td><td style="text-align: center">7</td></tr>
+<tr><td style="text-align: right">8</td><td>1000</td><td style="text-align: center">8</td></tr>
+<tr><td style="text-align: right">9</td><td>1001</td><td style="text-align: center">9</td></tr>
+<tr><td style="text-align: right">10</td><td>1010</td><td style="text-align: center">A</td></tr>
+<tr><td style="text-align: right">11</td><td>1011</td><td style="text-align: center">B</td></tr>
+<tr><td style="text-align: right">12</td><td>1100</td><td style="text-align: center">C</td></tr>
+<tr><td style="text-align: right">13</td><td>1101</td><td style="text-align: center">D</td></tr>
+<tr><td style="text-align: right">14</td><td>1110</td><td style="text-align: center">E</td></tr>
+<tr><td style="text-align: right">15</td><td>1111</td><td style="text-align: center">F</td></tr>
+<tr><td style="text-align: right">16</td><td>10000</td><td style="text-align: center">10</td></tr>
+</tbody></table>
+</div>
+<p>Un número de 8 bits tal como el 11010110 (&amp;D6 hex) puede ser subdividido en dos de 4 bits. A lo largo de todo este manual indicamos los números hexadecimales precediéndolos del signo &amp;. El sistema hexadecimal es el más utilizado por los programadores que trabajan en ensamblador. El lenguaje ensamblador es la etapa más cercana a código de máquina a la que llegan normalmente los programadores; permite expresar las instrucciones en &quot;códigos nemotécnicos&quot;, que son algo más inteligibles que los códigos de máquina. </p>
+<p>Para convertir un número hexadecimal en binario, lo primero que hay que hacer es observar el primer dígito, para ver cuántos grupos de &quot;16&quot; hay en el número, multiplicar por 16 y luego sumar al resultado el valor del segundo dígito. Así pues, no se deje llevar por la tentación de pensar que &amp;D6 es 13+6, ni 136, porque en realidad es (13x16)+(6)=214.</p>
+<p>El proceso es el mismo que seguimos cuando leemos un número decimal: 89=(8x10)+9. Lo que ocurre es que nos resulta mucho más fácil multiplicar por 10 que por 16; es una cuestión de práctica. </p>
+<p>Si usted ha conseguido llegar hasta aquí sin estar demasiado confuso, puede decir que está en el buen camino para llegar a entender los principios básicos del ordenador. Quizá se pregunte para qué nos metemos en todas estas complicaciones, y tiene razón. Un ordenador es un aparato que maneja ideas y conceptos muy sencillos; lo que tiene de especial es que realiza esas operaciones a una velocidad muy grande (millones de veces por segundo) y que tiene una enorme capacidad para recordar los datos, tanto los que se le han suministrado como los resultados intermedios de los muchos miles de sumas que realiza antes de poder dar la respuesta final. </p>
+<p>Si desea seguir estudiando la teoría de los ordenadores, sepa que hay miles de libros dedicados a estos temas. Algunos no le aclararán en absoluto las ideas, sino todo lo contrario, pero otros en cambio le guiarán en el descubrimiento de la sencillez y las relaciones fundamentales que existen entre los sistemas de numeración y le ayudarán a comprender la forma en que el ordenador los maneja. </p>
+<p><img src="png/c09-p01-i04.png" alt="" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="9.00.-Capítulo-9.-Cuando-usted-guste.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="9.02.-Más-en-concreto-sobre-el-CPC6128.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="9.00.-Capítulo-9.-Cuando-usted-guste.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="9.02.-Más-en-concreto-sobre-el-CPC6128.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE HTML>
+<html lang="es" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Grábelo en disco - Amstrad CPC6128 Manual del Usuario</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="Manual de usuario del micro ordenenador Amstrad modelo CPC6128">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Home.html">Inicio</a></li><li class="chapter-item expanded affix "><a href="0.01.-Introducción.html">Introducción</a></li><li class="chapter-item expanded affix "><a href="0.02.-Importante.html">Importante</a></li><li class="chapter-item expanded "><a href="1.00.-Capítulo-1.-Curso-de-introducción.html"><strong aria-hidden="true">1.</strong> Curso se introducción</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="1.01.-Instalación-y-mantenimiento.html"><strong aria-hidden="true">1.1.</strong> Instalación y mantenimiento</a></li><li class="chapter-item expanded "><a href="1.02.-Conexión-de-los-periféricos.html"><strong aria-hidden="true">1.2.</strong> Conexión de los periféricos</a></li><li class="chapter-item expanded "><a href="1.03.-En-cuanto-a-los-discos.html"><strong aria-hidden="true">1.3.</strong> En cuanto a los discos</a></li><li class="chapter-item expanded "><a href="1.04.-Manos-al-teclado.html"><strong aria-hidden="true">1.4.</strong> Manos al teclado</a></li><li class="chapter-item expanded "><a href="1.05.-Carga-de-programas.html"><strong aria-hidden="true">1.5.</strong> Carga de programas</a></li><li class="chapter-item expanded "><a href="1.06.-Empecemos-a-trabajar.html"><strong aria-hidden="true">1.6.</strong> Empecemos a trabajar</a></li><li class="chapter-item expanded "><a href="1.07.-Grábelo-en-disco.html" class="active"><strong aria-hidden="true">1.7.</strong> Grábelo en disco</a></li><li class="chapter-item expanded "><a href="1.08.-Introducción-a-los-modos-de-pantalla,-colores-y-gráficos.html"><strong aria-hidden="true">1.8.</strong> Introducción a los modos de pantalla, colores y gráficos</a></li><li class="chapter-item expanded "><a href="1.09.-Sonidos.html"><strong aria-hidden="true">1.9.</strong> Sonidos</a></li><li class="chapter-item expanded "><a href="1.10.-Introducción-a-los-sistemas-operativos-AMSDOS-y-CPM.html"><strong aria-hidden="true">1.10.</strong> Introducción a los sistemas operativos AMSDOS y CPM</a></li><li class="chapter-item expanded "><a href="1.11.-Introducción-al-gestor-de-bancos-de-memoria.html"><strong aria-hidden="true">1.11.</strong> Introducción al gestor de bancos de memoria</a></li></ol></li><li class="chapter-item expanded "><a href="2.01.-La-génesis-de-un-programa.html"><strong aria-hidden="true">2.</strong> La génesis de un programa</a></li><li class="chapter-item expanded "><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html"><strong aria-hidden="true">3.</strong> Lista completa de las palabras clave del BASIC de AMSTRAD</a></li><li class="chapter-item expanded "><a href="4.00.-Capítulo-4.-Discos-y-cintas.html"><strong aria-hidden="true">4.</strong> Discos y cintas</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="4.01.-Discos.html"><strong aria-hidden="true">4.1.</strong> Parte 1: Discos</a></li><li class="chapter-item expanded "><a href="4.02.-Cintas.html"><strong aria-hidden="true">4.2.</strong> Parte 2: Cintas</a></li></ol></li><li class="chapter-item expanded "><a href="5.00.-Capítulo-5.-AMSDOS-y-CP-M.html"><strong aria-hidden="true">5.</strong> AMSDOS y CP/M</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="5.01.-AMSDOS.html"><strong aria-hidden="true">5.1.</strong> Parte 1: AMSDOS</a></li><li class="chapter-item expanded "><a href="5.02.-CP-M.html"><strong aria-hidden="true">5.2.</strong> Parte 2: CP/M</a></li></ol></li><li class="chapter-item expanded "><a href="6.01.-Introducción-a-LOGO.html"><strong aria-hidden="true">6.</strong> Introducción a LOGO</a></li><li class="chapter-item expanded "><a href="7.00.-Capítulo-7.-Para-su-referencia.html"><strong aria-hidden="true">7.</strong> Para su referencia</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="7.01.-Posiciones-del-cursor-y-códigos-ampliados-de-control-en-BASIC.html"><strong aria-hidden="true">7.1.</strong> Posiciones del cursor y códigos ampliados de control en BASIC</a></li><li class="chapter-item expanded "><a href="7.02.-El-sistema-operativo.html"><strong aria-hidden="true">7.2.</strong> El sistema operativo</a></li><li class="chapter-item expanded "><a href="7.03.-Interrupciones.html"><strong aria-hidden="true">7.3.</strong> Interrupciones</a></li><li class="chapter-item expanded "><a href="7.04.-Caracteres-ASCII-y-caracteres-gráficos-en-BASIC.html"><strong aria-hidden="true">7.4.</strong> Caracteres ASCII y caracteres gráficos en BASIC</a></li><li class="chapter-item expanded "><a href="7.05.-Esquemas-de-teclado.html"><strong aria-hidden="true">7.5.</strong> Esquemas de teclado</a></li><li class="chapter-item expanded "><a href="7.06.-Sonidos.html"><strong aria-hidden="true">7.6.</strong> Sonidos</a></li><li class="chapter-item expanded "><a href="7.07.-Mensajes-de-error-de-BASIC.html"><strong aria-hidden="true">7.7.</strong> Mensajes de error de BASIC</a></li><li class="chapter-item expanded "><a href="7.08.-Palabras-reservadas-de-BASIC.html"><strong aria-hidden="true">7.8.</strong> Palabras reservadas de BASIC</a></li><li class="chapter-item expanded "><a href="7.09.-Plantillas.html"><strong aria-hidden="true">7.9.</strong> Plantillas</a></li><li class="chapter-item expanded "><a href="7.10.-Conexiones.html"><strong aria-hidden="true">7.10.</strong> Conexiones</a></li><li class="chapter-item expanded "><a href="7.11.-Impresoras.html"><strong aria-hidden="true">7.11.</strong> Impresoras</a></li><li class="chapter-item expanded "><a href="7.12.-Joysticks.html"><strong aria-hidden="true">7.12.</strong> Joysticks</a></li><li class="chapter-item expanded "><a href="7.13.-Organización-de-los-discos.html"><strong aria-hidden="true">7.13.</strong> Organización de los discos</a></li><li class="chapter-item expanded "><a href="7.14.-Ampliaciones-del-sistema-residentes-RSX.html"><strong aria-hidden="true">7.14.</strong> Ampliaciones del sistema residentes RSX</a></li><li class="chapter-item expanded "><a href="7.15.-Memoria.html"><strong aria-hidden="true">7.15.</strong> Memoria</a></li><li class="chapter-item expanded "><a href="7.16.-Emulador-de-consola-CP-M-Plus.html"><strong aria-hidden="true">7.16.</strong> Emulador de consola CP/M Plus</a></li><li class="chapter-item expanded "><a href="7.17.-Juego-de-caracteres-de-CP-M-Plus.html"><strong aria-hidden="true">7.17.</strong> Juego de caracteres de CP-M Plus</a></li></ol></li><li class="chapter-item expanded "><a href="8.00.-Capítulo-8.-Más-sobre-el-gestor-de-bancos-de-memoria.html"><strong aria-hidden="true">8.</strong> Más sobre el gestor de bancos de memoria</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="8.01.-Almacenamiento-de-imágenes-de-pantalla.html"><strong aria-hidden="true">8.1.</strong> Almacenamiento de imágenes de pantalla</a></li><li class="chapter-item expanded "><a href="8.02.-Ficheros-en-RAM.html"><strong aria-hidden="true">8.2.</strong> Ficheros en RAM</a></li></ol></li><li class="chapter-item expanded "><a href="9.00.-Capítulo-9.-Cuando-usted-guste.html"><strong aria-hidden="true">9.</strong> Cuando usted guste</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="9.01.-En-términos-generales.html"><strong aria-hidden="true">9.1.</strong> En términos generales</a></li><li class="chapter-item expanded "><a href="9.02.-Más-en-concreto-sobre-el-CPC6128.html"><strong aria-hidden="true">9.2.</strong> Más en concreto sobre el CPC6128</a></li></ol></li><li class="chapter-item expanded "><a href="10.0.-Para-más-información.html"><strong aria-hidden="true">10.</strong> Para más información</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 1</li><li class="chapter-item expanded "><a href="A01.-Digital-Research-y-AMSTRAD.html"><strong aria-hidden="true">11.</strong> Digital Research y AMSTRAD</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 2</li><li class="chapter-item expanded "><a href="A02.-Léxico-inglés-castellano-y-glosario.html"><strong aria-hidden="true">12.</strong> Léxico inglés-castellano y glosario</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 3. Que usted lo disfrute</li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Rebotes.html"><strong aria-hidden="true">13.</strong> Rebotes</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Bombardero.html"><strong aria-hidden="true">14.</strong> Bombardero</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Tele-tenis.html"><strong aria-hidden="true">15.</strong> Tele tenis</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Esgrima-eléctrico.html"><strong aria-hidden="true">16.</strong> Esgrima eléctrico</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Amthello.html"><strong aria-hidden="true">17.</strong> Amthello</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Guante-blanco.html"><strong aria-hidden="true">18.</strong> Guante blanco</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 4</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="A04.-Indice.html">Índice</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Amstrad CPC6128 Manual del Usuario</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/latchdevel/Amstrad-CPC6128-Manual-del-Usuario" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="capítulo-1-curso-de-introducción"><a class="header" href="#capítulo-1-curso-de-introducción">Capítulo 1. Curso de introducción</a></h1>
+<h2 id="parte-7-grábelo-en-disco"><a class="header" href="#parte-7-grábelo-en-disco">Parte 7: Grábelo en disco</a></h2>
+<p><strong>Contenido:</strong></p>
+<ul>
+<li><a href="#inicializaci%C3%B3n-de-discos">Inicialización de discos</a>.</li>
+<li><a href="#primeros-pasos-en-la-utilizaci%C3%B3n-de-los-discos-maestros-de-cpm">Primeros pasos en la utilización de los discos maestros de CP/M</a>.</li>
+<li><a href="#inicializaci%C3%B3n-en-un-sistema-de-2-unidades-de-disco">Inicialización en un sistema de 2 unidades de disco</a>.</li>
+<li><a href="#grabaci%C3%B3n-de-un-programa-en-disco">Grabación de un programa en disco</a>.</li>
+<li><a href="#cat%C3%A1logo">Catálogo</a>.</li>
+<li><a href="#carga-del-disco-a-la-memoria-del-ordenador">Carga del disco a la memoria del ordenador</a>.</li>
+<li><a href="#a-y-b">|A y |B</a>.</li>
+<li><a href="#copia-de-programas-de-disco-a-disco">Copia de programas de disco a disco</a>.</li>
+<li><a href="#ficheros-ascii">Ficheros ASCII</a>.</li>
+<li><a href="#ficheros-protegidos">Ficheros protegidos</a>.</li>
+<li><a href="#ficheros-binarios">Ficheros binarios</a>.</li>
+<li><a href="#volcado-de-pantalla">Volcado de pantalla</a>.</li>
+</ul>
+<hr />
+<p>Ahora que ha ejercitado su habilidad como mecanógrafo escribiendo unas cuantas instrucciones, seguramente querrá saber cómo grabar en disco un programa almacenado en la memoria del ordenador, para luego cargarlo del disco al ordenador.</p>
+<p>Aunque usted tenga experiencia en la grabación y carga de programas en cinta, hay algunas peculiaridades del sistema de grabación en disco que es necesario tener en cuenta.</p>
+<p>Hay dos diferencias fundamentales entre los discos y las cintas. La primera es que, a diferencia de lo que ocurre con la cintas, para grabar en un disco no basta con sacarlo de la caja e introducirlo en la unidad. Los discos nuevos tienen que ser &quot;formateados&quot; o &quot;inicializados&quot;; enseguida veremos cómo hacerlo.</p>
+<p>La otra diferencia tiene que ver con los nombres que se puede dar a los ficheros. En el sistema de grabación en cinta, los nombres de los ficheros prácticamente no siguen ninguna regla, salvo la de la longitud; incluso se pueden grabar ficheros sin nombre. No ocurre así con el sistema de grabación en disco, en el que los nombres de los ficheros deben atenerse a las normas de CP/M, como veremos más adelante. </p>
+<h3 id="inicialización-de-discos"><a class="header" href="#inicialización-de-discos">Inicialización de discos</a></h3>
+<p>Antes de poder escribir datos en un disco virgen es necesario inicializarlo o formatearlo. Esta operación consiste en preparar una especie de estantería en el disco; los estantes son los lugares en los que más tarde se va a almacenar la información.</p>
+<p>Al inicializar un disco, éste queda dividido en 360 zonas: </p>
+<p><img src="svg/c01-p07-i01.svg" alt="" /></p>
+<p>Radialmente el disco se divide en 40 pistas circulares, desde la número 0, que es la más externa, hasta la 39. Cada pista se divide en 9 sectores.</p>
+<p>Cada sector puede almacenar 512 bytes; por lo tanto, la capacidad total de cada cara del disco es de 180K. </p>
+<h3 id="primeros-pasos-en-la-utilización-de-los-discos-maestros-de-cpm"><a class="header" href="#primeros-pasos-en-la-utilización-de-los-discos-maestros-de-cpm">Primeros pasos en la utilización de los discos maestros de CP/M</a></h3>
+<p>Antes de poder grabar programas en un disco virgen es necesario inicializarlo, y para ello se requiere la cara 1 de los discos maestros de CP/M (suministrados con el ordenador).</p>
+<p>Encienda el equipo e inserte la cara 1 de los discos de CP/M en la unidad. Si su sistema dispone de dos unidades de disco, utilice la incorporada en el ordenador (unidad A). Escriba lo siguiente: </p>
+<pre><code>|cpm [RETURN]
+</code></pre>
+<p>(El símbolo | se obtiene de la tecla @ con <strong>[MAYS]</strong>.)</p>
+<p>Al cabo de unos segundos aparecerá en la pantalla el siguiente mensaje: </p>
+<pre><code>CP/M Plus    Amstrad Consumer Electronics plc
+</code></pre>
+<p>Esto es un mensaje de saludo que indica que el ordenador está siendo controlado por sistema operativo CP/M.</p>
+<p>Los caracteres <strong>A&gt;</strong> constituyen un inductor, análogo al <strong>Ready</strong> de BASIC, que avisa al usuario de que el ordenador está a la espera de sus instrucciones.</p>
+<p>Una vez cargado CP/M, ya no se pueden teclear instrucciones de BASIC, pues el ordenador no las entendería. </p>
+<p>Por ejemplo, si escribimos </p>
+<pre><code>cls [RETURN]
+</code></pre>
+<p>el ordenador repite lo tecleado junto con un signo de interrogación:</p>
+<pre><code>CLS?
+</code></pre>
+<p>lo que indica que no ha entendido la instrucción. </p>
+<p>Par dar un breve repaso a algunas órdenes de CP/M, escriba: </p>
+<pre><code>dir [RETURN]
+</code></pre>
+<p>En la pantalla aparece una lista del contenido del disco, incluidas algunas órdenes tran sitorias. Una de ellas es <strong>DISCKIT3</strong>. Escriba: </p>
+<pre><code>disckit3 [RETURN]
+</code></pre>
+<p>Al cabo de unos instantes verá aparecer en la pantalla el mensaje de presentación de DISCKIT3, seguido de: </p>
+<pre><code>One drive found
+</code></pre>
+<p>Esto confirma que estamos ejecutando el programa de ayuda DISC KIT y que el ordenador sólo ha detectado una unidad de disco (la incorporada en la máquina).</p>
+<p>En cambio, si está conectada la segunda unidad de disco, el mensaje será: </p>
+<pre><code>Two drives found
+</code></pre>
+<p>En la parte inferior de la pantalla se puede ver el siguiente menú: </p>
+<p><img src="svg/c01-p07-i02.svg" alt="" /></p>
+<p>Es el menú principal del programa DISCKIT3. Los números recuadrados hacen referencia a las teclas de función del teclado numérico (marcadas con <strong>f0</strong>, <strong>f1</strong>, <strong>f4</strong> y <strong>f7</strong>). Pulsando una de estas teclas se elige la opción deseada.</p>
+<p>Obsérvese que la opción <strong>0</strong> de este menú hace que se abandone el programa DISCKIT3 y se vuelva al modo directo de consola de CP/M (inductor <strong>A&gt;</strong>).</p>
+<p>Como lo que queremos hacer ahora es inicializar un disco, pulse la tecla de función número <strong>4</strong> (<strong>f4</strong>). </p>
+<table>
+<tr><td>
+<p align="center">
+<strong>PRECAUCIÓN</strong><br />
+AL INICIALIZAR UN DISCO SE BORRA SU CONTENIDO ANTERIOR. 
+</p></td></tr>
+</table>
+<p>El programa ofrece un nuevo menú con las diferentes opciones de formato: </p>
+<p><img src="svg/c01-p07-i03.svg" alt="" /></p>
+<p>Pulsando una de las teclas de función (<strong>f3</strong>, <strong>f6</strong> o <strong>f9</strong>) se selecciona el formato deseado. Más adelante explicaremos las diferencias entre los diversos formatos. Por ahora, elija el formato de datos pulsando la tecla de función número 6 (<strong>f6</strong>).</p>
+<p>Obsérvese que al pulsar la tecla . (que está debajo de <strong>f3</strong>, <strong>f6</strong> y <strong>f9</strong>) se sale de la opción de inicialización y se vuelve al menú principal del programa DISCKIT3. </p>
+<p>Después de pulsar la tecla de función número 6 (y suponiendo que no tenga conectada la segunda unidad de disco) podrá ver en la pantalla lo siguiente: </p>
+<p><img src="svg/c01-p07-i04.svg" alt="" /></p>
+<p>En este momento debe extraer el disco de CP/M e insertar el disco nuevo, con la cara que desee inicializar hacia arriba.</p>
+<p>Pulse ahora la tecla <strong>Y</strong> (de yes, &quot;sí&quot;), lo que equivale a decirle al ordenador: &quot;de acuerdo, inicializa el disco&quot;. El proceso de inicialización comienza con la pista 0 y termina con la 39; en cada momento, el número de la pista que está siendo inicializada aparece en el extremo superior izquierdo de la pantalla.</p>
+<p>El sistema no permite inicializar un disco que tenga abierto el orificio de protección contra escritura. Si lo intenta, el ordenador emite el mensaje: </p>
+<div class="table-wrapper"><table><thead><tr><th>Mensaje</th><th>Traducción</th></tr></thead><tbody>
+<tr><td>Disc write-protected</td><td>El disco está protegido contra escritura</td></tr>
+<tr><td>Insert disc to format</td><td>Insertar disco a inicializar</td></tr>
+<tr><td>R-etry or C-ancel</td><td>R-eintentar o C-ancelar</td></tr>
+</tbody></table>
+</div>
+<p>Lo que se debe hacer en este caso es pulsar C para cancelar la operación, extraer el disco e insertar el disco que sí se quiere inicializar, con el orificio de protección obturado.</p>
+<p>Es muy importante no cerrar los orificios de protección de los discos que contengan programas valiosos. <strong>NO CERRAR NUNCA</strong> los orificios de protección de los discos maestros de CP/M.</p>
+<p>Cuando termina la inicialización, el ordenador le pide que extraiga el disco recién inicializado y que pulse cualquier tecla para continuar.</p>
+<p>Una vez hecho esto, puede inicializar otro disco insertándolo en la unidad y pulsando de nuevo la tecla <strong>Y</strong>. Este proceso se puede repetir tantas veces como discos tenga que inicializar con este formato concreto.</p>
+<p>Cuando no haya más discos que inicializar, pulse cualquier tecla (distinta de la <strong>Y</strong>) para volver al menú. </p>
+<p>Más adelante explicaremos las opciones <strong>Copy</strong> y <strong>Verify</strong>. Por ahora nos basta con haber aprendido a inicializar discos con CP/M. Reinicialice la máquina con <strong>[CONTROL]</strong> <strong>[MAYS]</strong> <strong>[ESC]</strong>.</p>
+<p>Guarde siempre en lugar seguro los discos maestros de CP/M, que son, literalmente, la llave del sistema. En un capítulo posterior explicaremos cómo hacer 'copias de trabajo' de los discos de CP/M, de forma que pueda guardar los originales a salvo de toda posibilidad de accidente. </p>
+<h3 id="inicialización-en-un-sistema-de-2-unidades-de-disco"><a class="header" href="#inicialización-en-un-sistema-de-2-unidades-de-disco">Inicialización en un sistema de 2 unidades de disco</a></h3>
+<p>Siga las instrucciones anteriores: pulse <strong>f4</strong> en el menú principal de DISCKIT3 para elegir la opción <strong>Format</strong> (inicialización) y luego pulse la tecla <strong>f6</strong> para elegir <strong>Data format</strong> (formato de datos).</p>
+<p>El ordenador le muestra un tercer menú, en el que se puede elegir la unidad de disco que se desee utilizar:</p>
+<p><img src="svg/c01-p07-i05.svg" alt="" /></p>
+<p>Para no tener que extraer el disco de CP/M (cara 1) de la unidad A, se puede elegir, pulsando la tecla <strong>f5</strong>, la opción <strong>Format B</strong>:, Ponga en la unidad B el disco que desee inicializar.</p>
+<p>Después de elegida esta opción, puede pulsar <strong>Y</strong> para permitir que continúe el proceso de inicialización, o bien cualquier otra tecla para volver al menú principal de DISCKIT3.</p>
+<p>Si elige la opción <strong>Format A:</strong> (tecla <strong>f8</strong>), <strong>NO OLVIDE</strong> extraer de la unidad A el disco de CP/M. Inserte luego en ella el disco que desee inicializar.</p>
+<p align="center">
+NO SE EXPONGA NUNCA AL RIESGO DE BORRAR<br />
+LOS DISCOS MAESTROS DE CP/M 
+</p>
+<p>Ahora que ya tenemos uno o dos discos preparados, vamos a empezar a transferir pro gramas de BASIC del ordenador al disco y viceversa. </p>
+<h3 id="grabación-de-un-programa-en-disco"><a class="header" href="#grabación-de-un-programa-en-disco">Grabación de un programa en disco</a></h3>
+<p>Cuando se tiene un programa en la memoria del ordenador, se lo puede grabar en disco mediante la orden </p>
+<pre><code class="language-basic">save &quot;nombrefi&quot; [RETURN]
+</code></pre>
+<p>Observe que es indispensable dar un nombre al programa.</p>
+<p>El nombre de un fichero grabado en disco consta de dos partes (campos). La primera es obligatoria y puede contener hasta 8 caracteres. Se pueden utilizar letras o números, pero <strong>no</strong> espacios ni signos de puntuación. Este primer campo suele contener el nombre del programa.</p>
+<p>El segundo campo es opcional. Puede contener hasta 3 caracteres que no sean ni espacios ni signos de puntuación. Los dos campos se separan por un punto (.).</p>
+<p>Si el usuario no especifica el segundo campo, el sistema le asigna automáticamente un distintivo: <strong>.BAS</strong> para ficheros de BASIC o <strong>.BIN</strong> para ficheros binarios (en código de máquina).</p>
+<p>Para practicar la grabación en disco, introduzca un programa corto en la memoria del ordenador, inserte en la unidad un disco inicializado y escriba lo siguiente: </p>
+<pre><code class="language-basic">save &quot;ejemplo&quot; [RETURN]
+</code></pre>
+<p>Al cabo de unos segundos aparecerá en la pantalla el mensaje <strong>Ready</strong>, lo que indica que el programa ha quedado grabado en el disco. (De no ser así, observe los mensajes emitidos por el ordenador, pues puede ocurrir que no haya insertado el disco en la unidad correcta, que esté abierto el orificio de protección o que se haya equivocado al teclear la orden.) </p>
+<h3 id="catálogo"><a class="header" href="#catálogo">Catálogo</a></h3>
+<p>Una vez grabado el programa, escriba lo siguiente: </p>
+<pre><code class="language-basic">cat [RETURN) 
+</code></pre>
+<p>En la pantalla podrá ver </p>
+<pre><code>Drive A: user 0
+EJEMPLO.BAS 1K
+168 K free
+</code></pre>
+<p>o sea, el nombre del fichero, incluido el segundo campo, seguido de la longitud aproximada en K. En la última línea se indica también el espacio que queda libre en el disco. </p>
+<h3 id="carga-del-disco-a-la-memoria-del-ordenador"><a class="header" href="#carga-del-disco-a-la-memoria-del-ordenador">Carga del disco a la memoria del ordenador</a></h3>
+<p>Los programas se pueden cargar y ejecutar con las órdenes siguientes: </p>
+<pre><code class="language-basic">load &quot;nombrefi&quot; [RETURN]
+run [RETURN]
+</code></pre>
+<p>Pero también se los puede ejecutar directamente con una sola orden: </p>
+<pre><code class="language-basic">run &quot;nombreti&quot; [RETURN]
+</code></pre>
+<p>Los programas protegidos sólo se pueden ejecutar por este segundo método. </p>
+<h3 id="a-y-b"><a class="header" href="#a-y-b">|A y |B</a></h3>
+<p>Si tiene conectada la segunda unidad de disco, puede especificar en qué unidad desea que se realice cada función escribiendo </p>
+<pre><code class="language-basic">|a [RETURN]
+</code></pre>
+<p>o bien </p>
+<pre><code class="language-basic">|b [RETURN]
+</code></pre>
+<p>antes de las órdenes <strong>SAVE</strong>, <strong>CAT</strong> o <strong>LOAD</strong>. </p>
+<h3 id="copia-de-programas-de-disco-a-disco"><a class="header" href="#copia-de-programas-de-disco-a-disco">Copia de programas de disco a disco</a></h3>
+<p>Para copiar programas de un disco a otro utilizando las órdenes que hemos aprendido en esta sección, basta con hacer lo siguiente: cargar el programa en memoria leyéndolo del disco original (fuente), sacar el disco, insertar el disco nuevo (destino) y grabar en él el programa.</p>
+<p>En cambio, cuando se dispone de dos unidades de disco, es más cómodo insertar el disco fuente en una unidad, por ejemplo la B, y el disco destino en la A. Para copiar un programa se escribe entonces lo siguiente: </p>
+<pre><code class="language-basic">|b [RETURN]
+load &quot;nombrefi&quot; [RETURN]
+|a [RETURN]
+save &quot;nombrefi&quot; [RETURN]
+</code></pre>
+<p>Hay cuatro formas de grabar programas con el CPC6128. Una de ellas es la ya conocida: </p>
+<pre><code class="language-basic">save &quot;nombreti&quot; [RETURN]
+</code></pre>
+<p>Las otras tres tienen aplicaciones más especializadas:</p>
+<h3 id="ficheros-ascii"><a class="header" href="#ficheros-ascii">Ficheros ASCII</a></h3>
+<pre><code class="language-basic">save &quot;nombrefi&quot;,a [RETURN]
+</code></pre>
+<p>El sufijo <strong>,a</strong> indica al ordenador que debe grabar el programa o los datos en forma de fichero de texto ASCII. Este método de grabación de datos es aplicable a los ficheros generados por procesadores de textos y otros programas; lo explicaremos más detenidamente cuando hablemos de esas aplicaciones. </p>
+<h3 id="ficheros-protegidos"><a class="header" href="#ficheros-protegidos">Ficheros protegidos</a></h3>
+<pre><code class="language-basic">save &quot;nombrefi&quot;,p [RETURN]
+</code></pre>
+<p>El sufijo <strong>,p</strong> indica al ordenador que el fichero debe ser protegido. Cuando un programa está así protegido, no es posible cargarlo <strong>(LOAD)</strong> para luego listarlo <strong>(LIST)</strong>, ni tampoco interrumpirlo con la tecla <strong>[ESC]</strong> después de haber iniciado su ejecución con <strong>RUN</strong>. </p>
+<p>Los programas grabados por este procedimiento sólo pueden ser ejecutados directamente, bien con la orden</p>
+<pre><code class="language-basic">run &quot;nombrefi&quot; [RETURN]
+</code></pre>
+<p>bien con</p>
+<pre><code class="language-basic">chain &quot;nombrefi&quot; [RETURN]
+</code></pre>
+<p>Siempre que se prevea la posibilidad de que más tarde se vaya a corregir o modificar un programa, se debe guardar una copia no protegida, esto es, grabada sin el sufijo <strong>,p</strong>. </p>
+<h3 id="ficheros-binarios"><a class="header" href="#ficheros-binarios">Ficheros binarios</a></h3>
+<pre><code class="language-basic">save &quot;nombrefi&quot;,b, &lt;direccion inicial&gt; , &lt;longitud en bytes&gt;  
+           [, &lt;punto de entrada, opcional&gt; ] [RETURN]
+</code></pre>
+<p>Esta opción permite realizar un volcado directo de datos desde la memoria RAM del ordenador hacia el disco. Además del sufijo <strong>,b</strong>, es necesario indicar al ordenador en qué dirección de memoria empieza el bloque que se desea transferir, cuál es la longitud en bytes y, en su caso, en qué dirección de memoria debe empezar la ejecución cuando se cargue el fichero como programa. </p>
+<h3 id="volcado-de-pantalla"><a class="header" href="#volcado-de-pantalla">Volcado de pantalla</a></h3>
+<p>Este método de grabación de ficheros binarios permite hacer un volcado de la memoria dedicada a la pantalla. El contenido de la pantalla se graba mediante la siguiente orden:</p>
+<pre><code class="language-basic">save &quot;volcpant&quot;, b, 49152,16384 [RETURN]
+</code></pre>
+<p>donde <strong>49152</strong> es la dirección en la que empieza la zona de memoria dedicada a la pantalla y <strong>16384</strong> es el tamaño de esa zona en bytes.</p>
+<p>Para cargar nuevamente esos datos en el ordenador se escribe:</p>
+<pre><code class="language-basic">load &quot;volcpant&quot; [RETURN]
+</code></pre>
+<p>En un capítulo posterior de este manual daremos más información sobre la transferencia de datos de un disco a otro, de cinta a disco y de disco a cinta.</p>
+<p>Finalmente, asegúrese de que ha tenido en cuenta las advertencias que hemos hecho al principio del manual, en la sección titulada <a href="0.02.-Importante.html">IMPORTANTE</a>: </p>
+<ul>
+<li><a href="0.02.-Importante.html#notas-de-instalaci%C3%B3n">NOTAS DE INSTALACIÓN</a> 5, 6 y 7.</li>
+<li><a href="0.02.-Importante.html#notas-de-operaci%C3%B3n">NOTAS DE OPERACIÓN</a> 1, 2, 3, 4, 5, 6, 7 y 9.</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="1.06.-Empecemos-a-trabajar.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="1.08.-Introducción-a-los-modos-de-pantalla,-colores-y-gráficos.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="1.06.-Empecemos-a-trabajar.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="1.08.-Introducción-a-los-modos-de-pantalla,-colores-y-gráficos.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

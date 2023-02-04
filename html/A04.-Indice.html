@@ -1,0 +1,922 @@
+<!DOCTYPE HTML>
+<html lang="es" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Índice - Amstrad CPC6128 Manual del Usuario</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="Manual de usuario del micro ordenenador Amstrad modelo CPC6128">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Home.html">Inicio</a></li><li class="chapter-item expanded affix "><a href="0.01.-Introducción.html">Introducción</a></li><li class="chapter-item expanded affix "><a href="0.02.-Importante.html">Importante</a></li><li class="chapter-item expanded "><a href="1.00.-Capítulo-1.-Curso-de-introducción.html"><strong aria-hidden="true">1.</strong> Curso se introducción</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="1.01.-Instalación-y-mantenimiento.html"><strong aria-hidden="true">1.1.</strong> Instalación y mantenimiento</a></li><li class="chapter-item expanded "><a href="1.02.-Conexión-de-los-periféricos.html"><strong aria-hidden="true">1.2.</strong> Conexión de los periféricos</a></li><li class="chapter-item expanded "><a href="1.03.-En-cuanto-a-los-discos.html"><strong aria-hidden="true">1.3.</strong> En cuanto a los discos</a></li><li class="chapter-item expanded "><a href="1.04.-Manos-al-teclado.html"><strong aria-hidden="true">1.4.</strong> Manos al teclado</a></li><li class="chapter-item expanded "><a href="1.05.-Carga-de-programas.html"><strong aria-hidden="true">1.5.</strong> Carga de programas</a></li><li class="chapter-item expanded "><a href="1.06.-Empecemos-a-trabajar.html"><strong aria-hidden="true">1.6.</strong> Empecemos a trabajar</a></li><li class="chapter-item expanded "><a href="1.07.-Grábelo-en-disco.html"><strong aria-hidden="true">1.7.</strong> Grábelo en disco</a></li><li class="chapter-item expanded "><a href="1.08.-Introducción-a-los-modos-de-pantalla,-colores-y-gráficos.html"><strong aria-hidden="true">1.8.</strong> Introducción a los modos de pantalla, colores y gráficos</a></li><li class="chapter-item expanded "><a href="1.09.-Sonidos.html"><strong aria-hidden="true">1.9.</strong> Sonidos</a></li><li class="chapter-item expanded "><a href="1.10.-Introducción-a-los-sistemas-operativos-AMSDOS-y-CPM.html"><strong aria-hidden="true">1.10.</strong> Introducción a los sistemas operativos AMSDOS y CPM</a></li><li class="chapter-item expanded "><a href="1.11.-Introducción-al-gestor-de-bancos-de-memoria.html"><strong aria-hidden="true">1.11.</strong> Introducción al gestor de bancos de memoria</a></li></ol></li><li class="chapter-item expanded "><a href="2.01.-La-génesis-de-un-programa.html"><strong aria-hidden="true">2.</strong> La génesis de un programa</a></li><li class="chapter-item expanded "><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html"><strong aria-hidden="true">3.</strong> Lista completa de las palabras clave del BASIC de AMSTRAD</a></li><li class="chapter-item expanded "><a href="4.00.-Capítulo-4.-Discos-y-cintas.html"><strong aria-hidden="true">4.</strong> Discos y cintas</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="4.01.-Discos.html"><strong aria-hidden="true">4.1.</strong> Parte 1: Discos</a></li><li class="chapter-item expanded "><a href="4.02.-Cintas.html"><strong aria-hidden="true">4.2.</strong> Parte 2: Cintas</a></li></ol></li><li class="chapter-item expanded "><a href="5.00.-Capítulo-5.-AMSDOS-y-CP-M.html"><strong aria-hidden="true">5.</strong> AMSDOS y CP/M</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="5.01.-AMSDOS.html"><strong aria-hidden="true">5.1.</strong> Parte 1: AMSDOS</a></li><li class="chapter-item expanded "><a href="5.02.-CP-M.html"><strong aria-hidden="true">5.2.</strong> Parte 2: CP/M</a></li></ol></li><li class="chapter-item expanded "><a href="6.01.-Introducción-a-LOGO.html"><strong aria-hidden="true">6.</strong> Introducción a LOGO</a></li><li class="chapter-item expanded "><a href="7.00.-Capítulo-7.-Para-su-referencia.html"><strong aria-hidden="true">7.</strong> Para su referencia</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="7.01.-Posiciones-del-cursor-y-códigos-ampliados-de-control-en-BASIC.html"><strong aria-hidden="true">7.1.</strong> Posiciones del cursor y códigos ampliados de control en BASIC</a></li><li class="chapter-item expanded "><a href="7.02.-El-sistema-operativo.html"><strong aria-hidden="true">7.2.</strong> El sistema operativo</a></li><li class="chapter-item expanded "><a href="7.03.-Interrupciones.html"><strong aria-hidden="true">7.3.</strong> Interrupciones</a></li><li class="chapter-item expanded "><a href="7.04.-Caracteres-ASCII-y-caracteres-gráficos-en-BASIC.html"><strong aria-hidden="true">7.4.</strong> Caracteres ASCII y caracteres gráficos en BASIC</a></li><li class="chapter-item expanded "><a href="7.05.-Esquemas-de-teclado.html"><strong aria-hidden="true">7.5.</strong> Esquemas de teclado</a></li><li class="chapter-item expanded "><a href="7.06.-Sonidos.html"><strong aria-hidden="true">7.6.</strong> Sonidos</a></li><li class="chapter-item expanded "><a href="7.07.-Mensajes-de-error-de-BASIC.html"><strong aria-hidden="true">7.7.</strong> Mensajes de error de BASIC</a></li><li class="chapter-item expanded "><a href="7.08.-Palabras-reservadas-de-BASIC.html"><strong aria-hidden="true">7.8.</strong> Palabras reservadas de BASIC</a></li><li class="chapter-item expanded "><a href="7.09.-Plantillas.html"><strong aria-hidden="true">7.9.</strong> Plantillas</a></li><li class="chapter-item expanded "><a href="7.10.-Conexiones.html"><strong aria-hidden="true">7.10.</strong> Conexiones</a></li><li class="chapter-item expanded "><a href="7.11.-Impresoras.html"><strong aria-hidden="true">7.11.</strong> Impresoras</a></li><li class="chapter-item expanded "><a href="7.12.-Joysticks.html"><strong aria-hidden="true">7.12.</strong> Joysticks</a></li><li class="chapter-item expanded "><a href="7.13.-Organización-de-los-discos.html"><strong aria-hidden="true">7.13.</strong> Organización de los discos</a></li><li class="chapter-item expanded "><a href="7.14.-Ampliaciones-del-sistema-residentes-RSX.html"><strong aria-hidden="true">7.14.</strong> Ampliaciones del sistema residentes RSX</a></li><li class="chapter-item expanded "><a href="7.15.-Memoria.html"><strong aria-hidden="true">7.15.</strong> Memoria</a></li><li class="chapter-item expanded "><a href="7.16.-Emulador-de-consola-CP-M-Plus.html"><strong aria-hidden="true">7.16.</strong> Emulador de consola CP/M Plus</a></li><li class="chapter-item expanded "><a href="7.17.-Juego-de-caracteres-de-CP-M-Plus.html"><strong aria-hidden="true">7.17.</strong> Juego de caracteres de CP-M Plus</a></li></ol></li><li class="chapter-item expanded "><a href="8.00.-Capítulo-8.-Más-sobre-el-gestor-de-bancos-de-memoria.html"><strong aria-hidden="true">8.</strong> Más sobre el gestor de bancos de memoria</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="8.01.-Almacenamiento-de-imágenes-de-pantalla.html"><strong aria-hidden="true">8.1.</strong> Almacenamiento de imágenes de pantalla</a></li><li class="chapter-item expanded "><a href="8.02.-Ficheros-en-RAM.html"><strong aria-hidden="true">8.2.</strong> Ficheros en RAM</a></li></ol></li><li class="chapter-item expanded "><a href="9.00.-Capítulo-9.-Cuando-usted-guste.html"><strong aria-hidden="true">9.</strong> Cuando usted guste</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="9.01.-En-términos-generales.html"><strong aria-hidden="true">9.1.</strong> En términos generales</a></li><li class="chapter-item expanded "><a href="9.02.-Más-en-concreto-sobre-el-CPC6128.html"><strong aria-hidden="true">9.2.</strong> Más en concreto sobre el CPC6128</a></li></ol></li><li class="chapter-item expanded "><a href="10.0.-Para-más-información.html"><strong aria-hidden="true">10.</strong> Para más información</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 1</li><li class="chapter-item expanded "><a href="A01.-Digital-Research-y-AMSTRAD.html"><strong aria-hidden="true">11.</strong> Digital Research y AMSTRAD</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 2</li><li class="chapter-item expanded "><a href="A02.-Léxico-inglés-castellano-y-glosario.html"><strong aria-hidden="true">12.</strong> Léxico inglés-castellano y glosario</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 3. Que usted lo disfrute</li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Rebotes.html"><strong aria-hidden="true">13.</strong> Rebotes</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Bombardero.html"><strong aria-hidden="true">14.</strong> Bombardero</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Tele-tenis.html"><strong aria-hidden="true">15.</strong> Tele tenis</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Esgrima-eléctrico.html"><strong aria-hidden="true">16.</strong> Esgrima eléctrico</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Amthello.html"><strong aria-hidden="true">17.</strong> Amthello</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Guante-blanco.html"><strong aria-hidden="true">18.</strong> Guante blanco</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 4</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="A04.-Indice.html" class="active">Índice</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Amstrad CPC6128 Manual del Usuario</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/latchdevel/Amstrad-CPC6128-Manual-del-Usuario" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="apéndice-4"><a class="header" href="#apéndice-4">Apéndice 4</a></h1>
+<h2 id="Índice"><a class="header" href="#Índice">Índice</a></h2>
+<p><strong>Contenido:</strong></p>
+<ul>
+<li><a href="#a">A</a>.</li>
+<li><a href="#b">B</a>.</li>
+<li><a href="#c">C</a>.</li>
+<li><a href="#d">D</a>.</li>
+<li><a href="#e">E</a>.</li>
+<li><a href="#f">F</a>.</li>
+<li><a href="#g">G</a>.</li>
+<li><a href="#h">H</a>.</li>
+<li><a href="#i">I</a>.</li>
+<li><a href="#j">J</a>.</li>
+<li><a href="#k">K</a>.</li>
+<li><a href="#l">L</a>.</li>
+<li><a href="#m">M</a>.</li>
+<li><a href="#n">N</a>.</li>
+<li><a href="#o">O</a>.</li>
+<li><a href="#p">P</a>.</li>
+<li><a href="#q">Q</a>.</li>
+<li><a href="#r">R</a>.</li>
+<li><a href="#s">S</a>.</li>
+<li><a href="#t">T</a>.</li>
+<li><a href="#u">U</a>.</li>
+<li><a href="#v">V</a>.</li>
+<li><a href="#w">W</a>.</li>
+<li><a href="#x">X</a>.</li>
+<li><a href="#y">Y</a>.</li>
+<li><a href="#z">Z</a>.</li>
+</ul>
+<hr />
+<h3 id="a"><a class="header" href="#a">A</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>|A</td><td style="text-align: right"><a href="1.07.-Gr%C3%A1belo-en-disco.html#a-y-b">1</a>, <a href="1.10.-Introducci%C3%B3n-a-los-sistemas-operativos-AMSDOS-y-CPM.html#qu%C3%A9-es-amsdos">2</a>, <a href="5.01.-AMSDOS.html#resumen-de-las-%C3%B3rdenes-externas-de-amsdos">3</a></td></tr>
+<tr><td>ABS</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#abs">1</a></td></tr>
+<tr><td>Acceso aleatorio</td><td style="text-align: right"><a href="8.02.-Ficheros-en-RAM.html">1</a></td></tr>
+<tr><td>AFTER</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#after">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#interrupciones">2</a></td></tr>
+<tr><td>Altavoces externos</td><td style="text-align: right"><a href="1.02.-Conexi%C3%B3n-de-los-perif%C3%A9ricos.html#amplificador-y-altavoces-externos">1</a>, <a href="1.09.-Sonidos.html">2</a></td></tr>
+<tr><td>Ampliaciones del sistema residentes</td><td style="text-align: right"><a href="7.14.-Ampliaciones-del-sistema-residentes-RSX.html">1</a></td></tr>
+<tr><td>Amplificador externo</td><td style="text-align: right"><a href="1.02.-Conexi%C3%B3n-de-los-perif%C3%A9ricos.html#amplificador-y-altavoces-externos">1</a>, <a href="7.10.-Conexiones.html#z%C3%B3calo-est%C3%A9reo">2</a></td></tr>
+<tr><td>AMSDOS</td><td style="text-align: right"><a href="1.10.-Introducci%C3%B3n-a-los-sistemas-operativos-AMSDOS-y-CPM.html#qu%C3%A9-es-amsdos">1</a>, <a href="5.01.-AMSDOS.html">2</a>, <a href="5.01.-AMSDOS#grabaci%C3%B3n-de-variables-y-volcado-de-pantalla">3</a>, <a href="5.02.-CP-M.html#salida-de-cpm">4</a></td></tr>
+<tr><td>AMSDOS, mensajes de error</td><td style="text-align: right"><a href="5.01.-AMSDOS.html#lista-de-errores">1</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#errores-de-disco-en-amsdos">2</a></td></tr>
+<tr><td>AND</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#and">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#l%C3%B3gica">2</a></td></tr>
+<tr><td>AND (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#and">1</a></td></tr>
+<tr><td>Animación</td><td style="text-align: right"><a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#animaci%C3%B3n">1</a></td></tr>
+<tr><td>.APV</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#apv">1</a></td></tr>
+<tr><td>ARCTAN</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#arctan-">1</a></td></tr>
+<tr><td>ASC</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#asc">1</a></td></tr>
+<tr><td>ASCII</td><td style="text-align: right"><a href="7.04.-Caracteres-ASCII-y-caracteres-gr%C3%A1ficos-en-BASIC.html#ascii">1</a>, <a href="7.05.-Esquemas-de-teclado.html#valores-ascii-impl%C3%ADcitos-generados-por-las-teclas-hex">2</a></td></tr>
+<tr><td>ASCII, caracteres</td><td style="text-align: right"><a href="7.04.-Caracteres-ASCII-y-caracteres-gr%C3%A1ficos-en-BASIC.html#ascii">1</a>, <a href="7.04.-Caracteres-ASCII-y-caracteres-gr%C3%A1ficos-en-BASIC#conjunto-de-caracteres-gr%C3%A1ficos-espec%C3%ADficos-de-la-m%C3%A1quina">2</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#caracteres">3</a></td></tr>
+<tr><td>ASCII, ficheros</td><td style="text-align: right"><a href="1.07.-Gr%C3%A1belo-en-disco.html#ficheros-ascii">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#save">2</a>, <a href="5.01.-AMSDOS.html#nombres-y-tipos-de-ficheros-en-amsdos">3</a>, <a href="5.01.-AMSDOS#copia-de-ficheros-de-disco-a-disco">4</a>, <a href="5.01.-AMSDOS#procedimientos-de-copia-de-ficheros">5</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#25-file-type-error">6</a>, <a href="7.07.-Mensajes-de-error-de-BASIC#27-file-already-open">7</a>, <a href="7.07.-Mensajes-de-error-de-BASIC#31-file-not-open">8</a></td></tr>
+<tr><td>ASCII (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#ascii">1</a></td></tr>
+<tr><td>ASM</td><td style="text-align: right"><a href="5.02.-CP-M.html#para-terminar">1</a></td></tr>
+<tr><td>ASSIGN.SYS</td><td style="text-align: right"><a href="4.01.-Discos.html#introducci%C3%B3n-al-gsx">1</a></td></tr>
+<tr><td>ATN</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#atn">1</a></td></tr>
+<tr><td>Auriculares</td><td style="text-align: right"><a href="1.02.-Conexi%C3%B3n-de-los-perif%C3%A9ricos.html#amplificador-y-altavoces-externos">1</a>, <a href="1.09.-Sonidos.html">2</a></td></tr>
+<tr><td>AUTO</td><td style="text-align: right"><a href="2.01.-La-g%C3%A9nesis-de-un-programa.html#soluciones">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#auto">2</a></td></tr>
+<tr><td>AUX</td><td style="text-align: right"><a href="5.02.-CP-M.html#interfaz-serie">1</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="b"><a class="header" href="#b">B</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>|B</td><td style="text-align: right"><a href="1.07.-Gr%C3%A1belo-en-disco.html#a-y-b">1</a>, <a href="1.10.-Introducci%C3%B3n-a-los-sistemas-operativos-AMSDOS-y-CPM.html#qu%C3%A9-es-amsdos">2</a>, <a href="5.01.-AMSDOS.html#b">3</a></td></tr>
+<tr><td>|BANKFIND</td><td style="text-align: right"><a href="1.11.-Introducci%C3%B3n-al-gestor-de-bancos-de-memoria.html#utilizaci%C3%B3n-del-gestor-de-bancos-en-el-almacenamiento-de-cadenas-literales">1</a>, <a href="8.02.-Ficheros-en-RAM.html#b%C3%BAsquedas">2</a></td></tr>
+<tr><td>|BANKOPEN</td><td style="text-align: right"><a href="1.11.-Introducci%C3%B3n-al-gestor-de-bancos-de-memoria.html#utilizaci%C3%B3n-del-gestor-de-bancos-en-el-almacenamiento-de-cadenas-literales">1</a>, <a href="8.02.-Ficheros-en-RAM.html#ficheros-en-ram">2</a></td></tr>
+<tr><td>|BANKREAD</td><td style="text-align: right"><a href="1.11.-Introducci%C3%B3n-al-gestor-de-bancos-de-memoria.html#utilizaci%C3%B3n-del-gestor-de-bancos-en-el-almacenamiento-de-cadenas-literales">1</a>, <a href="8.02.-Ficheros-en-RAM.html#ficheros-en-ram">2</a></td></tr>
+<tr><td>|BANKWRITE</td><td style="text-align: right"><a href="1.11.-Introducci%C3%B3n-al-gestor-de-bancos-de-memoria.html#utilizaci%C3%B3n-del-gestor-de-bancos-en-el-almacenamiento-de-cadenas-literales">1</a>, <a href="8.02.-Ficheros-en-RAM.html#ficheros-en-ram">2</a></td></tr>
+<tr><td>BASIC</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html">2</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html">3</a>, <a href="9.01.-En-t%C3%A9rminos-generales.html#lo-b%C3%A1sico-de-basic">4</a></td></tr>
+<tr><td>BF</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#bf">1</a></td></tr>
+<tr><td>BIN$</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#bin">1</a></td></tr>
+<tr><td>Bit</td><td style="text-align: right"><a href="9.01.-En-t%C3%A9rminos-generales.html#bits-y-bytes">1</a></td></tr>
+<tr><td>BK</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#bk">1</a></td></tr>
+<tr><td>BL</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#bl">1</a></td></tr>
+<tr><td>BOOTGEN</td><td style="text-align: right"><a href="5.02.-CP-M.html#cpm-22">1</a></td></tr>
+<tr><td>BORDER</td><td style="text-align: right"><a href="1.08.-Introducci%C3%B3n-a-los-modos-de-pantalla,-colores-y-gr%C3%A1ficos.html#la-pantalla">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#border">2</a>, <a href="7.01.-Posiciones-del-cursor-y-c%C3%B3digos-ampliados-de-control-en-BASIC.html#control-de-c%C3%B3digos-en-basic">3</a></td></tr>
+<tr><td>Borrado de los canales de sonido</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#sound">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#el-sonido-de-la-m%C3%BAsica">2</a></td></tr>
+<tr><td>BREAK</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#break">1</a></td></tr>
+<tr><td>BRIGHTNESS, control</td><td style="text-align: right"><a href="1.01.-Instalaci%C3%B3n-y-mantenimiento.html#encendido-del-sistema-cpc6128-con-gt65-o-con-ctm644">1</a></td></tr>
+<tr><td>BUTTONP</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#buttonp">1</a></td></tr>
+<tr><td>BYE</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#sugerencias-para-el-trabajo-con-dr-logo">1</a>, <a href="6.01.-Introducci%C3%B3n-a-LOGO#bye">2</a></td></tr>
+<tr><td>Byte</td><td style="text-align: right"><a href="9.01.-En-t%C3%A9rminos-generales.html#bits-y-bytes">1</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="c"><a class="header" href="#c">C</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>CALL</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#call">1</a></td></tr>
+<tr><td>Capacidad de los discos</td><td style="text-align: right"><a href="1.07.-Gr%C3%A1belo-en-disco.html#inicializaci%C3%B3n-de-discos">1</a></td></tr>
+<tr><td>CAPSLOCK, tecla</td><td style="text-align: right"><a href="1.04.-Manos-al-teclado.html#parte-4-manos-al-teclado">1</a></td></tr>
+<tr><td>Caracteres</td><td style="text-align: right"><a href="1.08.-Introducci%C3%B3n-a-los-modos-de-pantalla,-colores-y-gr%C3%A1ficos.html#locate">1</a>, <a href="7.04.-Caracteres-ASCII-y-caracteres-gr%C3%A1ficos-en-BASIC.html#conjunto-de-caracteres-gr%C3%A1ficos-espec%C3%ADficos-de-la-m%C3%A1quina">2</a>, <a href="7.11.-Impresoras.html#configuraci%C3%B3n-de-la-impresora">3</a>, <a href="7.17.-Juego-de-caracteres-de-CP-M-Plus.html">4</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#caracteres">5</a></td></tr>
+<tr><td>Caracteres de control</td><td style="text-align: right"><a href="7.01.-Posiciones-del-cursor-y-c%C3%B3digos-ampliados-de-control-en-BASIC.html#control-de-c%C3%B3digos-en-basic">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#l%C3%ADneas-discontinuas">2</a></td></tr>
+<tr><td>Caracteres definibles por el usuario</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#symbol">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#caracteres-definidos-por-el-usuario">2</a></td></tr>
+<tr><td>Caracteres expansibles</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#key">1</a>, <a href="7.05.-Esquemas-de-teclado.html#c%C3%B3digos-expansibles-posiciones-y-valores-impl%C3%ADcitos">2</a>, <a href="7.15.-Memoria.html">3</a></td></tr>
+<tr><td>Caracteres transparentes</td><td style="text-align: right"><a href="7.01.-Posiciones-del-cursor-y-c%C3%B3digos-ampliados-de-control-en-BASIC.html#control-de-c%C3%B3digos-en-basic">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#caracteres-transparentes">2</a></td></tr>
+<tr><td>Carga de programas</td><td style="text-align: right"><a href="1.05.-Carga-de-programas.html">1</a></td></tr>
+<tr><td>Carga del programa &quot;Welcome&quot;</td><td style="text-align: right"><a href="1.05.-Carga-de-programas.html#carga-de-programas-amsoft-y-del-programa-welcome">1</a></td></tr>
+<tr><td>CAT</td><td style="text-align: right"><a href="1.07.-Gr%C3%A1belo-en-disco.html#cat%C3%A1logo">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#cat">2</a></td></tr>
+<tr><td>CAT (cassette)</td><td style="text-align: right"><a href="4.02.-Cintas.html#cat">1</a></td></tr>
+<tr><td>CATCH</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#catch">1</a></td></tr>
+<tr><td>CHAIN</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#chain">1</a></td></tr>
+<tr><td>CHAIN (cassette)</td><td style="text-align: right"><a href="4.02.-Cintas.html#chain">1</a></td></tr>
+<tr><td>CHAIN MERGE</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#chain-merge">1</a></td></tr>
+<tr><td>CHAIN MERGE (cassette)</td><td style="text-align: right"><a href="4.02.-Cintas.html#chain-merge">1</a></td></tr>
+<tr><td>CHANGEF</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#changef-">1</a></td></tr>
+<tr><td>CHAR</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#char">1</a></td></tr>
+<tr><td>CHR$</td><td style="text-align: right"><a href="1.08.-Introducci%C3%B3n-a-los-modos-de-pantalla,-colores-y-gr%C3%A1ficos.html#locate">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#chr">2</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#vamos-a-verlos">3</a></td></tr>
+<tr><td>CINT</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#cint">1</a></td></tr>
+<tr><td>Cintas</td><td style="text-align: right"><a href="1.02.-Conexi%C3%B3n-de-los-perif%C3%A9ricos.html#magnet%C3%B3fono-de-cassettes">1</a>, <a href="1.10.-Introducci%C3%B3n-a-los-sistemas-operativos-AMSDOS-y-CPM.html#c%C3%B3mo-se-utiliza-la-cinta">2</a>, <a href="4.02.-Cintas.html">3</a>, <a href="5.01.-AMSDOS.html#tape">4</a>. <a href="5.01.-AMSDOS#tape">5</a>, <a href="5.01.-AMSDOS#copia-de-ficheros-entre-disco-y-cinta">6</a>, <a href="5.02.-CP-M.html#cpm-22">7</a></td></tr>
+<tr><td>Circunferencias</td><td style="text-align: right"><a href="1.08.-Introducci%C3%B3n-a-los-modos-de-pantalla,-colores-y-gr%C3%A1ficos.html#circunferencias">1</a></td></tr>
+<tr><td>CLEAN</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#clean">1</a></td></tr>
+<tr><td>CLEAR</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#clear">1</a></td></tr>
+<tr><td>CLEAR INPUT</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#clear-input">1</a></td></tr>
+<tr><td>CLG</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#clg">1</a></td></tr>
+<tr><td>CLOAD</td><td style="text-align: right"><a href="5.01.-AMSDOS.html#procedimientos-de-copia-de-ficheros">1</a>, <a href="5.02.-CP-M.html#cpm-22">2</a></td></tr>
+<tr><td>CLOSEIN</td><td style="text-align: right"><a href="2.01.-La-g%C3%A9nesis-de-un-programa.html#volvemos-al-programa">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#closein">2</a></td></tr>
+<tr><td>CLOSEIN (cassette)</td><td style="text-align: right"><a href="4.02.-Cintas.html#closein">1</a></td></tr>
+<tr><td>CLOSEOUT</td><td style="text-align: right"><a href="2.01.-La-g%C3%A9nesis-de-un-programa.html#soluciones">1</a></td></tr>
+<tr><td>CLOSEOUT (cassette)</td><td style="text-align: right"><a href="4.02.-Cintas.html#closeout">1</a></td></tr>
+<tr><td>CLR, tecla</td><td style="text-align: right"><a href="1.04.-Manos-al-teclado.html#parte-4-manos-al-teclado">1</a></td></tr>
+<tr><td>CLS</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#cls">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#cls">2</a>, <a href="7.01.-Posiciones-del-cursor-y-c%C3%B3digos-ampliados-de-control-en-BASIC.html#control-de-c%C3%B3digos-en-basic">3</a></td></tr>
+<tr><td>CO</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#%D1%81%D0%BE">1</a></td></tr>
+<tr><td>Código de máquina</td><td style="text-align: right"><a href="7.02.-El-sistema-operativo.html#el-sistema-operativo">1</a></td></tr>
+<tr><td>Códigos de control</td><td style="text-align: right"><a href="5.02.-CP-M.html#c%C3%B3digos-de-control-de-consola">1</a>, <a href="7.01.-Posiciones-del-cursor-y-c%C3%B3digos-ampliados-de-control-en-BASIC.html">2</a>, <a href="7.01.-Posiciones-del-cursor-y-c%C3%B3digos-ampliados-de-control-en-BASIC#control-de-c%C3%B3digos-en-basic">3</a>, <a href="7.16.-Emulador-de-consola-CP-M-Plus.html">4</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#l%C3%ADneas-discontinuas">5</a></td></tr>
+<tr><td>Colas de sonido</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#on-sq-gosub">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD#sq">2</a>, <a href="7.03.-Interrupciones.html">3</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#el-sonido-de-la-m%C3%BAsica">4</a></td></tr>
+<tr><td>Colores</td><td style="text-align: right"><a href="1.08.-Introducci%C3%B3n-a-los-modos-de-pantalla,-colores-y-gr%C3%A1ficos.html#colores">1</a>, <a href="1.08.-Introducci%C3%B3n-a-los-modos-de-pantalla,-colores-y-gr%C3%A1ficos#la-pantalla">2</a>, <a href="5.02.-CP-M.html#colores">3</a></td></tr>
+<tr><td>Colores parpadeantes</td><td style="text-align: right"><a href="1.08.-Introducci%C3%B3n-a-los-modos-de-pantalla,-colores-y-gr%C3%A1ficos.html#colores-parpadeantes">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#speed-ink">2</a></td></tr>
+<tr><td>Comprobación de discos</td><td style="text-align: right"><a href="1.10.-Introducci%C3%B3n-a-los-sistemas-operativos-AMSDOS-y-CPM.html#verificaci%C3%B3n-de-discos">1</a></td></tr>
+<tr><td>CON</td><td style="text-align: right"><a href="5.02.-CP-M.html#interfaz-serie">1</a></td></tr>
+<tr><td>Conexión de una clavija de red</td><td style="text-align: right"><a href="1.01.-Instalaci%C3%B3n-y-mantenimiento.html#conexi%C3%B3n-del-ordenador-a-la-red">1</a></td></tr>
+<tr><td>Conexión del ordenador</td><td style="text-align: right"><a href="1.01.-Instalaci%C3%B3n-y-mantenimiento.html#conexi%C3%B3n-del-ordenador-a-un-monitor">1</a></td></tr>
+<tr><td>Conexión de periféricos</td><td style="text-align: right"><a href="1.02.-Conexi%C3%B3n-de-los-perif%C3%A9ricos.html">1</a>, <a href="7.10.-Conexiones.html">2</a></td></tr>
+<tr><td>Configuración de PROGRAMAS</td><td style="text-align: right"><a href="4.01.-Discos.html#configuraci%C3%B3n-de-un-programa-de-cpm">1</a>, <a href="4.01.-Discos#configuraci%C3%B3n-de-la-salida-de-un-paquete">2</a>, <a href="4.01.-Discos#configuraci%C3%B3n-de-la-entrada-a-un-paquete">3</a></td></tr>
+<tr><td>CONT</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#cont">1</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#17-cannot-continue">2</a></td></tr>
+<tr><td>.CONTENTS</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#contents">1</a></td></tr>
+<tr><td>CONTRAST, control</td><td style="text-align: right"><a href="1.01.-Instalaci%C3%B3n-y-mantenimiento.html#encendido-del-sistema-cpc6128-con-gt65-o-con-ctm644">1</a></td></tr>
+<tr><td>Copia de discos</td><td style="text-align: right"><a href="1.10.-Introducci%C3%B3n-a-los-sistemas-operativos-AMSDOS-y-CPM.html#copia-de-discos-con-cpm">1</a></td></tr>
+<tr><td>Copia de ficheros</td><td style="text-align: right"><a href="1.07.-Gr%C3%A1belo-en-disco.html#copia-de-programas-de-disco-a-disco">1</a>, <a href="5.01.-AMSDOS.html#copia-de-ficheros-de-disco-a-disco">2</a></td></tr>
+<tr><td>Copias de seguridad</td><td style="text-align: right"><a href="4.01.-Discos.html#copia-de-los-discos-maestros">1</a></td></tr>
+<tr><td>COPYCHR$</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#copychr">1</a></td></tr>
+<tr><td>COPYON</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#copyon-">1</a></td></tr>
+<tr><td>COPYOFF</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#copyoff-">1</a></td></tr>
+<tr><td>COPY, tecla</td><td style="text-align: right"><a href="1.04.-Manos-al-teclado.html#parte-4-manos-al-teclado">1</a></td></tr>
+<tr><td>COS</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#cos">1</a></td></tr>
+<tr><td>COS (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#cos">1</a></td></tr>
+<tr><td>COUNT</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#count">1</a></td></tr>
+<tr><td>CP/M</td><td style="text-align: right"><a href="5.02.-CP-M.html">1</a></td></tr>
+<tr><td>CP/M 2.2</td><td style="text-align: right"><a href="1.10.-Introducci%C3%B3n-a-los-sistemas-operativos-AMSDOS-y-CPM.html#utilizaci%C3%B3n-del-programa-disckit-en-cpm-22">1</a>, <a href="4.01.-Discos.html#trabajo-con-cpm-22">2</a>, <a href="5.02.-CP-M.html#cpm-22">3</a>, <a href="6.01.-Introducci%C3%B3n-a-LOGO.html#lista-de-las-primitivas-de-dr-logo">4</a></td></tr>
+<tr><td>|CPM</td><td style="text-align: right"><a href="1.07.-Gr%C3%A1belo-en-disco.html#primeros-pasos-en-la-utilizaci%C3%B3n-de-los-discos-maestros-de-cpm">1</a>, <a href="5.01.-AMSDOS.html#cpm">2</a></td></tr>
+<tr><td>CREAL</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#creal">1</a></td></tr>
+<tr><td>CS</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#cs">1</a></td></tr>
+<tr><td>CSAVE</td><td style="text-align: right"><a href="5.01.-AMSDOS.html#procedimientos-de-copia-de-ficheros">1</a>, <a href="5.02.-CP-M.html#cpm-22">2</a></td></tr>
+<tr><td>CT</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#ct">1</a></td></tr>
+<tr><td>CTR</td><td style="text-align: right"><a href="5.02.-CP-M.html#interfaz-serie">1</a></td></tr>
+<tr><td>CURSOR</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#cursor">1</a>, <a href="7.01.-Posiciones-del-cursor-y-c%C3%B3digos-ampliados-de-control-en-BASIC.html#control-de-c%C3%B3digos-en-basic">2</a></td></tr>
+<tr><td>CURSOR (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#cursor-">1</a></td></tr>
+<tr><td>Cursor, teclas del</td><td style="text-align: right"><a href="1.04.-Manos-al-teclado.html#parte-4-manos-al-teclado">1</a>, <a href="6.01.-Introducci%C3%B3n-a-LOGO.html#edici%C3%B3n-de-programas-y-procedimientos">2</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="d"><a class="header" href="#d">D</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>DATA</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#data">1</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#4-data-exhausted">2</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#listas-de-datos">3</a></td></tr>
+<tr><td>DATE</td><td style="text-align: right"><a href="5.02.-CP-M.html#gesti%C3%B3n-del-sistema">1</a></td></tr>
+<tr><td>DDT</td><td style="text-align: right"><a href="5.02.-CP-M.html#para-terminar">1</a></td></tr>
+<tr><td>DEC$</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#dec">1</a></td></tr>
+<tr><td>.DEF</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#def">1</a></td></tr>
+<tr><td>DEFAULTD</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#defaultd-">1</a></td></tr>
+<tr><td>DEF FN</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#def-fn">1</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#18-unknown-user-function">2</a></td></tr>
+<tr><td>DEFINE</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#define-">1</a></td></tr>
+<tr><td>DEFINT</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#defint">1</a></td></tr>
+<tr><td>DEFREAL</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#defreal">1</a></td></tr>
+<tr><td>DEFSTR</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#defstr">1</a></td></tr>
+<tr><td>DEG</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#deg">1</a></td></tr>
+<tr><td>DEL, tecla</td><td style="text-align: right"><a href="1.04.-Manos-al-teclado.html#parte-4-manos-al-teclado">1</a></td></tr>
+<tr><td>DELETE</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#delete">1</a></td></tr>
+<tr><td>.DEPOSIT</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#deposit">1</a></td></tr>
+<tr><td>DERR</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#derr">1</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#errores-de-disco-en-amsdos">2</a></td></tr>
+<tr><td>DEVICE</td><td style="text-align: right"><a href="5.02.-CP-M.html#interfaz-serie">1</a></td></tr>
+<tr><td>DI</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#di">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#interrupciones">2</a></td></tr>
+<tr><td>DIM</td><td style="text-align: right"><a href="2.01.-La-g%C3%A9nesis-de-un-programa.html#un-programa-sencillo">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#dim">2</a></td></tr>
+<tr><td>DIR (CP/M)</td><td style="text-align: right"><a href="1.07.-Gr%C3%A1belo-en-disco.html#primeros-pasos-en-la-utilizaci%C3%B3n-de-los-discos-maestros-de-cpm">1</a>, <a href="5.02.-CP-M.html#dir">2</a>, <a href="5.02.-CP-M#gesti%C3%B3n-del-sistema">3</a></td></tr>
+<tr><td>DIR (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#dir">1</a></td></tr>
+<tr><td>|DIR</td><td style="text-align: right"><a href="5.01.-AMSDOS.html#dir">1</a></td></tr>
+<tr><td>DIRPIC</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#dirpic-">1</a></td></tr>
+<tr><td>DIRS</td><td style="text-align: right"><a href="5.02.-CP-M.html#dirsys-y-dirs">1</a></td></tr>
+<tr><td>DIRSYS</td><td style="text-align: right"><a href="5.02.-CP-M.html#dirsys-y-dirs">1</a></td></tr>
+<tr><td>|DISC</td><td style="text-align: right"><a href="5.01.-AMSDOS.html#disc">1</a></td></tr>
+<tr><td>DISC DRIVE 2, zócalo</td><td style="text-align: right"><a href="1.02.-Conexi%C3%B3n-de-los-perif%C3%A9ricos.html#segunda-unidad-de-disco-amstrad-fd1">1</a>, <a href="7.10.-Conexiones.html#z%C3%B3calo-para-la-segunda-unidad-de-disco">2</a></td></tr>
+<tr><td>|DISC.IN</td><td style="text-align: right"><a href="1.10.-Introducci%C3%B3n-a-los-sistemas-operativos-AMSDOS-y-CPM.html#c%C3%B3mo-se-utiliza-la-cinta">1</a>, <a href="5.01.-AMSDOS.html#-discin">2</a></td></tr>
+<tr><td>DISCKIT2</td><td style="text-align: right"><a href="1.10.-Introducci%C3%B3n-a-los-sistemas-operativos-AMSDOS-y-CPM.html#utilizaci%C3%B3n-del-programa-disckit-en-cpm-22">1</a>, <a href="5.02.-CP-M.html#cpm-22">2</a></td></tr>
+<tr><td>DISCKIT3</td><td style="text-align: right"><a href="1.07.-Gr%C3%A1belo-en-disco.html#primeros-pasos-en-la-utilizaci%C3%B3n-de-los-discos-maestros-de-cpm">1</a>, <a href="1.10.-Introducci%C3%B3n-a-los-sistemas-operativos-AMSDOS-y-CPM.html#copia-de-programas-entre-discos-y-cinta">2</a>, <a href="5.02.-CP-M.html#gesti%C3%B3n-de-perif%C3%A9ricos">3</a></td></tr>
+<tr><td>Disco virtual</td><td style="text-align: right"><a href="1.11.-Introducci%C3%B3n-al-gestor-de-bancos-de-memoria.html#utilizaci%C3%B3n-del-gestor-de-bancos-en-el-almacenamiento-de-cadenas-literales">1</a>, <a href="8.02.-Ficheros-en-RAM.html">2</a></td></tr>
+<tr><td>|DISC.OUT</td><td style="text-align: right"><a href="1.10.-Introducci%C3%B3n-a-los-sistemas-operativos-AMSDOS-y-CPM.html#c%C3%B3mo-se-utiliza-la-cinta">1</a>, <a href="5.01.-AMSDOS.html#-discout">2</a></td></tr>
+<tr><td>Discos</td><td style="text-align: right"><a href="1.03.-En-cuanto-a-los-discos.html">1</a>, <a href="1.07.-Gr%C3%A1belo-en-disco.html">2</a>, <a href="4.01.-Discos.html">3</a></td></tr>
+<tr><td>Discos, organización</td><td style="text-align: right"><a href="7.13.-Organizaci%C3%B3n-de-los-discos.html">1</a></td></tr>
+<tr><td>Discos, segunda unidad</td><td style="text-align: right"><a href="1.02.-Conexi%C3%B3n-de-los-perif%C3%A9ricos.html#segunda-unidad-de-disco-amstrad-fd1">1</a>, <a href="1.03.-En-cuanto-a-los-discos.html#piloto">2</a>, <a href="1.07.-Gr%C3%A1belo-en-disco.html#primeros-pasos-en-la-utilizaci%C3%B3n-de-los-discos-maestros-de-cpm">3</a>, <a href="1.07.-Gr%C3%A1belo-en-disco#inicializaci%C3%B3n-en-un-sistema-de-2-unidades-de-disco">4</a>, <a href="1.10.-Introducci%C3%B3n-a-los-sistemas-operativos-AMSDOS-y-CPM.html#copia-en-un-sistema-de-dos-unidades-de-disco">5</a>, <a href="5.01.-AMSDOS.html#nombres-de-fichero-con-dos-unidades-de-disco">6</a>, <a href="7.10.-Conexiones.html#z%C3%B3calo-para-la-segunda-unidad-de-disco">7</a></td></tr>
+<tr><td>Diseñador de pantallas, programa</td><td style="text-align: right"><a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#gr%C3%A1ficos-con-el-segundo-banco-de-64k-de-ram">1</a></td></tr>
+<tr><td>DOT</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#dot">1</a></td></tr>
+<tr><td>DOTC</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#dotc-">1</a></td></tr>
+<tr><td>DRAW</td><td style="text-align: right"><a href="1.08.-Introducci%C3%B3n-a-los-modos-de-pantalla,-colores-y-gr%C3%A1ficos.html#draw">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#draw">2</a></td></tr>
+<tr><td>DRAWR</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#drawr">1</a></td></tr>
+<tr><td>|DRIVE</td><td style="text-align: right"><a href="5.01.-AMSDOS.html#drive">1</a></td></tr>
+<tr><td>DRIVERS.GSX</td><td style="text-align: right"><a href="4.01.-Discos.html#introducci%C3%B3n-al-gsx">1</a></td></tr>
+<tr><td>Dr. LOGO</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#dr-logo">1</a></td></tr>
+<tr><td>DUMP</td><td style="text-align: right"><a href="5.02.-CP-M.html#para-terminar">1</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="e"><a class="header" href="#e">E</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>ED</td><td style="text-align: right"><a href="5.02.-CP-M.html#para-terminar">1</a></td></tr>
+<tr><td>ED (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#ed">1</a></td></tr>
+<tr><td>EDALL</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#edall-">1</a></td></tr>
+<tr><td>EDF</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#edf-">1</a></td></tr>
+<tr><td>Edición de programas</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#edici%C3%B3n-de-programas">1</a></td></tr>
+<tr><td>Edición (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#edici%C3%B3n-de-programas-y-procedimientos">1</a>, <a href="6.01.-Introducci%C3%B3n-a-LOGO#edici%C3%B3n">2</a></td></tr>
+<tr><td>EDIT</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#m%C3%A9todo-del-cursor-de-edici%C3%B3n">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#edit">2</a></td></tr>
+<tr><td>EI</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#ei">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#interrupciones">2</a></td></tr>
+<tr><td>EJECT, botón</td><td style="text-align: right"><a href="1.03.-En-cuanto-a-los-discos.html#bot%C3%B3n-de-eyecci%C3%B3n">1</a></td></tr>
+<tr><td>ELSE</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#if">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#else">2</a></td></tr>
+<tr><td>EMPTYP</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#emptyp">1</a></td></tr>
+<tr><td>.EMT</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#emt-">1</a></td></tr>
+<tr><td>Emulador de consola</td><td style="text-align: right"><a href="4.01.-Discos.html#programas-llave-en-mano-de-cpm">1</a>, <a href="7.16.-Emulador-de-consola-CP-M-Plus.html">2</a></td></tr>
+<tr><td>END</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#end">1</a></td></tr>
+<tr><td>END (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#end">1</a></td></tr>
+<tr><td>.ENL</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#enl-">1</a></td></tr>
+<tr><td>ENT</td><td style="text-align: right"><a href="1.09.-Sonidos.html#definici%C3%B3n-de-una-envolvente-de-tono">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#ent">2</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#el-sonido-de-la-m%C3%BAsica">3</a></td></tr>
+<tr><td>ENT (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#ent">1</a></td></tr>
+<tr><td>ENTER, tecla</td><td style="text-align: right"><a href="1.04.-Manos-al-teclado.html#parte-4-manos-al-teclado">1</a></td></tr>
+<tr><td>ENV</td><td style="text-align: right"><a href="1.09.-Sonidos.html#definici%C3%B3n-de-una-envolvente-de-volumen">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#env">2</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#el-sonido-de-la-m%C3%BAsica">3</a></td></tr>
+<tr><td>ENV (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#env">1</a></td></tr>
+<tr><td>Envolvente de tono</td><td style="text-align: right"><a href="1.09.-Sonidos.html#definici%C3%B3n-de-una-envolvente-de-tono">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#ent">2</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#el-sonido-de-la-m%C3%BAsica">3</a></td></tr>
+<tr><td>Envolvente de volumen</td><td style="text-align: right"><a href="1.09.-Sonidos.html#definici%C3%B3n-de-una-envolvente-de-volumen">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#env">2</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#el-sonido-de-la-m%C3%BAsica">3</a></td></tr>
+<tr><td>EOF</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#eof">1</a>, <a href="4.02.-Cintas.html#eof">2</a>, <a href="5.01.-AMSDOS.html#carga-de-pantallas">3</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#24-eof-met">4</a></td></tr>
+<tr><td>EOF (CP/M)</td><td style="text-align: right"><a href="5.02.-CP-M.html#pip">1</a></td></tr>
+<tr><td>ER</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#er">1</a></td></tr>
+<tr><td>ERA</td><td style="text-align: right"><a href="5.02.-CP-M.html#erase-o-era">1</a></td></tr>
+<tr><td>|ERA</td><td style="text-align: right"><a href="5.01.-AMSDOS.html#era">1</a></td></tr>
+<tr><td>ERALL</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#erall-">1</a></td></tr>
+<tr><td>ERASE</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#erase">1</a></td></tr>
+<tr><td>ERASE (CP/M)</td><td style="text-align: right"><a href="5.02.-CP-M.html#erase-o-era">1</a>, <a href="5.02.-CP-M#gesti%C3%B3n-del-sistema">2</a></td></tr>
+<tr><td>ERL</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#erl">1</a></td></tr>
+<tr><td>ERN</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#ern">1</a></td></tr>
+<tr><td>ERR</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#err">1</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#errores-de-disco-en-amsdos">2</a></td></tr>
+<tr><td>ERRACT</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#erract">1</a></td></tr>
+<tr><td>ERROR</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#error">1</a></td></tr>
+<tr><td>ERROR (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#error">1</a></td></tr>
+<tr><td>Errores de lectura (cinta)</td><td style="text-align: right"><a href="4.02.-Cintas.html#errores-de-lectura">1</a></td></tr>
+<tr><td>ESC, tecla</td><td style="text-align: right"><a href="1.04.-Manos-al-teclado.html#parte-4-manos-al-teclado">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#on-break-cont">2</a></td></tr>
+<tr><td>Escritura transparente</td><td style="text-align: right"><a href="7.01.-Posiciones-del-cursor-y-c%C3%B3digos-ampliados-de-control-en-BASIC.html#control-de-c%C3%B3digos-en-basic">1</a></td></tr>
+<tr><td>Estereofonía</td><td style="text-align: right"><a href="1.02.-Conexi%C3%B3n-de-los-perif%C3%A9ricos.html#amplificador-y-altavoces-externos">1</a>, <a href="1.09.-Sonidos.html">2</a></td></tr>
+<tr><td>EVERY</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#every">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#interrupciones">2</a></td></tr>
+<tr><td>.EXAMINE</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#examine">1</a></td></tr>
+<tr><td>EXP</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#exp">1</a></td></tr>
+<tr><td>EXPANSION, zócalo</td><td style="text-align: right"><a href="1.02.-Conexi%C3%B3n-de-los-perif%C3%A9ricos.html#dispositivos-de-expansi%C3%B3n">1</a>, <a href="7.10.-Conexiones.html#z%C3%B3calo-de-expansi%C3%B3n">2</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="f"><a class="header" href="#f">F</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>FALSE</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#false">1</a></td></tr>
+<tr><td>FD</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#fd">1</a></td></tr>
+<tr><td>Fecha y hora en CP/M Plus</td><td style="text-align: right"><a href="5.02.-CP-M.html#gesti%C3%B3n-del-sistema">1</a></td></tr>
+<tr><td>FENCE</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#fence">1</a></td></tr>
+<tr><td>Ficheros ASCII</td><td style="text-align: right"><a href="1.07.-Gr%C3%A1belo-en-disco.html#ficheros-ascii">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#save">2</a>, <a href="5.01.-AMSDOS.html#cabeceras-de-fichero-en-amsdos">3</a>, <a href="5.01.-AMSDOS#ficheros-ascii">4</a>, <a href="5.01.-AMSDOS#procedimientos-de-copia-de-ficheros">5</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#25-file-type-error">6</a></td></tr>
+<tr><td>Ficheros de BASIC</td><td style="text-align: right"><a href="1.07.-Gr%C3%A1belo-en-disco.html#ficheros-ascii">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#save">2</a></td></tr>
+<tr><td>Ficheros binarios</td><td style="text-align: right"><a href="1.07.-Gr%C3%A1belo-en-disco.html#ficheros-binarios">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#save">2</a>, <a href="5.01.-AMSDOS.html#procedimientos-de-copia-de-ficheros">3</a></td></tr>
+<tr><td>Ficheros en disco (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#ficheros-en-disco">1</a></td></tr>
+<tr><td>Ficheros sin nombre</td><td style="text-align: right"><a href="4.02.-Cintas.html#cat">1</a>, <a href="4.02.-Cintas#input-9">2</a>, <a href="4.02.-Cintas#list-9">3</a></td></tr>
+<tr><td>Ficheros protegidos</td><td style="text-align: right"><a href="1.07.-Gr%C3%A1belo-en-disco.html#ficheros-protegidos">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#save">2</a></td></tr>
+<tr><td>Ficheros de &quot;sólo lectura&quot;</td><td style="text-align: right"><a href="5.01.-AMSDOS.html#ficheros-de-s%C3%B3lo-lectura">1</a>, <a href="5.02.-CP-M.html#gesti%C3%B3n-del-sistema">2</a>, <a href="5.02.-CP-M#cpm-22">3</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#errores-de-disco-en-amsdos">4</a></td></tr>
+<tr><td>FILECOPY</td><td style="text-align: right"><a href="4.01.-Discos.html#trabajo-con-cpm-22">1</a>, <a href="5.02.-CP-M.html#cpm-22">2</a></td></tr>
+<tr><td>FILL</td><td style="text-align: right"><a href="1.08.-Introducci%C3%B3n-a-los-modos-de-pantalla,-colores-y-gr%C3%A1ficos.html#fill">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#fill">2</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#dicho-gr%C3%A1ficamente">3</a></td></tr>
+<tr><td>FILL (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#fill-">1</a></td></tr>
+<tr><td>FIRST</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#first">1</a></td></tr>
+<tr><td>FIX</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#fix">1</a></td></tr>
+<tr><td>FN</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#fn">1</a></td></tr>
+<tr><td>FOR</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#for-next">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#for">2</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#1-unexpected-next">3</a>, <a href="7.07.-Mensajes-de-error-de-BASIC#26-next-missing">4</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#c%C3%B3mo-sabemos-que-es-una-variable">5</a></td></tr>
+<tr><td>Formatos de escritura</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#print-using">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#formato-de-escritura">2</a></td></tr>
+<tr><td>Formatos de los discos</td><td style="text-align: right"><a href="1.07.-Gr%C3%A1belo-en-disco.html#primeros-pasos-en-la-utilizaci%C3%B3n-de-los-discos-maestros-de-cpm">1</a>, <a href="1.07.-Gr%C3%A1belo-en-disco#inicializaci%C3%B3n-en-un-sistema-de-2-unidades-de-disco">2</a>, <a href="1.10.-Introducci%C3%B3n-a-los-sistemas-operativos-AMSDOS-y-CPM.html#copia-en-un-sistema-de-una-sola-unidad-de-disco">3</a>, <a href="5.02.-CP-M.html#cpm-22">4</a>, <a href="7.13.-Organizaci%C3%B3n-de-los-discos.html">5</a></td></tr>
+<tr><td>Formato comercial</td><td style="text-align: right"><a href="1.07.-Gr%C3%A1belo-en-disco.html#primeros-pasos-en-la-utilizaci%C3%B3n-de-los-discos-maestros-de-cpm">1</a>, <a href="5.02.-CP-M.html#setup">2</a>, <a href="7.13.-Organizaci%C3%B3n-de-los-discos.html#formato-sistema">3</a></td></tr>
+<tr><td>Formato de datos</td><td style="text-align: right"><a href="1.07.-Gr%C3%A1belo-en-disco.html#primeros-pasos-en-la-utilizaci%C3%B3n-de-los-discos-maestros-de-cpm">1</a>, <a href="5.02.-CP-M.html#cpm-22">2</a>, <a href="7.13.-Organizaci%C3%B3n-de-los-discos.html#formato-solo-datos">3</a></td></tr>
+<tr><td>Formato IBM</td><td style="text-align: right"><a href="5.02.-CP-M.html#cpm-22">1</a>, <a href="7.13.-Organizaci%C3%B3n-de-los-discos.html#formato-ibm-s%C3%B3lo-en-cpm-22">2</a></td></tr>
+<tr><td>Formato de sistema</td><td style="text-align: right"><a href="1.07.-Gr%C3%A1belo-en-disco.html#primeros-pasos-en-la-utilizaci%C3%B3n-de-los-discos-maestros-de-cpm">1</a>, <a href="5.02.-CP-M.html#cpm-22">2</a>, <a href="7.13.-Organizaci%C3%B3n-de-los-discos.html#formato-sistema">3</a></td></tr>
+<tr><td>FPUT</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#fput">1</a></td></tr>
+<tr><td>FRAME</td><td style="text-align: right"><a href="1.08.-Introducci%C3%B3n-a-los-modos-de-pantalla,-colores-y-gr%C3%A1ficos.html#frame">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#frame">2</a></td></tr>
+<tr><td>FRE</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#fre">1</a></td></tr>
+<tr><td>FS</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#fs">1</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="g"><a class="header" href="#g">G</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>Gestor de bancos</td><td style="text-align: right"><a href="1.11.-Introducci%C3%B3n-al-gestor-de-bancos-de-memoria.html">1</a>, <a href="8.00.-Cap%C3%ADtulo-8.-M%C3%A1s-sobre-el-gestor-de-bancos-de-memoria.html">2</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#gr%C3%A1ficos-con-el-segundo-banco-de-64k-de-ram">3</a></td></tr>
+<tr><td>GENGRAF</td><td style="text-align: right"><a href="4.01.-Discos.html#introducci%C3%B3n-al-gsx">1</a></td></tr>
+<tr><td>GLIST</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#glist">1</a></td></tr>
+<tr><td>GO</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#go">1</a></td></tr>
+<tr><td>GOSUB</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#gosub">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#gosub">2</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#3-unexpected-return">3</a></td></tr>
+<tr><td>GOTO</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#goto">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#goto">2</a></td></tr>
+<tr><td>GPROP</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#gprop">1</a></td></tr>
+<tr><td>Grabación en cinta</td><td style="text-align: right"><a href="4.02.-Cintas.html#calidad-de-la-grabaci%C3%B3n">1</a></td></tr>
+<tr><td>Grabación de variables</td><td style="text-align: right"><a href="2.01.-La-g%C3%A9nesis-de-un-programa.html#soluciones">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#write">2</a>, <a href="5.01.-AMSDOS.html#grabaci%C3%B3n-de-variables-y-volcado-de-pantalla">3</a></td></tr>
+<tr><td>Gráficos</td><td style="text-align: right"><a href="1.08.-Introducci%C3%B3n-a-los-modos-de-pantalla,-colores-y-gr%C3%A1ficos.html">1</a>, <a href="1.08.-Introducci%C3%B3n-a-los-modos-de-pantalla,-colores-y-gr%C3%A1ficos#gr%C3%A1ficos">2</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#dicho-gr%C3%A1ficamente">3</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128#gr%C3%A1ficos-con-el-segundo-banco-de-64k-de-ram">4</a></td></tr>
+<tr><td>GRAPHICS PAPER</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#graphics-paper">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#l%C3%ADneas-discontinuas">2</a></td></tr>
+<tr><td>GRAPHICS PEN</td><td style="text-align: right"><a href="1.08.-Introducci%C3%B3n-a-los-modos-de-pantalla,-colores-y-gr%C3%A1ficos.html#fill">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#fill">2</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#dicho-gr%C3%A1ficamente">3</a></td></tr>
+<tr><td>GSX</td><td style="text-align: right"><a href="4.01.-Discos.html#introducci%C3%B3n-al-gsx">1</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="h"><a class="header" href="#h">H</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>Hardware</td><td style="text-align: right"><a href="7.15.-Memoria.html">1</a>, <a href="8.00.-Cap%C3%ADtulo-8.-M%C3%A1s-sobre-el-gestor-de-bancos-de-memoria.html">2</a></td></tr>
+<tr><td>HELP</td><td style="text-align: right"><a href="4.01.-Discos.html#el-programa-help">1</a></td></tr>
+<tr><td>HEX$</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#hex">1</a></td></tr>
+<tr><td>HIMEM</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#himem">1</a>, <a href="7.15.-Memoria.html">2</a></td></tr>
+<tr><td>HOME</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#home-">1</a></td></tr>
+<tr><td>Hora y fecha en CP/M Plus</td><td style="text-align: right"><a href="5.02.-CP-M.html#gesti%C3%B3n-del-sistema">1</a></td></tr>
+<tr><td>HT</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#ht">1</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="i"><a class="header" href="#i">I</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>IBM, formato</td><td style="text-align: right"><a href="5.02.-CP-M.html#cpm-22">1</a>, <a href="7.13.-Organizaci%C3%B3n-de-los-discos.html#formato-ibm-s%C3%B3lo-en-cpm-22">2</a></td></tr>
+<tr><td>IF</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#if">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#if">2</a></td></tr>
+<tr><td>IF (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#if">1</a></td></tr>
+<tr><td>Impresoras</td><td style="text-align: right"><a href="1.02.-Conexi%C3%B3n-de-los-perif%C3%A9ricos.html#impresora">1</a>, <a href="5.02.-CP-M.html#impresoras">2</a>, <a href="7.10.-Conexiones.html#z%C3%B3calo-de-expansi%C3%B3n">3</a>, <a href="7.10.-Conexiones#z%C3%B3calo-para-la-impresora">4</a></td></tr>
+<tr><td>.IN</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#in-">1</a></td></tr>
+<tr><td>INK</td><td style="text-align: right"><a href="1.08.-Introducci%C3%B3n-a-los-modos-de-pantalla,-colores-y-gr%C3%A1ficos.html#colores">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#ink">2</a>, <a href="7.01.-Posiciones-del-cursor-y-c%C3%B3digos-ampliados-de-control-en-BASIC.html#control-de-c%C3%B3digos-en-basic">3</a></td></tr>
+<tr><td>INKEY</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#inkey">1</a>, <a href="7.12.-Joysticks.html">2</a></td></tr>
+<tr><td>INKEY$</td><td style="text-align: right"><a href="2.01.-La-g%C3%A9nesis-de-un-programa.html#el-principio-del-fin">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#inkey-1">2</a>, <a href="7.12.-Joysticks.html">3</a></td></tr>
+<tr><td>INP</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#inp">1</a></td></tr>
+<tr><td>INPUT</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#input">1</a>, <a href="2.01.-La-g%C3%A9nesis-de-un-programa.html#un-programa-sencillo">2</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#input">3</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#13-type-mismatch">4</a></td></tr>
+<tr><td>INPUT (cassette)</td><td style="text-align: right"><a href="4.02.-Cintas.html#input-9">1</a></td></tr>
+<tr><td>Inserción de discos</td><td style="text-align: right"><a href="1.03.-En-cuanto-a-los-discos.html#inserci%C3%B3n">1</a></td></tr>
+<tr><td>Instalación</td><td style="text-align: right"><a href="1.01.-Instalaci%C3%B3n-y-mantenimiento.html">1</a></td></tr>
+<tr><td>INSTR</td><td style="text-align: right"><a href="2.01.-La-g%C3%A9nesis-de-un-programa.html#un-programa-sencillo">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#instr">2</a></td></tr>
+<tr><td>INT</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#int">1</a></td></tr>
+<tr><td>INT (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#int">1</a></td></tr>
+<tr><td>Interfaz serie</td><td style="text-align: right"><a href="5.02.-CP-M.html#interfaz-serie">1</a>, <a href="9.01.-En-t%C3%A9rminos-generales.html#ampliabilidad">2</a></td></tr>
+<tr><td>Interrupciones</td><td style="text-align: right"><a href="7.03.-Interrupciones.html">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#interrupciones">2</a></td></tr>
+<tr><td>I/O</td><td style="text-align: right"><a href="7.10.-Conexiones.html">1</a>, <a href="7.15.-Memoria.html#otras-entradas-y-salidas">2</a></td></tr>
+<tr><td>ITEM</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#item">1</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="j"><a class="header" href="#j">J</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>JOY</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#joy">1</a>, <a href="7.12.-Joysticks.html">2</a></td></tr>
+<tr><td>Joystick, instrucciones (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#teclado-y-joystick">1</a></td></tr>
+<tr><td>Joysticks</td><td style="text-align: right"><a href="1.02.-Conexi%C3%B3n-de-los-perif%C3%A9ricos.html#joysticks-bastoncillos-de-mando">1</a>, <a href="7.05.-Esquemas-de-teclado.html#valores-ascii-impl%C3%ADcitos-generados-por-las-teclas-hex">2</a>, <a href="7.05.-Esquemas-de-teclado#n%C3%BAmeros-de-teclas-y-los-joysticks">3</a>, <a href="7.12.-Joysticks.html">4</a></td></tr>
+<tr><td>JOYSTICK, zócalo</td><td style="text-align: right"><a href="1.02.-Conexi%C3%B3n-de-los-perif%C3%A9ricos.html#joysticks-bastoncillos-de-mando">1</a>, <a href="7.10.-Conexiones.html#z%C3%B3calo-del-joystick">2</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="k"><a class="header" href="#k">K</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>KEY</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#key">1</a>, <a href="7.05.-Esquemas-de-teclado.html#c%C3%B3digos-expansibles-posiciones-y-valores-impl%C3%ADcitos">2</a></td></tr>
+<tr><td>KEY DEF</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#key-def">1</a>, <a href="7.05.-Esquemas-de-teclado.html#c%C3%B3digos-expansibles-posiciones-y-valores-impl%C3%ADcitos">2</a>, <a href="7.12.-Joysticks.html">3</a></td></tr>
+<tr><td>KEYP</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#keyp">1</a></td></tr>
+<tr><td>KEYS.CCP</td><td style="text-align: right"><a href="4.01.-Discos.html#el-programa-profile">1</a>, <a href="5.02.-CP-M.html#el-teclado">2</a></td></tr>
+<tr><td>KEYS.DRL</td><td style="text-align: right"><a href="5.02.-CP-M.html#el-teclado">1</a></td></tr>
+<tr><td>KEYS.WP</td><td style="text-align: right"><a href="5.02.-CP-M.html#el-teclado">1</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="l"><a class="header" href="#l">L</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>LABEL</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#label">1</a></td></tr>
+<tr><td>LANGUAGE</td><td style="text-align: right"><a href="4.01.-Discos.html#el-programa-profile">1</a>, <a href="5.02.-CP-M.html#language">2</a>, <a href="7.17.-Juego-de-caracteres-de-CP-M-Plus.html">3</a></td></tr>
+<tr><td>LAST</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#last-">1</a></td></tr>
+<tr><td>LC</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#lc-">1</a></td></tr>
+<tr><td>LEFT$</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#left">1</a></td></tr>
+<tr><td>LEN</td><td style="text-align: right"><a href="2.01.-La-g%C3%A9nesis-de-un-programa.html#soluciones">1</a></td></tr>
+<tr><td>LET</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#let">1</a></td></tr>
+<tr><td>LINE INPUT</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#line-input">1</a></td></tr>
+<tr><td>LINE INPUT (cassette)</td><td style="text-align: right"><a href="4.02.-Cintas.html#load">1</a></td></tr>
+<tr><td>Líneas discontinuas</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#mask">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#l%C3%ADneas-discontinuas">2</a></td></tr>
+<tr><td>LIST</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#list">1</a>, <a href="1.08.-Introducci%C3%B3n-a-los-modos-de-pantalla,-colores-y-gr%C3%A1ficos.html#colores-parpadeantes">2</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#list">3</a></td></tr>
+<tr><td>LIST (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#list">1</a></td></tr>
+<tr><td>LISTP</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#listp-">1</a></td></tr>
+<tr><td>Listas</td><td style="text-align: right"><a href="2.01.-La-g%C3%A9nesis-de-un-programa.html#un-programa-sencillo">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#dim">2</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD#erase">3</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#10-array-already-dimensioned">4</a></td></tr>
+<tr><td>LOAD</td><td style="text-align: right"><a href="1.07.-Gr%C3%A1belo-en-disco.html#carga-del-disco-a-la-memoria-del-ordenador">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#load">2</a></td></tr>
+<tr><td>LOAD (cassette)</td><td style="text-align: right"><a href="4.02.-Cintas.html#load">1</a></td></tr>
+<tr><td>LOAD (CP/M)</td><td style="text-align: right"><a href="5.02.-CP-M.html#para-terminar">1</a></td></tr>
+<tr><td>LOAD (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#load">1</a></td></tr>
+<tr><td>LOADPIC</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#loadpic-">1</a></td></tr>
+<tr><td>LOCAL</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#local">1</a></td></tr>
+<tr><td>LOCATE</td><td style="text-align: right"><a href="1.08.-Introducci%C3%B3n-a-los-modos-de-pantalla,-colores-y-gr%C3%A1ficos.html#locate">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#locate">2</a>, <a href="7.01.-Posiciones-del-cursor-y-c%C3%B3digos-ampliados-de-control-en-BASIC.html#control-de-c%C3%B3digos-en-basic">3</a></td></tr>
+<tr><td>LOG</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#log">1</a></td></tr>
+<tr><td>LOG10</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#log10">1</a></td></tr>
+<tr><td>Lógica</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#and">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD#not">2</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD#or">3</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD#xor">4</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#l%C3%B3gica">5</a></td></tr>
+<tr><td>LOGO</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html">1</a></td></tr>
+<tr><td>LPT</td><td style="text-align: right"><a href="5.02.-CP-M.html#interfaz-serie">1</a></td></tr>
+<tr><td>LPUT</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#lput-">1</a></td></tr>
+<tr><td>LST</td><td style="text-align: right"><a href="5.02.-CP-M.html#interfaz-serie">1</a></td></tr>
+<tr><td>LT</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#lt">1</a></td></tr>
+<tr><td>LOWER$</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#lower">1</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="m"><a class="header" href="#m">M</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>MAKE</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#make">1</a></td></tr>
+<tr><td>MASK</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#mask">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#l%C3%ADneas-discontinuas">2</a></td></tr>
+<tr><td>Matrices</td><td style="text-align: right"><a href="2.01.-La-g%C3%A9nesis-de-un-programa.html#un-programa-sencillo">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#dim">2</a></td></tr>
+<tr><td>MAX</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#max">1</a></td></tr>
+<tr><td>MEMBERP</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#memberp-">1</a></td></tr>
+<tr><td>Memoria</td><td style="text-align: right"><a href="1.11.-Introducci%C3%B3n-al-gestor-de-bancos-de-memoria.html">1</a>, <a href="7.14.-Ampliaciones-del-sistema-residentes-RSX.html">2</a>, <a href="8.00.-Cap%C3%ADtulo-8.-M%C3%A1s-sobre-el-gestor-de-bancos-de-memoria.html#utilizaci%C3%B3n-por-basic-del-segundo-banco-de-64k-de-ram">3</a>, <a href="8.01.-Almacenamiento-de-im%C3%A1genes-de-pantalla.html">4</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#gr%C3%A1ficos-con-el-segundo-banco-de-64k-de-ram">5</a></td></tr>
+<tr><td>MEMORY</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#memory">1</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#7-memory-full">2</a>, <a href="7.15.-Memoria.html">3</a></td></tr>
+<tr><td>Mensajes de error</td><td style="text-align: right"><a href="7.07.-Mensajes-de-error-de-BASIC.html">1</a></td></tr>
+<tr><td>Mensajes de error (AMSDOS)</td><td style="text-align: right"><a href="5.01.-AMSDOS.html#gu%C3%ADa-de-referencia-de-los-mensajes-de-error">1</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#errores-de-disco-en-amsdos">2</a></td></tr>
+<tr><td>Menú</td><td style="text-align: right"><a href="2.01.-La-g%C3%A9nesis-de-un-programa.html#soluciones">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#on-expresi%C3%B3n-goto">2</a></td></tr>
+<tr><td>MERGE</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#merge">1</a></td></tr>
+<tr><td>MERGE (cassette)</td><td style="text-align: right"><a href="4.02.-Cintas.html#merge">1</a></td></tr>
+<tr><td>MID$</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#mid">1</a></td></tr>
+<tr><td>MIN</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#min">1</a></td></tr>
+<tr><td>MOD</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#m%C3%B3dulo">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#mod">2</a></td></tr>
+<tr><td>MODE</td><td style="text-align: right"><a href="1.08.-Introducci%C3%B3n-a-los-modos-de-pantalla,-colores-y-gr%C3%A1ficos.html#parte-8-introducci%C3%B3n-a-los-modos-de-pantalla-colores-y-gr%C3%A1ficos">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#mode">2</a>, <a href="7.01.-Posiciones-del-cursor-y-c%C3%B3digos-ampliados-de-control-en-BASIC.html#control-de-c%C3%B3digos-en-basic">3</a></td></tr>
+<tr><td>Modos de tinta</td><td style="text-align: right"><a href="7.01.-Posiciones-del-cursor-y-c%C3%B3digos-ampliados-de-control-en-BASIC.html#control-de-c%C3%B3digos-en-basic">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#modos-de-tinta">2</a></td></tr>
+<tr><td>Modulador/fuente de alimentación (MP2)</td><td style="text-align: right"><a href="1.01.-Instalaci%C3%B3n-y-mantenimiento.html#conexi%C3%B3n-del-ordenador-a-la-unidad-moduladorfuente-de-alimentaci%C3%B3n-mp2">1</a>, <a href="1.01.-Instalaci%C3%B3n-y-mantenimiento#encendido-del-sistema-cpc6128-con-gt65-o-con-ctm644">2</a>, <a href="1.08.-Introducci%C3%B3n-a-los-modos-de-pantalla,-colores-y-gr%C3%A1ficos.html#colores">3</a>, <a href="1.09.-Sonidos.html#parte-9-sonidos">4</a></td></tr>
+<tr><td>Monitor</td><td style="text-align: right"><a href="1.01.-Instalaci%C3%B3n-y-mantenimiento.html#conexi%C3%B3n-del-ordenador-a-un-monitor">1</a></td></tr>
+<tr><td>MONITOR, zócalo</td><td style="text-align: right"><a href="1.01.-Instalaci%C3%B3n-y-mantenimiento.html#conexi%C3%B3n-del-ordenador-a-un-monitor">1</a>, <a href="1.01.-Instalaci%C3%B3n-y-mantenimiento#conexi%C3%B3n-del-ordenador-a-la-unidad-moduladorfuente-de-alimentaci%C3%B3n-mp2">2</a>, <a href="7.10.-Conexiones.html#z%C3%B3calo-del-monitor">3</a></td></tr>
+<tr><td>MOVCPM</td><td style="text-align: right"><a href="5.02.-CP-M.html#para-terminar">1</a></td></tr>
+<tr><td>MOVE</td><td style="text-align: right"><a href="1.08.-Introducci%C3%B3n-a-los-modos-de-pantalla,-colores-y-gr%C3%A1ficos.html#move">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#move">2</a></td></tr>
+<tr><td>MOVER</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#mover">1</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="n"><a class="header" href="#n">N</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>NAMEP</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#namep-">1</a></td></tr>
+<tr><td>NEW</td><td style="text-align: right"><a href="1.08.-Introducci%C3%B3n-a-los-modos-de-pantalla,-colores-y-gr%C3%A1ficos.html#dibujo-de-una-circunferencia">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#new">2</a></td></tr>
+<tr><td>NEXT</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#for-next">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#next">2</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#1-unexpected-next">3</a>, <a href="7.07.-Mensajes-de-error-de-BASIC#26-next-missing">4</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#c%C3%B3mo-sabemos-que-es-una-variable">5</a></td></tr>
+<tr><td>NODES</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#sugerencias-para-el-trabajo-con-dr-logo">1</a>, <a href="6.01.-Introducci%C3%B3n-a-LOGO#nodes">2</a></td></tr>
+<tr><td>NOFORMAT</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#noformat-">1</a></td></tr>
+<tr><td>NOT</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#not">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#l%C3%B3gica">2</a></td></tr>
+<tr><td>NOT (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#not">1</a></td></tr>
+<tr><td>Notas musicales</td><td style="text-align: right"><a href="7.06.-Sonidos.html#notas-y-periodos-de-tono">1</a></td></tr>
+<tr><td>NOTRACE</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#notrace-">1</a></td></tr>
+<tr><td>NOWATCH</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#nowatch-">1</a></td></tr>
+<tr><td>NUMBERP</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#numberp">1</a></td></tr>
+<tr><td>Números aleatorios</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#rnd">1</a></td></tr>
+<tr><td>Números binarios</td><td style="text-align: right"><a href="9.01.-En-t%C3%A9rminos-generales.html#bits-y-bytes">1</a></td></tr>
+<tr><td>Números de los errores</td><td style="text-align: right"><a href="7.07.-Mensajes-de-error-de-BASIC.html#mensajes-de-error-de-basic">1</a></td></tr>
+<tr><td>Números hexadecimales</td><td style="text-align: right"><a href="9.01.-En-t%C3%A9rminos-generales.html#sin-embargo">1</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="o"><a class="header" href="#o">O</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>ON BREAK CONT</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#on-break-cont">1</a></td></tr>
+<tr><td>ON BREAK GOSUB</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#on-break-gosub">1</a></td></tr>
+<tr><td>ON BREAK STOP</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#on-break-stop">1</a></td></tr>
+<tr><td>ON ERROR GOTO</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#on-error-goto">1</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#19-resume-missing">2</a>, <a href="7.07.-Mensajes-de-error-de-BASIC#errores-de-disco-en-amsdos">3</a></td></tr>
+<tr><td>ON GOSUB</td><td style="text-align: right"><a href="2.01.-La-g%C3%A9nesis-de-un-programa.html#soluciones">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#on-expresi%C3%B3n-gosub">2</a></td></tr>
+<tr><td>ON GOTO</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#on-expresi%C3%B3n-goto">1</a></td></tr>
+<tr><td>ON, piloto</td><td style="text-align: right"><a href="1.01.-Instalaci%C3%B3n-y-mantenimiento.html#encendido-del-sistema-cpc6128-con-gt65-o-con-ctm644">1</a>, <a href="1.01.-Instalaci%C3%B3n-y-mantenimiento#encendido-del-sistema-cpc6128-con-la-unidad-moduladorfuente-de-alimentaci%C3%B3n-mp2">2</a></td></tr>
+<tr><td>ON SQ GOSUB</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#on-sq-gosub">1</a>, <a href="7.03.-Interrupciones.html#interrupciones">2</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#el-sonido-de-la-m%C3%BAsica">3</a></td></tr>
+<tr><td>OP</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#op">1</a></td></tr>
+<tr><td>OPENIN</td><td style="text-align: right"><a href="2.01.-La-g%C3%A9nesis-de-un-programa.html#soluciones">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#openin">2</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#27-file-already-open">3</a></td></tr>
+<tr><td>OPENIN (cassette)</td><td style="text-align: right"><a href="4.02.-Cintas.html#openin">1</a></td></tr>
+<tr><td>OPENOUT</td><td style="text-align: right"><a href="2.01.-La-g%C3%A9nesis-de-un-programa.html#soluciones">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#openout">2</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#27-file-already-open">3</a></td></tr>
+<tr><td>OPENOUT (cassette)</td><td style="text-align: right"><a href="4.02.-Cintas.html#openout">1</a></td></tr>
+<tr><td>Operaciones aritméticas</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#aritm%C3%A9tica-sencilla">1</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#6-overflow">2</a>, <a href="7.07.-Mensajes-de-error-de-BASIC#11-division-by-zero">3</a></td></tr>
+<tr><td>Operaciones aritméticas (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#operaciones-aritm%C3%A9ticas">1</a></td></tr>
+<tr><td>Operaciones lógicas</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#operaciones-l%C3%B3gicas">1</a></td></tr>
+<tr><td>Operadores</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#aritm%C3%A9tica-sencilla">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#l%C3%B3gica">2</a></td></tr>
+<tr><td>OR</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#or">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#l%C3%B3gica">2</a></td></tr>
+<tr><td>OR (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#or">1</a></td></tr>
+<tr><td>Órdenes externas</td><td style="text-align: right"><a href="1.11.-Introducci%C3%B3n-al-gestor-de-bancos-de-memoria.html#utilizaci%C3%B3n-del-gestor-de-bancos-en-el-almacenamiento-de-cadenas-literales">1</a>, <a href="4.02.-Cintas.html#%C3%B3rdenes-externas-de-amsdos">2</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#errores-de-disco-en-amsdos">3</a>, <a href="8.02.-Ficheros-en-RAM.html#b%C3%BAsquedas">4</a></td></tr>
+<tr><td>ORIGIN</td><td style="text-align: right"><a href="1.08.-Introducci%C3%B3n-a-los-modos-de-pantalla,-colores-y-gr%C3%A1ficos.html#origin">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#origin">2</a></td></tr>
+<tr><td>OUT</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#out">1</a></td></tr>
+<tr><td>.OUT</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#out-">1</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="p"><a class="header" href="#p">P</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>PADDLE</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#paddle">1</a></td></tr>
+<tr><td>PAL</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#pal">1</a></td></tr>
+<tr><td>Palabras clave</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#introducci%C3%B3n-a-las-palabras-clave-del-basic-de-amstrad">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html">2</a>, <a href="5.02.-CP-M.html#gesti%C3%B3n-del-sistema">3</a>, <a href="7.08.-Palabras-reservadas-de-BASIC.html">4</a></td></tr>
+<tr><td>PALETTE</td><td style="text-align: right"><a href="5.02.-CP-M.html#colores">1</a></td></tr>
+<tr><td>PAPER</td><td style="text-align: right"><a href="1.08.-Introducci%C3%B3n-a-los-modos-de-pantalla,-colores-y-gr%C3%A1ficos.html#la-pantalla">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#paper">2</a>, <a href="7.01.-Posiciones-del-cursor-y-c%C3%B3digos-ampliados-de-control-en-BASIC.html#control-de-c%C3%B3digos-en-basic">3</a></td></tr>
+<tr><td>PAUSE</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#pause">1</a></td></tr>
+<tr><td>PD</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#pd">1</a></td></tr>
+<tr><td>PE</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#pe">1</a></td></tr>
+<tr><td>PEEK</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#peek">1</a></td></tr>
+<tr><td>PEN</td><td style="text-align: right"><a href="1.08.-Introducci%C3%B3n-a-los-modos-de-pantalla,-colores-y-gr%C3%A1ficos.html#la-pantalla">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#pen">2</a>, <a href="7.01.-Posiciones-del-cursor-y-c%C3%B3digos-ampliados-de-control-en-BASIC.html#control-de-c%C3%B3digos-en-basic">3</a></td></tr>
+<tr><td>Periféricos</td><td style="text-align: right"><a href="1.02.-Conexi%C3%B3n-de-los-perif%C3%A9ricos.html">1</a>, <a href="9.01.-En-t%C3%A9rminos-generales.html#ampliabilidad">2</a></td></tr>
+<tr><td>PI</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#pi">1</a></td></tr>
+<tr><td>PIECE</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#piece-">1</a></td></tr>
+<tr><td>Piloto (de la unidad de disco)</td><td style="text-align: right"><a href="1.03.-En-cuanto-a-los-discos.html#piloto">1</a></td></tr>
+<tr><td>PIP</td><td style="text-align: right"><a href="4.01.-Discos.html#creaci%C3%B3n-de-un-disco-de-trabajo-para-programas-llave-en-mano-de-cpm">1</a>, <a href="5.02.-CP-M.html#pip">2</a></td></tr>
+<tr><td>Plantillas</td><td style="text-align: right"><a href="7.09.-Plantillas.html#pantalla-de-texto-modo-0-20-columnas">1</a>, <a href="7.09.-Plantillas#pantalla-de-texto-modo-1-40-columnas">2</a>, <a href="7.09.-Plantillas#pantalla-de-texto-modo-2-80-columnas">3</a>, <a href="7.09.-Plantillas#envolventes-de-sonidom%C3%BAsica">4</a></td></tr>
+<tr><td>PLIST</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#plist">1</a></td></tr>
+<tr><td>PLOT</td><td style="text-align: right"><a href="1.08.-Introducci%C3%B3n-a-los-modos-de-pantalla,-colores-y-gr%C3%A1ficos.html#plot">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#plot">2</a></td></tr>
+<tr><td>PLOTR</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#plotr">1</a></td></tr>
+<tr><td>PO</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#po">1</a></td></tr>
+<tr><td>POALL</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#poall-">1</a></td></tr>
+<tr><td>POKE</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#poke">1</a></td></tr>
+<tr><td>PONS</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#pons-">1</a></td></tr>
+<tr><td>POS</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#pos">1</a>, <a href="4.02.-Cintas.html#pos9">2</a></td></tr>
+<tr><td>POPS</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#pops-">1</a></td></tr>
+<tr><td>Potenciación</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#potenciaci%C3%B3n">1</a>, <a href="1.06.-Empecemos-a-trabajar#m%C3%A1s-exponentes">2</a></td></tr>
+<tr><td>POTS</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#pots">1</a></td></tr>
+<tr><td>POWER, interruptor</td><td style="text-align: right"><a href="1.01.-Instalaci%C3%B3n-y-mantenimiento.html#encendido-del-sistema-cpc6128-con-gt65-o-con-ctm644">1</a>, <a href="1.01.-Instalaci%C3%B3n-y-mantenimiento#encendido-del-sistema-cpc6128-con-la-unidad-moduladorfuente-de-alimentaci%C3%B3n-mp2">2</a></td></tr>
+<tr><td>PPROP</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#pprop">1</a></td></tr>
+<tr><td>PPS</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#pps-">1</a></td></tr>
+<tr><td>PR</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#pr">1</a></td></tr>
+<tr><td>PRINT</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#print">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#print">2</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#la-imprenta">3</a></td></tr>
+<tr><td>PRINT SPC</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#print-spc">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#formato-de-escritura">2</a></td></tr>
+<tr><td>PRINT TAB</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#print-tab">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#formato-de-escritura">2</a></td></tr>
+<tr><td>PRINT USING</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#print-using">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#formato-de-escritura">2</a></td></tr>
+<tr><td>PRINTER, zócalo</td><td style="text-align: right"><a href="1.02.-Conexi%C3%B3n-de-los-perif%C3%A9ricos.html#impresora">1</a>, <a href="7.10.-Conexiones.html#z%C3%B3calo-para-la-impresora">2</a></td></tr>
+<tr><td>.PRM</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#prm">1</a></td></tr>
+<tr><td>PRN</td><td style="text-align: right"><a href="5.02.-CP-M.html#pip">1</a></td></tr>
+<tr><td>PROFILE</td><td style="text-align: right"><a href="4.01.-Discos.html#el-programa-profile">1</a>, <a href="5.02.-CP-M.html#arranque-en-fr%C3%ADo">2</a></td></tr>
+<tr><td>Programas llave en mano</td><td style="text-align: right"><a href="4.01.-Discos.html#programas-llave-en-mano-de-cpm">1</a>, <a href="4.01.-Discos#ejecuci%C3%B3n-de-un-paquete-llave-en-mano-de-cpm">2</a></td></tr>
+<tr><td>Protección contra escritura</td><td style="text-align: right"><a href="1.03.-En-cuanto-a-los-discos.html#protecci%C3%B3n-contra-escritura">1</a></td></tr>
+<tr><td>PU</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#pu">1</a></td></tr>
+<tr><td>PX</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#px">1</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="q"><a class="header" href="#q">Q</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>QUOTIENT</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#quotient-">1</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="r"><a class="header" href="#r">R</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>RAD</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#rad">1</a></td></tr>
+<tr><td>Raíz cuadrada</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#ra%C3%ADz-cuadrada">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#sqr">2</a></td></tr>
+<tr><td>Raíz cúbica</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#ra%C3%ADz-c%C3%BAbica">1</a></td></tr>
+<tr><td>RAMdisc</td><td style="text-align: right"><a href="1.11.-Introducci%C3%B3n-al-gestor-de-bancos-de-memoria.html#utilizaci%C3%B3n-del-gestor-de-bancos-en-el-almacenamiento-de-cadenas-literales">1</a>, <a href="8.02.-Ficheros-en-RAM.html#ficheros-en-ram">2</a></td></tr>
+<tr><td>RANDOM</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#random">1</a></td></tr>
+<tr><td>RANDOMIZE</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#randomize">1</a></td></tr>
+<tr><td>RC</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#rc">1</a></td></tr>
+<tr><td>READ</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#read">1</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#4-data-exhausted">2</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#listas-de-datos">3</a></td></tr>
+<tr><td>RECYCLE</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#sugerencias-para-el-trabajo-con-dr-logo">1</a>, <a href="6.01.-Introducci%C3%B3n-a-LOGO#recycle">2</a></td></tr>
+<tr><td>REDEFP</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#redefp">1</a></td></tr>
+<tr><td>Reinicialización del ordenador</td><td style="text-align: right"><a href="1.05.-Carga-de-programas.html#parte-5-carga-de-programas">1</a>, <a href="1.05.-Carga-de-programas#carga-de-programas-amsoft-y-del-programa-welcome">2</a></td></tr>
+<tr><td>RELEASE</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#release">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#el-sonido-de-la-m%C3%BAsica">2</a></td></tr>
+<tr><td>RELEASE (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#release">1</a></td></tr>
+<tr><td>REM</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#rem">1</a>, <a href="2.01.-La-g%C3%A9nesis-de-un-programa.html#un-programa-sencillo">2</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#rem">3</a></td></tr>
+<tr><td>.REM</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#rem-o-bien-">1</a></td></tr>
+<tr><td>REMAIN</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#remain">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#interrupciones">2</a></td></tr>
+<tr><td>REMAINDER</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#remainder-">1</a></td></tr>
+<tr><td>REMPROP</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#remprop">1</a></td></tr>
+<tr><td>REN</td><td style="text-align: right"><a href="5.02.-CP-M.html#rename-o-ren">1</a></td></tr>
+<tr><td>RENAME</td><td style="text-align: right"><a href="5.02.-CP-M.html#rename-o-ren">1</a>, <a href="5.02.-CP-M#gesti%C3%B3n-del-sistema">2</a></td></tr>
+<tr><td>|REN</td><td style="text-align: right"><a href="5.01.-AMSDOS.html#ren">1</a></td></tr>
+<tr><td>RENUM</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#renum">1</a></td></tr>
+<tr><td>REPEAT</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#repeat">1</a></td></tr>
+<tr><td>RERANDOM</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#rerandom-">1</a></td></tr>
+<tr><td>RESTORE</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#restore">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#listas-de-datos">2</a></td></tr>
+<tr><td>RESUME</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#resume">1</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#19-resume-missing">2</a></td></tr>
+<tr><td>RESUME NEXT</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#resume-next">1</a></td></tr>
+<tr><td>Retención de los canales de sonido</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#sound">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#el-sonido-de-la-m%C3%BAsica">2</a></td></tr>
+<tr><td>RETURN</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#gosub">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#return">2</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#3-unexpected-return">3</a></td></tr>
+<tr><td>RETURN, tecla</td><td style="text-align: right"><a href="1.04.-Manos-al-teclado.html#parte-4-manos-al-teclado">1</a>, <a href="1.04.-Manos-al-teclado#importante">2</a></td></tr>
+<tr><td>RIGHT$</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#right">1</a></td></tr>
+<tr><td>RL</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#rl">1</a></td></tr>
+<tr><td>RND</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#rnd">1</a></td></tr>
+<tr><td>RQ</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#rq">1</a></td></tr>
+<tr><td>ROINTIME.DEM, programa</td><td style="text-align: right"><a href="1.05.-Carga-de-programas.html#parte-5-carga-de-programas">1</a></td></tr>
+<tr><td>ROM adicional</td><td style="text-align: right"><a href="7.15.-Memoria.html#memorias-rom-adicionales">1</a></td></tr>
+<tr><td>ROUND</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#round">1</a></td></tr>
+<tr><td>ROUND (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#round-">1</a></td></tr>
+<tr><td>RS232</td><td style="text-align: right"><a href="5.02.-CP-M.html#interfaz-serie">1</a>, <a href="9.01.-En-t%C3%A9rminos-generales.html#ampliabilidad">2</a></td></tr>
+<tr><td>RSX</td><td style="text-align: right"><a href="7.14.-Ampliaciones-del-sistema-residentes-RSX.html#parte-14-ampliaciones-del-sistema-residentes-rsx">1</a></td></tr>
+<tr><td>RT</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#rt">1</a></td></tr>
+<tr><td>RUN</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#run">1</a>, <a href="1.07.-Gr%C3%A1belo-en-disco.html#carga-del-disco-a-la-memoria-del-ordenador">2</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#run">3</a></td></tr>
+<tr><td>RUN (cassette)</td><td style="text-align: right"><a href="4.02.-Cintas.html#run">1</a></td></tr>
+<tr><td>RUN (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#run">1</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="s"><a class="header" href="#s">S</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>SAVE</td><td style="text-align: right"><a href="1.07.-Gr%C3%A1belo-en-disco.html#grabaci%C3%B3n-de-un-programa-en-disco">1</a>, <a href="1.07.-Gr%C3%A1belo-en-disco#ficheros-ascii">2</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#save">3</a></td></tr>
+<tr><td>SAVE (cassette)</td><td style="text-align: right"><a href="4.02.-Cintas.html#save">1</a></td></tr>
+<tr><td>SAVE (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#save">1</a></td></tr>
+<tr><td>SAVEPIC</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#savepic-">1</a></td></tr>
+<tr><td>|SCREENCOPY</td><td style="text-align: right"><a href="1.11.-Introducci%C3%B3n-al-gestor-de-bancos-de-memoria.html#control-de-im%C3%A1genes-de-pantalla-con-el-gestor-de-bancos">1</a>, <a href="8.01.-Almacenamiento-de-im%C3%A1genes-de-pantalla.html#parte-1-almacenamiento-de-im%C3%A1genes-de-pantalla">2</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#gr%C3%A1ficos-con-el-segundo-banco-de-64k-de-ram">3</a></td></tr>
+<tr><td>|SCREENSWAP</td><td style="text-align: right"><a href="1.11.-Introducci%C3%B3n-al-gestor-de-bancos-de-memoria.html#control-de-im%C3%A1genes-de-pantalla-con-el-gestor-de-bancos">1</a>, <a href="8.01.-Almacenamiento-de-im%C3%A1genes-de-pantalla.html#parte-1-almacenamiento-de-im%C3%A1genes-de-pantalla">2</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#gr%C3%A1ficos-con-el-segundo-banco-de-64k-de-ram">3</a></td></tr>
+<tr><td>SE</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#se">1</a></td></tr>
+<tr><td>Sector de configuración</td><td style="text-align: right"><a href="5.02.-CP-M.html#cpm-22">1</a></td></tr>
+<tr><td>Segunda unidad de disco, zócalo</td><td style="text-align: right"><a href="1.02.-Conexi%C3%B3n-de-los-perif%C3%A9ricos.html#segunda-unidad-de-disco-amstrad-fd1">1</a>, <a href="1.03.-En-cuanto-a-los-discos.html#piloto">2</a>, <a href="1.07.-Gr%C3%A1belo-en-disco.html#primeros-pasos-en-la-utilizaci%C3%B3n-de-los-discos-maestros-de-cpm">3</a>, <a href="1.07.-Gr%C3%A1belo-en-disco#inicializaci%C3%B3n-en-un-sistema-de-2-unidades-de-disco">4</a>, <a href="7.10.-Conexiones.html#z%C3%B3calo-para-la-segunda-unidad-de-disco">5</a></td></tr>
+<tr><td>SET</td><td style="text-align: right"><a href="5.02.-CP-M.html#gesti%C3%B3n-del-sistema">1</a></td></tr>
+<tr><td>SETBG</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#setbg-">1</a></td></tr>
+<tr><td>SETCURSOR</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#setcursor-">1</a></td></tr>
+<tr><td>SETD</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#setd-">1</a></td></tr>
+<tr><td>SETDEF</td><td style="text-align: right"><a href="5.02.-CP-M.html#gesti%C3%B3n-del-sistema">1</a></td></tr>
+<tr><td>SETH</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#seth">1</a></td></tr>
+<tr><td>SETKEYS</td><td style="text-align: right"><a href="4.01.-Discos.html#el-programa-profile">1</a>, <a href="5.02.-CP-M.html#el-teclado">2</a></td></tr>
+<tr><td>SETLST</td><td style="text-align: right"><a href="5.02.-CP-M.html#impresoras">1</a></td></tr>
+<tr><td>SETPAL</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#setpal">1</a></td></tr>
+<tr><td>SETPC</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#setpc">1</a></td></tr>
+<tr><td>SETPOS</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#setpos">1</a></td></tr>
+<tr><td>SETSCRUNCH</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#setscrunch-">1</a></td></tr>
+<tr><td>SETSIO</td><td style="text-align: right"><a href="5.02.-CP-M.html#interfaz-serie">1</a></td></tr>
+<tr><td>SETSPLIT</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#setsplit">1</a></td></tr>
+<tr><td>SETUP</td><td style="text-align: right"><a href="5.02.-CP-M.html#setup">1</a></td></tr>
+<tr><td>SETX</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#setx-">1</a></td></tr>
+<tr><td>SETY</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#sety-">1</a></td></tr>
+<tr><td>SET24X80</td><td style="text-align: right"><a href="5.02.-CP-M.html#impresoras">1</a></td></tr>
+<tr><td>SF</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#sf">1</a></td></tr>
+<tr><td>SGN</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#sgn">1</a></td></tr>
+<tr><td>SHIFT, teclas</td><td style="text-align: right"><a href="1.04.-Manos-al-teclado.html#parte-4-manos-al-teclado">1</a></td></tr>
+<tr><td>SHOW (CP/M)</td><td style="text-align: right"><a href="5.02.-CP-M.html#gesti%C3%B3n-del-sistema">1</a></td></tr>
+<tr><td>SHOW (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#show">1</a></td></tr>
+<tr><td>SHUFFLE</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#shuffle-">1</a></td></tr>
+<tr><td>Símbolos comodín</td><td style="text-align: right"><a href="5.01.-AMSDOS.html#s%C3%ADmbolos-comod%C3%ADn">1</a></td></tr>
+<tr><td>SIN</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#sin">1</a></td></tr>
+<tr><td>SIN (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#sin">1</a></td></tr>
+<tr><td>Sincronización de canales</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#sound">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#el-sonido-de-la-m%C3%BAsica">2</a></td></tr>
+<tr><td>Sintetizador de voz</td><td style="text-align: right"><a href="1.02.-Conexi%C3%B3n-de-los-perif%C3%A9ricos.html#dispositivos-de-expansi%C3%B3n">1</a>, <a href="9.01.-En-t%C3%A9rminos-generales.html#ampliabilidad">2</a></td></tr>
+<tr><td>SIO</td><td style="text-align: right"><a href="5.02.-CP-M.html#interfaz-serie">1</a></td></tr>
+<tr><td>Software</td><td style="text-align: right"><a href="1.05.-Carga-de-programas.html#parte-5-carga-de-programas">1</a>, <a href="7.17.-Juego-de-caracteres-de-CP-M-Plus.html#juegos-de-caracteres-de-7-bits">2</a>, <a href="7.17.-Juego-de-caracteres-de-CP-M-Plus#juegos-de-caracteres-de-8-bits">3</a></td></tr>
+<tr><td>Sonido (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#sonido">1</a></td></tr>
+<tr><td>SOUND</td><td style="text-align: right"><a href="1.09.-Sonidos.html#parte-9-sonidos">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#sound">2</a>, <a href="7.06.-Sonidos.html#notas-y-periodos-de-tono">3</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#el-sonido-de-la-m%C3%BAsica">4</a></td></tr>
+<tr><td>SOUND (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#sonido">1</a></td></tr>
+<tr><td>SPACE$</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#space">1</a></td></tr>
+<tr><td>SPC</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#spc">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#la-imprenta">2</a></td></tr>
+<tr><td>SPEED INK</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#speed-ink">1</a></td></tr>
+<tr><td>SPEED KEY</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#speed-key">1</a></td></tr>
+<tr><td>SPEED WRITE</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#speed-write">1</a>, <a href="4.02.-Cintas.html#speed-write">2</a></td></tr>
+<tr><td>Sprites</td><td style="text-align: right"><a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#sprites">1</a></td></tr>
+<tr><td>SQ</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#sq">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#el-sonido-de-la-m%C3%BAsica">2</a></td></tr>
+<tr><td>SQR</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#ra%C3%ADz-cuadrada">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#sqr">2</a></td></tr>
+<tr><td>SS</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#ss">1</a></td></tr>
+<tr><td>ST</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#st">1</a></td></tr>
+<tr><td>STAT</td><td style="text-align: right"><a href="5.02.-CP-M.html#cpm-22">1</a></td></tr>
+<tr><td>STEP</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#for-next">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#step">2</a></td></tr>
+<tr><td>STEREO, zócalo</td><td style="text-align: right"><a href="1.02.-Conexi%C3%B3n-de-los-perif%C3%A9ricos.html#amplificador-y-altavoces-externos">1</a>, <a href="1.09.-Sonidos.html#parte-9-sonidos">2</a>, <a href="7.10.-Conexiones.html#z%C3%B3calo-est%C3%A9reo">3</a></td></tr>
+<tr><td>STOP</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#stop">1</a></td></tr>
+<tr><td>STOP (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#stop">1</a></td></tr>
+<tr><td>STR$</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#str">1</a></td></tr>
+<tr><td>STRING$</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#string">1</a></td></tr>
+<tr><td>SUBMIT</td><td style="text-align: right"><a href="4.01.-Discos.html#ejecuci%C3%B3n-de-un-paquete-llave-en-mano-de-cpm">1</a>, <a href="5.02.-CP-M.html#gesti%C3%B3n-del-sistema">2</a></td></tr>
+<tr><td>Suma de verificación</td><td style="text-align: right"><a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#listas-de-datos">1</a></td></tr>
+<tr><td>SWAP</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#swap">1</a></td></tr>
+<tr><td>SYMBOL</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#symbol">1</a>, <a href="7.01.-Posiciones-del-cursor-y-c%C3%B3digos-ampliados-de-control-en-BASIC.html#control-de-c%C3%B3digos-en-basic">2</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#caracteres-definidos-por-el-usuario">3</a></td></tr>
+<tr><td>SYMBOL AFTER</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#symbol-after">1</a>, <a href="7.15.-Memoria.html#parte-15-memoria">2</a></td></tr>
+<tr><td>Syntax error</td><td style="text-align: right"><a href="1.04.-Manos-al-teclado.html#syntax-error-error-de-sintaxis">1</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#2-syntax-error">2</a></td></tr>
+<tr><td>SYSGEN</td><td style="text-align: right"><a href="5.02.-CP-M.html#cpm-22">1</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="t"><a class="header" href="#t">T</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>TAB</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#tab">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#formato-de-escritura">2</a></td></tr>
+<tr><td>TAG</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#tag">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#l%C3%ADneas-discontinuas">2</a></td></tr>
+<tr><td>TAGOFF</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#tagoff">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#l%C3%ADneas-discontinuas">2</a></td></tr>
+<tr><td>TAN</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#tan">1</a></td></tr>
+<tr><td>|TAPE</td><td style="text-align: right"><a href="1.10.-Introducci%C3%B3n-a-los-sistemas-operativos-AMSDOS-y-CPM.html#c%C3%B3mo-se-utiliza-la-cinta">1</a>, <a href="5.01.-AMSDOS.html#tape">2</a></td></tr>
+<tr><td>|TAPE.IN</td><td style="text-align: right"><a href="1.10.-Introducci%C3%B3n-a-los-sistemas-operativos-AMSDOS-y-CPM.html#c%C3%B3mo-se-utiliza-la-cinta">1</a>, <a href="5.01.-AMSDOS.html#tape">2</a></td></tr>
+<tr><td>|TAPE.OUT</td><td style="text-align: right"><a href="1.10.-Introducci%C3%B3n-a-los-sistemas-operativos-AMSDOS-y-CPM.html#c%C3%B3mo-se-utiliza-la-cinta">1</a>, <a href="5.01.-AMSDOS.html#tape">2</a></td></tr>
+<tr><td>TAPE, zócalo</td><td style="text-align: right"><a href="1.02.-Conexi%C3%B3n-de-los-perif%C3%A9ricos.html#magnet%C3%B3fono-de-cassettes">1</a>, <a href="7.10.-Conexiones.html#z%C3%B3calo-de-cinta">2</a></td></tr>
+<tr><td>Teclado</td><td style="text-align: right"><a href="1.04.-Manos-al-teclado.html#parte-4-manos-al-teclado">1</a>, <a href="5.02.-CP-M.html#el-teclado">2</a>, <a href="7.05.-Esquemas-de-teclado.html#valores-ascii-impl%C3%ADcitos-generados-por-las-teclas-hex">3</a>, <a href="7.05.-Esquemas-de-teclado#c%C3%B3digos-expansibles-posiciones-y-valores-impl%C3%ADcitos">4</a>, <a href="7.05.-Esquemas-de-teclado#n%C3%BAmeros-de-teclas-y-los-joysticks">5</a>, <a href="7.12.-Joysticks.html#joysticks">6</a></td></tr>
+<tr><td>Teclas definibles por el usuario</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#key">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD#key-def">2</a>, <a href="7.05.-Esquemas-de-teclado.html#valores-ascii-impl%C3%ADcitos-generados-por-las-teclas-hex">3</a>, <a href="7.05.-Esquemas-de-teclado#c%C3%B3digos-expansibles-posiciones-y-valores-impl%C3%ADcitos">4</a>, <a href="7.05.-Esquemas-de-teclado#n%C3%BAmeros-de-teclas-y-los-joysticks">5</a></td></tr>
+<tr><td>Televisor</td><td style="text-align: right"><a href="1.01.-Instalaci%C3%B3n-y-mantenimiento.html#conexi%C3%B3n-del-ordenador-a-la-unidad-moduladorfuente-de-alimentaci%C3%B3n-mp2">1</a>, <a href="1.01.-Instalaci%C3%B3n-y-mantenimiento#encendido-del-sistema-cpc6128-con-la-unidad-moduladorfuente-de-alimentaci%C3%B3n-mp2">2</a>, <a href="1.09.-Sonidos.html#parte-9-sonidos">3</a></td></tr>
+<tr><td>TEST</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.md#test.html">1</a></td></tr>
+<tr><td>TESTR</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.md#test.html">1</a></td></tr>
+<tr><td>TEXT</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#text-">1</a></td></tr>
+<tr><td>TF</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#if">1</a>, <a href="6.01.-Introducci%C3%B3n-a-LOGO.html#tf">2</a></td></tr>
+<tr><td>THEN</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#then">1</a></td></tr>
+<tr><td>THING</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#thing-">1</a></td></tr>
+<tr><td>THROW</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#throw">1</a></td></tr>
+<tr><td>TIME</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#time">1</a></td></tr>
+<tr><td>TO</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#to">1</a></td></tr>
+<tr><td>TO (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#to">1</a></td></tr>
+<tr><td>TOPLEVEL</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#toplevel">1</a></td></tr>
+<tr><td>TOWARDS</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#towards-">1</a></td></tr>
+<tr><td>TRACE</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#trace-">1</a></td></tr>
+<tr><td>TROFF</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#troff">1</a></td></tr>
+<tr><td>TRON</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#tron">1</a></td></tr>
+<tr><td>TRUE</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#true">1</a></td></tr>
+<tr><td>TS</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#ts">1</a></td></tr>
+<tr><td>TYP</td><td style="text-align: right"><a href="5.02.-CP-M.html#type-o-typ">1</a></td></tr>
+<tr><td>TYPE (CP/M)</td><td style="text-align: right"><a href="5.02.-CP-M.html#type-o-typ">1</a></td></tr>
+<tr><td>TYPE (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#type">1</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="u"><a class="header" href="#u">U</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>UC</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#uc-">1</a></td></tr>
+<tr><td>UNT</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#unt">1</a></td></tr>
+<tr><td>UPPER$</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#upper">1</a></td></tr>
+<tr><td>USE</td><td style="text-align: right"><a href="5.02.-CP-M.html#user-o-use">1</a></td></tr>
+<tr><td>USER</td><td style="text-align: right"><a href="5.02.-CP-M.html#user-o-use">1</a></td></tr>
+<tr><td>|USER</td><td style="text-align: right"><a href="5.01.-AMSDOS.html#user">1</a></td></tr>
+<tr><td>USING</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#using">1</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="v"><a class="header" href="#v">V</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>VAL</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#val">1</a></td></tr>
+<tr><td>Variables</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#input">1</a>, <a href="7.08.-Palabras-reservadas-de-BASIC.html#parte-8-palabras-reservadas-de-basic">2</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#c%C3%B3mo-sabemos-que-es-una-variable">3</a></td></tr>
+<tr><td>Variables, grabación de</td><td style="text-align: right"><a href="2.01.-La-g%C3%A9nesis-de-un-programa.html#soluciones">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#save">2</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD#write">3</a>, <a href="5.01.-AMSDOS.html#grabaci%C3%B3n-de-variables-y-volcado-de-pantalla">4</a></td></tr>
+<tr><td>Variables literales</td><td style="text-align: right"><a href="1.06.-Empecemos-a-trabajar.html#input">1</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#13-type-mismatch">2</a></td></tr>
+<tr><td>VDU, emulador</td><td style="text-align: right"><a href="4.01.-Discos.html#programas-llave-en-mano-de-cpm">1</a>, <a href="7.16.-Emulador-de-consola-CP-M-Plus.html#parte-16-emulador-de-consola-cpm-plus">2</a></td></tr>
+<tr><td>Verificación de discos</td><td style="text-align: right"><a href="1.10.-Introducci%C3%B3n-a-los-sistemas-operativos-AMSDOS-y-CPM.html#verificaci%C3%B3n-de-discos">1</a></td></tr>
+<tr><td>Vibrato</td><td style="text-align: right"><a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#el-sonido-de-la-m%C3%BAsica">1</a></td></tr>
+<tr><td>Volcado de pantalla</td><td style="text-align: right"><a href="1.07.-Gr%C3%A1belo-en-disco.html#volcado-de-pantalla">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#save">2</a>, <a href="5.01.-AMSDOS.html#grabaci%C3%B3n-de-variables-y-volcado-de-pantalla">3</a></td></tr>
+<tr><td>VOLUME, control</td><td style="text-align: right"><a href="1.02.-Conexi%C3%B3n-de-los-perif%C3%A9ricos.html#amplificador-y-altavoces-externos">1</a>, <a href="1.09.-Sonidos.html#parte-9-sonidos">2</a></td></tr>
+<tr><td>VPOS</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#vpos">1</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="w"><a class="header" href="#w">W</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>WAIT</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#wait">1</a></td></tr>
+<tr><td>WAIT (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#wait">1</a></td></tr>
+<tr><td>WATCH</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#watch-">1</a></td></tr>
+<tr><td>WEND</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#wend">1</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#29-wend-missing">2</a></td></tr>
+<tr><td>WHERE</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#where-">1</a></td></tr>
+<tr><td>WHILE</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#while">1</a>, <a href="7.07.-Mensajes-de-error-de-BASIC.html#7-memory-full">2</a>, <a href="7.07.-Mensajes-de-error-de-BASIC#29-wend-missing">3</a></td></tr>
+<tr><td>WIDTH</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#width">1</a></td></tr>
+<tr><td>WINDOW</td><td style="text-align: right"><a href="2.01.-La-g%C3%A9nesis-de-un-programa.html#el-principio-del-fin">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#window">2</a>, <a href="7.01.-Posiciones-del-cursor-y-c%C3%B3digos-ampliados-de-control-en-BASIC.html#control-de-c%C3%B3digos-en-basic">3</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#ventanas">4</a></td></tr>
+<tr><td>WINDOW (LOGO)</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#window">1</a></td></tr>
+<tr><td>WINDOW SWAP</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#window-swap">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#ventanas">2</a></td></tr>
+<tr><td>WORD</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#word">1</a></td></tr>
+<tr><td>WORDP</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#wordp">1</a></td></tr>
+<tr><td>WRAP</td><td style="text-align: right"><a href="6.01.-Introducci%C3%B3n-a-LOGO.html#wrap">1</a></td></tr>
+<tr><td>WRITE</td><td style="text-align: right"><a href="2.01.-La-g%C3%A9nesis-de-un-programa.html#soluciones">1</a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#write">2</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#formato-de-escritura">3</a></td></tr>
+<tr><td>WRITE (cassette)</td><td style="text-align: right"><a href="4.02.-Cintas.html#write-9">1</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="x"><a class="header" href="#x">X</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>XOR</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#xor">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#l%C3%B3gica">2</a></td></tr>
+<tr><td>XPOS</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#xpos">1</a></td></tr>
+<tr><td>XSUB</td><td style="text-align: right"><a href="5.02.-CP-M.html#para-terminar">1</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="y"><a class="header" href="#y">Y</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>YPOS</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#ypos">1</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="z"><a class="header" href="#z">Z</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><img width="500"/></th><th style="text-align: right"></th></tr></thead><tbody>
+<tr><td>Zócalos de corriente continua</td><td style="text-align: right"><a href="1.01.-Instalaci%C3%B3n-y-mantenimiento.html#conexi%C3%B3n-del-ordenador-a-un-monitor">1</a>, <a href="1.01.-Instalaci%C3%B3n-y-mantenimiento#conexi%C3%B3n-del-ordenador-a-la-unidad-moduladorfuente-de-alimentaci%C3%B3n-mp2">2</a></td></tr>
+<tr><td>ZONE</td><td style="text-align: right"><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#zone">1</a>, <a href="9.02.-M%C3%A1s-en-concreto-sobre-el-CPC6128.html#formato-de-escritura">2</a></td></tr>
+</tbody></table>
+</div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="A03.-Que-usted-lo-disfrute.-Guante-blanco.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="A03.-Que-usted-lo-disfrute.-Guante-blanco.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

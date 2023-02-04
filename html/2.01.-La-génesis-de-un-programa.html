@@ -1,0 +1,527 @@
+<!DOCTYPE HTML>
+<html lang="es" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>La génesis de un programa - Amstrad CPC6128 Manual del Usuario</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="Manual de usuario del micro ordenenador Amstrad modelo CPC6128">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Home.html">Inicio</a></li><li class="chapter-item expanded affix "><a href="0.01.-Introducción.html">Introducción</a></li><li class="chapter-item expanded affix "><a href="0.02.-Importante.html">Importante</a></li><li class="chapter-item expanded "><a href="1.00.-Capítulo-1.-Curso-de-introducción.html"><strong aria-hidden="true">1.</strong> Curso se introducción</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="1.01.-Instalación-y-mantenimiento.html"><strong aria-hidden="true">1.1.</strong> Instalación y mantenimiento</a></li><li class="chapter-item expanded "><a href="1.02.-Conexión-de-los-periféricos.html"><strong aria-hidden="true">1.2.</strong> Conexión de los periféricos</a></li><li class="chapter-item expanded "><a href="1.03.-En-cuanto-a-los-discos.html"><strong aria-hidden="true">1.3.</strong> En cuanto a los discos</a></li><li class="chapter-item expanded "><a href="1.04.-Manos-al-teclado.html"><strong aria-hidden="true">1.4.</strong> Manos al teclado</a></li><li class="chapter-item expanded "><a href="1.05.-Carga-de-programas.html"><strong aria-hidden="true">1.5.</strong> Carga de programas</a></li><li class="chapter-item expanded "><a href="1.06.-Empecemos-a-trabajar.html"><strong aria-hidden="true">1.6.</strong> Empecemos a trabajar</a></li><li class="chapter-item expanded "><a href="1.07.-Grábelo-en-disco.html"><strong aria-hidden="true">1.7.</strong> Grábelo en disco</a></li><li class="chapter-item expanded "><a href="1.08.-Introducción-a-los-modos-de-pantalla,-colores-y-gráficos.html"><strong aria-hidden="true">1.8.</strong> Introducción a los modos de pantalla, colores y gráficos</a></li><li class="chapter-item expanded "><a href="1.09.-Sonidos.html"><strong aria-hidden="true">1.9.</strong> Sonidos</a></li><li class="chapter-item expanded "><a href="1.10.-Introducción-a-los-sistemas-operativos-AMSDOS-y-CPM.html"><strong aria-hidden="true">1.10.</strong> Introducción a los sistemas operativos AMSDOS y CPM</a></li><li class="chapter-item expanded "><a href="1.11.-Introducción-al-gestor-de-bancos-de-memoria.html"><strong aria-hidden="true">1.11.</strong> Introducción al gestor de bancos de memoria</a></li></ol></li><li class="chapter-item expanded "><a href="2.01.-La-génesis-de-un-programa.html" class="active"><strong aria-hidden="true">2.</strong> La génesis de un programa</a></li><li class="chapter-item expanded "><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html"><strong aria-hidden="true">3.</strong> Lista completa de las palabras clave del BASIC de AMSTRAD</a></li><li class="chapter-item expanded "><a href="4.00.-Capítulo-4.-Discos-y-cintas.html"><strong aria-hidden="true">4.</strong> Discos y cintas</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="4.01.-Discos.html"><strong aria-hidden="true">4.1.</strong> Parte 1: Discos</a></li><li class="chapter-item expanded "><a href="4.02.-Cintas.html"><strong aria-hidden="true">4.2.</strong> Parte 2: Cintas</a></li></ol></li><li class="chapter-item expanded "><a href="5.00.-Capítulo-5.-AMSDOS-y-CP-M.html"><strong aria-hidden="true">5.</strong> AMSDOS y CP/M</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="5.01.-AMSDOS.html"><strong aria-hidden="true">5.1.</strong> Parte 1: AMSDOS</a></li><li class="chapter-item expanded "><a href="5.02.-CP-M.html"><strong aria-hidden="true">5.2.</strong> Parte 2: CP/M</a></li></ol></li><li class="chapter-item expanded "><a href="6.01.-Introducción-a-LOGO.html"><strong aria-hidden="true">6.</strong> Introducción a LOGO</a></li><li class="chapter-item expanded "><a href="7.00.-Capítulo-7.-Para-su-referencia.html"><strong aria-hidden="true">7.</strong> Para su referencia</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="7.01.-Posiciones-del-cursor-y-códigos-ampliados-de-control-en-BASIC.html"><strong aria-hidden="true">7.1.</strong> Posiciones del cursor y códigos ampliados de control en BASIC</a></li><li class="chapter-item expanded "><a href="7.02.-El-sistema-operativo.html"><strong aria-hidden="true">7.2.</strong> El sistema operativo</a></li><li class="chapter-item expanded "><a href="7.03.-Interrupciones.html"><strong aria-hidden="true">7.3.</strong> Interrupciones</a></li><li class="chapter-item expanded "><a href="7.04.-Caracteres-ASCII-y-caracteres-gráficos-en-BASIC.html"><strong aria-hidden="true">7.4.</strong> Caracteres ASCII y caracteres gráficos en BASIC</a></li><li class="chapter-item expanded "><a href="7.05.-Esquemas-de-teclado.html"><strong aria-hidden="true">7.5.</strong> Esquemas de teclado</a></li><li class="chapter-item expanded "><a href="7.06.-Sonidos.html"><strong aria-hidden="true">7.6.</strong> Sonidos</a></li><li class="chapter-item expanded "><a href="7.07.-Mensajes-de-error-de-BASIC.html"><strong aria-hidden="true">7.7.</strong> Mensajes de error de BASIC</a></li><li class="chapter-item expanded "><a href="7.08.-Palabras-reservadas-de-BASIC.html"><strong aria-hidden="true">7.8.</strong> Palabras reservadas de BASIC</a></li><li class="chapter-item expanded "><a href="7.09.-Plantillas.html"><strong aria-hidden="true">7.9.</strong> Plantillas</a></li><li class="chapter-item expanded "><a href="7.10.-Conexiones.html"><strong aria-hidden="true">7.10.</strong> Conexiones</a></li><li class="chapter-item expanded "><a href="7.11.-Impresoras.html"><strong aria-hidden="true">7.11.</strong> Impresoras</a></li><li class="chapter-item expanded "><a href="7.12.-Joysticks.html"><strong aria-hidden="true">7.12.</strong> Joysticks</a></li><li class="chapter-item expanded "><a href="7.13.-Organización-de-los-discos.html"><strong aria-hidden="true">7.13.</strong> Organización de los discos</a></li><li class="chapter-item expanded "><a href="7.14.-Ampliaciones-del-sistema-residentes-RSX.html"><strong aria-hidden="true">7.14.</strong> Ampliaciones del sistema residentes RSX</a></li><li class="chapter-item expanded "><a href="7.15.-Memoria.html"><strong aria-hidden="true">7.15.</strong> Memoria</a></li><li class="chapter-item expanded "><a href="7.16.-Emulador-de-consola-CP-M-Plus.html"><strong aria-hidden="true">7.16.</strong> Emulador de consola CP/M Plus</a></li><li class="chapter-item expanded "><a href="7.17.-Juego-de-caracteres-de-CP-M-Plus.html"><strong aria-hidden="true">7.17.</strong> Juego de caracteres de CP-M Plus</a></li></ol></li><li class="chapter-item expanded "><a href="8.00.-Capítulo-8.-Más-sobre-el-gestor-de-bancos-de-memoria.html"><strong aria-hidden="true">8.</strong> Más sobre el gestor de bancos de memoria</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="8.01.-Almacenamiento-de-imágenes-de-pantalla.html"><strong aria-hidden="true">8.1.</strong> Almacenamiento de imágenes de pantalla</a></li><li class="chapter-item expanded "><a href="8.02.-Ficheros-en-RAM.html"><strong aria-hidden="true">8.2.</strong> Ficheros en RAM</a></li></ol></li><li class="chapter-item expanded "><a href="9.00.-Capítulo-9.-Cuando-usted-guste.html"><strong aria-hidden="true">9.</strong> Cuando usted guste</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="9.01.-En-términos-generales.html"><strong aria-hidden="true">9.1.</strong> En términos generales</a></li><li class="chapter-item expanded "><a href="9.02.-Más-en-concreto-sobre-el-CPC6128.html"><strong aria-hidden="true">9.2.</strong> Más en concreto sobre el CPC6128</a></li></ol></li><li class="chapter-item expanded "><a href="10.0.-Para-más-información.html"><strong aria-hidden="true">10.</strong> Para más información</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 1</li><li class="chapter-item expanded "><a href="A01.-Digital-Research-y-AMSTRAD.html"><strong aria-hidden="true">11.</strong> Digital Research y AMSTRAD</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 2</li><li class="chapter-item expanded "><a href="A02.-Léxico-inglés-castellano-y-glosario.html"><strong aria-hidden="true">12.</strong> Léxico inglés-castellano y glosario</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 3. Que usted lo disfrute</li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Rebotes.html"><strong aria-hidden="true">13.</strong> Rebotes</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Bombardero.html"><strong aria-hidden="true">14.</strong> Bombardero</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Tele-tenis.html"><strong aria-hidden="true">15.</strong> Tele tenis</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Esgrima-eléctrico.html"><strong aria-hidden="true">16.</strong> Esgrima eléctrico</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Amthello.html"><strong aria-hidden="true">17.</strong> Amthello</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Guante-blanco.html"><strong aria-hidden="true">18.</strong> Guante blanco</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 4</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="A04.-Indice.html">Índice</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Amstrad CPC6128 Manual del Usuario</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/latchdevel/Amstrad-CPC6128-Manual-del-Usuario" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="capítulo-2-la-génesis-de-un-programa"><a class="header" href="#capítulo-2-la-génesis-de-un-programa">Capítulo 2. La génesis de un programa</a></h1>
+<p><strong>Contenido:</strong></p>
+<ul>
+<li><a href="#por-d%C3%B3nde-empezamos">¿Por dónde empezamos?</a>.</li>
+<li><a href="#un-programa-sencillo">Un programa sencillo</a>.</li>
+<li><a href="#qu%C3%A9-ocurre-si-">¿Qué ocurre si... ?</a>.</li>
+<li><a href="#soluciones">Soluciones</a>.</li>
+<li><a href="#una-digresi%C3%B3n">Una digresión</a>.</li>
+<li><a href="#volvemos-al-programa">Volvemos al programa</a>.</li>
+<li><a href="#el-fin-del-principio">El fin del principio</a>.</li>
+<li><a href="#el-principio-del-fin">El principio del fin</a>.</li>
+</ul>
+<hr />
+<p>Pues bien. Usted ya ha leído el <a href="1.00.-Cap%C3%ADtulo-1.-Curso-de-introducci%C3%B3n.html">Curso de introducción</a> y tiene ante sí el ordenador encendido. Ya sabe cómo hacer que el ordenador repita una tarea varias veces con la instrucción <strong>FOR ... NEXT</strong> y cómo hacerle realizar operaciones de forma condicional con la instrucción <strong>IF...</strong> <strong>THEN...</strong> .</p>
+<p>Pero pronto empezará a cansarse de ver su nombre repetido hasta la saciedad en la pantalla y querrá aprender algo de informática más seria, algo útil o divertido. En el capítulo siguiente damos la lista de todas las palabras clave del BASIC de AMSTRAD, junto con su sintaxis, es decir, la forma de utilizarlas. Con estas herramientas en la mano, el único límite a lo que puede obtener del ordenador lo fijará su imaginación.</p>
+<p>Si no ha utilizado antes ningún otro ordenador, es probable que la palabra &quot;programación&quot; le suene amenazadora. ¡No le tenga miedo! Programar es más fácil de lo que usted cree, y desde luego mucho más fácil de lo que la jerga técnica da a entender. </p>
+<p>No se deje asustar por BASIC y verá qué pronto empieza a disfrutar de la programación y de los frutos de su esfuerzo. Programar puede llegar a ser un ejercicio muy gratificante, en particular para el principiante que se pone a experimentar con la máquina y el lenguaje. Recuerde siempre que, a excepción del riesgo de borrar accidentalmente los discos de CP/M, nada que usted haga <em>en el teclado</em> puede dañar el ordenador; siempre vale la pena intentar algo nuevo.</p>
+<h2 id="por-dónde-empezamos"><a class="header" href="#por-dónde-empezamos">¿Por dónde empezamos?</a></h2>
+<p>En programación, como en muchas otras actividades, lo más difícil es empezar. Sin embargo, lo peor que puede hacer es lanzarse directamente al teclado sin antes pensar para qué.</p>
+<p>El primer paso en el desarrollo de un programa debe ser establecer claramente qué se pretende que el programa haga y cómo se quiere que presente los resultados en la pantalla.</p>
+<p>Decidido esto, se puede empezar a escribir un programa que realice las funciones deseadas, preocupándose siempre de que el programa discurra suavemente de principio a fin, con el mínimo número de saltos posible. Un buen programa debe ser fácil de leer una vez listado, no un lío indescifrable que haga imposible la detección de errores o la depuración del programa.</p>
+<p>Afortunadamente, BASIC es un lenguaje muy tolerante que facilita la depuración de los programas emitiendo mensajes que indican dónde está el error y en qué consiste. Además, hace posible la ampliación de los programas, pues permite intercalar líneas nuevas entre las ya existentes. </p>
+<h2 id="un-programa-sencillo"><a class="header" href="#un-programa-sencillo">Un programa sencillo</a></h2>
+<p>Manos a la obra. Vamos a escribir un programa que controle y mantenga un fichero con los nombres y números de teléfono de nuestros amigos. Le llamaremos &quot;guía de teléfonos&quot;. Para respetar las reglas que hemos enunciado, &quot;¿qué debe hacer el programa?&quot;; &quot;¿cómo de be presentar los resultados en la pantalla?&quot;</p>
+<p>El programa debe permitirnos almacenar 100 nombres y números de teléfono. Cuando queramos averiguar un número de teléfono, escribiremos el nombre y el ordenador nos dará el número. Además, por si no recordamos cómo habíamos escrito algún nombre, el programa debe ser capaz de mostrar toda la información en la pantalla. Dicho sea de paso, esto ya nos hace empezar a pensar en la forma de presentación de los resultados en la pantalla. </p>
+<p>De acuerdo, vamos al teclado. Empezaremos por escribir el nombre del programa: </p>
+<pre><code class="language-basic">10 REM guia de telefonos
+</code></pre>
+<p>No es imprescindible dar nombre a todos los programas, pero comprobará cuando tenga grabados unos cuantos que es muy útil poder averiguar de un golpe de vista cuál es cuál.</p>
+<p>Lo siguiente que necesitamos es poder captar por el teclado (con <strong>INPUT</strong>) una cadena de caracteres (quizá un nombre) para luego poder asignarlo a una variable. A la variable que represente el nombre le llamaremos <strong>NOMBRE$.</strong> Lo mismo se puede hacer con el número de teléfono; a la variable le llamaremos <strong>TEL$.</strong></p>
+<p>¿Recuerda todavía los programas del <a href="1.00.-Cap%C3%ADtulo-1.-Curso-de-introducci%C3%B3n.html">Curso de Introducción</a>? En algunos de ellos utilizábamos la instrucción <strong>INPUT</strong> para captar los valores de las variables. Escribamos:</p>
+<pre><code class="language-basic">20 INPUT &quot;Escriba el nombre:&quot;;NOMBRE$
+30 INPUT &quot;Escriba el numero de telefono:&quot;;TEL$
+run 
+</code></pre>
+<p>En respuesta al programa podemos introducir un nombre (por ejemplo, <strong>Juan</strong>) y luego un número de teléfono (por ejemplo, <strong>923 233717</strong>).</p>
+<p>El programa ha almacenado la información que le hemos suministrado, pero no ha escrito ningún resultado en la pantalla. Así pues, en algún lugar del programa necesitaremos instrucciones del tipo </p>
+<pre><code>PRINT NOMBRE$ ... y ... PRINT TEL$
+</code></pre>
+<p>con las que recuperemos los valores de las variables. </p>
+<p>Algo falla, ¿verdad? Dijimos que nuestro programa debería ser capaz de almacenar 100 nombres con sus números de teléfono; si seguimos por este camino, necesitaremos 200 instrucciones <strong>INPUT</strong> para escribir la lista en la pantalla. No se inquiete; los ordenadores tienen un recurso que permite manejar con facilidad grandes cantidades de datos: se trata de las &quot;listas&quot;. Una lista es una variable que puede representar, con un solo nombre (tal como <strong>NOMBRE$</strong>), un grupo de datos (en nuestro caso necesitamos 100) que se identifican por un <em>índice</em>. Cuando queramos referirnos a un dato concreto, lo citaremos por el nombre de la variable seguido del índice entre paréntesis; por ejemplo, <strong>NOMBRE$(27)</strong>, donde <strong>27</strong> es el índice y <strong>NOMBRES$</strong> es lo que denominamos <em>variable indexada</em>. Si como índice ponemos una variable numérica, <strong>NOMBRE$(x)</strong>, en lugar de un número concreto, podemos manejar la lista completa de datos, del 1 al 100, variando el valor de <strong>x</strong> dentro de un bucle <strong>FOR ... NEXT</strong> (v. g., <strong>FOR x=1 TO 100</strong>). A medida que se va incrementando el valor de <strong>x</strong>, el índice de <strong>NOMBRE$</strong> va señalando los diferentes elementos de la lista.</p>
+<p>En nuestro programa necesitamos dos listas, <strong>NOMBRE$</strong> y <strong>TEL$</strong>, cada una con capacidad para 100 elementos. Pero tenemos que informar al ordenador de nuestras intenciones, y para ello debemos <em>dimensionar</em> las listas con la instrucción <strong>DIM</strong>. Cambiemos las líneas 20 y 30: </p>
+<pre><code class="language-basic">20 DIM NOMBRE$(100)
+30 DIM TEL$(100)
+</code></pre>
+<p>Ahora ya podemos escribir el tramo del programa que nos va a permitir introducir nombres y números de teléfono. Añada las siguientes líneas: </p>
+<pre><code class="language-basic">40 FOR x=1 TO 100
+50 INPUT;&quot; Nombre &quot;;NOMBRE$(x)
+60 INPUT&quot; Telefono &quot;;TEL$(x)
+70 NEXT
+run
+</code></pre>
+<p>Pero no es probable que vayamos a introducir los 100 nombres de una ve<em>z</em>, y además la forma de presentación en la pantalla es muy desordenada. Tenemos que organizarnos mejor. En primer lugar, antes de captar un nombre, vamos a librarnos de todo el texto superfluo que tenemos en la pantalla: </p>
+<pre><code class="language-basic">45 cls
+</code></pre>
+<p>¿Qué podemos hacer para decirle al ordenador que de momento ya no queremos introducir más datos? Podemos detener el programa pulsando <strong>[ESC]</strong> dos veces, pero cuando volvamos a teclear <strong>run</strong> perderemos todos los datos introducidos anteriormente.</p>
+<p>Ésta es la solución. Cada vez que el programa capte un nuevo nombre, haremos que examine el dato introducido para ver si consta de al menos un carácter o si, por el contrario, es la &quot;cadena vacía&quot;. Si lo es, haremos que suspenda la captación de datos. Añada lo siguiente: </p>
+<pre><code class="language-basic">55 IF NOMBRE$(x)=&quot;&quot; THEN 80
+80 PRINT &quot;Fin de la entrada de datos&quot; 
+</code></pre>
+<p>También necesitamos que el ordenador indique al usuario qué debe hacer para suspender la introducción de datos. Añada, pues, la siguiente línea: </p>
+<pre><code class="language-basic">47 PRINT &quot;Pulse [RETURN] para terminar&quot;
+</code></pre>
+<p>Ahora vamos a escribir las instrucciones que exhiban en la pantalla la información almacenada. Primero la lista completa: </p>
+<pre><code class="language-basic">90 FOR x=1 TO 100
+100 PRINT NOMBRE$(x);&quot; &quot;;TEL$(x)
+110 NEXT
+</code></pre>
+<p>Otra vez nos ocurre que el programa no sabe dónde pararse y continúa hasta el centésimo elemento. Esto tiene fácil arreglo: </p>
+<pre><code class="language-basic">95 IF NOMBRE$(x)=&quot;&quot; THEN 120
+120 PRINT &quot;Fin de la lista&quot;
+</code></pre>
+<p>La línea 95 comprueba si <strong>NOMBRE$(x</strong>) es la cadena vacía; si lo es, concluye la escritura de la lista saltando a la línea 120.</p>
+<p>Atendamos a los otros requisitos que habíamos formulado al idear el programa. Necesitamos unas instrucciones que busquen en la lista un nombre introducido por el usuario. Escriba lo siguiente: </p>
+<pre><code class="language-basic">130 INPUT &quot;Buscar &quot;;BUSCA$
+140 FOR x=1 TO 100 
+150 IF INSTR(NOMBRE$(x),BUSCA$)=0 THEN 180
+160 PRINT NOMBRE$(x);&quot; &quot;;TEL$(x)
+170 END
+180 NEXT
+190 PRINT &quot;No lo encuentro&quot;
+</code></pre>
+<p>En la línea 150 hay una instrucción nueva: <strong>INSTR</strong>. Esta instrucción determina si la cadena literal <strong>BUSCA$</strong> (que es el nombre que estamos buscando, captado en la línea 130) está contenida en <strong>NOMBRE$(x)</strong>. Si no lo está, <strong>INSTR</strong> genera el valor <strong>0</strong>, y entonces el programa salta a la línea 180 para probar con el siguiente valor de <strong>x</strong>. Si el programa ha examinado sin éxito todos los elementos de la lista, continúa en la línea 190, donde informa de lo que ha ocurrido. En cambio, si encuentra el nombre, <strong>INSTR</strong> produce un valor mayor que <strong>0</strong>, lo que permite que el programa pase de la línea 150 a la 160 para escribir el nombre y el número de teléfono y luego terminar con la instrucción <strong>END</strong> de la línea 170. </p>
+<p>Como ve, nuestro programa avanza muy deprisa, pero todavía nos queda mucho por hacer. Meditemos un poco sobre los inconvenientes de este programa, empezando por el orden en que funciona: primero capta la información, después la escribe completa en la pantalla, luego busca un nombre concreto. </p>
+<h2 id="qué-ocurre-si-"><a class="header" href="#qué-ocurre-si-">¿Qué ocurre si... ?</a></h2>
+<p>Precisamente. ¿Qué ocurre si no queremos que los acontecimientos se produzcan en ese orden? Podríamos querer consultar un teléfono que introdujimos ayer. O podríamos querer ampliar la lista con otros nombres. Esto nos plantea nuevos problemas, para los que tenemos que encontrar solución. Después de todo, en esto es en lo que consiste la programación. Ya hemos dicho que BASIC es muy amable y nos permite rectificar e incluir nuevas instrucciones con gran facilidad; pero un buen programador habría pensado en todo esto de antemano. </p>
+<p>Otro grave inconveniente del programa consiste en que las listas quedan almacenadas solamente en la memoria, la cual se borra cada vez que se apaga el ordenador. De poco nos serviría este programa si tuviéramos que escribir todos los datos cada vez que lo ejecutásemos; así pues, necesitamos que el programa pueda grabar los valores de los elementos de <strong>NOMBRE$</strong> y <strong>TEL$</strong> antes de que apaguemos el ordenador, y también que pueda cargar los datos cada vez que lo ejecutemos. </p>
+<h2 id="soluciones"><a class="header" href="#soluciones">Soluciones</a></h2>
+<p>El primero de los problemas mencionados (el del orden de ejecución) se resuelve haciendo que el programa de la posibilidad de elegir entre las funciones que sabe realizar. De un programa de este tipo se dice que está &quot;controlado por menú&quot; pues, en efecto, ofrece un menú de opciones de entre las cuales se elige la deseada. Si alguna vez ha sacado dinero de un cajero automático, ya ha utilizado un programa de ordenador controlado por menú. Añadamos un menú a nuestro programa: </p>
+<pre><code class="language-basic">32 PRINT&quot;1. Introd. datos&quot;
+33 PRINT&quot;2. Listado&quot;
+34 PRINT&quot;3. Busqueda&quot;
+35 PRINT&quot;4. Grabar de datos&quot;
+36 PRINT&quot;5. Cargar datos&quot;
+37 INPUT &quot;Elija una opción (1-5) &quot;;el
+38 ON el GOSUB 40,90,130
+
+85 RETURN
+125 RETURN
+170 RETURN
+200 RETURN
+</code></pre>
+<p>Hemos hecho que el programa escriba la lista de opciones y que capte la elección del usuario mediante una instrucción <strong>INPUT</strong> para asignarla a la variable <strong>el</strong>. La instrucción <strong>ON el GOSUB</strong> de la línea 38 funciona de la siguiente forma: si <strong>el=1</strong>, invoca la subrutina de la línea 40; si <strong>el=2</strong>, invoca la subrutina de la línea 90, etc.</p>
+<p>Puesto que todas las funciones están ahora en subrutinas (controladas por la instrucción <strong>ON el GOSUB</strong>), tienen que terminar en una instrucción <strong>RETURN</strong>. De ahí que hayamos incluido las líneas 85, 125, 170 y 200. </p>
+<p>¿Recuerda para qué sirve <strong>RETURN</strong>? Hace que BASIC retorne de la subrutina a la instrucción siguiente a aquella que invocó la subrutina. En nuestro caso, el punto de retorno es la instrucción siguiente a la línea 38, que es la línea 40. Si dejamos que esto ocurra, el programa entra en la subrutina de &quot;Introducción de datos&quot;. Para impedirlo añadimos la línea </p>
+<pre><code class="language-basic">39 GOTO 32
+</code></pre>
+<p>que reconduce el programa al menú.</p>
+<p>Ejecute el programa y vea cuánto hemos progresado.</p>
+<p>Bien; vamos a echar un vistazo al listado. (Detenga el programa pulsando <strong>[ESC]</strong> dos veces.) Escriba: </p>
+<pre><code class="language-basic">LIST
+</code></pre>
+<p>Esto es lo que tenemos por el momento: </p>
+<pre><code class="language-basic">10 REM guia de telefonos
+20 DIM NOMBRE$(100)
+30 DIM TEL$(100)
+32 PRINT&quot;1. Introd, datos&quot;
+33 PRINT&quot;2. Listado&quot;
+34 PRINT&quot;3. Busqueda&quot;
+35 PRINT&quot;4. Grabar datos&quot;
+36 PRINT&quot;5. Cargar datos&quot;
+37 INPUT &quot;Elija una opcion (1-5) &quot;;el
+38 ON el GOSUB 40,90,130
+39 GOTO 32
+40 FOR x=1 TO 100
+45 CLS
+47 PRINT&quot;Pulse [RETURN] para terminar&quot;
+50 INPUT;&quot; Nombre &quot;;NOMBRE$(x)
+55 IF NOMBRE$(x)=&quot;&quot; THEN 80
+60 INPUT;&quot; Telefono &quot;;TEL$(x)
+70 NEXT
+80 PRINT &quot;Fin de la entrada de datos&quot;
+85 RETURN
+90 FOR x=1 TO 100
+95 IF NOMBRE$(x)=&quot;&quot; THEN 120
+100 PRINT NOMBRE$(x);&quot; &quot;;TEL$(x)
+110 NEXT
+120 PRINT &quot;Fin de la lista&quot;
+125 RETURN
+130 INPUT &quot;Buscar &quot;;BUSCA$
+140 FOR x=1 TO 100
+150 IF INSTR(NOMBRE$(x),BUSCA$)=0 THEN 180
+160 PRINT NOMBRE$(x);&quot; &quot;;TEL$(x)
+170 END
+180 NEXT
+190 PRINT&quot;No lo encuentro&quot;
+200 RETURN
+</code></pre>
+<p>Observe que en algunas zonas del programa las instrucciones están muy apretadas y no dejan hueco para introducir otras nuevas. Reorganicemos el programa renumerando las líneas. Escriba: </p>
+<pre><code class="language-basic">RENUM
+LIST
+</code></pre>
+<p>El listado es ahora: </p>
+<pre><code class="language-basic">10 REM guia de telefonos
+20 DIM NOMBRE$(100)
+30 DIM TEL$(100)
+40 PRINT&quot;1. Introd. datos&quot;
+50 PRINT&quot;2. Listado&quot;
+60 PRINT&quot;3. Busqueda&quot;
+70 PRINT&quot;4. Grabar datos&quot;
+80 PRINT&quot;5. Cargar datos&quot;
+90 INPUT &quot;Elija una opcion (1-5) &quot;;el
+100 ON el GOSUB 120,210,270
+110 GOTO 40
+120 FOR x=1 TO 100
+130 CLS
+140 PRINT&quot;Pulse (INTRO) para terminar&quot;
+150 INPUT;&quot; Nombre &quot;;NOMBRE$(x)
+160 IF NOMBRE$(x)=&quot;&quot; THEN 190
+170 INPUT;&quot; Telefono &quot;;TEL$(x)
+180 NEXT
+190 PRINT &quot;Fin de la entrada de datos&quot;
+200 RETURN
+210 FOR x=1 TO 100
+220 IF NOMBRE$(x)=&quot;&quot; THEN 250
+230 PRINT NOMBRE$(x);&quot; &quot;;TEL$(x)
+240 NEXT
+250 PRINT &quot;Fin de la lista&quot;
+260 RETURN
+270 INPUT &quot;Buscar &quot;;BUSCA$
+280 FOR X=1 TO 100
+290 IF INSTR(NOMBRE$(x),BUSCA$)=0 THEN 320
+300 PRINT NOMBRE$(x);&quot; &quot;;TEL$(x)
+310 END
+320 NEXT
+330 PRINT&quot;No lo encuentro&quot;
+340 RETURN
+</code></pre>
+<p>¡Mucho más limpio! Pero sigamos con el programa. Ahora queremos que cada vez que introduzcamos un dato nuevo (nombre y número), el ordenador lo coloque al final de la lista actual, en el primer lugar que encuentre vacío. En esta ocasión vamos a utilizar la instrucción <strong>LEN</strong> para determinar la longitud de una cadena literal. Especificaremos lo siguiente: </p>
+<p>Si (<strong>IF</strong>) la longitud de <strong>NOMBRE$(x)</strong> es mayor que <strong>0</strong>, es decir, si ya hay un dato en ese elemento de la lista, entonces (<strong>THEN</strong>) ir a la línea 180 (que provoca el salto al siguiente elemento de la lista): </p>
+<pre><code class="language-basic">135 IF LEN(NOMBRE$(x))&gt;0 THEN 180
+</code></pre>
+<p>Una solución sencilla, ¿verdad? Los problemas de este tipo siempre tienen solución si conocemos bien el repertorio de instrucciones y nos paramos a pensar un poco. Para casi todas las necesidades hay casi siempre al menos una instrucción; cuanto mayor es la experiencia en programación, más inmediatas son las soluciones.</p>
+<p>Vamos con otro requisito del programa: grabar los valores de las variables para poder cargarlos más tarde. En la <a href="1.07.-Gr%C3%A1belo-en-disco.html">parte 7</a> del <a href="1.00.-Cap%C3%ADtulo-1.-Curso-de-introducci%C3%B3n.html">Curso de introducción</a> hemos explicado cómo grabar programas (con la orden <strong>SAVE</strong>). Pero el programa no es más que la herramienta que nos permite captar y manipular los datos; cuando grabamos el programa sólo estamos guardando la herramienta, no los valores de las variables. </p>
+<p>Así pues, tenemos que escribir una sección del programa que grabe los valores de las variables. Para ello crearemos un &quot;fichero de datos&quot;.</p>
+<p>Lo primero es abrir (<strong>OPEN</strong>) un fichero en dirección de salida (<strong>OUT</strong>) dándole el nombre de &quot;<strong>datos</strong>&quot;. Después escribiremos (<strong>WRITE</strong>) los valores de las variables <strong>NOMBRE$(x)</strong> y <strong>TEL$(x)</strong>, de <strong>1</strong> a <strong>100</strong>, en el fichero; finalmente, cerraremos (<strong>CLOSE</strong>) el fichero y retornaremos (<strong>RETURN</strong>) al menú. Pondremos esta rutina en las líneas 350 y siguientes. Para no tener que escribir los números de línea, ejecutaremos la orden </p>
+<pre><code class="language-basic">AUTO 350
+</code></pre>
+<p>que inicia la numeración automática de las líneas a partir del número 350: </p>
+<pre><code class="language-basic">350 OPENOUT &quot;datos&quot;
+360 FOR x=1 TO 100
+370 WRITE #9,NOMBRE$(x),TEL$(x)
+380 NEXT
+390 CLOSEOUT
+400 PRINT&quot;Fin de la grabación de los datos&quot;
+410 RETURN
+</code></pre>
+<p>Cuando haya terminado de teclear la línea 410 y haya pulsado <strong>[RETURN]</strong>, pulse <strong>[ESC]</strong> para interrumpir la función <strong>AUTO</strong>. </p>
+<p>Como tenemos una rutina más, tendremos que poner otro número de línea en la instrucción <strong>ON el GOSUB</strong> de la línea 100. Para ello vamos a corregir (editar, <strong>EDIT</strong>) la línea 100: </p>
+<pre><code class="language-basic">100 ON el GOSUB 120,210,270,350
+</code></pre>
+<p>A partir de ahora, cada vez que elijamos la opción 4 del menú, el programa grabará el fichero de datos en el disco.</p>
+<p>Observe la línea 370, en la que se escriben los valores de <strong>NOMBRE$(x)</strong> y <strong>TEL$(x)</strong> en el disco: la expresión <strong>#9</strong> que aparece después de <strong>WRITE</strong> es un &quot;indicador de canal&quot; que especifica a qué canal debe el ordenador enviar los datos. El ordenador maneja 10 canales:</p>
+<p>Los ocho primeros (<strong>#0</strong> a <strong>#7</strong>) dirigen los datos a la pantalla [bien a la pantalla completa, bien a alguna ventana (<strong>WINDOW</strong>)].</p>
+<p>El canal <strong>#8</strong> es el de la impresora.</p>
+<p>Finalmente, el canal <strong>#9</strong> es el que conecta el ordenador con la unidad de disco; éste es el que utilizamos en la instrucción 370. </p>
+<h3 id="una-digresión"><a class="header" href="#una-digresión">Una digresión</a></h3>
+<p>Hagamos un cometario sobre la orden <strong>AUTO</strong> que acabamos de conocer. Si se escribe sencillamente</p>
+<pre><code class="language-basic">AUTO
+</code></pre>
+<p>el ordenador empieza a numerar líneas a partir del 10 y va incrementando el número de 10 en 10 cada vez que se pulsa <strong>[RETURN]</strong>. Si ya existen líneas 10, 20, 30, etc., su contenido aparece en la pantalla según se va pasando por ellas (pulsando <strong>[RETURN]</strong>).</p>
+<p>Cuando aparece una línea en la pantalla, se la puede editar antes de pulsar <strong>[RETURN]</strong>. Esto da un método para editar cómodamente líneas cuyos números estén uniformemente espaciados.</p>
+<h3 id="volvemos-al-programa"><a class="header" href="#volvemos-al-programa">Volvemos al programa</a></h3>
+<p>Ya hemos escrito las instrucciones que graban los datos en disco. Ahora nos falta ocuparnos de la lectura de los datos para ponerlos a disposición del programa. Como vamos a escribir una nueva rutina, tendremos que poner otro número de línea en la instrucción <strong>ON el GOSUB</strong>. Editemos la línea 100: </p>
+<pre><code class="language-basic">100 ON el GOSUB 120,210,270,350,420
+</code></pre>
+<p>Para leer los datos tenemos que empezar por abrir (<strong>OPEN</strong>) en dirección de entrada (<strong>IN</strong>) el fichero que tenemos en el disco con el nombre de &quot;<strong>datos</strong>&quot;. Después leemos con <strong>INPUT</strong> (por el canal <strong>#9</strong>) los valores de las variables <strong>NOMBRE$(x)</strong> y <strong>TEL$(x)</strong>, de 1 a 100, y finalmente cerramos (<strong>CLOSE</strong>) el fichero y retornamos (<strong>RETURN</strong>) al menú. Escriba las siguientes líneas: </p>
+<pre><code class="language-basic">420 OPENIN &quot;datos&quot;
+430 FOR x=1 TO 100
+440 INPUT #9,NOMBRE$(x),TEL$(x)
+450 NEXT
+460 CLOSEIN
+470 PRINT&quot;Fin de la carga de los datos&quot;
+480 RETURN
+</code></pre>
+<h2 id="el-fin-del-principio"><a class="header" href="#el-fin-del-principio">El fin del principio</a></h2>
+<p>Por fin hemos conseguido un programa que realiza todas las funciones previstas. Todo lo que nos queda ahora es ocuparnos de cómo presentar los resultados en la pantalla. </p>
+<h2 id="el-principio-del-fin"><a class="header" href="#el-principio-del-fin">El principio del fin</a></h2>
+<p>Para mejorar el manejo de la pantalla vamos a añadir unas cuantas instrucciones:</p>
+<pre><code class="language-basic">34 MODE 1
+</code></pre>
+<p>Esta instrucción establece el modo de pantalla y borra la pantalla al principio del programa. Añada ahora lo siguiente: </p>
+<pre><code class="language-basic">36 WINDOW #1,13,30,10,14
+</code></pre>
+<p>No se deje impresionar por esta instrucción aparentemente tan complicada. Lo que hemos hecho es definir una ventana en la pantalla para escribir en ella el menú. Después de la palabra <strong>WINDOW</strong>, lo primero que ponemos es el número del canal al que vamos a asignarla; recuerde que podemos elegir cualquiera entre el <strong>0</strong> y el <strong>7</strong>. Ahora bien, si tenemos en cuenta que todos los textos que enviamos a la pantalla sin especificar número de canal circulan por el <strong>#0</strong>, no vamos a dar este número a nuestra ventana. Elegimos, pues, el número <strong>1</strong>. Los cuatro números que vienen a continuación especifican el tamaño de la ventana. Su significado no podía ser más sencillo: columna del borde izquierdo, columna del derecho, primera fila y última fila, por este orden. En nuestro caso, después de especificar el canal <strong>#1</strong>, hemos dicho al ordenador que la ventana empieza en la columna número <strong>13</strong> y termina en la número <strong>30</strong>, en horizontal, y empieza en la fila <strong>10</strong> y termina en la <strong>14</strong>, en vertical. </p>
+<p>Para dirigir los textos del menú al canal <strong>#1</strong> debemos editar las líneas 40 a 80: </p>
+<pre><code class="language-basic">40 PRINT #1,&quot;1. Introd. datos&quot;
+50 PRINT #1,&quot;2. Listado&quot;
+60 PRINT #1,&quot;3. Busqueda&quot;
+70 PRINT #1,&quot;4. Grabar datos&quot;
+80 PRINT #1,&quot;5. Cargar datos&quot;
+</code></pre>
+<p>Añadamos también </p>
+<pre><code class="language-basic">85 LOCATE 7,20
+</code></pre>
+<p>para situar el texto de la línea 90.</p>
+<p>Para borrar la pantalla cada vez que el programa retorne al menú, modifiquemos la línea 110: </p>
+<pre><code class="language-basic">110 GOTO 34
+</code></pre>
+<p>Además, para borrar la pantalla cada vez que se selecciona una opción del menú añadimos: </p>
+<pre><code class="language-basic">95 CLS
+</code></pre>
+<p>Finalmente, incluiremos las tres líneas siguientes para hacer que el retorno al menú sea controlado por el usuario: </p>
+<pre><code class="language-basic">103 LOCATE 9,20
+105 PRINT &quot;Pulse una tecla para volver al menu&quot;
+107 IF INKEY$=&quot;&quot; THEN 107
+</code></pre>
+<p>La línea 103 especifica dónde se debe escribir el mensaje de la línea 105. La línea 107 examina el teclado para averiguar si se ha pulsado alguna tecla. Si no se ha pulsado ninguna, <strong>INKEY$</strong> genera la cadena vacía y entonces se repite la ejecución de la línea hasta que efectivamente se pulse alguna. Ésta es la forma habitual de programar la espera &quot;hasta que el usuario se decida&quot;, pues BASIC no pasa a la línea siguiente mientras no se pulse una tecla.</p>
+<p>Bueno, ya hemos terminado. O quizá no, porque podríamos incluir la posibilidad de modificar o borrar nombres y números de teléfono, de ordenarlos alfabéticamente, de listarlos por la impresora, etc. Todas estas mejoras son posibles; podríamos seguir mejorando y depurando el programa indefinidamente, pero en algún momento tenemos que poner el punto y aparte, y éste es tan bueno como cualquier otro. Le dejamos, pues, con este programa de &quot;guía de teléfonos&quot;, confiando en haberle abierto las puertas del arte de programar. Adecente el programa con la orden </p>
+<pre><code class="language-basic">RENUM
+</code></pre>
+<p>y grábelo en disco; o bórrelo si no le gusta. Quién sabe; quizá pueda necesitarlo algún día.</p>
+<p>Listado final: </p>
+<pre><code class="language-basic">10 REM guia de telefonos
+20 DIM NOMBRE$(100)
+30 DIM TEL$(100)
+40 MODE 1
+50 WINDOW #1,13,30,10,14
+60 PRINT #1,&quot;1. Introd. datos&quot;
+70 PRINT #1,&quot;2. Listado&quot;
+80 PRINT #1,&quot;3. Busqueda&quot;
+90 PRINT #1,&quot;4. Grabar datos&quot;
+100 PRINT #1,&quot;5. Cargar datos&quot;
+110 LOCATE 7,20
+120 INPUT &quot;Elija una opcion (1-5) &quot;;el
+130 CLS
+140 ON el GOSUB 190,290,350,430,500
+150 LOCATE 9,20
+160 PRINT&quot;Pulse una tecla para volver al menu&quot;
+170 IF INKEY$=&quot;&quot; THEN 170
+180 GOTO 40
+190 FOR x=1 TO 100
+200 CLS
+210 IF LEN(NOMBRE$(x))&gt;0 THEN 260
+220 PRINT&quot;Pulse [RETURN] para terminar&quot;
+230 INPUT;&quot; Nombre &quot;;NOMBRE$(x)
+240 IF NOMBRE$(x)=&quot;&quot; THEN 270
+250 INPUT;&quot; Telefono &quot;;TEL$(x)
+260 NEXT
+270 PRINT &quot;Fin de la entrada de datos&quot; 
+280 RETURN
+290 FOR X=1 TO 100
+300 IF NOMBRE$(x)=&quot;&quot; THEN 330
+310 PRINT NOMBRE$(x);&quot; &quot;;TEL$(x)
+320 NEXT
+330 PRINT &quot;Fin de la lista&quot;
+340 RETURN
+350 INPUT &quot;Buscar &quot;;BUSCA$
+360 FOR X=1 TO 100
+370 IF INSTR(NOMBRE$(x),BUSCA$)=0 THEN 400
+380 PRINT NOMBRE$(x);&quot; &quot;;TEL$(x)
+390 END
+400 NEXT
+410 PRINT&quot;No lo encuentro&quot;
+420 RETURN
+430 OPENOUT &quot;!datos&quot;
+440 FOR x=1 TO 100
+450 WRITE #9,NOMBRE$(x),TEL$(x)
+460 NEXT
+470 CLOSEOUT
+480 PRINT&quot;Fin de la grabacion de los datos&quot;
+490 RETURN
+500 OPENIN &quot;!datos&quot;
+510 FOR X=1 TO 100
+520 INPUT #9,NOMBRE$(x),TEL$(x)
+530 NEXT
+540 CLOSEIN
+550 PRINT&quot;Fin de la carga de los datos&quot;
+560 RETURN
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="1.11.-Introducción-al-gestor-de-bancos-de-memoria.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="1.11.-Introducción-al-gestor-de-bancos-de-memoria.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

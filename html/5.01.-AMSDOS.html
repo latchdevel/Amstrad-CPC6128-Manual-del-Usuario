@@ -1,0 +1,508 @@
+<!DOCTYPE HTML>
+<html lang="es" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Parte 1: AMSDOS - Amstrad CPC6128 Manual del Usuario</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="Manual de usuario del micro ordenenador Amstrad modelo CPC6128">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Home.html">Inicio</a></li><li class="chapter-item expanded affix "><a href="0.01.-Introducción.html">Introducción</a></li><li class="chapter-item expanded affix "><a href="0.02.-Importante.html">Importante</a></li><li class="chapter-item expanded "><a href="1.00.-Capítulo-1.-Curso-de-introducción.html"><strong aria-hidden="true">1.</strong> Curso se introducción</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="1.01.-Instalación-y-mantenimiento.html"><strong aria-hidden="true">1.1.</strong> Instalación y mantenimiento</a></li><li class="chapter-item expanded "><a href="1.02.-Conexión-de-los-periféricos.html"><strong aria-hidden="true">1.2.</strong> Conexión de los periféricos</a></li><li class="chapter-item expanded "><a href="1.03.-En-cuanto-a-los-discos.html"><strong aria-hidden="true">1.3.</strong> En cuanto a los discos</a></li><li class="chapter-item expanded "><a href="1.04.-Manos-al-teclado.html"><strong aria-hidden="true">1.4.</strong> Manos al teclado</a></li><li class="chapter-item expanded "><a href="1.05.-Carga-de-programas.html"><strong aria-hidden="true">1.5.</strong> Carga de programas</a></li><li class="chapter-item expanded "><a href="1.06.-Empecemos-a-trabajar.html"><strong aria-hidden="true">1.6.</strong> Empecemos a trabajar</a></li><li class="chapter-item expanded "><a href="1.07.-Grábelo-en-disco.html"><strong aria-hidden="true">1.7.</strong> Grábelo en disco</a></li><li class="chapter-item expanded "><a href="1.08.-Introducción-a-los-modos-de-pantalla,-colores-y-gráficos.html"><strong aria-hidden="true">1.8.</strong> Introducción a los modos de pantalla, colores y gráficos</a></li><li class="chapter-item expanded "><a href="1.09.-Sonidos.html"><strong aria-hidden="true">1.9.</strong> Sonidos</a></li><li class="chapter-item expanded "><a href="1.10.-Introducción-a-los-sistemas-operativos-AMSDOS-y-CPM.html"><strong aria-hidden="true">1.10.</strong> Introducción a los sistemas operativos AMSDOS y CPM</a></li><li class="chapter-item expanded "><a href="1.11.-Introducción-al-gestor-de-bancos-de-memoria.html"><strong aria-hidden="true">1.11.</strong> Introducción al gestor de bancos de memoria</a></li></ol></li><li class="chapter-item expanded "><a href="2.01.-La-génesis-de-un-programa.html"><strong aria-hidden="true">2.</strong> La génesis de un programa</a></li><li class="chapter-item expanded "><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html"><strong aria-hidden="true">3.</strong> Lista completa de las palabras clave del BASIC de AMSTRAD</a></li><li class="chapter-item expanded "><a href="4.00.-Capítulo-4.-Discos-y-cintas.html"><strong aria-hidden="true">4.</strong> Discos y cintas</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="4.01.-Discos.html"><strong aria-hidden="true">4.1.</strong> Parte 1: Discos</a></li><li class="chapter-item expanded "><a href="4.02.-Cintas.html"><strong aria-hidden="true">4.2.</strong> Parte 2: Cintas</a></li></ol></li><li class="chapter-item expanded "><a href="5.00.-Capítulo-5.-AMSDOS-y-CP-M.html"><strong aria-hidden="true">5.</strong> AMSDOS y CP/M</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="5.01.-AMSDOS.html" class="active"><strong aria-hidden="true">5.1.</strong> Parte 1: AMSDOS</a></li><li class="chapter-item expanded "><a href="5.02.-CP-M.html"><strong aria-hidden="true">5.2.</strong> Parte 2: CP/M</a></li></ol></li><li class="chapter-item expanded "><a href="6.01.-Introducción-a-LOGO.html"><strong aria-hidden="true">6.</strong> Introducción a LOGO</a></li><li class="chapter-item expanded "><a href="7.00.-Capítulo-7.-Para-su-referencia.html"><strong aria-hidden="true">7.</strong> Para su referencia</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="7.01.-Posiciones-del-cursor-y-códigos-ampliados-de-control-en-BASIC.html"><strong aria-hidden="true">7.1.</strong> Posiciones del cursor y códigos ampliados de control en BASIC</a></li><li class="chapter-item expanded "><a href="7.02.-El-sistema-operativo.html"><strong aria-hidden="true">7.2.</strong> El sistema operativo</a></li><li class="chapter-item expanded "><a href="7.03.-Interrupciones.html"><strong aria-hidden="true">7.3.</strong> Interrupciones</a></li><li class="chapter-item expanded "><a href="7.04.-Caracteres-ASCII-y-caracteres-gráficos-en-BASIC.html"><strong aria-hidden="true">7.4.</strong> Caracteres ASCII y caracteres gráficos en BASIC</a></li><li class="chapter-item expanded "><a href="7.05.-Esquemas-de-teclado.html"><strong aria-hidden="true">7.5.</strong> Esquemas de teclado</a></li><li class="chapter-item expanded "><a href="7.06.-Sonidos.html"><strong aria-hidden="true">7.6.</strong> Sonidos</a></li><li class="chapter-item expanded "><a href="7.07.-Mensajes-de-error-de-BASIC.html"><strong aria-hidden="true">7.7.</strong> Mensajes de error de BASIC</a></li><li class="chapter-item expanded "><a href="7.08.-Palabras-reservadas-de-BASIC.html"><strong aria-hidden="true">7.8.</strong> Palabras reservadas de BASIC</a></li><li class="chapter-item expanded "><a href="7.09.-Plantillas.html"><strong aria-hidden="true">7.9.</strong> Plantillas</a></li><li class="chapter-item expanded "><a href="7.10.-Conexiones.html"><strong aria-hidden="true">7.10.</strong> Conexiones</a></li><li class="chapter-item expanded "><a href="7.11.-Impresoras.html"><strong aria-hidden="true">7.11.</strong> Impresoras</a></li><li class="chapter-item expanded "><a href="7.12.-Joysticks.html"><strong aria-hidden="true">7.12.</strong> Joysticks</a></li><li class="chapter-item expanded "><a href="7.13.-Organización-de-los-discos.html"><strong aria-hidden="true">7.13.</strong> Organización de los discos</a></li><li class="chapter-item expanded "><a href="7.14.-Ampliaciones-del-sistema-residentes-RSX.html"><strong aria-hidden="true">7.14.</strong> Ampliaciones del sistema residentes RSX</a></li><li class="chapter-item expanded "><a href="7.15.-Memoria.html"><strong aria-hidden="true">7.15.</strong> Memoria</a></li><li class="chapter-item expanded "><a href="7.16.-Emulador-de-consola-CP-M-Plus.html"><strong aria-hidden="true">7.16.</strong> Emulador de consola CP/M Plus</a></li><li class="chapter-item expanded "><a href="7.17.-Juego-de-caracteres-de-CP-M-Plus.html"><strong aria-hidden="true">7.17.</strong> Juego de caracteres de CP-M Plus</a></li></ol></li><li class="chapter-item expanded "><a href="8.00.-Capítulo-8.-Más-sobre-el-gestor-de-bancos-de-memoria.html"><strong aria-hidden="true">8.</strong> Más sobre el gestor de bancos de memoria</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="8.01.-Almacenamiento-de-imágenes-de-pantalla.html"><strong aria-hidden="true">8.1.</strong> Almacenamiento de imágenes de pantalla</a></li><li class="chapter-item expanded "><a href="8.02.-Ficheros-en-RAM.html"><strong aria-hidden="true">8.2.</strong> Ficheros en RAM</a></li></ol></li><li class="chapter-item expanded "><a href="9.00.-Capítulo-9.-Cuando-usted-guste.html"><strong aria-hidden="true">9.</strong> Cuando usted guste</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="9.01.-En-términos-generales.html"><strong aria-hidden="true">9.1.</strong> En términos generales</a></li><li class="chapter-item expanded "><a href="9.02.-Más-en-concreto-sobre-el-CPC6128.html"><strong aria-hidden="true">9.2.</strong> Más en concreto sobre el CPC6128</a></li></ol></li><li class="chapter-item expanded "><a href="10.0.-Para-más-información.html"><strong aria-hidden="true">10.</strong> Para más información</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 1</li><li class="chapter-item expanded "><a href="A01.-Digital-Research-y-AMSTRAD.html"><strong aria-hidden="true">11.</strong> Digital Research y AMSTRAD</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 2</li><li class="chapter-item expanded "><a href="A02.-Léxico-inglés-castellano-y-glosario.html"><strong aria-hidden="true">12.</strong> Léxico inglés-castellano y glosario</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 3. Que usted lo disfrute</li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Rebotes.html"><strong aria-hidden="true">13.</strong> Rebotes</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Bombardero.html"><strong aria-hidden="true">14.</strong> Bombardero</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Tele-tenis.html"><strong aria-hidden="true">15.</strong> Tele tenis</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Esgrima-eléctrico.html"><strong aria-hidden="true">16.</strong> Esgrima eléctrico</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Amthello.html"><strong aria-hidden="true">17.</strong> Amthello</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Guante-blanco.html"><strong aria-hidden="true">18.</strong> Guante blanco</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 4</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="A04.-Indice.html">Índice</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Amstrad CPC6128 Manual del Usuario</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/latchdevel/Amstrad-CPC6128-Manual-del-Usuario" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="capítulo-5-amsdos-y-cpm"><a class="header" href="#capítulo-5-amsdos-y-cpm">Capítulo 5. AMSDOS y CP/M</a></h1>
+<h2 id="parte-1-amsdos"><a class="header" href="#parte-1-amsdos">Parte 1: AMSDOS</a></h2>
+<p><strong>Contenido:</strong></p>
+<ul>
+<li><a href="#introducci%C3%B3n">Introducción</a>.</li>
+<li><a href="#directorio-del-disco">Directorio del disco</a>.</li>
+<li><a href="#cambio-de-discos">Cambio de discos</a>.</li>
+<li><a href="#nombres-y-tipos-de-ficheros-en-amsdos">Nombres y tipos de ficheros en AMSDOS</a>.</li>
+<li><a href="#construcci%C3%B3n-de-los-nombres-de-los-ficheros">Construcción de los nombres de los ficheros</a>.</li>
+<li><a href="#cabeceras-de-fichero-en-amsdos">Cabeceras de fichero en AMSDOS</a>.</li>
+<li><a href="#nombres-de-fichero-con-dos-unidades-de-disco">Nombres de fichero con dos unidades de disco</a>.</li>
+<li><a href="#s%C3%ADmbolos-comod%C3%ADn">Símbolos comodín</a>.</li>
+<li><a href="#ejemplos-de-utilizaci%C3%B3n-de-%C3%B3rdenes-de-amsdos-dentro-de-un-programa">Ejemplos de utilización de órdenes de AMSDOS dentro de un programa</a>.
+<ul>
+<li><a href="#grabaci%C3%B3n-de-variables-y-volcado-de-pantalla">Grabación de variables y volcado de pantalla</a>.</li>
+<li><a href="#carga-de-pantallas">Carga de pantallas</a>.</li>
+</ul>
+</li>
+<li><a href="#resumen-de-las-%C3%B3rdenes-externas-de-amsdos">Resumen de las órdenes externas de AMSDOS</a>.</li>
+<li><a href="#copia-de-ficheros-de-disco-a-disco">Copia de ficheros de disco a disco</a>.
+<ul>
+<li><a href="#ficheros-de-amsdos-con-cabecera">Ficheros de AMSDOS con cabecera</a>.</li>
+<li><a href="#ficheros-ascii">Ficheros ASCII</a>.</li>
+<li><a href="#ficheros-de-s%C3%B3lo-lectura">Ficheros de &quot;sólo lectura&quot;</a>.</li>
+<li><a href="#copia-de-ficheros-entre-disco-y-cinta">Copia de ficheros entre disco y cinta</a>.</li>
+</ul>
+</li>
+<li><a href="#procedimientos-de-copia-de-ficheros">Procedimientos de copia de ficheros</a>.</li>
+<li><a href="#gu%C3%ADa-de-referencia-de-los-mensajes-de-error">Guía de referencia de los mensajes de error</a>.</li>
+<li><a href="#lista-de-errores">Lista de errores</a>.</li>
+</ul>
+<hr />
+<h3 id="introducción"><a class="header" href="#introducción">Introducción</a></h3>
+<p>AMSDOS amplía el BASIC suministrado con su ordenador al añadirle algunas órdenes externas, identificadas por el signo | que las precede.</p>
+<p>AMSDOS permite cambiar libremente los discos siempre que no haya ningún fichero abierto. Si lo hay, emite un mensaje de error y se puede producir una pérdida de datos si el fichero estaba abierto para escritura (en dirección de salida).</p>
+<h3 id="directorio-del-disco"><a class="header" href="#directorio-del-disco">Directorio del disco</a></h3>
+<p>Todos los discos tienen dos secciones: el directorio y el área de datos. El directorio contiene la lista de los nombres de los ficheros y un &quot;mapa&quot; de la organización del área de datos. AMSDOS y CP/M pueden calcular el tamaño de un fichero consultando su reseña en el directorio. El cálculo del espacio libre se realiza sumando las longitudes de todos los ficheros y restándolo de la capacidad total del disco.</p>
+<p>Cada vez que se va a leer de un fichero, se consulta su reseña en el directorio para averiguar su situación en el disco. Cuando se crea un fichero nuevo, se le reserva espacio en el disco. Cuando se borra un fichero, se libera el espacio por él ocupado. El directo rio trabaja en unidades de 1K y puede contener hasta 64 reseñas. Los ficheros largos necesitan una reseña para cada 16K, si bien este hecho queda oculto y carece de importancia para el usuario. </p>
+<h3 id="cambio-de-discos"><a class="header" href="#cambio-de-discos">Cambio de discos</a></h3>
+<p>AMSDOS (y CP/M Plus) permite el cambio o la extracción del disco en todo momento en que no se esté accediendo a él, suponiendo que no haya ningún fichero abierto en esa unidad. A diferencia de CP/M 2.2, no necesita &quot;reconocer&quot; los discos.</p>
+<p>Si se extrae un disco cuando se está escribiendo en él, se pueden perder los datos grabados en el disco. En cuanto AMSDOS detecta que se ha extraído un disco habiendo ficheros abiertos en él, se abandonan todos los ficheros y se emite un mensaje de error. Los datos pendientes de escribir en el tampón de salida se perderán, y no se grabará la última reseña del directorio. No obstante, AMSDOS solamente detecta la extracción del disco cuando consulta el directorio, lo que ocurre, con ficheros grandes, una vez cada 16K (y siempre que abre o cierra un fichero). Así, es posible perder 16K de datos si se extrae un disco antes de cerrar todos los ficheros abiertos en él.</p>
+<h3 id="nombres-y-tipos-de-ficheros-en-amsdos"><a class="header" href="#nombres-y-tipos-de-ficheros-en-amsdos">Nombres y tipos de ficheros en AMSDOS</a></h3>
+<p>Es costumbre dar a los ficheros nombres que incluyan un distintivo del tipo de fichero de que se trata. Este convenio no obliga al ordenador a utilizar los ficheros de una forma determinada, si bien hay programas que solamente aceptan ficheros de un tipo de terminado. BASIC acepta ficheros de todo tipo, pero busca preferentemente ciertos tipos si no se le especifica otra cosa. (Véase la sección <a href="#cabeceras-de-fichero-en-amsdos">Cabeceras de fichero en AMSDOS</a>.) </p>
+<h3 id="construcción-de-los-nombres-de-los-ficheros"><a class="header" href="#construcción-de-los-nombres-de-los-ficheros">Construcción de los nombres de los ficheros</a></h3>
+<p>El nombre del fichero consta de dos partes, separadas por un punto (.). La primera parte consta de 8 caracteres como máximo; la segunda puede contener hasta 3 caracteres. Así, por ejemplo, &quot;<strong>ROINTIME.DEM</strong>&quot;, &quot;<strong>DISCKIT3.COM</strong>&quot; y &quot;<strong>DISC.BAS</strong>&quot; son nombres correctos de fichero.</p>
+<p>La segunda parte del nombre del fichero es el distintivo de tipo. Los nombres y los distintivos pueden consistir en una mezcla cualquiera de letras y números, pero no pueden contener espacios ni signos de puntuación. Algunos distintivos de tipo convencionales. son los siguientes: </p>
+<div class="table-wrapper"><table><thead><tr><th>Distintivo</th><th>Descripción</th></tr></thead><tbody>
+<tr><td>.&lt;espacios&gt;</td><td>Tipo no especificado. Puede ser un fichero creado por <strong>OPENOUT</strong>  &quot;&lt;nombrefi&gt;”, o bien un programa de BASIC grabado por AMSDOS con <strong>SAVE</strong> &quot;&lt;nombrefi&gt;&quot;,<strong>A</strong>.</td></tr>
+<tr><td><strong>.BAS</strong></td><td>Programa de BASIC grabado con <strong>SAVE</strong> &quot;&lt;nombrefi&gt;&quot;, con <strong>SAVE</strong> &quot;&lt;nombrefi&gt;&quot;,<strong>P</strong> o con <strong>SAVE</strong> &quot; &lt;nombrefi&gt;&quot;<strong>.BAS</strong>&quot;,<strong>A</strong>.</td></tr>
+<tr><td><strong>.BIN</strong></td><td>Programa o zona de memoria grabados por AMSDOS con <strong>SAVE</strong> &quot;&lt;nombrefi&gt;&quot;,<strong>B</strong>,&lt;parámetros binarios&gt;.</td></tr>
+<tr><td><strong>.BAK</strong></td><td>Este distintivo se asigna automáticamente a la versión anterior de un fichero cuando AMSDOS o un programa de ayuda graban una versión más moderna con el mismo nombre. Esto permite que el usuario pueda utilizar o consultar la versión anterior siempre que lo necesite.</td></tr>
+<tr><td><strong>.COM</strong></td><td>Fichero de orden (programa directamente ejecutable). Los programas de ayuda de CP/M son de este tipo.</td></tr>
+<tr><td><strong>.SUB</strong></td><td>Fichero de instrucciones para el programa <strong>SUBMIT</strong> de CP/M.</td></tr>
+</tbody></table>
+</div>
+<h3 id="cabeceras-de-fichero-en-amsdos"><a class="header" href="#cabeceras-de-fichero-en-amsdos">Cabeceras de fichero en AMSDOS</a></h3>
+<p>AMSDOS asigna automáticamente a los ficheros, distintivos de tipo adecuados cuando los graba, por lo que normalmente no es necesario especificar distintivo. Los ficheros de BASIC ordinarios, los ficheros de BASIC protegidos y los ficheros binarios se graban con un registro de cabecera, de forma que en el proceso de lectura la orden de AMSDOS</p>
+<pre><code class="language-basic">LOAD &quot;&lt;nombreti&gt;&quot;
+</code></pre>
+<p>pueda reconocerlos y obrar en consecuencia. Si la orden <strong>LOAD</strong> no encuentra el registro de cabecera, supone que se trata de un fichero ASCII, es decir, de un fichero de texto.</p>
+<p>Independientemente del registro de cabecera, cuando se pide a AMSDOS que cargue un fichero sin especificarle el distintivo de tipo, empieza por buscarlo con el distintivo</p>
+<pre><code>.&lt;espacios&gt;
+</code></pre>
+<p>Si no lo encuentra, busca uno del tipo</p>
+<pre><code>.BAS
+</code></pre>
+<p>y, finalmente, del tipo</p>
+<pre><code>.BIN
+</code></pre>
+<p>Esto permite que el usuario se despreocupe del distintivo de tipo en la mayor parte de los casos.</p>
+<p>Un fichero de disco creado por <strong>OPENOUT</strong> y escrito por BASIC carecerá de registro de cabecera; su contenido estará en ASCII (es decir, texto normal escrito con las órdenes <strong>WRITE</strong>, <strong>PRINT</strong> o <strong>LIST</strong> de BASIC.) La orden <strong>OPENIN</strong> busca los ficheros en el mismo orden que <strong>LOAD</strong> si no se especifica distintivo de tipo.</p>
+<h3 id="nombres-de-fichero-con-dos-unidades-de-disco"><a class="header" href="#nombres-de-fichero-con-dos-unidades-de-disco">Nombres de fichero con dos unidades de disco</a></h3>
+<p>En los sistemas de dos unidades de disco (esto es, en aquellos a los que se ha conectado la unidad externa), puede haber ficheros en las dos unidades. El ordenador no busca los ficheros automáticamente en las dos unidades, por lo que el usuario debe especificar qué unidad se va a utilizar. Se puede utilizar las órdenes <strong>|A</strong>, <strong>|B</strong> o <strong>DRIVE</strong> (descritas más adelante) para seleccionar una de las dos unidades; o bien, sin necesidad de modificar la unidad implícita, se puede especificar <strong>A:</strong> o <strong>B:</strong> como prefijo del nombre del fichero (los números de usuario permiten participar el directorio). Así, por ejemplo,</p>
+<pre><code>|B
+SAVE &quot;PROG.BAS&quot;
+|A
+</code></pre>
+<p>y</p>
+<pre><code>|A
+SAVE &quot;B:PROG.BAS&quot;
+</code></pre>
+<p>graban el programa en la segunda unidad (B).</p>
+<p>Análogamente, se puede modificar transitoriamente la asignación implícita de <strong>USER</strong> (&quot;usuario&quot;, margen de 0 a 15) poniendo el número de usuario como prefijo del nombre del fichero. Así, por ejemplo,</p>
+<pre><code>LOAD &quot;15:PROG.BAS&quot;
+</code></pre>
+<p>y</p>
+<pre><code>SAVE &quot;15:PROG.BAS&quot;
+</code></pre>
+<p>cargan y graban el programa de la sección del disco correspondiente al usuario número 15, cualquiera que sea la asignación implícita de <strong>USER</strong>. (Véase más abajo la descripción de la orden <strong>|USER</strong>.) </p>
+<p>Finalmente, se pueden modificar transitoriamente las asignaciones implícitas de <strong>USER</strong> y <strong>DRIVE</strong> a un tiempo especificando ambos (y en este orden) como prefijo del nombre del fichero. Por ejemplo,</p>
+<pre><code>RUN &quot;15B:PROG.BAS&quot;
+</code></pre>
+<h3 id="símbolos-comodín"><a class="header" href="#símbolos-comodín">Símbolos comodín</a></h3>
+<p>A veces se necesita realizar con el disco operaciones (catálogo, copia, borrado, etc.) que afecten a varios ficheros. Cuando se especifica un nombre de fichero para una determinada operación, el sistema busca en el directorio un nombre que coincida exactamente con el especificado. Algunas órdenes pueden actuar sobre un conjunto de ficheros independientemente de alguno de los caracteres de su nombre. En vez de especificar los caracteres &quot;indiferentes&quot;, en su lugar se pone el signo de interrogación <strong>?</strong>. Si todo el bloque (o resto del bloque) del nombre del fichero o del distintivo de tipo es indiferente, el conjunto de signos de interrogación se puede sustituir por un asterisco. Así, por ejemplo, <strong>NOM.</strong>* es abreviatura de <strong>NOM.???</strong>, y <em><em>F</em>.BAS</em>* es abreviatura de <strong>F???????.BAS</strong>.</p>
+<p>La expresión <strong>*.*</strong> significa &quot;todos los ficheros&quot;.</p>
+<p>Ejemplos:</p>
+<div class="table-wrapper"><table><thead><tr><th>Directorio</th><th>Concuerdan con<BR /> *.BAS</th><th>Concuerdan con<BR />NOM?.BAS</th><th>Concuerdan con<BR />N*.BA?</th></tr></thead><tbody>
+<tr><td>BANCO.BAS</td><td>BANCO.BAS</td><td></td><td></td></tr>
+<tr><td>NOM1.BAS</td><td>NOM1.BAS</td><td>NOM1.BAS</td><td>NOM1.BAS</td></tr>
+<tr><td>NOM2.BAS</td><td>NOM2.BAS</td><td>NOM2.BAS</td><td>NOM2.BAS</td></tr>
+<tr><td>NOM3.BAK</td><td></td><td></td><td>NOM3.BAK</td></tr>
+<tr><td>NOM3.BAS</td><td>NOM3.BAS</td><td>NOM3.BAS</td><td>NOM3.BAS</td></tr>
+<tr><td>NOMINA.BAS</td><td>NOMINA.BAS</td><td></td><td>NOMINA.BAS</td></tr>
+</tbody></table>
+</div>
+<h3 id="ejemplos-de-utilización-de-órdenes-de-amsdos-dentro-de-un-programa"><a class="header" href="#ejemplos-de-utilización-de-órdenes-de-amsdos-dentro-de-un-programa">Ejemplos de utilización de órdenes de AMSDOS dentro de un programa</a></h3>
+<p>Para mejor asimilar las órdenes de AMSDOS, le recomendamos que introduzca en el ordenador y estudie los programas siguientes. No ejecute nunca estos programa con un disco maestro de CP/M instalado: los programas escriben datos en disco, y nunca se debe correr el riesgo de escribir sobre los discos maestros originales. Utilice una copia o un disco de trabajo. </p>
+<h3 id="grabación-de-variables-y-volcado-de-pantalla"><a class="header" href="#grabación-de-variables-y-volcado-de-pantalla">Grabación de variables y volcado de pantalla</a></h3>
+<p>El siguiente programa dibuja la bandera británica y graba la pantalla completa en disco. Para ejecutarlo es necesario poner en la unidad un disco inicializado. </p>
+<pre><code class="language-basic">10 fichero$=&quot;volcpant.srn&quot;
+20 MODE 1:BORDER 0
+30 DIM color(2)
+40 FOR i=0 TO 2
+50 READ color(i): REM lee colores de lista DATA
+60 INK i,color(i)
+70 NEXT
+80 ON ERROR GOTO 430
+90 OPENIN &quot;param.dat&quot; ' comprueba si existe fichero
+190 CLOSEIN:ON ERROR GOTO 0
+110 IF numerrom=32 AND DERR=146 THEN CLS
+120 CURSOR 1:PRINT &quot;Quiere escribir sobre el fichero&quot;:PRINT &quot;anterior? Y/N&quot;;
+130 a$=INKEY$:ON INSTR(&quot; YN&quot;,UPPER$(a$) ) GOTO 130,150,140:GOTO 130
+140 PRINT a$:PRINT &quot;Fin del programa&quot;:END
+150 PRINT a$:CURSOR 0
+160 OPENOUT &quot;param.dat&quot;
+170 WRITE #9,fichero$,1: REM graba nombre de fichero y modo
+180 FOR i=0 TO 2
+190 WRITE #9,color(i): REM graba colores
+200 NEXT i
+210 CLOSEOUT
+220 CLS
+230 gp=1:GRAPHICS PEN gp:w=125
+240 x=-65:a=240:y=400;b=-150:GOSUB 400
+250 y=0:b=150:GOSUB 400
+260 x=575:a=-240:y=400:b=-150: GOSUB 400
+270 y=0:b=150:GOSUB 400
+280 gp=2:GRAPHICS PEN gp:w=40
+290 a=240:x=-40:y=400:b=-150:GOSUB 400
+300 x=0:y=0:b=150:GOSUB 400
+310 a=-240:x=640:y=0:b=150: GOSUB 400
+320 x=600:y=400:b=-150:GOSUB 400
+330 ORIGIN 0,0,256,380,0,400:CLG 1
+340 ORIGIN 0,0,0,640,150,250:CLG 1
+350 ORIGIN 0,0,280,352,0,400:CLG 2
+360 ORIGIN 0,0,0,640,168,230:CLG 2
+370 SAVE fichero$,b,&amp;c000,&amp;4000
+380 DATA 2,26,6
+390 END
+400 MOVE x,y:DRAWR a,b:DRAWR w,0:DRAWR -a,-b
+410 MOVE x+a/2+w/2,y+b/2:FILL gp
+420 RETURN
+430 numerror=ERR:RESUME NEXT
+run
+</code></pre>
+<p>Fíjese en los distintivos de tipo <strong>.DAT</strong> y <strong>.SRN</strong>. No tienen más significado intrínseco que recordarnos cuál es su contenido. El fichero <strong>PARAM.DAT</strong> será un fichero ASCII sin registro de cabecera, mientras que <strong>VOLCPANT.SRN</strong> es un fichero binario AMSDOS con cabecera.</p>
+<p>Observe que el programa trata de leer el fichero <strong>PARAM.DAT</strong>, para averiguar si existe, antes de escribir en él. Si no existe, BASIC genera un error, el cual es gestionado por el programa para que la ejecución continúe sin interrupción. Si ya existe el fichero, no se genera error y el programa pregunta al usuario si desea escribir encima de él.</p>
+<p>En este fichero se graba información sobre el modo de pantalla, los colores y el nombre del fichero que contiene el volcado de pantalla. La línea 170 ilustra cómo se puede utilizar un fichero de datos para escribir en él valores de variables (<strong>fichero$</strong>) y constantes (<strong>1</strong>) que luego hayan de ser utilizados por otro programa.</p>
+<h3 id="carga-de-pantallas"><a class="header" href="#carga-de-pantallas">Carga de pantallas</a></h3>
+<p>El siguiente ejemplo es un lector de volcados de pantalla que utiliza un fichero de parámetros para controlar su acción. Observe cómo se leen los datos del fichero con <strong>INPUT</strong> y cómo se utiliza <strong>EOF</strong> para adaptar la lectura automáticamente al tamaño del fichero. Para que este programa visualice correctamente el volcado de pantalla, es necesario que la grabación se haya hecho en una posición de memoria conocida, pues en caso contrario la imagen quedará desplazada. Esto se garantiza grabando el volcado después de ejecutar una orden <strong>MODE</strong> y teniendo cuidado de que durante la formación de la imagen no se desplace la pantalla.</p>
+<pre><code class="language-basic">10 DIM color(15): REM preparacion para 16 colores
+20 OPENIN &quot;param.dat&quot;
+30 INPUT #9,nombrefichero$,modopantalla
+40 i=0
+50 WHILE NOT EOF
+60  INPUT #9,color(i)
+70  INK i,color(i)
+80  i=i+1
+90 WEND
+100 CLOSEIN
+110 MODE modopantalla:BORDER 0
+120 LOAD nombrefichero$
+run
+</code></pre>
+<h3 id="resumen-de-las-órdenes-externas-de-amsdos"><a class="header" href="#resumen-de-las-órdenes-externas-de-amsdos">Resumen de las órdenes externas de AMSDOS</a></h3>
+<h3 id="a"><a class="header" href="#a">|A</a></h3>
+<p><strong>|A</strong></p>
+<p><em>Orden</em>. Especifica que la unidad de disco implícita sea la <strong>A</strong>. Equivale a <strong>|DRIVE</strong> con parámetro <strong>A</strong>. (La unidad incorporada al ordenador es la <strong>A</strong>.)</p>
+<h3 id="b"><a class="header" href="#b">|B</a></h3>
+<p><strong>|B</strong></p>
+<p><em>Orden</em>. Especifica que la unidad de disco implícita sea la <strong>B</strong>. Equivale a <strong>|DRIVE</strong> con parámetro <strong>B</strong>. (La unidad incorporada al ordenador es la <strong>A</strong>.)</p>
+<h3 id="cpm"><a class="header" href="#cpm">|CPM</a></h3>
+<p><strong>|CPM</strong>
+<em>Orden</em>. Carga un sistema operativo de disco. Los sistemas operativos suministrados con el ordenador son CP/M Plus y CP/M 2.2.</p>
+<p>La ejecución de esta orden no se puede completar si en la unidad no hay instalado un disco de sistema con CP/M. En concreto, CP/M Plus se carga con una copia de la cara 1 de los discos maestros suministrados con el ordenador; CP/M 2.2, con una copia de la cara 4.</p>
+<h3 id="dir"><a class="header" href="#dir">|DIR</a></h3>
+<p><strong>|DIR</strong> [,&lt;expresion literal&gt;]</p>
+<pre><code class="language-basic">|DIR,&quot;*.BAS&quot;
+</code></pre>
+<p><em>Orden</em>. Escribe en la pantalla el directorio del disco (al estilo de CP/M) y el espacio libre. Si se omite el parámetro, se supone *.*.</p>
+<h3 id="disc"><a class="header" href="#disc">|DISC</a></h3>
+<p><strong>|DISC</strong>
+<em>Orden</em>. Equivale a las órdenes <strong>|DISC.IN</strong> y <strong>|DISC.OUT</strong>. </p>
+<h3 id="-discin"><a class="header" href="#-discin">| DISC.IN</a></h3>
+<p><strong>|DISC.IN</strong>
+<em>Orden</em>. Especifica que las operaciones de lectura se deben hacer con el disco. </p>
+<h3 id="discout"><a class="header" href="#discout">|DISC.OUT</a></h3>
+<p><strong>|DISC.OUT</strong>
+Especifica que las operaciones de escritura se deben hacer con el disco. </p>
+<h3 id="drive"><a class="header" href="#drive">|DRIVE</a></h3>
+<p><strong>|DRIVE,&lt;expresion literal&gt;</strong></p>
+<pre><code class="language-basic">|DRIVE,&quot;A&quot;
+</code></pre>
+<p><em>Orden</em>. Establece qué unidad de disco se debe considerar como implícita en lo sucesivo. Esta orden fallará si AMSDOS no consigue leer en la unidad especificada.</p>
+<h3 id="era"><a class="header" href="#era">|ERA</a></h3>
+<p><strong>|ERA,&lt;expresion literal&gt;</strong></p>
+<pre><code class="language-basic">|ERA,&quot;*.BAK&quot;
+</code></pre>
+<p><em>Orden</em>. Borra todos los ficheros que concuerden con la &lt;expresión literal&gt; y no sean de sólo lectura. Admite símbolos comodín. </p>
+<h3 id="ren"><a class="header" href="#ren">|REN</a></h3>
+<p><strong>|REN,&lt;expresion literal&gt;,&lt;expresion literal&gt;</strong></p>
+<pre><code class="language-basic">REN,&quot;FICHNUEV.BAS&quot;,&quot;FICHANTI.BAS&quot;
+</code></pre>
+<p><em>Orden</em>. Da un nuevo nombre a un fichero ya existente en el disco. No puede haber otro fichero con el nombre nuevo. No admite símbolos comodín.</p>
+<p>Se puede incluir el parámetro <strong>USER</strong> (&quot;usuario&quot;, véase más abajo) en la &lt;expresión literal&gt; para modificar transitoriamente la situación implícita. Por ejemplo,</p>
+<pre><code class="language-basic">|REN,&quot;0:NUEVO.BAS&quot;,&quot;15:ANTIGUO.BAS&quot;
+</code></pre>
+<p>da al fichero &quot;<strong>ANTIGUO.BAS</strong>&quot; de <strong>USER 15</strong> el nuevo nombre &quot;<strong>NUEVO.BAS</strong>&quot; en <strong>|USER 0</strong>, cualquiera que sea el parámetro de <strong>USER</strong> especificado con anterioridad.</p>
+<h3 id="tape"><a class="header" href="#tape">|TAPE</a></h3>
+<p><strong>|ТАРЕ</strong>
+<em>Orden</em>. Equivale a las órdenes <strong>|TAPE.IN</strong> y <strong>|TAPE.OUT</strong>. Solamente actúa si está conectado un magnetófono externo.</p>
+<h3 id="tapein"><a class="header" href="#tapein">|TAPE.IN</a></h3>
+<p><strong>|TAPE.IN</strong>
+<em>Orden</em>. Especifica que las operaciones de lectura se deben hacer con la cinta. Solamente actúa si está conectado un magnetófono externo. </p>
+<h3 id="tapeout"><a class="header" href="#tapeout">|TAPE.OUT</a></h3>
+<p><strong>|TAPE.OUT</strong>
+<em>Orden</em>. Especifica que las operaciones de escritura se deben hacer con la cinta. Solamente actúa si está conectado un magnetófono externo. </p>
+<h3 id="user"><a class="header" href="#user">|USER</a></h3>
+<p><strong>USER,&lt;expresion entera&gt;</strong></p>
+<pre><code class="language-basic">|USER,3
+</code></pre>
+<p><em>Orden</em>. Determina con cuál de las 16 secciones del directorio (áreas de usuario, del 0 al 15) deben actuar ciertas órdenes de manejo de disco (<strong>CAT</strong>, <strong>LOAD</strong>, <strong>DIR</strong>, etc.).</p>
+<p>Un fichero grabado en un área de usuario puede ser transferido a otra con la orden <strong>|REN</strong>. Así, </p>
+<pre><code class="language-basic">REN,&quot;15:EJEMPLO.BAS&quot;,&quot;0:EJEMPLO.BAS&quot; 
+</code></pre>
+<p>transfiere el fichero del área 15 al área 0 sin cambiarle el nombre.</p>
+<h3 id="copia-de-ficheros-de-disco-a-disco"><a class="header" href="#copia-de-ficheros-de-disco-a-disco">Copia de ficheros de disco a disco</a></h3>
+<h4 id="ficheros-de-amsdos-con-cabecera"><a class="header" href="#ficheros-de-amsdos-con-cabecera">Ficheros de AMSDOS con cabecera</a></h4>
+<p>Los ficheros de este tipo se pueden copiar desde CP/M mediante <strong>PIP</strong> y (véase la <a href="5.02.-CP-M.html">parte 2</a> de este capítulo). Los ficheros creados por AMSDOS con registro de cabecera (véase más arriba) pueden ser copiados en bloque (disco a disco), pero en general su contenido no puede ser entendido por los programas de CP/M. </p>
+<h4 id="ficheros-ascii"><a class="header" href="#ficheros-ascii">Ficheros ASCII</a></h4>
+<p>Los ficheros creados por AMSDOS sin registro de cabecera estarán generalmente en ASCII y son tanto copiables como entendibles por los programas de CP/M. En concreto, los ficheros de programa, de datos y de texto de ASCII son intercambiables entre AMSDOS y CP/M. </p>
+<h4 id="ficheros-de-sólo-lectura"><a class="header" href="#ficheros-de-sólo-lectura">Ficheros de &quot;sólo lectura&quot;</a></h4>
+<p>Desde CP/M es posible hacer que un fichero sea de sólo lectura y/o invisible a efectos de catálogo del directorio. Estas características sólo se pueden establecer o anular desde CP/M, pero son respetadas por AMSDOS. Para más detalles, véase la <a href="5.02.-CP-M.html">parte 2</a> de este capítulo (programa de ayuda <strong>SET</strong>).</p>
+<h4 id="copia-de-ficheros-entre-disco-y-cinta"><a class="header" href="#copia-de-ficheros-entre-disco-y-cinta">Copia de ficheros entre disco y cinta</a></h4>
+<p>CP/M Plus no está preparado para acceder a ficheros de cinta y copiarlos en disco, ni para copiar ficheros de disco a cinta. Si lo está, en cambio, CP/M 2.2 (cara 4 de los discos maestros). Los programas de ayuda <strong>CLOAD</strong> y <strong>CSAVE</strong> de CP/M 2.2 realizan estas funciones según se muestra en las tablas siguientes.</p>
+<h3 id="procedimientos-de-copia-de-ficheros"><a class="header" href="#procedimientos-de-copia-de-ficheros">Procedimientos de copia de ficheros</a></h3>
+<p>En las tablas siguientes se describen los procedimientos de transferencia para todo tipo de ficheros entre disco y cinta. No se requiere tener conectada la segunda unidad de disco. Los programas de BASIC protegidos no pueden ser copiados de cinta a disco, ni viceversa; tampoco pueden serlo los ficheros binarios (tales como programas de juegos en código de máquina) si no se conocen las direcciones de carga. En la parte 2 de ese capítulo se da más información sobre los programas <strong>PIP</strong>, <strong>CLOAD</strong> y <strong>CSAVE</strong>.</p>
+<div class="table-wrapper"><table><thead><tr><th>COPIAR HACIA</th><th>COPIAR DESDE<br />BASIC de Amstrad en cinta *</th><th>COPIAR DESDE<br />Datos ASCII en cinta *</th><th>COPIAR DESDE<br />Binario en cinta *</th></tr></thead><tbody>
+<tr><td>BASIC de Amstrad<br /> en cinta *</td><td>|TAPE<br />LOAD&quot;FICH&quot;<br />&lt;cambiar cinta&gt;<br />SAVE&quot;FICH&quot;<br />|DISC</td><td></td><td></td></tr>
+<tr><td>Binario<br />en cinta *</td><td></td><td></td><td>H=HIMEM<br />|TAPE<br />MEMORY &lt;p&gt;-1<br />LOAD&quot;FICH&quot;<br />&lt;cambiar cinta&gt;<br />SAVE&quot;FICH&quot;,B,&lt;p&gt;,&lt;l&gt;[,&lt;e&gt;]<br />|DISC<br />MEMORY=H<br />&lt;nota 2&gt;</td></tr>
+<tr><td>ASCII<br />en cinta *</td><td>|TAPE<br />LOAD&quot;FICH&quot;<br />&lt;cambiar cinta&gt;<br />SAVE&quot;FICH&quot;,A<br />|DISC</td><td>&lt;insertar disco de CP/M 2.2&gt;<br />|CPM<br />CLOAD&quot;FICH&quot;,TEMP<br />&lt;cambiar cinta&gt;<br />CSAVE TEMP,&quot;FICH&quot;<br />ERA TEMP<br />AMSDOS<br />&lt;nota 1&gt;</td><td></td></tr>
+<tr><td>BASIC de Amstrad<br />en disco *</td><td>|TAPE<br />LOAD&quot;FICH&quot;<br />|DISC<br />SAVE&quot;FICH&quot;</td><td></td><td></td></tr>
+<tr><td>ASCII<br />en disco</td><td>|TAPE<br />LOAD&quot;FICH&quot;<br />|DISC<br />SAVE&quot;FICH&quot;,A</td><td>&lt;insertar disco de CP/M 2.2&gt;<br />CPM<br />CLOAD&quot;FICH&quot;<br />AMSDOS</td><td></td></tr>
+<tr><td>Binario<br />en disco</td><td></td><td></td><td>H=HIMEM<br />|TAPE<br />MEMORY &lt;p&gt;-1<br />LOAD&quot;FICH&quot;<br />|DISC<br />SAVE&quot;FICH&quot;,B,&lt;p&gt;,&lt;l&gt;[,&lt;e&gt;]<br />MEMORY H<br />&lt;nota 2&gt;</td></tr>
+</tbody></table>
+</div>
+<ul>
+<li>* Fichero con cabecera.</li>
+<li>&lt;nota 1&gt; Requiere espacio libre en el disco para el fichero transitorio &quot;<strong>TEMP</strong>&quot;.</li>
+<li>&lt;nota 2&gt; &lt;p&gt; es la dirección inicial del fichero, &lt;l&gt; es su longitud, &lt;e&gt; es la dirección opcional de ejecución.</li>
+</ul>
+<div class="table-wrapper"><table><thead><tr><th>COPIAR HACIA</th><th>COPIAR DESDE<br />BASIC de Amstrad<br />en disco *</th><th>COPIAR DESDE<br />Datos ASCII<br />en disco</th><th>COPIAR DESDE<br />Binario Amsdos<br />en disco *</th><th>COPIAR DESDE<br />Todos los demás<br />en disco</th></tr></thead><tbody>
+<tr><td>BASIC de Amstrad<br />en cinta *</td><td>LOAD&quot;FICH&quot;<br />|TAPE<br />SAVE&quot;FICH&quot;<br />|DISC</td><td></td><td></td><td></td></tr>
+<tr><td>Binario<br />en cinta *</td><td></td><td></td><td>H=HIMEM<br />MEMORY &lt;p&gt;-1<br />LOAD&quot;FICH&quot;<br />|TAPE<br />SAVE&quot;FICH&quot;,B,&lt;p&gt;,&lt;l&gt;[,&lt;e&gt;]<br />|DISC<br />MEMORY H<br />&lt;nota 2&gt;</td><td></td></tr>
+<tr><td>ASCII<br />en cinta *</td><td>LOAD&quot;FICH&quot;<br />|TAPE<br />SAVE&quot;FICH&quot;,A<br />|DISC<br />  o bien<br />&lt;insertar disco de CP/M 2.2&gt;<br />|CPM<br />CSAVE FICH<br />AMSDOS</td><td>&lt;insertar disco de CP/M 2.2&gt;<br />|CPM<br />CSAVE FICH<br />AMSDOS</td><td></td><td>&lt;insertar disco de CP/M 2.2&gt;<br />|CPM<br />CSAVE FICH<br />AMSDOS<br />&lt;nota 3&gt;</td></tr>
+<tr><td>BASIC de Amstrad<br />en disco *</td><td>LOAD&quot;FICH&quot;<br />&lt;cambiar disco&gt;<br />SAVE&quot;FICH&quot;<br />   o bien<br />&lt;insertar disco de CP/M 2.2&gt;<br />|CPM<br />PIP B:=FICH<br />AMSDOS</td><td></td><td></td><td></td></tr>
+<tr><td>ASCII<br />en disco</td><td>LAD&quot;FICH&quot;<br />&lt;cambiar disco&gt;<br />SAVE&quot;FICH&quot;,A</td><td>&lt;insertar disco CP/M  Plus&gt;<br />|CPM<br />PIP B:=FICH<br />AMSDOS</td><td></td><td></td></tr>
+<tr><td>Binario Amsdos<br />en disco *</td><td></td><td></td><td>&lt;insertar disco de CP/M Plus&gt;<br />|CPM<br />PIP B:=FICH<br />AMSDOS</td><td></td></tr>
+<tr><td>Todos los demás<br />en disco</td><td></td><td></td><td></td><td>&lt;insertar disco de CP/M Plus&gt;<br />|CPM<br />PIP B:=FICH<br />AMSDOS</td></tr>
+</tbody></table>
+</div>
+<ul>
+<li>* Fichero con cabecera.</li>
+<li>&lt;nota 2&gt; &lt;p&gt; es la dirección inicial del fichero, &lt;l&gt; es su longitud, &lt;e&gt; es la dirección opcional de ejecución.</li>
+<li>&lt;nota 3&gt; El fichero destino no es utilizable directamente por BASIC. No obstante, esta opción es interesante como medio de almacenamiento a bajo costo. El fichero se puede volver a copiar en disco con <strong>CLOAD&quot;FICH&quot;</strong> (desde CP/M 2.2).</li>
+</ul>
+<h3 id="guía-de-referencia-de-los-mensajes-de-error"><a class="header" href="#guía-de-referencia-de-los-mensajes-de-error">Guía de referencia de los mensajes de error</a></h3>
+<p>Cuando AMSDOS no puede ejecutar una orden, emite un mensaje de error. Si el problema es mecánico o radica en los circuitos, el mensaje de error va seguido de la pregunta: </p>
+<pre><code>Retry, Ignore or Cancel?
+</code></pre>
+<ul>
+<li><strong>R</strong> (reintentar) hace que se repita la operación, posiblemente después de que el usuario haya remediado el problema.</li>
+<li><strong>I</strong> (ignorar) hace que el ordenador continúe como si nada hubiera ocurrido, lo que generalmente da lugar a efectos inesperados y posiblemente indeseados.</li>
+<li><strong>C</strong> (cancelar) hace que se cancele la operación, lo que frecuentemente conduce a un nuevo mensaje de error.</li>
+</ul>
+<h4 id="lista-de-errores"><a class="header" href="#lista-de-errores">Lista de errores</a></h4>
+<p><strong>Unknown command</strong></p>
+<p>La orden no ha sido tecleada correctamente. </p>
+<p><strong>Bad command</strong></p>
+<p>La orden no puede ser ejecutada por alguna razón; error de sintaxis o configuración inadecuada del sistema. </p>
+<p><strong>&lt;nombre de fichero&gt; already exists</strong></p>
+<p>El usuario ha intentado dar a un fichero el nombre de un fichero ya existente.</p>
+<p><strong>&lt;nombre de fichero&gt; not found</strong></p>
+<p>No existe ese fichero. </p>
+<p><strong>Drive &lt;unidad&gt;: directory full</strong></p>
+<p>No queda espacio en el directorio para una nueva reseña. </p>
+<p><strong>Drive &lt;unidad&gt;: disc full</strong></p>
+<p>No queda espacio en el disco para grabar nuevos datos.</p>
+<p><strong>Drive &lt;unidad&gt;: disc changed, closing &lt;nonbre de fichero&gt;</strong></p>
+<p>Se ha cambiado el disco antes de cerrar el fichero; el ordenador lo cierra.</p>
+<p><strong>&lt;nombre de fichero&gt; is read only</strong></p>
+<p>El fichero no se puede modificar porque es de &quot;sólo lectura&quot;. Los ficheros solamente se pueden caracterizar como de sólo lectura o de lectura/escritura desde CP/M.</p>
+<p><strong>Drive &lt;unidad&gt;: disc missing</strong></p>
+<p>No hay disco en la unidad, o el disco no está girando correctamente. La acción aconsejable es extraer el disco, insertarlo de nuevo y pulsar R. </p>
+<p><strong>Drive &lt;unidad&gt;: disc is write protected</strong></p>
+<p>Se ha intentado escribir en un disco que tiene abierto el orificio de protección. Si efectivamente quiere utilizar ese disco, extráigalo, cierre el orificio de protección, insértelo de nuevo y pulse <strong>R</strong>.</p>
+<p><strong>Drive &lt;unidad&gt;: read fail</strong></p>
+<p>Error en los circuitos de lectura. La acción aconsejable es extraer el disco, insertarlo de nuevo y pulsar <strong>R</strong>.</p>
+<p><strong>Drive &lt;unidad&gt;; write fail</strong></p>
+<p>Error en los circuitos de escritura. La acción aconsejable es extraer el disco, insertarlo de nuevo y pulsar <strong>R</strong>. </p>
+<p><strong>Failed to load CP/M</strong></p>
+<p>Error de lectura al intentar cargar CP/M con la orden <strong>|CPM</strong>, o bien no se ha insertado un disco de sistema de CP/M válido. Cuando se intenta cargar CP/M con un disco que tenga formato &quot;de datos&quot; se genera el mensaje de error &quot;<strong>Read fail</strong>&quot;. </p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="5.00.-Capítulo-5.-AMSDOS-y-CP-M.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="5.02.-CP-M.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="5.00.-Capítulo-5.-AMSDOS-y-CP-M.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="5.02.-CP-M.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

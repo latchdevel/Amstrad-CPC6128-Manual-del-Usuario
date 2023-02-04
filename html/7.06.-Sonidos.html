@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html lang="es" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Sonidos - Amstrad CPC6128 Manual del Usuario</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="Manual de usuario del micro ordenenador Amstrad modelo CPC6128">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Home.html">Inicio</a></li><li class="chapter-item expanded affix "><a href="0.01.-Introducción.html">Introducción</a></li><li class="chapter-item expanded affix "><a href="0.02.-Importante.html">Importante</a></li><li class="chapter-item expanded "><a href="1.00.-Capítulo-1.-Curso-de-introducción.html"><strong aria-hidden="true">1.</strong> Curso se introducción</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="1.01.-Instalación-y-mantenimiento.html"><strong aria-hidden="true">1.1.</strong> Instalación y mantenimiento</a></li><li class="chapter-item expanded "><a href="1.02.-Conexión-de-los-periféricos.html"><strong aria-hidden="true">1.2.</strong> Conexión de los periféricos</a></li><li class="chapter-item expanded "><a href="1.03.-En-cuanto-a-los-discos.html"><strong aria-hidden="true">1.3.</strong> En cuanto a los discos</a></li><li class="chapter-item expanded "><a href="1.04.-Manos-al-teclado.html"><strong aria-hidden="true">1.4.</strong> Manos al teclado</a></li><li class="chapter-item expanded "><a href="1.05.-Carga-de-programas.html"><strong aria-hidden="true">1.5.</strong> Carga de programas</a></li><li class="chapter-item expanded "><a href="1.06.-Empecemos-a-trabajar.html"><strong aria-hidden="true">1.6.</strong> Empecemos a trabajar</a></li><li class="chapter-item expanded "><a href="1.07.-Grábelo-en-disco.html"><strong aria-hidden="true">1.7.</strong> Grábelo en disco</a></li><li class="chapter-item expanded "><a href="1.08.-Introducción-a-los-modos-de-pantalla,-colores-y-gráficos.html"><strong aria-hidden="true">1.8.</strong> Introducción a los modos de pantalla, colores y gráficos</a></li><li class="chapter-item expanded "><a href="1.09.-Sonidos.html"><strong aria-hidden="true">1.9.</strong> Sonidos</a></li><li class="chapter-item expanded "><a href="1.10.-Introducción-a-los-sistemas-operativos-AMSDOS-y-CPM.html"><strong aria-hidden="true">1.10.</strong> Introducción a los sistemas operativos AMSDOS y CPM</a></li><li class="chapter-item expanded "><a href="1.11.-Introducción-al-gestor-de-bancos-de-memoria.html"><strong aria-hidden="true">1.11.</strong> Introducción al gestor de bancos de memoria</a></li></ol></li><li class="chapter-item expanded "><a href="2.01.-La-génesis-de-un-programa.html"><strong aria-hidden="true">2.</strong> La génesis de un programa</a></li><li class="chapter-item expanded "><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html"><strong aria-hidden="true">3.</strong> Lista completa de las palabras clave del BASIC de AMSTRAD</a></li><li class="chapter-item expanded "><a href="4.00.-Capítulo-4.-Discos-y-cintas.html"><strong aria-hidden="true">4.</strong> Discos y cintas</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="4.01.-Discos.html"><strong aria-hidden="true">4.1.</strong> Parte 1: Discos</a></li><li class="chapter-item expanded "><a href="4.02.-Cintas.html"><strong aria-hidden="true">4.2.</strong> Parte 2: Cintas</a></li></ol></li><li class="chapter-item expanded "><a href="5.00.-Capítulo-5.-AMSDOS-y-CP-M.html"><strong aria-hidden="true">5.</strong> AMSDOS y CP/M</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="5.01.-AMSDOS.html"><strong aria-hidden="true">5.1.</strong> Parte 1: AMSDOS</a></li><li class="chapter-item expanded "><a href="5.02.-CP-M.html"><strong aria-hidden="true">5.2.</strong> Parte 2: CP/M</a></li></ol></li><li class="chapter-item expanded "><a href="6.01.-Introducción-a-LOGO.html"><strong aria-hidden="true">6.</strong> Introducción a LOGO</a></li><li class="chapter-item expanded "><a href="7.00.-Capítulo-7.-Para-su-referencia.html"><strong aria-hidden="true">7.</strong> Para su referencia</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="7.01.-Posiciones-del-cursor-y-códigos-ampliados-de-control-en-BASIC.html"><strong aria-hidden="true">7.1.</strong> Posiciones del cursor y códigos ampliados de control en BASIC</a></li><li class="chapter-item expanded "><a href="7.02.-El-sistema-operativo.html"><strong aria-hidden="true">7.2.</strong> El sistema operativo</a></li><li class="chapter-item expanded "><a href="7.03.-Interrupciones.html"><strong aria-hidden="true">7.3.</strong> Interrupciones</a></li><li class="chapter-item expanded "><a href="7.04.-Caracteres-ASCII-y-caracteres-gráficos-en-BASIC.html"><strong aria-hidden="true">7.4.</strong> Caracteres ASCII y caracteres gráficos en BASIC</a></li><li class="chapter-item expanded "><a href="7.05.-Esquemas-de-teclado.html"><strong aria-hidden="true">7.5.</strong> Esquemas de teclado</a></li><li class="chapter-item expanded "><a href="7.06.-Sonidos.html" class="active"><strong aria-hidden="true">7.6.</strong> Sonidos</a></li><li class="chapter-item expanded "><a href="7.07.-Mensajes-de-error-de-BASIC.html"><strong aria-hidden="true">7.7.</strong> Mensajes de error de BASIC</a></li><li class="chapter-item expanded "><a href="7.08.-Palabras-reservadas-de-BASIC.html"><strong aria-hidden="true">7.8.</strong> Palabras reservadas de BASIC</a></li><li class="chapter-item expanded "><a href="7.09.-Plantillas.html"><strong aria-hidden="true">7.9.</strong> Plantillas</a></li><li class="chapter-item expanded "><a href="7.10.-Conexiones.html"><strong aria-hidden="true">7.10.</strong> Conexiones</a></li><li class="chapter-item expanded "><a href="7.11.-Impresoras.html"><strong aria-hidden="true">7.11.</strong> Impresoras</a></li><li class="chapter-item expanded "><a href="7.12.-Joysticks.html"><strong aria-hidden="true">7.12.</strong> Joysticks</a></li><li class="chapter-item expanded "><a href="7.13.-Organización-de-los-discos.html"><strong aria-hidden="true">7.13.</strong> Organización de los discos</a></li><li class="chapter-item expanded "><a href="7.14.-Ampliaciones-del-sistema-residentes-RSX.html"><strong aria-hidden="true">7.14.</strong> Ampliaciones del sistema residentes RSX</a></li><li class="chapter-item expanded "><a href="7.15.-Memoria.html"><strong aria-hidden="true">7.15.</strong> Memoria</a></li><li class="chapter-item expanded "><a href="7.16.-Emulador-de-consola-CP-M-Plus.html"><strong aria-hidden="true">7.16.</strong> Emulador de consola CP/M Plus</a></li><li class="chapter-item expanded "><a href="7.17.-Juego-de-caracteres-de-CP-M-Plus.html"><strong aria-hidden="true">7.17.</strong> Juego de caracteres de CP-M Plus</a></li></ol></li><li class="chapter-item expanded "><a href="8.00.-Capítulo-8.-Más-sobre-el-gestor-de-bancos-de-memoria.html"><strong aria-hidden="true">8.</strong> Más sobre el gestor de bancos de memoria</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="8.01.-Almacenamiento-de-imágenes-de-pantalla.html"><strong aria-hidden="true">8.1.</strong> Almacenamiento de imágenes de pantalla</a></li><li class="chapter-item expanded "><a href="8.02.-Ficheros-en-RAM.html"><strong aria-hidden="true">8.2.</strong> Ficheros en RAM</a></li></ol></li><li class="chapter-item expanded "><a href="9.00.-Capítulo-9.-Cuando-usted-guste.html"><strong aria-hidden="true">9.</strong> Cuando usted guste</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="9.01.-En-términos-generales.html"><strong aria-hidden="true">9.1.</strong> En términos generales</a></li><li class="chapter-item expanded "><a href="9.02.-Más-en-concreto-sobre-el-CPC6128.html"><strong aria-hidden="true">9.2.</strong> Más en concreto sobre el CPC6128</a></li></ol></li><li class="chapter-item expanded "><a href="10.0.-Para-más-información.html"><strong aria-hidden="true">10.</strong> Para más información</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 1</li><li class="chapter-item expanded "><a href="A01.-Digital-Research-y-AMSTRAD.html"><strong aria-hidden="true">11.</strong> Digital Research y AMSTRAD</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 2</li><li class="chapter-item expanded "><a href="A02.-Léxico-inglés-castellano-y-glosario.html"><strong aria-hidden="true">12.</strong> Léxico inglés-castellano y glosario</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 3. Que usted lo disfrute</li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Rebotes.html"><strong aria-hidden="true">13.</strong> Rebotes</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Bombardero.html"><strong aria-hidden="true">14.</strong> Bombardero</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Tele-tenis.html"><strong aria-hidden="true">15.</strong> Tele tenis</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Esgrima-eléctrico.html"><strong aria-hidden="true">16.</strong> Esgrima eléctrico</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Amthello.html"><strong aria-hidden="true">17.</strong> Amthello</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Guante-blanco.html"><strong aria-hidden="true">18.</strong> Guante blanco</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 4</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="A04.-Indice.html">Índice</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Amstrad CPC6128 Manual del Usuario</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/latchdevel/Amstrad-CPC6128-Manual-del-Usuario" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="capítulo-7-para-su-referencia"><a class="header" href="#capítulo-7-para-su-referencia">Capítulo 7. Para su referencia</a></h1>
+<h2 id="parte-6-sonidos"><a class="header" href="#parte-6-sonidos">Parte 6: Sonidos</a></h2>
+<p><strong>Contenido:</strong></p>
+<ul>
+<li><a href="#notas-y-periodos-de-tono">Notas y periodos de tono</a>.
+<ul>
+<li><a href="#octava-4">Octava -4</a>.</li>
+<li><a href="#octava-3">Octava -3</a>.</li>
+<li><a href="#octava-2">Octava -2</a>.</li>
+<li><a href="#octava-1">Octava -1</a>.</li>
+<li><a href="#octava-0">Octava 0</a>.</li>
+<li><a href="#octava-1-1">Octava 1</a>.</li>
+<li><a href="#octava-2-1">Octava 2</a>.</li>
+<li><a href="#octava-3-1">Octava 3</a>.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="notas-y-periodos-de-tono"><a class="header" href="#notas-y-periodos-de-tono">Notas y periodos de tono</a></h3>
+<p>La tabla siguiente da los valores recomendados para el parámetro &lt;periodo de tono&gt; correspondientes a los tonos y semitonos de las ocho octavas que puede reproducir el CPC664.</p>
+<p>Las frecuencias generadas no coinciden exactamente con las requeridas porque el &lt;periodo de tono&gt; tiene que ser un número entero. El &quot;error relativo&quot; es el cociente: </p>
+<p><img src="svg/c07-p06-i01.svg" alt="" /></p>
+<p>expresado en porcentaje.</p>
+<h4 id="octava--4"><a class="header" href="#octava--4">Octava -4</a></h4>
+<div class="table-wrapper"><table><thead><tr><th>NOTA</th><th>NOTA</th><th style="text-align: center">Frecuencia</th><th style="text-align: center">PERIODO</th><th>Error Relativo</th></tr></thead><tbody>
+<tr><td>C</td><td>DO</td><td style="text-align: center">16.352</td><td style="text-align: center">3822</td><td>-0.007%</td></tr>
+<tr><td>C#</td><td>DO#</td><td style="text-align: center">17.324</td><td style="text-align: center">3608</td><td>+0.007%</td></tr>
+<tr><td>D</td><td>RE</td><td style="text-align: center">18.354</td><td style="text-align: center">3405</td><td>-0.007%</td></tr>
+<tr><td>D#</td><td>RE#</td><td style="text-align: center">19.445</td><td style="text-align: center">3214</td><td>-0.004%</td></tr>
+<tr><td>E</td><td>MI</td><td style="text-align: center">20.602</td><td style="text-align: center">3034</td><td>+0.009%</td></tr>
+<tr><td>F</td><td>FA</td><td style="text-align: center">21.827</td><td style="text-align: center">2863</td><td>-0.016%</td></tr>
+<tr><td>F#</td><td>FA#</td><td style="text-align: center">23.125</td><td style="text-align: center">2703</td><td>+0.009%</td></tr>
+<tr><td>G</td><td>SOL</td><td style="text-align: center">24.500</td><td style="text-align: center">2551</td><td>-0.002%</td></tr>
+<tr><td>G#</td><td>SOL#</td><td style="text-align: center">25.957</td><td style="text-align: center">2408</td><td>+0.005%</td></tr>
+<tr><td>A</td><td>LA</td><td style="text-align: center">27.500</td><td style="text-align: center">2273</td><td>+0.012%</td></tr>
+<tr><td>A#</td><td>LA#</td><td style="text-align: center">29.135</td><td style="text-align: center">2145</td><td>-0.008%</td></tr>
+<tr><td>B</td><td>SI</td><td style="text-align: center">30.868</td><td style="text-align: center">2025</td><td>+0.011%</td></tr>
+</tbody></table>
+</div>
+<h4 id="octava--3"><a class="header" href="#octava--3">Octava -3</a></h4>
+<div class="table-wrapper"><table><thead><tr><th>NOTA</th><th>NOTA</th><th style="text-align: center">Frecuencia</th><th style="text-align: center">PERIODO</th><th>Error Relativo</th></tr></thead><tbody>
+<tr><td>C</td><td>DO</td><td style="text-align: center">32.703</td><td style="text-align: center">1911</td><td>-0.007%</td></tr>
+<tr><td>C#</td><td>DO#</td><td style="text-align: center">34.648</td><td style="text-align: center">1804</td><td>+0.007%</td></tr>
+<tr><td>D</td><td>RE</td><td style="text-align: center">36.708</td><td style="text-align: center">1703</td><td>+0.022%</td></tr>
+<tr><td>D#</td><td>RE#</td><td style="text-align: center">38.891</td><td style="text-align: center">1607</td><td>-0.004%</td></tr>
+<tr><td>E</td><td>MI</td><td style="text-align: center">41.203</td><td style="text-align: center">1517</td><td>+0.009%</td></tr>
+<tr><td>F</td><td>FA</td><td style="text-align: center">43.654</td><td style="text-align: center">1432</td><td>+0.019%</td></tr>
+<tr><td>F#</td><td>FA#</td><td style="text-align: center">46.249</td><td style="text-align: center">1351</td><td>-0.028%</td></tr>
+<tr><td>G</td><td>SOL</td><td style="text-align: center">48.999</td><td style="text-align: center">1276</td><td>+0.037%</td></tr>
+<tr><td>G#</td><td>SOL#</td><td style="text-align: center">51.913</td><td style="text-align: center">1204</td><td>+0.005%</td></tr>
+<tr><td>A</td><td>LA</td><td style="text-align: center">55.000</td><td style="text-align: center">1136</td><td>-0.032%</td></tr>
+<tr><td>A#</td><td>LA#</td><td style="text-align: center">58.270</td><td style="text-align: center">1073</td><td>+0.039%</td></tr>
+<tr><td>B</td><td>SI</td><td style="text-align: center">61.735</td><td style="text-align: center">1012</td><td>-0.038%</td></tr>
+</tbody></table>
+</div>
+<h4 id="octava--2"><a class="header" href="#octava--2">Octava -2</a></h4>
+<div class="table-wrapper"><table><thead><tr><th>NOTA</th><th>NOTA</th><th style="text-align: center">Frecuencia</th><th style="text-align: center">PERIODO</th><th>Error Relativo</th></tr></thead><tbody>
+<tr><td>C</td><td>DO</td><td style="text-align: center">65.406</td><td style="text-align: center">956</td><td>+0.046%</td></tr>
+<tr><td>C#</td><td>DO#</td><td style="text-align: center">69.296</td><td style="text-align: center">902</td><td>+0.007%</td></tr>
+<tr><td>D</td><td>RE</td><td style="text-align: center">73.416</td><td style="text-align: center">851</td><td>-0.037%</td></tr>
+<tr><td>D#</td><td>RE#</td><td style="text-align: center">77.782</td><td style="text-align: center">804</td><td>+0.058%</td></tr>
+<tr><td>E</td><td>MI</td><td style="text-align: center">82.407</td><td style="text-align: center">758</td><td>-0.057%</td></tr>
+<tr><td>F</td><td>FA</td><td style="text-align: center">87.307</td><td style="text-align: center">716</td><td>+0.019%</td></tr>
+<tr><td>F#</td><td>FA#</td><td style="text-align: center">92.499</td><td style="text-align: center">676</td><td>+0.046%</td></tr>
+<tr><td>G</td><td>SOL</td><td style="text-align: center">97.999</td><td style="text-align: center">638</td><td>+0.037%</td></tr>
+<tr><td>G#</td><td>SOL#</td><td style="text-align: center">103.826</td><td style="text-align: center">602</td><td>+0.005%</td></tr>
+<tr><td>A</td><td>LA</td><td style="text-align: center">110.000</td><td style="text-align: center">568</td><td>-0.032%</td></tr>
+<tr><td>A#</td><td>LA#</td><td style="text-align: center">116.541</td><td style="text-align: center">536</td><td>-0.055%</td></tr>
+<tr><td>B</td><td>SI</td><td style="text-align: center">123.471</td><td style="text-align: center">506</td><td>-0.038%</td></tr>
+</tbody></table>
+</div>
+<h4 id="octava--1"><a class="header" href="#octava--1">Octava -1</a></h4>
+<div class="table-wrapper"><table><thead><tr><th>NOTA</th><th>NOTA</th><th style="text-align: center">Frecuencia</th><th style="text-align: center">PERIODO</th><th>Error Relativo</th></tr></thead><tbody>
+<tr><td>C</td><td>DO</td><td style="text-align: center">130.813</td><td style="text-align: center">478</td><td>+0.046%</td></tr>
+<tr><td>C#</td><td>DO#</td><td style="text-align: center">138.591</td><td style="text-align: center">451</td><td>+0.007%</td></tr>
+<tr><td>D</td><td>RE</td><td style="text-align: center">146.832</td><td style="text-align: center">426</td><td>+0.081%</td></tr>
+<tr><td>D#</td><td>RE#</td><td style="text-align: center">155.564</td><td style="text-align: center">402</td><td>+0.058%</td></tr>
+<tr><td>E</td><td>MI</td><td style="text-align: center">164.814</td><td style="text-align: center">379</td><td>-0.057%</td></tr>
+<tr><td>F</td><td>FA</td><td style="text-align: center">174.614</td><td style="text-align: center">358</td><td>+0.019%</td></tr>
+<tr><td>F#</td><td>FA#</td><td style="text-align: center">184.997</td><td style="text-align: center">338</td><td>+0.046%</td></tr>
+<tr><td>G</td><td>SOL</td><td style="text-align: center">195.998</td><td style="text-align: center">319</td><td>+0.037%</td></tr>
+<tr><td>G#</td><td>SOL#</td><td style="text-align: center">207.652</td><td style="text-align: center">301</td><td>+0.005%</td></tr>
+<tr><td>A</td><td>LA</td><td style="text-align: center">220.000</td><td style="text-align: center">284</td><td>-0.032%</td></tr>
+<tr><td>A#</td><td>LA#</td><td style="text-align: center">233.082</td><td style="text-align: center">268</td><td>-0.055%</td></tr>
+<tr><td>B</td><td>SI</td><td style="text-align: center">246.942</td><td style="text-align: center">253</td><td>-0.038%</td></tr>
+</tbody></table>
+</div>
+<h4 id="octava-0"><a class="header" href="#octava-0">Octava 0</a></h4>
+<div class="table-wrapper"><table><thead><tr><th>NOTA</th><th>NOTA</th><th style="text-align: center">Frecuencia</th><th style="text-align: center">PERIODO</th><th>Error Relativo</th></tr></thead><tbody>
+<tr><td>C</td><td>DO (1)</td><td style="text-align: center">261.626</td><td style="text-align: center">239</td><td>+0.046%</td></tr>
+<tr><td>C#</td><td>DO#</td><td style="text-align: center">277.183</td><td style="text-align: center">225</td><td>-0.215%</td></tr>
+<tr><td>D</td><td>RE</td><td style="text-align: center">293.665</td><td style="text-align: center">213</td><td>+0.081%</td></tr>
+<tr><td>D#</td><td>RE#</td><td style="text-align: center">311.127</td><td style="text-align: center">201</td><td>+0.058%</td></tr>
+<tr><td>E</td><td>MI</td><td style="text-align: center">329.628</td><td style="text-align: center">190</td><td>+0.206%</td></tr>
+<tr><td>F</td><td>FA</td><td style="text-align: center">349.228</td><td style="text-align: center">179</td><td>+0.019%</td></tr>
+<tr><td>F#</td><td>FA#</td><td style="text-align: center">369.994</td><td style="text-align: center">169</td><td>+0.046%</td></tr>
+<tr><td>G</td><td>SOL</td><td style="text-align: center">391.995</td><td style="text-align: center">159</td><td>-0.277%</td></tr>
+<tr><td>G#</td><td>SOL#</td><td style="text-align: center">415.305</td><td style="text-align: center">150</td><td>-0.328%</td></tr>
+<tr><td>A</td><td>LA (2)</td><td style="text-align: center">440.000</td><td style="text-align: center">142</td><td>-0.032%</td></tr>
+<tr><td>A#</td><td>LA#</td><td style="text-align: center">466.164</td><td style="text-align: center">134</td><td>-0.055%</td></tr>
+<tr><td>B</td><td>SI</td><td style="text-align: center">493.883</td><td style="text-align: center">127</td><td>+0.356%</td></tr>
+</tbody></table>
+</div>
+<p>(1) DO media.</p>
+<p>(2) LA internacional.</p>
+<h4 id="octava-1"><a class="header" href="#octava-1">Octava 1</a></h4>
+<div class="table-wrapper"><table><thead><tr><th>NOTA</th><th>NOTA</th><th style="text-align: center">Frecuencia</th><th style="text-align: center">PERIODO</th><th>Error Relativo</th></tr></thead><tbody>
+<tr><td>C</td><td>DO</td><td style="text-align: center">523.251</td><td style="text-align: center">119</td><td>-0.374%</td></tr>
+<tr><td>C#</td><td>DO#</td><td style="text-align: center">554.365</td><td style="text-align: center">113</td><td>+0.229%</td></tr>
+<tr><td>D</td><td>RE</td><td style="text-align: center">587.330</td><td style="text-align: center">106</td><td>-0.390%</td></tr>
+<tr><td>D#</td><td>RE#</td><td style="text-align: center">622.254</td><td style="text-align: center">100</td><td>-0.441%</td></tr>
+<tr><td>E</td><td>MI</td><td style="text-align: center">659.255</td><td style="text-align: center">95</td><td>+0.206%</td></tr>
+<tr><td>F</td><td>FA</td><td style="text-align: center">698.457</td><td style="text-align: center">89</td><td>-0.543%</td></tr>
+<tr><td>F#</td><td>FA#</td><td style="text-align: center">739.989</td><td style="text-align: center">84</td><td>-0.548%</td></tr>
+<tr><td>G</td><td>SOL</td><td style="text-align: center">783.991</td><td style="text-align: center">80</td><td>+0.350%</td></tr>
+<tr><td>G#</td><td>SOL#</td><td style="text-align: center">830.609</td><td style="text-align: center">75</td><td>-0.328%</td></tr>
+<tr><td>A</td><td>LA</td><td style="text-align: center">880.000</td><td style="text-align: center">71</td><td>-0.032%</td></tr>
+<tr><td>A#</td><td>LA#</td><td style="text-align: center">932.328</td><td style="text-align: center">67</td><td>-0.055%</td></tr>
+<tr><td>B</td><td>SI</td><td style="text-align: center">987.767</td><td style="text-align: center">63</td><td>-0.435%</td></tr>
+</tbody></table>
+</div>
+<h4 id="octava-2"><a class="header" href="#octava-2">Octava 2</a></h4>
+<div class="table-wrapper"><table><thead><tr><th>NOTA</th><th>NOTA</th><th style="text-align: center">Frecuencia</th><th style="text-align: center">PERIODO</th><th>Error Relativo</th></tr></thead><tbody>
+<tr><td>C</td><td>DO</td><td style="text-align: center">1046.502</td><td style="text-align: center">60</td><td>+0.462%</td></tr>
+<tr><td>C#</td><td>DO#</td><td style="text-align: center">1108.731</td><td style="text-align: center">56</td><td>-0.662%</td></tr>
+<tr><td>D</td><td>RE</td><td style="text-align: center">1174.659</td><td style="text-align: center">53</td><td>-0.390%</td></tr>
+<tr><td>D#</td><td>RE#</td><td style="text-align: center">1244.508</td><td style="text-align: center">50</td><td>-0.441%</td></tr>
+<tr><td>E</td><td>MI</td><td style="text-align: center">1318.510</td><td style="text-align: center">47</td><td>-0.855%</td></tr>
+<tr><td>F</td><td>FA</td><td style="text-align: center">1396.913</td><td style="text-align: center">45</td><td>+0.574%</td></tr>
+<tr><td>F#</td><td>FA#</td><td style="text-align: center">1479.978</td><td style="text-align: center">42</td><td>-0.548%</td></tr>
+<tr><td>G</td><td>SOL</td><td style="text-align: center">1567.982</td><td style="text-align: center">40</td><td>+0.350%</td></tr>
+<tr><td>G#</td><td>SOL#</td><td style="text-align: center">1661.219</td><td style="text-align: center">38</td><td>+0.992%</td></tr>
+<tr><td>A</td><td>LA</td><td style="text-align: center">1760.000</td><td style="text-align: center">36</td><td>+1.357%</td></tr>
+<tr><td>A#</td><td>LA#</td><td style="text-align: center">1864.655</td><td style="text-align: center">34</td><td>+1.417%</td></tr>
+<tr><td>B</td><td>SI</td><td style="text-align: center">1975.533</td><td style="text-align: center">32</td><td>+1.134%</td></tr>
+</tbody></table>
+</div>
+<h4 id="octava-3"><a class="header" href="#octava-3">Octava 3</a></h4>
+<div class="table-wrapper"><table><thead><tr><th>NOTA</th><th>NOTA</th><th style="text-align: center">Frecuencia</th><th style="text-align: center">PERIODO</th><th>Error Relativo</th></tr></thead><tbody>
+<tr><td>C</td><td>DO</td><td style="text-align: center">2093.004</td><td style="text-align: center">30</td><td>+0.462%</td></tr>
+<tr><td>C#</td><td>DO#</td><td style="text-align: center">2217.461</td><td style="text-align: center">28</td><td>-0.662%</td></tr>
+<tr><td>D</td><td>RE</td><td style="text-align: center">2349.318</td><td style="text-align: center">27</td><td>+1.469%</td></tr>
+<tr><td>D#</td><td>RE#</td><td style="text-align: center">2489.016</td><td style="text-align: center">25</td><td>-0.441%</td></tr>
+<tr><td>E</td><td>MI</td><td style="text-align: center">2637.021</td><td style="text-align: center">24</td><td>+1.246%</td></tr>
+<tr><td>F</td><td>FA</td><td style="text-align: center">2793.826</td><td style="text-align: center">22</td><td>-1.685%</td></tr>
+<tr><td>F#</td><td>FA#</td><td style="text-align: center">2959.955</td><td style="text-align: center">21</td><td>-0.548%</td></tr>
+<tr><td>G</td><td>SOL</td><td style="text-align: center">3135.963</td><td style="text-align: center">20</td><td>+0.350%</td></tr>
+<tr><td>G#</td><td>SOL#</td><td style="text-align: center">3322.438</td><td style="text-align: center">19</td><td>+0.992%</td></tr>
+<tr><td>A</td><td>LA</td><td style="text-align: center">3520.000</td><td style="text-align: center">18</td><td>+1.357%</td></tr>
+<tr><td>A#</td><td>LA#</td><td style="text-align: center">3729.310</td><td style="text-align: center">17</td><td>+1.417%</td></tr>
+<tr><td>B</td><td>SI</td><td style="text-align: center">3951.066</td><td style="text-align: center">16</td><td>+1.134%</td></tr>
+</tbody></table>
+</div>
+<p>Estas frecuencias han sido calculadas a partir de la correspondiente a la nota LA internacional mediante la siguiente fórmula:</p>
+<ul>
+<li>FRECUENCIA = 440*(2↑(OCTAVA+((N-10)/12)))</li>
+<li>PERIODO = ROUND(62500/FRECUENCIA)</li>
+</ul>
+<p>donde <strong>N</strong> es 1 para DO, 2 para DO#, etc.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="7.05.-Esquemas-de-teclado.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="7.07.-Mensajes-de-error-de-BASIC.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="7.05.-Esquemas-de-teclado.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="7.07.-Mensajes-de-error-de-BASIC.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

@@ -1,0 +1,1483 @@
+<!DOCTYPE HTML>
+<html lang="es" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Más en concreto sobre el CPC6128 - Amstrad CPC6128 Manual del Usuario</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="Manual de usuario del micro ordenenador Amstrad modelo CPC6128">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Home.html">Inicio</a></li><li class="chapter-item expanded affix "><a href="0.01.-Introducción.html">Introducción</a></li><li class="chapter-item expanded affix "><a href="0.02.-Importante.html">Importante</a></li><li class="chapter-item expanded "><a href="1.00.-Capítulo-1.-Curso-de-introducción.html"><strong aria-hidden="true">1.</strong> Curso se introducción</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="1.01.-Instalación-y-mantenimiento.html"><strong aria-hidden="true">1.1.</strong> Instalación y mantenimiento</a></li><li class="chapter-item expanded "><a href="1.02.-Conexión-de-los-periféricos.html"><strong aria-hidden="true">1.2.</strong> Conexión de los periféricos</a></li><li class="chapter-item expanded "><a href="1.03.-En-cuanto-a-los-discos.html"><strong aria-hidden="true">1.3.</strong> En cuanto a los discos</a></li><li class="chapter-item expanded "><a href="1.04.-Manos-al-teclado.html"><strong aria-hidden="true">1.4.</strong> Manos al teclado</a></li><li class="chapter-item expanded "><a href="1.05.-Carga-de-programas.html"><strong aria-hidden="true">1.5.</strong> Carga de programas</a></li><li class="chapter-item expanded "><a href="1.06.-Empecemos-a-trabajar.html"><strong aria-hidden="true">1.6.</strong> Empecemos a trabajar</a></li><li class="chapter-item expanded "><a href="1.07.-Grábelo-en-disco.html"><strong aria-hidden="true">1.7.</strong> Grábelo en disco</a></li><li class="chapter-item expanded "><a href="1.08.-Introducción-a-los-modos-de-pantalla,-colores-y-gráficos.html"><strong aria-hidden="true">1.8.</strong> Introducción a los modos de pantalla, colores y gráficos</a></li><li class="chapter-item expanded "><a href="1.09.-Sonidos.html"><strong aria-hidden="true">1.9.</strong> Sonidos</a></li><li class="chapter-item expanded "><a href="1.10.-Introducción-a-los-sistemas-operativos-AMSDOS-y-CPM.html"><strong aria-hidden="true">1.10.</strong> Introducción a los sistemas operativos AMSDOS y CPM</a></li><li class="chapter-item expanded "><a href="1.11.-Introducción-al-gestor-de-bancos-de-memoria.html"><strong aria-hidden="true">1.11.</strong> Introducción al gestor de bancos de memoria</a></li></ol></li><li class="chapter-item expanded "><a href="2.01.-La-génesis-de-un-programa.html"><strong aria-hidden="true">2.</strong> La génesis de un programa</a></li><li class="chapter-item expanded "><a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html"><strong aria-hidden="true">3.</strong> Lista completa de las palabras clave del BASIC de AMSTRAD</a></li><li class="chapter-item expanded "><a href="4.00.-Capítulo-4.-Discos-y-cintas.html"><strong aria-hidden="true">4.</strong> Discos y cintas</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="4.01.-Discos.html"><strong aria-hidden="true">4.1.</strong> Parte 1: Discos</a></li><li class="chapter-item expanded "><a href="4.02.-Cintas.html"><strong aria-hidden="true">4.2.</strong> Parte 2: Cintas</a></li></ol></li><li class="chapter-item expanded "><a href="5.00.-Capítulo-5.-AMSDOS-y-CP-M.html"><strong aria-hidden="true">5.</strong> AMSDOS y CP/M</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="5.01.-AMSDOS.html"><strong aria-hidden="true">5.1.</strong> Parte 1: AMSDOS</a></li><li class="chapter-item expanded "><a href="5.02.-CP-M.html"><strong aria-hidden="true">5.2.</strong> Parte 2: CP/M</a></li></ol></li><li class="chapter-item expanded "><a href="6.01.-Introducción-a-LOGO.html"><strong aria-hidden="true">6.</strong> Introducción a LOGO</a></li><li class="chapter-item expanded "><a href="7.00.-Capítulo-7.-Para-su-referencia.html"><strong aria-hidden="true">7.</strong> Para su referencia</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="7.01.-Posiciones-del-cursor-y-códigos-ampliados-de-control-en-BASIC.html"><strong aria-hidden="true">7.1.</strong> Posiciones del cursor y códigos ampliados de control en BASIC</a></li><li class="chapter-item expanded "><a href="7.02.-El-sistema-operativo.html"><strong aria-hidden="true">7.2.</strong> El sistema operativo</a></li><li class="chapter-item expanded "><a href="7.03.-Interrupciones.html"><strong aria-hidden="true">7.3.</strong> Interrupciones</a></li><li class="chapter-item expanded "><a href="7.04.-Caracteres-ASCII-y-caracteres-gráficos-en-BASIC.html"><strong aria-hidden="true">7.4.</strong> Caracteres ASCII y caracteres gráficos en BASIC</a></li><li class="chapter-item expanded "><a href="7.05.-Esquemas-de-teclado.html"><strong aria-hidden="true">7.5.</strong> Esquemas de teclado</a></li><li class="chapter-item expanded "><a href="7.06.-Sonidos.html"><strong aria-hidden="true">7.6.</strong> Sonidos</a></li><li class="chapter-item expanded "><a href="7.07.-Mensajes-de-error-de-BASIC.html"><strong aria-hidden="true">7.7.</strong> Mensajes de error de BASIC</a></li><li class="chapter-item expanded "><a href="7.08.-Palabras-reservadas-de-BASIC.html"><strong aria-hidden="true">7.8.</strong> Palabras reservadas de BASIC</a></li><li class="chapter-item expanded "><a href="7.09.-Plantillas.html"><strong aria-hidden="true">7.9.</strong> Plantillas</a></li><li class="chapter-item expanded "><a href="7.10.-Conexiones.html"><strong aria-hidden="true">7.10.</strong> Conexiones</a></li><li class="chapter-item expanded "><a href="7.11.-Impresoras.html"><strong aria-hidden="true">7.11.</strong> Impresoras</a></li><li class="chapter-item expanded "><a href="7.12.-Joysticks.html"><strong aria-hidden="true">7.12.</strong> Joysticks</a></li><li class="chapter-item expanded "><a href="7.13.-Organización-de-los-discos.html"><strong aria-hidden="true">7.13.</strong> Organización de los discos</a></li><li class="chapter-item expanded "><a href="7.14.-Ampliaciones-del-sistema-residentes-RSX.html"><strong aria-hidden="true">7.14.</strong> Ampliaciones del sistema residentes RSX</a></li><li class="chapter-item expanded "><a href="7.15.-Memoria.html"><strong aria-hidden="true">7.15.</strong> Memoria</a></li><li class="chapter-item expanded "><a href="7.16.-Emulador-de-consola-CP-M-Plus.html"><strong aria-hidden="true">7.16.</strong> Emulador de consola CP/M Plus</a></li><li class="chapter-item expanded "><a href="7.17.-Juego-de-caracteres-de-CP-M-Plus.html"><strong aria-hidden="true">7.17.</strong> Juego de caracteres de CP-M Plus</a></li></ol></li><li class="chapter-item expanded "><a href="8.00.-Capítulo-8.-Más-sobre-el-gestor-de-bancos-de-memoria.html"><strong aria-hidden="true">8.</strong> Más sobre el gestor de bancos de memoria</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="8.01.-Almacenamiento-de-imágenes-de-pantalla.html"><strong aria-hidden="true">8.1.</strong> Almacenamiento de imágenes de pantalla</a></li><li class="chapter-item expanded "><a href="8.02.-Ficheros-en-RAM.html"><strong aria-hidden="true">8.2.</strong> Ficheros en RAM</a></li></ol></li><li class="chapter-item expanded "><a href="9.00.-Capítulo-9.-Cuando-usted-guste.html"><strong aria-hidden="true">9.</strong> Cuando usted guste</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="9.01.-En-términos-generales.html"><strong aria-hidden="true">9.1.</strong> En términos generales</a></li><li class="chapter-item expanded "><a href="9.02.-Más-en-concreto-sobre-el-CPC6128.html" class="active"><strong aria-hidden="true">9.2.</strong> Más en concreto sobre el CPC6128</a></li></ol></li><li class="chapter-item expanded "><a href="10.0.-Para-más-información.html"><strong aria-hidden="true">10.</strong> Para más información</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 1</li><li class="chapter-item expanded "><a href="A01.-Digital-Research-y-AMSTRAD.html"><strong aria-hidden="true">11.</strong> Digital Research y AMSTRAD</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 2</li><li class="chapter-item expanded "><a href="A02.-Léxico-inglés-castellano-y-glosario.html"><strong aria-hidden="true">12.</strong> Léxico inglés-castellano y glosario</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 3. Que usted lo disfrute</li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Rebotes.html"><strong aria-hidden="true">13.</strong> Rebotes</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Bombardero.html"><strong aria-hidden="true">14.</strong> Bombardero</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Tele-tenis.html"><strong aria-hidden="true">15.</strong> Tele tenis</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Esgrima-eléctrico.html"><strong aria-hidden="true">16.</strong> Esgrima eléctrico</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Amthello.html"><strong aria-hidden="true">17.</strong> Amthello</a></li><li class="chapter-item expanded "><a href="A03.-Que-usted-lo-disfrute.-Guante-blanco.html"><strong aria-hidden="true">18.</strong> Guante blanco</a></li><li class="chapter-item expanded affix "><li class="part-title">Apéndice 4</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="A04.-Indice.html">Índice</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Amstrad CPC6128 Manual del Usuario</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/latchdevel/Amstrad-CPC6128-Manual-del-Usuario" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="capítulo-9-cuando-usted-guste"><a class="header" href="#capítulo-9-cuando-usted-guste">Capítulo 9. Cuando usted guste</a></h1>
+<h2 id="parte-2-más-en-concreto-sobre-el-cpc6128"><a class="header" href="#parte-2-más-en-concreto-sobre-el-cpc6128">Parte 2: Más en concreto sobre el CPC6128</a></h2>
+<p><strong>Contenido:</strong></p>
+<ul>
+<li><a href="#caracteres">Caracteres</a>.</li>
+<li><a href="#vamos-a-verlos">Vamos a verlos</a>.</li>
+<li><a href="#c%C3%B3mo-sabemos-que-es-una-variable">¿Cómo sabemos que es una variable?</a>.</li>
+<li><a href="#l%C3%B3gica">Lógica</a>.</li>
+<li><a href="#caracteres-definidos-por-el-usuario">Caracteres definidos por el usuario</a></li>
+<li><a href="#la-imprenta">La imprenta</a>.</li>
+<li><a href="#formato-de-escritura">Formato de escritura</a>.</li>
+<li><a href="#ventanas">Ventanas</a>.</li>
+<li><a href="#interrupciones">Interrupciones</a>.</li>
+<li><a href="#listas-de-datos">Listas de datos</a>.</li>
+<li><a href="#el-sonido-de-la-m%C3%BAsica">El sonido de la música</a>.</li>
+<li><a href="#dicho-gr%C3%A1ficamente">Dicho gráficamente</a>.</li>
+<li><a href="#l%C3%ADneas-discontinuas">Líneas discontinuas</a>.</li>
+<li><a href="#caracteres-transparentes">Caracteres transparentes</a>.</li>
+<li><a href="#modos-de-tinta">Modos de tinta</a>.</li>
+<li><a href="#animaci%C3%B3n">Animación</a>.</li>
+<li><a href="#sprites">Sprites</a>.</li>
+<li><a href="#gr%C3%A1ficos-con-el-segundo-banco-de-64k-de-ram">Gráficos con el segundo banco de 64K de RAM</a>.</li>
+</ul>
+<hr />
+<p>En esta sección vamos a tratar algunas cuestiones específicas del CPC6128. La información básica sobre estos temas se puede encontrar en el <a href="1.00.-Cap%C3%ADtulo-1.-Curso-de-introducci%C3%B3n.html">Curso de introducción</a> y en el capítulo titulado <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html">Lista completa de las palabras clave del BASIC de Amstrad</a>. </p>
+<p>Temas tratados en esta sección:</p>
+<ul>
+<li>Juegos de caracteres.</li>
+<li>ASCII.</li>
+<li>Variables.</li>
+<li>Lógica.</li>
+<li>Caracteres definidos por el usuario.</li>
+<li>Formatos de escritura.</li>
+<li>Ventanas.</li>
+<li>Interrupciones.</li>
+<li>Datos.</li>
+<li>Sonido.</li>
+<li>Gráficos.</li>
+<li>Utilización del segundo banco de 64K de RAM.</li>
+</ul>
+<h3 id="caracteres"><a class="header" href="#caracteres">Caracteres</a></h3>
+<p>Cuando se ponga al teclado de su CPC6128, no dé por supuesto que en la pantalla vayan a aparecer letras y números reconocibles. Ya hemos explicado que el ordenador no es una máquina de escribir. Lo que usted hace es pulsar una serie de conmutadores eléctricos; las señales eléctricas así producidas son traducidas por los circuitos internos para enviar a la pantalla grupos de puntos. Según sea la colocación de esos puntos, podremos reconocer letras, números u otros caracteres del &quot;juego de caracteres&quot; del CPC6128. </p>
+<p>Algunos de estos caracteres no son accesibles directamente a través del teclado, sino mediante la instrucción <strong>PRINT CHR$(</strong>&lt;número&gt;<strong>)</strong>. Esto es así porque la información se almacena en el ordenador en unidades de 1 byte y, como vimos en la <a href="9.01.-En-t%C3%A9rminos-generales.html">parte 1</a> de <a href="9.00.-Cap%C3%ADtulo-9.-Cuando-usted-guste.html">este capítulo</a>, 1 byte puede tener 256 formas posibles. Dado que el ordenador tiene que dedicar al menos un byte a cada carácter almacenado, más vale que aprovechemos las 256 combinaciones posibles en lugar de conformarnos con los 96 &quot;caracteres estándar&quot; de las máquinas de escribir y desperdiciar los 160 restantes.</p>
+<p>Los caracteres estándar son un subconjunto del juego total de caracteres. Su nombre en informática es &quot;caracteres ASCII&quot;, término derivado de &quot;American Standard Code for Information Interchange&quot; (código estándar norteamericano para el intercambio de la información). Se trata de un sistema diseñado para asegurar la compatibilidad de los datos transmitidos de un ordenador a otro. En el <a href="7.00.-Cap%C3%ADtulo-7.-Para-su-referencia.html">capítulo 7</a> hemos dado la <a href="7.04.-Caracteres-ASCII-y-caracteres-gr%C3%A1ficos-en-BASIC.html">lista de todos los caracteres ASCII</a>, así como de los demás caracteres disponibles en el CPC6128, junto a sus números de código. </p>
+<h3 id="vamos-a-verlos"><a class="header" href="#vamos-a-verlos">Vamos a verlos</a></h3>
+<p>Seguramente ya no encierra ningún secreto para usted un programa tan sencillo como éste: </p>
+<pre><code class="language-basic">10 FOR n=32 TO 255
+20 PRINT CHR$(n);
+30 NEXT
+</code></pre>
+<p>con el que hacemos que el ordenador muestre en la pantalla el juego completo de caracteres. Pero estudiemos un poco la esencia de este programa. </p>
+<p>Lo primero que debemos observar es que al ordenador no le hemos dicho <strong>PRINT &quot;abcdefghijklmn ...&quot;</strong>, sino <strong>PRINT CHR$(n)</strong>. En vez de mencionar explícitamente los caracteres hemos puesto en su lugar una &quot;variable&quot;. Una <em>variable</em> es un elemento de información que varía según impongan las instrucciones del programa. (El nombre que hemos dado a la variable en este caso, <strong>n</strong>, es arbitrario; podríamos haber puesto cualquier letra o combinación de letras, cualquier cosa que no fuera una palabra reservada de BASIC.) </p>
+<h3 id="cómo-sabemos-que-es-una-variable"><a class="header" href="#cómo-sabemos-que-es-una-variable">¿Cómo sabemos que es una variable?</a></h3>
+<p>Un número tal como el 5 es fijo, está entre el 4 y el 6 y no tiene nada de variable. El carácter <strong>n</strong> también es fijo: es una letra concreta del alfabeto. </p>
+<p>Entonces, ¿cómo distingue el ordenador las variables de las constantes? Si hubiéramos querido decirle que considerara la <strong>n</strong> como letra del alfabeto, la habríamos escrito entre comillas: <strong>&quot;n&quot;</strong>. El ordenador habría respondido con el mensaje <strong>Syntax error</strong>, porque no entendería la línea <strong>FOR &quot;n&quot;=32 TO 255</strong>. </p>
+<p>Al escribir la <strong>n</strong> sin comillas le hemos dicho al ordenador que <strong>n</strong> es una variable. La instrucción <strong>FOR</strong> de BASIC tiene que ir seguida del nombre de una variable, y el ordenador da por supuesto que lo que pongamos después de <strong>FOR</strong> es una variable. </p>
+<p>También le hemos dicho al ordenador <strong>n=32 TO 255</strong>, con lo que hemos especificado el margen de variación de la variable: una sucesión que empieza en 32 y termina en 255. </p>
+<p>Una vez declarada la variable, debemos decirle al ordenador qué tiene que hacer con ella; eso es lo que hace la línea 20: </p>
+<pre><code class="language-basic">20 PRINT CHR$(n);
+</code></pre>
+<p>Esta instrucción hace que el ordenador, cualquiera que sea el valor de <strong>n</strong>, busque en su memoria el carácter que corresponde a ese valor y lo escriba en la pantalla. </p>
+<p>El punto y coma impide que el ordenador realice un retorno de carro y avance de línea después de escribir cada carácter. (De no ser así, los caracteres aparecerían uno debajo de otro en la primera columna de cada línea.)</p>
+<p>La línea 30 le dice al ordenador que cuando haya concluido la tarea con el primer valor de <strong>n</strong> (que es el 32) debe retornar a la línea en la que está <strong>FOR</strong> y volver a hacer lo mismo con el siguiente (<strong>NEXT</strong>) valor de la variable <strong>n</strong>. Este mecanismo, denominado &quot;bucle&quot;, es fundamental para la programación. Gracias a él nos ahorramos el tener que escribir largas series de instrucciones similares. Usted aprenderá enseguida a incluirlo en sus programas. </p>
+<p>Cuando el bucle <strong>FOR ... NEXT</strong> alcanza el límite superior del margen declarado (255), el bucle termina y el ordenador vuelve al modo directo y muestra el mensaje <strong>Ready</strong>. Este mensaje indica que el ordenador está preparado para recibir más instrucciones, una de las cuales podría ser <strong>RUN</strong>, para ejecutar otra vez el programa. El programa está almacenado en la memoria y lo seguirá estando hasta que le digamos al ordenador que lo borre o apaguemos la máquina. </p>
+<p>Este programa ilustra un hecho esencial de la informática: todo lo que el ordenador hace está relacionado con números. El ordenador ha escrito el alfabeto y todos los demás caracteres usando como referencia para acceder a ellos un número. Cuando usted pulsa la tecla A, no le está pidiendo al ordenador que escriba esa letra, sino que busque en su memoria la información numérica que necesita para exhibir el carácter en la pantalla. La localización de esa información es función del código numérico que se activa al pulsar la tecla. (Cada carácter tiene un código asociado; la <a href="7.05.-Esquemas-de-teclado.html">relación completa</a> se da en el capítulo titulado <a href="7.00.-Cap%C3%ADtulo-7.-Para-su-referencia.html">Para su referencia</a>.)</p>
+<p>Pero tampoco el hecho de visualizar el carácter tiene nada que ver con &quot;escribir&quot;, sino que es un proceso numérico.</p>
+<p>Por ejemplo, el código ASCII de la letra A es el 65. El ordenador tampoco entiende el número 65, por lo que tiene que traducirlo de decimal a una forma que le resulte más familiar: el código de máquina. Ya hemos estudiado los principios de esta conversión en la primera parte de <a href="9.01.-En-t%C3%A9rminos-generales.html">este capítulo</a>. </p>
+<p>Al principio, la conversión de la notación decimal, a la que estamos tan acostumbrados, a notación hexadecimal nos parece muy difícil. Pensar en números decimales nos parece tan natural que cambiar de sistema de numeración es como cambiar de mano el tenedor y el cuchillo.</p>
+<p>Para manejar la notación hexadecimal es necesario adquirir cierto grado de destreza mental. Una vez adquirida, se empieza a entender el por qué de muchos hechos informáticos y se hace patente la elegancia de la estructura de este sistema de numeración.</p>
+<p>Si no conoce los sistemas binario y hexadecimal, le sugerimos que lea detenidamente la <a href="9.01.-En-t%C3%A9rminos-generales.html#bits-y-bytes">primera parte</a> de <a href="9.00.-Cap%C3%ADtulo-9.-Cuando-usted-guste.html">este capítulo</a>. </p>
+<p>Cuando el ordenador ha convertido la pulsación de la tecla A en un número comprensible para él, busca en una zona de la memoria especificada por ese número, y en ella encuentra otra serie de números que describen la forma de la letra. El carácter que usted puede ver en la pantalla está formado por un bloque de datos, almacenado en la memoria en forma de &quot;matriz&quot; numérica: </p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Matriz en blanco (retícula)</th><th style="text-align: center">a minúscula</th><th style="text-align: center">A mayúscula</th></tr></thead><tbody>
+<tr><td style="text-align: center"><img src="svg/char_032.svg" alt="" /></td><td style="text-align: center"><img src="svg/char_097.svg" alt="" /></td><td style="text-align: center"><img src="svg/char_065.svg" alt="" /></td></tr>
+</tbody></table>
+</div>
+<p>Los elementos de la matriz son puntos dispuestos en filas columnas. El carácter se &quot;escribe&quot; encendiendo y apagando correctamente los puntos. En el CPC6128 cada matriz tiene 8 filas y 8 columnas. Si entre los 255 caracteres no encuentra el que necesita, usted mismo puede definirlo a su gusto con la instrucción <strong>SYMBOL</strong> que describiremos más adelante.</p>
+<p>Los caracteres &quot;definidos por el usuario&quot; se construyen especificando cada uno de los 64 puntos de la matriz. Las combinaciones posibles con 1.84467E+19, es decir, aproximadamente un 2 seguido de 19 ceros. Si a esto añadimos la posibilidad de agrupar caracteres para formar bloques más grandes, vemos que las posibilidades de generar gráficos sólo están limitadas por la imaginación del usuario. </p>
+<h3 id="lógica"><a class="header" href="#lógica">Lógica</a></h3>
+<p>Una diferencia fundamental entre una calculadora y un ordenador radica en la capacidad de éste para manejar operaciones lógicas y tomar decisiones en instrucciones del tipo <strong>IF ... THEN ...</strong> (si ... entonces ...). Para ello, los operadores lógicos tratan los valores a los que son aplicados como grupos de bits y examinan y modifican los bits uno a uno. No es fácil describir las operaciones lógicas sin antes dar unas definiciones concisas.</p>
+<p>Las dos mitades de una expresión lógica son los &quot;argumentos&quot;. Una expresión lógica tiene la siguiente forma: </p>
+<p>&lt;argumento&gt; [&lt;operador lógico&gt; &lt;argumento&gt;]</p>
+<p>donde &lt;argumento&gt; puede ser: </p>
+<ul>
+<li><strong>NOT</strong> &lt;argumento&gt;</li>
+<li>&lt;expresión numérica&gt;</li>
+<li>&lt;expresión de relación&gt;</li>
+<li>(&lt;expresión lógica&gt;)</li>
+</ul>
+<p>Los dos argumentos de un operador lógico tienen que ser enteros; de lo contrario se produce el error número 6.</p>
+<p>Los operadores lógicos (en orden de prioridad) y su efecto sobre los bits son los siguientes: </p>
+<ul>
+<li><strong>AND</strong>. El resultado es 0 a menos que los bits de los dos argumentos sean 1.</li>
+<li><strong>OR</strong>. El resultado es 1 a menos que los bits de los dos argumentos sean 0.</li>
+<li><strong>XOR</strong>. El resultado es 1 a menos que los bits de los dos argumentos sean iguales. </li>
+</ul>
+<p><strong>AND</strong> es el operador lógico más utilizado. </p>
+<pre><code class="language-basic">PRINT 10 AND 10
+</code></pre>
+<p>da como resultado <strong>10</strong>.</p>
+<pre><code class="language-basic">PRINT 10 AND 12
+</code></pre>
+<p>da como resultado <strong>8</strong>.</p>
+<pre><code class="language-basic">PRINT 10 AND 1000
+</code></pre>
+<p>también da como resultado <strong>8</strong>.</p>
+<p>Esto se debe a que los números <strong>10</strong> y <strong>1000</strong> han sido convertidos a su forma binaria: </p>
+<pre><code>      1010
+1111101000
+</code></pre>
+<p>La operación <strong>AND</strong> comprueba los bits dos a dos. Si los dos bits de las dos filas son 1, el resultado es 1: </p>
+<pre><code>0000001000
+</code></pre>
+<p>y este número binario es el 8 decimal. El operador lógico <strong>AND</strong> se utiliza para detectar cuándo se cumplen simultáneamente dos condiciones. He aquí un ejemplo que explica como: </p>
+<pre><code class="language-basic">10 INPUT &quot;Dia del mes: &quot;,dia
+20 INPUT &quot;Mes número: &quot;,mes
+30 IF dia=25 AND mes=12 THEN 50
+40 CLS:GOTO 10
+50 PRINT &quot;Feliz Navidad!&quot;
+</code></pre>
+<p><strong>OR</strong> funciona de forma análoga, pero da como resultado 1 a no ser que los bits de los dos operandos sean 0, en cuyo caso el resultado es 0. Aplicado a los mismos números que en el ejemplo de <strong>AND</strong>, </p>
+<pre><code class="language-basic">PRINT 1000 OR 10
+1002
+</code></pre>
+<p>Bit a bit: </p>
+<pre><code>      1010
+1111101000
+</code></pre>
+<p>cuyo resultado es </p>
+<pre><code>1111101010
+</code></pre>
+<p>Un programa ejemplo: </p>
+<pre><code class="language-basic">10 CLS
+20 INPUT &quot;Mes número: &quot;,mes
+30 IF mes=12 OR mes=1 OR mes=2 THEN 50
+40 GOTO 10
+50 PRINT &quot;Estamos en invierno!&quot;
+</code></pre>
+<p>El operador <strong>NOT</strong> invierte todos los bits del argumento (convierte el 0 en 1, y viceversa): </p>
+<pre><code class="language-basic">10 CLS
+20 INPUT &quot;Mes número: &quot;,mes
+30 IF NOT(mes=6 OR mes=7 OR mes=8) THEN 50
+40 GOTO 10
+50 PRINT &quot;No estamos en verano!&quot;
+</code></pre>
+<p>Observe que se pueden combinar los operadores lógicos, sin más limitación que la longitud de la línea: </p>
+<pre><code class="language-basic">10 INPUT &quot;Dia del mes: &quot;,dia
+20 INPUT &quot;Mes número: &quot;,mes
+30 IF NOT(mes=12 OR mes=1) AND dia=29 THEN 50
+40 CLS:GOTO 10
+50 PRINT &quot;No es ni diciembre ni enero, pero puede ser un año bisiesto&quot;
+</code></pre>
+<p>El resultado de una expresión de relación es <strong>-1</strong> o <strong>0</strong>. La representación binaria del número <strong>-1</strong> es una sucesión de bits iguales a 1; para el <strong>0</strong>, todos los bits son 0. El resultado de una operación lógica entre argumentos de este tipo da <strong>–1</strong> (verdadero) o <strong>0</strong> (falso).</p>
+<p>Añada las siguientes líneas al programa anterior: </p>
+<pre><code class="language-basic">60 PRINT NOT(mes=12 OR mes=1)
+70 PRINT (mes=12 OR mes=1)
+</code></pre>
+<p>Si al ejecutar el programa introduce <strong>29</strong> para el día y <strong>2</strong> para el mes, obtendrá el mensaje de la línea 50, y las líneas 60 y 70 escribirán los resultados de las operaciones.</p>
+<p>Finalmente, <strong>XOR</strong> (<strong>OR</strong> e<strong>X</strong>clusivo) produce como resultado &quot;verdadero&quot; siempre que los argumentos sean diferentes. </p>
+<p>A continuación resumimos todo lo dicho en una tabla, denominada <em>tabla de verdad.</em> Es una forma muy clara de ilustrar qué sucede en una operación lógica bit a bit. </p>
+<pre><code>Argumento A:      1010
+Argumento B:      0110
+
+Resultado de AND: 0010
+Resultado de OR:  1110
+Resultado de XOR: 1100
+</code></pre>
+<h3 id="caracteres-definidos-por-el-usuario"><a class="header" href="#caracteres-definidos-por-el-usuario">Caracteres definidos por el usuario</a></h3>
+<p>Una de las primeras aplicaciones que el lector encontrará para los números binarios es el diseño de caracteres con la instrucción <strong>SYMBOL</strong>. Como sabemos, el carácter se diseña en una retícula de 8 por 8; cada una de las 8 filas se convierte en un número binario poniendo un 1 en lugar del pixel que debe ser iluminado, y un cero en lugar del pixel que debe quedar del color del papel. Los 8 números así obtenidos serán los parámetros de <strong>SYMBOL</strong>. Por ejemplo, para definir un carácter que representa una casa: </p>
+<p><img src="svg/c09-p02-i01.svg" alt="" /></p>
+<p>la orden es </p>
+<pre><code class="language-basic">SYMBOL 240,8,60,66,165,129,181,177,255
+</code></pre>
+<p>o bien </p>
+<pre><code class="language-basic">SYMBOL 240,&amp;08,&amp;3C,&amp;42,&amp;A5,&amp;81,&amp;B5,&amp;B1,&amp;FF
+</code></pre>
+<p>o bien </p>
+<pre><code class="language-basic">SYMBOL 240,&amp;X00001000,&amp;X00111100,&amp;X01000010,&amp;X10100101,&amp;X10000001,&amp;X10110101,&amp;X10110001,&amp;X11111111
+</code></pre>
+<p>Para escribir el carácter así definido: </p>
+<pre><code class="language-basic">PRINT CHR$(240)
+</code></pre>
+<p>Finalmente, para agrupar caracteres se puede hacer </p>
+<pre><code class="language-basic">adosado$=CHR$(240)+CHR$(240)
+PRINT adosado$
+</code></pre>
+<p>o bien </p>
+<pre><code class="language-basic">urbanizacion$=STRING$(15,240)
+PRINT urbanizacion$
+</code></pre>
+<h3 id="la-imprenta"><a class="header" href="#la-imprenta">La imprenta</a></h3>
+<p><strong>PRINT</strong> es la primera instrucción que se usa cuando se empieza a programar. En principio es muy sencilla, pero podemos complicarla considerablemente. En efecto, no basta con pedirle al ordenador que escriba, sino que también debemos decirle dónde y cómo. </p>
+<h3 id="formato-de-escritura"><a class="header" href="#formato-de-escritura">Formato de escritura</a></h3>
+<p>La instrucción <strong>PRINT</strong> se puede utilizar de diversas formas. La más sencilla es poner a su derecha el elemento que se desea escribir, que puede ser un número, una cadena literal o el nombre de una variable: </p>
+<pre><code class="language-basic">PRINT 3
+ 3
+</code></pre>
+<pre><code class="language-basic">PRINT &quot;hola&quot;
+hola 
+</code></pre>
+<pre><code class="language-basic">a=5
+PRINT a
+ 5
+</code></pre>
+<pre><code class="language-basic">a$=&quot;prueba&quot; 
+PRINT a$
+ prueba 
+</code></pre>
+<p>En una instrucción <strong>PRINT</strong> se pueden poner varios elementos, intercalando entre ellos un separador, o bien <strong>TAB</strong> o <strong>SPC</strong>. Los separadores pueden ser la coma o el punto y coma. El punto y coma hace que el siguiente elemento se escriba inmediatamente a continuación del que se acaba de escribir; la coma provoca el salto a la siguiente zona de escritura. La anchura implícita de la zona de escritura es <strong>13</strong>, pero se la puede modificar con la orden <strong>ZONE</strong>: </p>
+<pre><code class="language-basic">PRINT 3;-4;5
+ 3 -4  5
+</code></pre>
+<pre><code class="language-basic">PRINT &quot;buenos&quot;,&quot;dias&quot;
+ buenos             dias
+</code></pre>
+<pre><code class="language-basic">PRINT 3,-4,5
+ 3             -4              5
+</code></pre>
+<pre><code class="language-basic">ZONE 4
+PRINT 3,-4,5
+ 3    -4     5
+</code></pre>
+<p>Observe que los números positivos llevan un espacio a la izquierda, mientras que en los negativos ese espacio está ocupado por el signo –. Todos los números llevan un espacio en blanco a la derecha. Las cadenas se escriben literalmente tal como están entre las comillas.</p>
+<p>La función <strong>SPC</strong> lleva como parámetro una función numérica; &quot;escribe&quot; tantos espacios como indique el valor de la expresión. Si el valor es negativo, se toma el 0; si es mayor que la anchura de la ventana actual se toma esa anchura: </p>
+<pre><code class="language-basic">PRINT SPC(5)&quot;hola&quot;
+     hola
+</code></pre>
+<pre><code class="language-basic">x=3
+PRINT SPC(x*3)&quot;hola&quot;
+         hola
+</code></pre>
+<p><strong>TAB</strong> es similar, pero el número de espacios que escribe es el necesario para que el siguiente elemento se empiece a escribir en la columna especificada.</p>
+<p>La ventana en la que se escribe es la número <strong>0</strong>, a no ser que se especifique otro número de canal (#) antes de la lista de elementos. Se pueden especificar otros canales para enviar la salida a otras ventanas. Los canales <strong>8</strong> y <strong>9</strong> están reservados para la impresora y el disco (o cinta), respectivamente. (Obsérvese que para &quot;escribir&quot; en el canal <strong>#9</strong> se debe utilizar <strong>WRITE</strong> en lugar de <strong>PRINT</strong>.) </p>
+<pre><code class="language-basic">PRINT &quot;hola&quot;
+hola                    - ventana 0
+</code></pre>
+<pre><code class="language-basic">PRINT #0,&quot;hola&quot;
+hola                    - tambien ventana 0
+</code></pre>
+<pre><code class="language-basic">PRINT #4,&quot;hola&quot;
+hola                    - ventana 4 (primera linea de la pantalla)
+</code></pre>
+<pre><code class="language-basic">PRINT #8,&quot;hola&quot;
+hola                    - en la impresora (si esta conectada)
+</code></pre>
+<p>Con <strong>TAB</strong> y <strong>SPC</strong> se pueden controlar los formatos más sencillos, pero en cuanto el formato deseado sea un poco más complejo habrá que utilizar <strong>PRINT USING</strong> y una &quot;plantilla&quot; adecuada. Una plantilla de formato es una expresión literal que contiene caracteres especiales, cada uno de los cuales especifica un formato determinado. Estos caracteres, denominados &quot;especificadores de formato&quot;, están explicados en detalle en la descripción de <strong>PRINT USING</strong> (<a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#print-using">capítulo 3</a>). Aquí vamos a dar algunos ejemplos.</p>
+<p>En primer lugar, he aquí los formatos disponibles para escribir cadenas literales: </p>
+<p>&quot;        &quot;  escribe tantos caracteres como espacios haya en la plantilla, más dos: </p>
+<pre><code class="language-basic">PRINT USING &quot;      &quot;;&quot;cadena de prueba&quot;
+cadena d
+</code></pre>
+<p>&quot;!&quot; escribe solamente el primer carácter de la cadena: </p>
+<pre><code class="language-basic">PRINT USING &quot;!&quot;;&quot;cadena de prueba&quot;
+c
+</code></pre>
+<p>Pero el formato literal más útil es seguramente <strong>&quot;&amp;&quot;</strong>. Con él se anula una función de BASIC por la cual, si una cadena es demasiado larga como para caber en la línea actual, el ordenador la escribe al principio de la línea siguiente. <strong>PRINT USING &quot;&amp;&quot;</strong>; desactiva esa función. (En el siguiente ejemplo ponga <strong>BORDER 0</strong> para hacer visibles los bordes del papel.) </p>
+<pre><code class="language-basic">MODE 1:LOCATE 39,1:PRINT &quot;demasiado&quot;
+                                    -- linea 1 
+demasiado                           -- linea 2
+                                     
+MODE 1:LOCATE 39,1:PRINT USING &quot;&amp;&quot;;&quot;demasiado&quot;
+                                 de -- linea 1
+masiado                             -- linea 2
+</code></pre>
+<p>Para los números se dispone de gran variedad de plantillas. La más sencilla es <strong>PRINT USING</strong> &quot;#####&quot;, en la que cada # reserva espacio para un dígito: </p>
+<pre><code class="language-basic">PRINT USING &quot;######&quot;;123
+   123
+</code></pre>
+<p>La posición del punto decimal se puede especificar incluyendo un punto en la plantilla: </p>
+<pre><code class="language-basic">PRINT USING &quot;####.#####';12.45
+  12.45000
+</code></pre>
+<p>Los dígitos que quedan a la izquierda del punto decimal se pueden agrupar de tres en tres, separados por comas, si se pone una coma a la izquierda del punto en la plantilla: </p>
+<pre><code class="language-basic">PRINT USING &quot;########,.####&quot;;123456.78
+   123,456.7800
+</code></pre>
+<p>En el formato se pueden incluir los signos de dólar y de libra esterlina, para que aparezca siempre el signo monetario antes del primer dígito, aunque el número no llene el formato. Esto se consigue poniendo <strong>$$</strong> o <strong>PtPt</strong> en la plantilla: </p>
+<pre><code class="language-basic">PRINT USING &quot;$$##&quot;;7
+  $7
+
+PRINT USING &quot;$$##&quot;;351
+$351
+
+PRINT USING &quot;PtPt####,.##&quot;;1234.567
+ Pt1,234.57
+</code></pre>
+<p>Observe cómo se ha redondeado este último número.</p>
+<p>Se puede rellenar el espacio sobrante por la izquierda con asteriscos poniendo ** en la plantilla: </p>
+<pre><code class="language-basic">PRINT USING &quot;**####.#&quot;;12.22
+****12.2
+</code></pre>
+<p>Esto último se puede combinar con los signos monetarios poniendo <strong>**$</strong> o <strong>**Pt</strong> en la plantilla.</p>
+<p>Un signo + al principio de la plantilla especifica que siempre se debe escribir el signo del número a su izquierda. Si el + está al final de la plantilla, el signo se describe a la derecha del número. </p>
+<p>El signo - sólo se puede poner al final de la plantilla; específica que se debe poner el signo - a la derecha del número si éste es negativo. </p>
+<pre><code class="language-basic">PRINT USING &quot;+##&quot;;12
++12
+
+PRINT USING &quot;+##&quot;;-12
+-12
+
+PRINT USING &quot;##+&quot;;12
+12+
+
+PRINT USING &quot;##-&quot;;-12 
+12-
+
+PRINT USING &quot;##-&quot;;12
+12
+</code></pre>
+<p>La inclusión de &quot;↑↑↑↑&quot; en la plantilla hace que el número se escriba en forma exponencial: </p>
+<pre><code class="language-basic">PRINT USING &quot;###.##^^^^&quot;;123.45
+12.35E+01
+</code></pre>
+<ul>
+<li>Se debe sustituir ^^^^ por ↑↑↑↑.</li>
+</ul>
+<p>En cualquier caso, si el número es demasiado grande como para caber en el formato especificado, el número no se trunca, sino que se lo escribe entero, precedido de un signo % para indicar lo que ha ocurrido: </p>
+<pre><code class="language-basic">PRINT USING &quot;####&quot;;123456
+%123456
+</code></pre>
+<h3 id="ventanas"><a class="header" href="#ventanas">Ventanas</a></h3>
+<p>EI BASIC del CPC6128 permite la definición y el control de hasta ocho ventanas de texto. Todas las acciones de control de textos se pueden referir a cualquiera de estas ventanas.</p>
+<p>Las ventanas se definen con la orden <strong>WINDOW</strong>, que va seguida de 5 parámetros. El primero es opcional y especifica el número de la ventana que se va a definir; si se lo omite, el ordenador supone el <strong>0</strong>, que es el canal por el que el BASIC emite sus mensajes normales (<strong>Ready</strong>, errores, etc.). Antes del número se pone el signo # para indicar que se está dando un número de canal. Los otros cuatro parámetros especifican los extremos izquierdo, derecho, superior e inferior de la ventana. Como son números de fila y de columna, pueden estar comprendidos entre 1 y 80 los dos primeros, y entre 1 y 25 los dos últimos. </p>
+<p>El siguiente ejemplo define la ventana (canal) número 4, la cual se extiende desde la columna 7 hasta la 31, y desde la fila 6 hasta la 18. Reinicialice la máquina y luego escriba: </p>
+<pre><code class="language-basic">WINDOW #4,7,31,6,18
+</code></pre>
+<p>No parece que haya ocurrido nada, así que escriba lo siguiente: </p>
+<pre><code class="language-basic">INK 3,9
+PAPER #4,3
+CLS #4
+</code></pre>
+<p>En la pantalla ha aparecido un gran rectángulo verde, que es la ventana número 4. Este último ejemplo demuestra que las instrucciones <strong>PAPER</strong> y <strong>CLS</strong> se pueden referir a cualquiera de las ocho ventanas especificando el número de canal; su omisión hace que la orden actúe sobre la ventana número <strong>0</strong>. </p>
+<p>Las órdenes para las que se puede especificar número de ventana son las siguientes:</p>
+<p><strong>CLS</strong>, <strong>COPYCHR$</strong>, <strong>INPUT</strong>, <strong>LINE INPUT</strong>, <strong>LIST</strong>, <strong>LOCATE</strong>, <strong>PAPER</strong>, <strong>PEN</strong>, <strong>POS</strong>, <strong>PRINT</strong>, <strong>TAG</strong>, <strong>TAGOFF</strong>, <strong>VPOS</strong>, <strong>WINDOW</strong>, <strong>WRITE</strong>. </p>
+<p>La ventana verde que hemos creado habrá borrado parte del texto que teníamos en la pantalla, que había sido enviado a la ventana número <strong>0</strong>. </p>
+<p>El texto se puede escribir en cualquier ventana especificando el número de canal en la instrucción <strong>PRINT</strong>: </p>
+<pre><code class="language-basic">PRINT #4,&quot;estoy en la ventana 4&quot;
+</code></pre>
+<p>Estas palabras han aparecido en el extremo superior de la ventana verde, no en la línea siguiente de la pantalla, que es lo que habría ocurrido con: </p>
+<pre><code class="language-basic">PRINT &quot;estoy en la ventana 0&quot;
+</code></pre>
+<p>Observe que al escribir esta última orden el texto ha invadido parte de la ventana verde.</p>
+<p>Si usted desea confinar todos los mensajes de BASIC a la ventana número <strong>4</strong>, intercámbiela con la implícita (la número <strong>0</strong>) mediante la orden: </p>
+<pre><code class="language-basic">WINDOW SWAP 0,4
+</code></pre>
+<p>El mensaje <strong>Ready</strong> ha aparecido ahora en la ventana verde y el cursor está debajo de él. Escriba lo siguiente: </p>
+<pre><code class="language-basic">PRINT #4,&quot;estoy en la ventana 4&quot;
+</code></pre>
+<p>El texto ha aparecido debajo de la orden <strong>WINDOW SWAP</strong>, en lo que antes era la ventana <strong>0</strong> y ahora es la <strong>4</strong>. Estos ejemplos demuestran que el ordenador recuerda la posición de escritura de cada ventana incluso después de un intercambio. Escriba lo siguiente: </p>
+<pre><code class="language-basic">LOCATE #4,20,1
+PRINT &quot;estoy en la ventana 0&quot;
+PRINT #4,&quot;estoy en la ventana 4&quot;
+</code></pre>
+<p>Mientras no se ejecuta una orden <strong>WINDOW</strong>, todas las ocho ventanas coinciden con la pantalla entera. Lo mismo ocurre después de una orden <strong>MODE</strong>. Así pues, si después de jugar con las ventanas se encuentra con que el cursor está en una muy pequeña, puede salir del lío escribiendo <strong>MODE 1</strong>: </p>
+<pre><code class="language-basic">MODE 1
+WINDOW 20,21,7,18
+MO
+DE 
+1
+</code></pre>
+<p>El ordenador se ha visto obligado a partir la palabra <strong>MODE</strong>, pero la instrucción funciona igual. (No olvide dejar un espacio entre la <strong>E</strong> y el <strong>1</strong>.) </p>
+<p>Ahora que ya tiene una idea de cómo funcionan las ventanas, escriba y pruebe el siguiente programa: </p>
+<pre><code class="language-basic">10 MODE 0
+20 FOR n=0 TO 7
+30 WINDOW #n,n+1,n+6,n+1,n+6
+40 PAPER #n,n+4
+50 CLS #n
+60 FOR c=1 TO 200:NEXT c
+70 NEXT n
+</code></pre>
+<p>Este programa crea 8 ventanas que se solapan y las borra con un color de papel diferente para cada una. </p>
+<p>Cuando termine el programa y haya aparecido <strong>Ready</strong>, pulse <strong>[RETURN]</strong> varias veces para observar cómo afecta el desplazamiento de la ventana <strong>0</strong> a los bloques de colores. Sin embargo, aunque el contenido de las ventanas se desplace, las ventanas en sí siguen estando en el mismo sitio. Compruébelo escribiendo: </p>
+<pre><code class="language-basic">CLS #4
+</code></pre>
+<p>Fíjese también en los diferentes efectos de las siguientes órdenes: </p>
+<pre><code class="language-basic">LIST
+LIST #4
+LIST #3
+</code></pre>
+<p>Otra característica interesante de la orden <strong>WINDOW</strong> es que también admite los números que especifican los bordes izquierdo y derecho en orden inverso; es decir, aunque el primer parámetro sea mayor que el segundo, BASIC los interpreta en el orden correcto. Análogamente ocurre con los bordes inferior y superior. </p>
+<pre><code class="language-basic">10 MODE 0
+20 a=1+RND*19:b=1+RND*19
+30 c=1+RND*24:d=1+RND*24
+40 e=RND*15
+50 WINDOW a,b,c,d
+60 PAPER e:CLS
+70 GOTO 20
+</code></pre>
+<h3 id="interrupciones"><a class="header" href="#interrupciones">Interrupciones</a></h3>
+<p>Por si todavía no lo ha leído en otro lugar de este manual, le diremos que una de las principales innovaciones del software de los ordenadores Amstrad es su capacidad de gestión de las interrupciones desde BASIC; esto hace que el BASIC de Amstrad sea capaz de realizar acciones simultáneas controladas por programa. Esto es lo que se suele denominar “multitarea”, y se programa con las instrucciones <strong>AFTER</strong> y <strong>EVERY</strong>.</p>
+<p>Esta misma habilidad queda demostrada por la forma en que se controla el sonido a través de recursos tales como las colas de sonido y la sincronización de canales.</p>
+<p>De todo lo que tenga que ver con la medida del tiempo se encarga el cronómetro patrón del sistema, que es un circuito controlado por un cristal de cuarzo. Este reloj se encarga de cronometrar y de sincronizar los procesos que tienen lugar dentro del ordenador: desde el barrido de la pantalla hasta el envío de impulsos al microprocesador. Toda función del hardware que tenga que ver con el tiempo depende del reloj patrón.</p>
+<p>Las instrucciones <strong>AFTER</strong> (después de) y <strong>EVERY</strong> (cada) hacen precisamente lo que su nombre sugiere. Así, <strong>AFTER</strong> invoca una determinada subrutina cuando ha transcurrido el tiempo especificado.</p>
+<p>El CPC6128 mantiene un reloj de tiempo real. La orden <strong>AFTER</strong> permite que un programa de BASIC realice una tarea en un instante futuro especificado. Existen cuatro temporizadores de retardo, cada uno de los cuales puede tener una subrutina asociada.</p>
+<p>Cuando el tiempo especificado ha transcurrido, la rutina se ejecuta automáticamente, exactamente igual que si el ordenador hubiera encontrado un <strong>GOSUB</strong> en la línea actual del programa. Cuando la rutina se acaba, con el <strong>RETURN</strong> habitual, el programa continúa a partir del punto en que fue interrumpido.</p>
+<p>La orden <strong>EVERY</strong> permite que el programa de BASIC ejecute subrutinas a intervalos de tiempo regulares. También en este caso se dispone de cuatro temporizadores, a cada uno de los cuales se puede asignar una subrutina distinta.</p>
+<p>Los temporizadores tienen prioridades de interrupción diferentes, lo que tiene importancia cuando varios de ellos compiten por interrumpir el programa en un momento dado. El temporizador 3 tiene la máxima prioridad, y el 0 la mínima (véase el capítulo <a href="7.03.-Interrupciones.html">Para su referencia</a>). </p>
+<pre><code class="language-basic">10 MODE 1:n=14:x=RND*400
+20 AFTER x,3 GOSUB 90
+30 EVERY 25,2 GOSUB 170
+40 EVERY 10,1 GOSUB 180
+50 PRINT&quot;Pruebe sus reflejos:&quot;
+60 PRINT&quot;pulse la barra espaciadora&quot;
+70 PRINT&quot;cuando yo le diga.&quot;
+80 IF ind=1 THEN END ELSE 80
+90 x=REMAIN(2)
+100 IF INKEY(47)=-1 THEN 120
+110 SOUND 1,900:PRINT&quot;Tramposo!&quot;:GOTO 160
+120 SOUND 129,20:PRINT&quot;AHORA&quot;:t=TIME
+130 IF INKEY(47)=-1 THEN 130
+140 PRINT&quot;Ha tardado&quot;;
+150 PRINT(TIME-t)/300;&quot;segundos&quot;
+160 CLEAR INPUT:ind=1:RETURN
+170 SOUND 1,0,50:PRINT&quot;.&quot;;:RETURN
+180 n=n+1:IF n&gt;26 THEN n=14
+190 INK 1,n:RETURN
+</code></pre>
+<p>Las órdenes <strong>AFTER</strong> y <strong>EVERY</strong> se pueden ejecutar en cualquier lugar del programa. Su efecto es reelegir la rutina asociada y poner a cero el temporizador correspondiente. Los temporizadores están compartidos por <strong>AFTER</strong> y <strong>EVERY</strong>, de modo que una orden <strong>AFTER</strong> cancela la anterior <strong>EVERY</strong> referida al mismo temporizador, y viceversa.</p>
+<p>Las órdenes <strong>DI</strong> y <strong>EI</strong> inhiben y habilitan, respectivamente, las interrupciones. Esto sirve para permitir que cierta interrupción se procese sin ser interrumpida por otra más prioritaria. La orden <strong>REMAIN</strong> da el tiempo que queda en un temporizador y lo desactiva. </p>
+<h3 id="listas-de-datos"><a class="header" href="#listas-de-datos">Listas de datos</a></h3>
+<p>Si un programa necesita que se le suministre siempre la misma información cada vez que se lo ejecuta, es preferible hacer que esa información esté contenida en el propio programa para no tener que teclearla con cada ejecución. Esto es posible gracias al par de instrucciones <strong>READ/DATA</strong>. La orden <strong>READ</strong> es similar a <strong>INPUT</strong> en el sentido de que asigna valores a variables, pero en lugar de captar los valores por el teclado los lee en listas encabezadas por la palabra <strong>DATA</strong>. Los dos ejemplos siguientes ilustran la diferencia: </p>
+<pre><code class="language-basic">10 INPUT &quot;escriba 3 numeros separados por comas: &quot;a,b,c
+20 PRINT&quot;los numeros son&quot;;a;&quot;y&quot;;b;&quot;y&quot;;c
+run
+</code></pre>
+<pre><code class="language-basic">10 READ a,b,c
+20 PRINT&quot;los numeros son&quot;;a;&quot;y&quot;;b;&quot;y&quot;;c
+30 DATA 12,14,21
+run
+</code></pre>
+<p>Los datos contenidos en las listas <strong>DATA</strong> van separados por comas, lo mismo que los que se teclean en respuesta a una instrucción <strong>INPUT</strong>. </p>
+<p>Las listas <strong>DATA</strong> pueden contener, no sólo números, sino también cadenas literales constantes: </p>
+<pre><code class="language-basic">10 DIM a$(11)
+20 FOR i=0 TO 11
+30 READ a$(i)
+40 NEXT
+50 FOR i=0 TO 11
+60 PRINT a$(i);&quot; &quot;;
+70 NEXT
+80 DATA Cuentan,de,un,sabio,que,un,dia,tan,pobre,y,misero,estaba
+run
+</code></pre>
+<p>Observe que no es necesario encerrar entre comillas las cadenas que se ponen en las listas <strong>DATA</strong>. Las comillas en este caso son opcionales (también lo son en <strong>INPUT</strong>). El único caso en que son necesarias es cuando una cadena contiene una coma; si no se la pusiera entre comillas, la instrucción <strong>READ</strong> se detendría en la coma y no leería el resto de la cadena. </p>
+<pre><code class="language-basic">10 READ a$
+20 WHILE a$&lt;&gt;&quot;*&quot;
+30 PRINT a$
+40 READ a$
+50 WEND
+60 DATA los dias de la semana son lunes, martes, miercoles, jueves, viernes y sabado
+70 DATA &quot;los dias de la semana son lunes, martes, miercoles, jueves, viernes y sabado&quot;
+80 DATA *
+run
+</code></pre>
+<p>La cadena de la línea 60 contiene comas, y por lo tanto cada tramo será leído por <strong>READ</strong> y escrito por separado. En cambio, la de la línea 70 ha sido delimitada por comillas y <strong>READ</strong> la lee de una sola vez.</p>
+<p>El ejemplo anterior demuestra que los datos pueden estar distribuidos en varias líneas (60, 70, 80, ...). Otro detalle no tan evidente es que las líneas <strong>DATA</strong> pueden estar en cualquier lugar del programa, antes o después de las instrucciones <strong>READ</strong> que leen la información.</p>
+<p>Si un programa contiene varias instrucciones <strong>READ</strong>, cada una continúa leyendo donde terminó la anterior: </p>
+<pre><code class="language-basic">10 DATA 123,456,789,321,654,2343
+20 FOR i=1 TO 5
+30 READ num
+40 total=total+num
+50 NEXT
+60 READ total2
+70 IF total=total2 THEN PRINT &quot;los datos son correctos&quot; ELSE PRINT &quot;hay un error en los datos&quot;
+run
+</code></pre>
+<p>Modifique uno de los primeros cinco números de la lista de la línea 10 y ejecute otra vez el programa. Esta técnica de poner al final de la lista un dato adicional que sea la suma de los anteriores constituye un buen método de detección de errores en los datos, especialmente si los datos son muchos. Se le llama &quot;suma de verificación&quot; (<em>checksum</em>). </p>
+<p>Si un programa requiere datos mixtos (cadenas y números), se los puede combinar en una misma lista <strong>DATA</strong>, a condición de que <strong>READ</strong> los lea en el orden correcto. Por ejemplo, si una lista <strong>DATA</strong> contiene dos números seguidos de una cadena, la instrucción <strong>READ</strong> tendrá que leer primero dos variables numéricas y luego una literal: </p>
+<pre><code class="language-basic">10 DIM a(5),b(5),s$(5)
+20 FOR i=1 TO 5
+30 READ a(i),b(i),s$(i)
+40 NEXT
+50 DATA 1,7,Alfredo,3,9,Juan,2,2,Enrique,4,6,Pedro,9,1,Manuel
+60 FOR i=1 TO 5
+70 PRINT s$(i),&quot;:&quot;;a(i)*b(i)
+80 NEXT
+</code></pre>
+<p>También se puede separar los datos en dos listas distintas: </p>
+<pre><code class="language-basic">10 DIM a(5),b(5),s$(5)
+20 FOR i=1 TO 5
+30 READ a(i),b(i)
+40 NEXT
+50 FOR i=1 TO 5
+60 READ s$(1)
+70 NEXT
+80 DATA 1,7,3,9,2,2,4,6,9,1
+90 DATA Alfredo,Juan,Enrique,Pedro,Manuel
+100 FOR i=1 TO 5
+110 PRINT s$(i),&quot;:&quot;;a(i)*b(i)
+120 NEXT
+</code></pre>
+<p>Si ahora cambiamos el límite superior de la línea 20: </p>
+<pre><code class="language-basic">20 FOR i=1 TO 4
+</code></pre>
+<p>los dos primeros intentos de leer cadenas darán &quot;<strong>9</strong>&quot; y &quot;<strong>1</strong>&quot;. Estos valores son cadenas válidas, pero el programa no funciona como esperábamos. Una forma de asegurar que el programa funcione correctamente consiste en incluir las líneas: </p>
+<pre><code class="language-basic">15 RESTORE 80
+45 RESTORE 90
+</code></pre>
+<p>La orden <strong>RESTORE</strong> hace que el puntero de datos &quot;apunte&quot; hacia el principio de la línea especificada; por lo tanto se la puede incluir en una instrucción condicional para que el bloque de datos leídos dependa del resultado de alguna comprobación. Por ejemplo, en un juego que esté previsto para varios niveles de destreza, los datos de cada nivel pueden ser seleccionados mediante una variable adecuada. Veamos un ejemplo: </p>
+<pre><code class="language-basic">1000 REM seccion para dibujar la pantalla
+1010 IF nivel=1 THEN RESTORE 2010
+1020 IF nivel=2 THEN RESTORE 2510
+1030 IF nivel=3 THEN RESTORE 3010
+1040 FOR y=1 TO 25
+1050 FOR x=1 TO 40
+1060 READ car
+1070 LOCATE x,y:PRINT CHR$(car);
+1080 NEXT x,y
+...
+2000 REM DATA para pantalla 1
+2010 DATA 200,190,244,244,210, ... etc.
+...
+2500 REM DATA para pantalla 2
+2510 DATA 100,103,245,243,251, ... etc.
+...
+3000 REM DATA para pantalla 3
+3010 DATA 190,191,192,193,194, ... etc.
+</code></pre>
+<p>Otra aplicación típica de las instrucciones <strong>DATA</strong>/<strong>READ</strong>/<strong>RESTORE</strong> es un programa que interprete una melodía. Los periodos de tono se pueden poner en listas data; <strong>RESTORE</strong> puede hacer que se repita una sección moviendo el puntero de datos hacia atrás: </p>
+<pre><code class="language-basic">10 FOR i=1 TO 3
+20 RESTORE 100
+30 READ nota
+40 WHILE nota&lt;&gt;-1
+50 SOUND 1,nota,35
+60 READ nota
+70 WEND
+80 NEXT
+90 SOUND 1,142,100
+100 DATA 95,95,142,127,119,106
+110 DATA 95,95,119,95,95,119,95
+120 DATA 95,142,119,142,179,119
+130 DATA 142,142,106,119,127,-1
+run
+</code></pre>
+<h3 id="el-sonido-de-la-música"><a class="header" href="#el-sonido-de-la-música">El sonido de la música</a></h3>
+<p>De todas las instrucciones del CPC6128, es posible que las de sonido y envolventes le parezcan las más imponentes a primera vista. Y sin embargo, con un poco de práctica, muy pronto podrá programar ruidos de diversos tipos e incluso melodías con armonía.</p>
+<p>Empecemos por analizar las cuatro primeras partes de la instrucción <strong>SOUND</strong>, que son las siguientes: situación de canales, periodo de tono, duración de la nota y volumen. Lo primero que hay que saber es en qué margen de valores puede estar cada uno de estos parámetros. </p>
+<p>Aplazaremos el primero de momento porque es el más complicado. El segundo, período de tono, puede tener cualquier valor entero comprendido entre 0 y 4095. Sin embargo sólo algunos de estos valores producen notas reconocibles: son los que están relacionados en la <a href="7.06.-Sonidos.html">parte 6</a> del capítulo <a href="7.00.-Cap%C3%ADtulo-7.-Para-su-referencia.html">Para su referencia</a>. Por ejemplo, el número 239 produce la nota DO media; el 253 produce la nota SI inmediatamente anterior; los valores 240 a 252 producen cada uno un tono diferente, pero ninguno de ellos corresponde a la escala del piano. Si el parámetro es 0, no se produce ningún tono; esto es útil cuando se está generando ruido.</p>
+<p>El tercer parámetro de la orden <strong>SOUND</strong> especifica la duración de la nota en unidades de centésimas de segundo. Su valor puede estar normalmente entre 1 y 32767. Si es 0, la duración queda controlada por la &quot;envolvente&quot; (de la que hablaremos más adelante). Si el parámetro es negativo, su valor absoluto indica cuántas veces se va a repetir la envolvente; por ejemplo, -3 significa &quot;repetir la envolvente tres veces&quot;.</p>
+<p>El cuarto parámetro especifica el volumen. Puede valer entre 0 y 15; el valor implícito es 12, que es el que el ordenador supone si no se especifica otra cosa. En los sonidos sencillos que hemos conocido hasta ahora, el volumen ha permanecido constante durante el tiempo en que ha sonado cada nota. Sin embargo, cuando se utiliza una &quot;envolvente de volumen&quot; para hacer que éste deje de ser constante, el parámetro &quot;volumen&quot; de <strong>SOUND</strong> se considera como volumen inicial de la nota.</p>
+<p>Bueno, vamos con el parámetro de situación de canales. Quizá sepa ya el lector que el significado de este parámetro depende del valor de sus bits; para entenderlo necesitará saber algo acerca de los números binarios (<a href="9.01.-En-t%C3%A9rminos-generales.html">parte 1</a> de <a href="9.00.-Cap%C3%ADtulo-9.-Cuando-usted-guste.html">este capítulo</a>). </p>
+<p>El sonido se puede generar en tres canales distintos. Si el ordenador está conectado a un amplificador estereofónico, un canal será el derecho, otro el izquierdo y otro común a ambos o central. Para especificar en qué canal o canales debe sonar una nota se utilizan los siguientes números: </p>
+<ul>
+<li>1 canal de A</li>
+<li>2 canal de B</li>
+<li>4 canal de C</li>
+</ul>
+<p>Para enviar el sonido a varios canales, se suman los números correspondientes. Por ejemplo, para que la nota suene en los canales A y C, el parámetro debe ser 1+4=5. </p>
+<pre><code class="language-basic">SOUND 5,284
+</code></pre>
+<p>Se preguntará el lector por qué el número del canal C es 4, y no 3. Observe que estos tres números son potencias de 2(1=2↑0, 2=2↑1, 4=2↑2) y se combinan para dar un número binario. Si imaginamos un número binario de tres dígitos, cada uno de ellos se puede utilizar para indicar si el canal correspondiente debe estar conectado o desconectado. En el ejemplo anterior, 5 en decimal es equivalente a <strong>1*4+0*2+1*1</strong>, es decir, 101 en binario. Si a los dígitos de este número binario les ponemos las etiquetas C, B y A, tenemos </p>
+<pre><code>C B A
+1 0 1
+</code></pre>
+<p>de forma que C y A están conectados, mientras que B está desconectado. Si quisiéramos que la nota sonase en los canales A y B, el número tendría que ser </p>
+<pre><code>C B A
+0 1 1
+</code></pre>
+<p>En decimal: <strong>0*4+1*2+1*1=3</strong>. La orden <strong>SOUND</strong> sería</p>
+<pre><code class="language-basic">SOUND 3,142
+</code></pre>
+<p>Naturalmente, este número tiene que coincidir con el que se obtendría sumando los valores correspondientes a los dos canales: 1+2=3 (recuerde que A=1, B=2, C=4).</p>
+<p>Si después de todo no ha entendido cómo funciona esto en binario, no se preocupe. Le basta con saber que las combinaciones de canales se programan sumando los números de selección de los canales deseados.</p>
+<p>Lamentablemente (o afortunadamente, según cómo se mire), todavía podemos sumar otros números a este parámetro. Así, los números 8, 16 y 32 especifican que el sonido debe sincronizarse con otro canal (A, B o C, respectivamente). Ahora hace falta saber qué es eso de &quot;sincronizar con un canal&quot;. Pues bien, los sonidos que hemos generado hasta ahora han ido directamente al canal especificado. Escriba lo siguiente: </p>
+<pre><code class="language-basic">SOUND 1,142,2000
+SOUND 1,90,200
+</code></pre>
+<p>A menos que sea usted un mecanógrafo muy lento, habrá tenido tiempo de escribir la segunda orden antes de que se extinguiera el primer sonido. Esto ocurre porque el sistema de sonido puede guardar hasta cinco órdenes en cada una de las colas de los tres canales. Si queremos que suene una nota por el canal A y luego dos notas simultáneamente en los canales A y B, necesitamos un forma de indicar al ordenador que no debe ejecutar la nota del canal B mientras no haya terminado la primera del A. En esto consiste la sincronización de canales. Hay dos formas de conseguirla: </p>
+<pre><code class="language-basic">SOUND 1,200,1000
+SOUND 3,90,200
+</code></pre>
+<p>En este ejemplo hemos dirigido la segunda nota a A y B, y por lo tanto no puede sonar mientras no haya concluido la primera. La limitación de este método es que el sonido que se envía a varios canales tiene que ser igual en todos ellos (en este caso, <strong>,90,200</strong> era igual para el A que para el B). El otro método es el siguiente: </p>
+<pre><code class="language-basic">SOUND 1,200,2000
+SOUND 1+16,90,200
+SOUND 2+8,140,400
+</code></pre>
+<p>Aquí hemos hecho que la segunda nota de A se sincronice con el sonido de B (y que éste se sincronice con el canal A). La ventaja de este método es evidente: las notas sincronizadas pueden ser (y en este caso son) diferentes. Estos números de sincronización también son interpretables bit a bit: </p>
+<ul>
+<li>8=2↑3, 16=2↑4, 32=2↑5</li>
+</ul>
+<p>Así, el número de situación de canales se puede considerar como número binario cuyos dígitos tienen el siguiente significado: </p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Sincronizar con</th><th style="text-align: center">Sumar</th><th style="text-align: center">Sonar en</th><th style="text-align: center">Sumar</th></tr></thead><tbody>
+<tr><td style="text-align: center">C</td><td style="text-align: center">32</td><td style="text-align: center">C</td><td style="text-align: center">4</td></tr>
+<tr><td style="text-align: center">B</td><td style="text-align: center">16</td><td style="text-align: center">B</td><td style="text-align: center">2</td></tr>
+<tr><td style="text-align: center">A</td><td style="text-align: center">8</td><td style="text-align: center">A</td><td style="text-align: center">1</td></tr>
+</tbody></table>
+</div>
+<p>Por ejemplo, para hacer sonar una nota en el canal C sincronizado con el A: </p>
+<pre><code>0   0   1   1   0   0
+</code></pre>
+<p>Éste es el número binario 1100, equivalente a 8+4 en decimal.</p>
+<p>Así pues, el número de situación de canales 12 ordena a la máquina que haga sonar una nota en el canal C y que espere por una nota que debe sonar en el canal A y que ha sido marcada para sincronizarla con el C. </p>
+<p>Si ahora sumamos 64 (=2↑6) al parámetro, estamos indicando que la nota debe ser retenida. Esto significa que no va a sonar mientras no la liberemos con la orden <strong>RELEASE</strong>.</p>
+<p>Finalmente, si sumamos 128 (=2↑7), borramos la cola de sonido del canal especificado.</p>
+<p>Por ejemplo, si hemos ordenado un sonido que va a durar un buen rato, podemos anularlo borrando la cola del canal correspondiente: </p>
+<pre><code class="language-basic">SOUND 1,248,30000   ' (esta nota dura 5 minutos)
+SOUND 1+128,0       ' (pero esta la detiene)
+</code></pre>
+<p>Cuando se esté en modo directo, la forma más rápida de interrumpir un sonido es pulsar <strong>[←DEL]</strong> al principio de la línea; el pitido que así se produce borra todas las colas de sonido.</p>
+<p>Ahora que ya sabemos enviar sonido a cualquier combinación de canales (con sincronización, si es necesario), vamos a intentar producir algo más agradable que los molestos pitidos que produce una orden <strong>SOUND</strong> en esta forma sencilla. Lo haremos dotando al sonido de una envolvente: una gráfica que define cómo evoluciona la intensidad del sonido a lo largo del tiempo. Las notas producidas por los instrumentos musicales tienen una fase inicial de ataque en la que el volumen sube muy deprisa; después se mantiene a un nivel algo inferior hasta que finalmente decae gradualmente a cero. En el ordenador se puede dar una envolvente de este tipo a las notas producidas por la orden <strong>SOUND</strong>. La instrucción con la que se programa la envolvente es <strong>ENV</strong>. Veamos un ejemplo sencillo: </p>
+<pre><code class="language-basic">ENV 1,5,3,4,5,-3,8
+SOUND 1,142,0,0,1
+</code></pre>
+<p>La instrucción <strong>ENV</strong> se debe ejecutar antes que la <strong>SOUND</strong> que la utiliza. Para invocar una envolvente en una instrucción <strong>SOUND</strong> se pone como quinto parámetro de éste el número de referencia de la envolvente, en este caso el 1, que es el número con que se la creó en la instrucción <strong>ENV</strong>. Los parámetros de <strong>ENV</strong> describen tanto la duración como el volumen de la nota, de modo que en <strong>SOUND</strong> podemos poner <strong>0</strong> en lugar de los datos de duración y volumen. La envolvente del ejemplo anterior hace que la nota crezca en 5 etapas, en cada una de las cuales el volumen aumenta en 3 unidades y cuya duración es de 4 centésimas de segundo. Después se especifica que el volumen debe decaer en 5 etapas, –3 unidades en cada una, siendo la duración de cada etapa 8 centésimas de segundo. Es decir, el primer parámetro de <strong>ENV</strong> es el número de referencia de la envolvente y va seguido por grupos de tres números. Dentro de cada grupo, el primer parámetro es el número de escalones de variación del volumen; el segundo, la amplitud de esos escalones; y el tercero, su duración. La duración total de cada sección será igual al producto del primer parámetro (número de escalones) por el tercero (duración de cada escalón). El aumento o disminución total del volumen es igual al producto del primer parámetro por el segundo (variación del volumen por escalón). La duración total de una envolvente es la suma de las correspondientes a las secciones que la integran. </p>
+<p>En el ejemplo anterior, <strong>SOUND</strong> fijaba en <strong>0</strong> el volumen inicial de la nota. Pero esto no tiene que ser necesariamente así. En el siguiente ejemplo el volumen decrece desde el valor inicial <strong>15</strong> y luego vuelve a subir: </p>
+<pre><code class="language-basic">ENV 2,5,-2,1,20,0,1,10,1,1
+SOUND 1,142,0,15,2
+</code></pre>
+<p>El número de esta envolvente es el <strong>2</strong>. Consta de tres secciones. En la primera el volumen se reduce en 5 escalones de -2; es decir, varía a través de <strong>5</strong> etapas y en cada una se reduce en 2 unidades. La duración de cada etapa es de <strong>1</strong> centésima de segundo. La segunda sección tiene <strong>20</strong> etapas en las que no varía el volumen (<strong>0</strong>) y cada una de las cuales dura <strong>1</strong> centésima de segundo. Finalmente, la tercera sección consta de 10 etapas, con un incremento de volumen de <strong>1</strong> unidad y duración de <strong>1</strong> centésima de segundo cada una. </p>
+<p>La instrucción <strong>SOUND</strong> especifica un volumen inicial de <strong>15</strong>; al final de la primera sección ha decrecido hasta 5; se mantiene a ese nivel durante 20 centésimas de segundo y luego vuelve a crecer hasta alcanzar el nivel 15.</p>
+<p>Para mejor visualizar y diseñar la forma de las envolventes conviene dibujarlas en un papel milimetrado y leer en él los valores de los parámetros requeridos. En las dos figuras siguientes mostramos las dos envolventes definidas hasta ahora.</p>
+<p><img src="svg/c09-p02-i02.svg" alt="" /></p>
+<p><img src="svg/c09-p02-i03.svg" alt="" /></p>
+<p>El máximo número de secciones que se puede incluir en una envolvente es 5; como cada sección requiere 3 parámetros, la instrucción <strong>ENV</strong> puede llegar a tener 16 parámetros en total, contando el primero, que indica cuál de las 15 envolventes posibles se está definiendo. Podemos imaginar los números de volumen como dispuestos en círculo; si vamos subiendo de nivel y sobrepasamos el 15, volvemos al 0; análogamente, si intentamos descender por debajo del 0, volvemos al 15. Por ejemplo, en </p>
+<pre><code class="language-basic">ENV 3,9,5,20
+SOUND 1,142,0,0,3
+</code></pre>
+<p>la envolvente consta de una sola sección de <strong>9</strong> etapas, cada una de las cuales incrementa el volumen en <strong>5</strong> unidades y dura <strong>20</strong> centésimas de segundo. Al terminar la tercera etapa, el volumen ha subido de 0 a 15; en la cuarta etapa volverá a 4; en la quinta a 9, etc. El proceso está ilustrado en la figura siguiente.</p>
+<p><img src="svg/c09-p02-i04.svg" alt="" /></p>
+<p>El margen de valores para el número de escalones es de 0 a 127. En cada uno el valor puede variar entre -128 y +127 (los valores negativos representan disminución). La duración de cada escalón puede ser de entre 0 y 255 (centésimas de segundo).</p>
+<p>Ya sabemos cómo variar el volumen de una nota. Ahora podemos estudiar cómo se define la variación de su tono con el tiempo para producir efectos tales como el &quot;vibrato&quot;.</p>
+<p>El método es muy parecido al de las envolventes de volumen. Las envolventes de tono se definen con la instrucción <strong>ENT</strong>. Por ejemplo: </p>
+<pre><code class="language-basic">ENT 1,5,1,1,5,-1,1
+SOUND 1,142,10,15,,1
+</code></pre>
+<p>Las envolventes de tono se invocan con la instrucción <strong>SOUND</strong> poniendo en esta como sexto parámetro el número de referencia de la envolvente. La instrucción <strong>ENT</strong> tiene que ser ejecutada antes que la <strong>SOUND</strong> que la utiliza.</p>
+<p>Este primer ejemplo de <strong>ENT</strong> define la envolvente de tono número <strong>1</strong>. La primera sección consta de <strong>5</strong> etapas; en cada una el periodo de tono crece en <strong>1</strong> unidad; cada una dura <strong>1</strong> centésima de segundo. La segunda sección consta de <strong>5</strong> etapas; la variación del periodo de tono en cada una de ellas es <strong>–1</strong> (descenso); la duración de cada etapa es de <strong>1</strong> centésima de segundo. La duración total es, pues, 5+5=10 centésimas de segundo. Obsérvese que esta duración ha sido especificada en <strong>SOUND</strong>, ya que la duración de la envolvente de tono <em>no</em> determina la duración de la nota (mientras que sí lo hace la envolvente de volumen). Si la duración especificada en <strong>SOUND</strong> es menor que la de la envolvente, el final de ésta se perderá. Si es mayor, el final de la nota se ejecutará a tono constante. Esto último es también aplicable a las envolventes de volumen.</p>
+<p>(Nótese la ausencia del número de envolvente de volumen en la última instrucción <strong>SOUND</strong>, debida a que aún no hemos definido una envolvente de volumen para este sonido.) </p>
+<p>Las envolventes de tono normalmente duran menos que la nota. Se puede hacer que la envolvente se repita mientras la nota está sonando. Para ello se especifica un número de envolvente negativo, cuyo valor absoluto se cita en la instrucción <strong>SOUND</strong>: </p>
+<pre><code class="language-basic">ENT -5,4,1,1,4,-1,1
+SOUND 1,142,100,12,,5
+</code></pre>
+<p>Esta repetición de la envolvente produce el efecto &quot;vibrato&quot;. Cuando se diseñan envolventes de tono, es conveniente que el tono varíe simétricamente con respecto al valor inicial, de forma que al repetir la envolvente el tono no se desvíe demasiado con respecto al valor central. Pruebe el siguiente sonido:</p>
+<pre><code class="language-basic">ENT -6,3,1,1
+SOUND 1,142,90,12,,6
+</code></pre>
+<p>Habrá observado que la frecuencia ha disminuido drásticamente. Esto ha ocurrido porque la envolvente impone un aumento del periodo de tono de <strong>3</strong> unidades y se repite 30 veces (<strong>90</strong>/<strong>3</strong>). No obstante, ese efecto se puede aprovechar para imitar trinos y sirenas: </p>
+<pre><code class="language-basic">ENT -7,20,1,1,20,-1,1
+SOUND 1,100,400,12,,7
+</code></pre>
+<pre><code class="language-basic">ENT -8,60,-1,1,60,1,1
+SOUND 1,100,480,12,,8
+</code></pre>
+<p>Se pueden definir hasta 15 envolventes de tono, con números de referencia del 1 al 15; los números negativos indican que la envolvente se repite. Para cada sección, el número de escalones puede estar entre 0 y 239. La variación del periodo de tono en cada escalón puede ser de entre –128 y +127. La duración de cada escalón puede ser de entre 0 y 255 (centésimas de segundo). Cada envolvente puede tener hasta 5 secciones.</p>
+<p>El último parámetro que se puede incluir en la instrucción <strong>SOUND</strong>, el séptimo, caracteriza el nivel de ruido que se añade al sonido. Obsérvese que sólo hay un canal de ruido y que, por consiguiente, cada vez que se especifica un nivel de ruido se anula la anterior especificación.</p>
+<p>El ruido se puede mezclar con un tono, pero también se lo puede programar por separado, para lo cual se debe poner un <strong>0</strong> como período de tono en <strong>SOUND</strong>. Esto es útil para imitar ruidos de percusión: </p>
+<pre><code class="language-basic">ENT -3,2,1,1,2,-1,1
+ENV 9,15,1,1,15,-1,1
+FOR a=1 TO 10:SOUND 1,4000,0,0,9,3,15:NEXT
+</code></pre>
+<p>Un ruido como éste puede servir de base para imitar el de una locomotora. Obsérvese que hemos combinado los dos tipos de envolvente y el ruido. En <strong>SOUND</strong> hemos puesto <strong>0</strong> para los parámetros de duración y de volumen, por lo que estas características quedan controladas por las envolventes de volumen.</p>
+<p>Como ya estamos en condiciones de utilizar <strong>SOUND</strong>, <strong>ENV</strong> y <strong>ENT</strong> a plena potencia, vamos a estudiar algunas otras órdenes y funciones.</p>
+<p>Como el lector recordará, al describir el primer parámetro de <strong>SOUND</strong> dijimos que si le sumábamos el número 64 el sonido quedaba &quot;retenido&quot; en la cola, y que no sonaría mientras no lo liberásemos. La forma de liberarlo es ejecutar la orden <strong>RELEASE</strong>. Esta palabra va seguida de un número cuyos bits determinan a qué canales afecta la orden: </p>
+<ul>
+<li>4 significa canal C</li>
+<li>2 significa canal B</li>
+<li>1 significa canal A</li>
+</ul>
+<p>Los canales se combinan sumando los números correspondientes. Así, para liberar el sonido de los tres canales la orden que se requiere es: </p>
+<pre><code class="language-basic">RELEASE 7
+</code></pre>
+<p>donde 7=1+2+4. Si no hay sonido retenido en ningún canal, la orden no tiene efecto. Pruebe lo siguiente: </p>
+<pre><code class="language-basic">SOUND 1+64,90
+SOUND 2+64,140
+SOUND 4+64,215
+RELEASE 3:FOR t=1 TO 1000:NEXT:RELEASE 4
+</code></pre>
+<p>No se produce ningún sonido mientras no se ejecuta la primera orden <strong>RELEASE</strong>, la cual libera los sonidos de los canales A y B. Después de una pausa, la segunda orden <strong>RELEASE</strong> libera el canal C. </p>
+<p>Hay otro método para sincronizar sonidos. Cuando se retiene un sonido sumando 64 a su número de situación de canal, no sólo queda él retenido, sino todos los que se envíen a continuación a ese mismo canal. Si se envían más de cuatro sonidos a una cola que está retenida, la máquina queda bloqueada hasta que se libere la cola (posiblemente al ejecutarse una subrutina invocada por <strong>AFTER</strong> o <strong>EVERY</strong>). Ésta no es una buena forma de gestionar los sonidos, ya que la máquina se detendrá cada vez que se llene una cola. Lo mismo ocurre si se ejecutan varias órdenes <strong>SOUND</strong> seguidas. Pruebe este programa:</p>
+<pre><code class="language-basic">10 FOR a=1 TO 8
+20 SOUND 1,100*a,200
+30 NEXT
+40 PRINT&quot;hola&quot;
+run
+</code></pre>
+<p>El texto no aparece en la pantalla inmediatamente, sino al cabo de tres segundos. Esto ocurre porque el programa no puede llegar a la línea 40 mientras no haya espacio libre en la cola para almacenar todos los sonidos. </p>
+<p>BASIC dispone de un mecanismo de interrupción, similar al que se utiliza en <strong>AFTER</strong>, <strong>EVERY</strong> y <strong>ON BREAK GOSUB</strong>, mediante el cual se puede hacer que se ejecute una subrutina cada vez que queda espacio libre en una cola especificada: </p>
+<pre><code class="language-basic">10 a=0
+20 ON SQ(1) GOSUB 1000
+30 PRINT a;
+40 GOTO 30
+1000 a=a+10
+1010 SOUND 1,a,200
+1020 IF a&lt;200 THEN ON SQ(1) GOSUB 1000
+1030 RETURN
+</code></pre>
+<p>Observe que el programa no se detiene. La instrucción <strong>SOUND</strong> no se ejecuta mientras no hay espacio libre en la cola del canal A (<strong>1</strong>), hecho que detecta la orden <strong>ON SQ(1) GOSUB</strong> de la línea 20. Esta orden inicializa un mecanismo de interrupción que ejecuta la subrutina cada vez que queda un hueco libre en la cola especificada. El mecanismo tiene que ser reinicializado cada vez que se ejecuta la subrutina (línea 1020). En este ejemplo, la reinicialización sólo se produce si <strong>a</strong> es menor que 200.</p>
+<p>En un programa que lleve a cabo acciones relativamente lentas (por ejemplo, mover objetos por la pantalla), se puede poner música de fondo programando una subrutina que ejecute una nota cada vez que quede un hueco libre en la cola. De esta forma se asegura que el programa no se va a detener en espera de que quede espacio en la cola. Si los valores de las notas están contenidos en listas <strong>DATA</strong>, se puede hacer que la subrutina de sonido deje de reinicializarse cuando los datos estén a punto de agotarse.</p>
+<p>El parámetro que va entre paréntesis en la instrucción <strong>ON SQ( ) GOSUB</strong> puede ser 1, 2 o 4, dependiendo del canal cuya cola se desee examinar.</p>
+<p>Hay una <em>función</em>, <strong>SQ( )</strong>, que se puede utilizar para determinar el estado de los canales de sonido. Su parámetro puede ser 1, 2 o 4. El valor generado por la función se interpreta bit a bit según la siguiente tabla: </p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Bit</th><th style="text-align: right">Decimal</th><th>Significado</th></tr></thead><tbody>
+<tr><td style="text-align: center">0, 1, 2</td><td style="text-align: right">1 a 4</td><td>Número de huecos libres en la cola</td></tr>
+<tr><td style="text-align: center">3</td><td style="text-align: right">8</td><td>La primera nota de la cola está marcada para sincronizar con el canal A</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: right">16</td><td>La primera nota de la cola está marcada para sincronizar con el canal B</td></tr>
+<tr><td style="text-align: center">5</td><td style="text-align: right">32</td><td>La primera nota de la cola está marcada para sincronizar con el canal C</td></tr>
+<tr><td style="text-align: center">6</td><td style="text-align: right">64</td><td>La primera nota de la cola está retenida (está a 1 el bit de retención)</td></tr>
+<tr><td style="text-align: center">7</td><td style="text-align: right">128</td><td>En este momento está sonando una nota</td></tr>
+</tbody></table>
+</div>
+<p>Pruebe el siguiente ejemplo:</p>
+<pre><code class="language-basic">10 SOUND 2,200
+20 x=SQ(2)
+30 PRINT BIN$(x)
+run
+</code></pre>
+<p>La línea 30 escribe el número binario <strong>10000100</strong>. El bit 7 está a 1, lo que indica que en el canal había una nota sonando cuando se ejecutó la línea 20. Los tres dígitos menos significativos son <strong>100</strong>; equivalen al número decimal 4, y esto quiere decir que había cuatro espacios libres en la cola. Esta función examina la situación del canal en un punto específico del programa; en cambio, <strong>ON SQ( ) GOSUB</strong> examina la cola, y reacciona en consecuencia, en un punto indeterminado. </p>
+<p>Hasta ahora todos los ejemplos han consistido en hacer sonar una o dos notas. Si se va a ejecutar un grupo de notas independientes, por ejemplo las de una melodía, sus características se pueden guardar en líneas <strong>DATA</strong>, para luego leerlas con <strong>READ</strong> e introducirlas en <strong>SOUND</strong>: </p>
+<pre><code class="language-basic">10 FOR octava=-1 TO 2
+20 FOR x=1 TO 7:REM notas por octava
+30 READ nota
+40 SOUND 1,nota/2^octava
+50 NEXT
+60 RESTORE
+70 NEXT
+80 DATA 426,379,358,319,284,253,239
+run
+</code></pre>
+<p>Se debe substituir el carácter ^ por ↑.</p>
+<p>El ejemplo final de esta sección se basa en este concepto. En los canales A y B se hace sonar una melodía con ritmo, utilizando la sincronización. Este ejemplo muestra cómo utilizar las listas <strong>DATA</strong> para incluir información sobre nota, octava, duración y sincronización: </p>
+<pre><code class="language-basic">10 REM la linea 190 da la melodia en clave de agudos
+20 REM la linea 200 da la melodia en clave de graves
+30 DIM escala%(12):FOR x%=1 TO 12:READ escala%(x%):NEXT
+40 canal1%=1:READ canal1$:canal2%=2:READ canal2$
+50 CLS
+60 velocidad%=12
+70 escala$=&quot; a-b b c+c d-e e f+f g+g&quot;
+80 ENV 1,2,5,2,8,-1,10,10,0,15
+90 ENV 2,2,7,2,12,-1,10,10,0,15
+100 ENT -1,1,1,1,2,-1,1,1,1,1
+110 DEF FNm$(s$,s)=MID$(s$,s,1)
+120 canal1%=1:GOSUB 200
+130 canal2%=1:GOSUB 380
+140 IF canal1%+canal2%&gt;0 THEN 140
+150 END
+160 DATA &amp;777,&amp;70c,&amp;6a7,&amp;647,&amp;5ed,&amp;598
+170 DATA &amp;547,&amp;4fc,&amp;4b4,&amp;470,&amp;431,&amp;3f4
+180 DATA 4cr4f4f1f1g1A1-B2C2f4g2g1A1-B6A2Cr1f1g1f1g1a1-b1A1-b2C2g2A2g2f1g1a2g2f6e2c2e2c2g2e2c1-B1A2g2f4e4d8c4f3f1c2d4-b2fr2-B2A2g2f6e2gr4C4-B1a1f1-b1g2c2-b4a4g4fr6A2A2-B4-B2Ar2-B2A2g2f6e2g4C4-B1A1f1-B1g2C2-B4A4g8f.
+190 DATA r4f4f8f4e4c4fr8f4e2f2e4d2e2d8c8c6e2f4g4g8e4f3f1c4dr8g4cr4e4c6f2d4c4c8fr8-e4dr8g8c4e4c6f2d4c4c8f.
+200 REM enviar sonido al canal A
+210 p1$=FNm$(canal1$,canal1%)
+220 IF p1$&lt;&gt;&quot;r&quot; THEN r1%=0:GOTO 240
+230 r1%=16:canal1%=canal1%+1:p1$=FNm$(canal1$,canal1%)
+240 IF p1$=&quot;.&quot; THEN canal1%=0:RETURN ELSE I1%=VAL(p1$)
+250 canal1%=canal1%+1
+260 n1$=FNm$(canal1$,canal1%)
+270 canal1%=canal1%+1
+280 IF n1$=&quot;+&quot; OR n1$=&quot;-&quot; THEN 350
+290 n1$=&quot; &quot;+n1$
+300 nd1%=(1+INSTR(escala$,LOWER$(n1$)))/2
+310 IF ASC(RIGHT$(n1$,1))&gt;96 THEN o1%=8 ELSE o1%=16
+320 SOUND 1+r1%,escala%(nd1%)/o1%,velocidad%*I1%,0,1,1
+330 ON SQ(1) GOSUB 200
+340 RETURN
+350 n1$=n1$+FNm$(canal1$,canal1%)
+360 canal1%=canal1%+1
+370 GOTO 300
+380 REM enviar sonido al canal B
+390 p2$=FNm$(canal2$,canal2%)
+400 IF p2$&lt;&gt;&quot;r&quot; THEN r2%=0:GOTO 420
+410 r2%=8:canal2%=canal2%+1:p2$=FNm$(canal2$,canal2%)
+420 IF p2$=&quot;.&quot; THEN canal2%=0:RETURN ELSE l2%=VAL(p2$)
+430 canal2%=canal2%+1
+440 n2$=FNm$(canal2$,canal2%)
+450 canal2%=canal2%+1
+460 IF n2$=&quot;+&quot; OR n2$=&quot;-&quot; THEN 530
+470 n2$=&quot; &quot;+n2$
+480 nd2%=(1+INSTR(escala$,LOWER$(n2$)))/2
+490 IF ASC(RIGHT$(n2$,1))&gt;96 THEN o2%=4 ELSE o2%=8
+500 SOUND 2+r2%,escala%(nd2%)/o2%,velocidad%*l2%,0,1,2
+510 ON SQ(2) GOSUB 380
+520 RETURN
+530 n2$=n2$+FNm$(canal2$,canal2%)
+540 canal2%=canal2%+1
+550 GOTO 480
+
+run
+</code></pre>
+<h3 id="dicho-gráficamente"><a class="header" href="#dicho-gráficamente">Dicho gráficamente</a></h3>
+<p>En esta sección vamos a repasar las funciones gráficas del ordenador. Iremos construyendo paso a paso un primer ejemplo para ilustrar el funcionamiento de las diversas instrucciones.</p>
+<p>Para empezar, dividimos la pantalla en una ventana de texto (línea 40) y una ventana gráfica (línea 30). Además, establecemos el modo de pantalla y asignamos tintas parpadeantes a dos plumas (líneas 20):</p>
+<pre><code class="language-basic">10 REM MASK Y TAG en una ventana
+20 MODE 1:INK 2,10,4:INK 3,4,10
+30 ORIGIN 440,100,440,640,100,300
+40 WINDOW 1,26,1,25
+50 CLG 2
+</code></pre>
+<p>Si ejecuta este programa, podrá ver un cuadrado parpadeante al lado derecho de la pantalla. Este cuadrado ha sido borrado con la pluma número 2 (magenta/cyan) por la línea 50. El origen de coordenadas ha sido trasladado al extremo inferior izquierdo del cuadrado. La orden <strong>MODE</strong> ha llevado el cursor al origen de coordenadas (X=0, Y=0); podemos dibujar una diagonal en el cuadrado con la línea 60: </p>
+<pre><code class="language-basic">60 DRAW 200,200,3
+</code></pre>
+<p>Ejecute el programa y observe el efecto. Añada ahora: </p>
+<pre><code class="language-basic">80 MOVE 0,2:FILL 3
+</code></pre>
+<p>La línea 80 lleva el cursor al interior de una de las dos mitades del cuadrado y la rellena con la pluma 3. El límite del recinto que se rellena es el borde de la ventana gráfica (que en este caso es también el del cuadrado) y cualquier recta que se haya dibujado con la pluma gráfica actual (la <strong>3</strong>) o con la que se utiliza para rellenar (también la <strong>3</strong>).</p>
+<p>Ejecute esta versión del programa.</p>
+<p>Para comprobar lo dicho acerca de los límites del recinto, añada la siguiente línea 70. Observe que la única razón para que el rellenado se limite a una mitad del cuadrado es que la pluma de rellenar es la misma con la que se dibujó la diagonal.</p>
+<pre><code class="language-basic">70 GRAPHICS PEN 1
+run
+</code></pre>
+<p>Modifique la línea 80 para rellenar con la pluma <strong>1</strong> y ejecute el programa para comprobar esto último. Cuando lo haya hecho, vuelva a dejar la línea 80 como estaba (<strong>FILL 3</strong>).</p>
+<p>Añada ahora las líneas siguientes para dibujar un cuadrado: </p>
+<pre><code class="language-basic">100 MOVE 20,20
+110 DRAW 180,20
+120 DRAW 180,180
+130 DRAW 20,180
+140 DRAW 20,20
+run
+</code></pre>
+<p>Este cuadrado ha sido dibujado con la pluma <strong>1</strong> a causa de la línea 70. Si omitiéramos la línea 70, tendríamos que incluir <strong>&quot;,1&quot;</strong> como tercer parámetro de <strong>MOVE</strong> en la línea 100, o bien en el <strong>DRAW</strong> de la línea 110, para pedir al ordenador que cambiase la pluma gráfica. </p>
+<h3 id="líneas-discontinuas"><a class="header" href="#líneas-discontinuas">Líneas discontinuas</a></h3>
+<p>Las rectas que dibujemos no tienen que ser necesariamente de trazo continuo, sino que pueden ser de puntos. La orden <strong>MASK</strong> nos permite definir el tamaño de los puntos. La forma que definamos se repetirá cada 8 pixels. Si la primera línea deja incompleto el último grupo de 8 pixels, la siguiente empezará dibujando los puntos restantes. Con una nueva orden <strong>MASK</strong> (quizá con el mismo parámetro) se hace que el siguiente dibujo empiece por el principio del grupo.</p>
+<p>El parámetro de <strong>MASK</strong> es en realidad un byte binario en el que los bits que están a <strong>1</strong> indican que el pixel correspondiente se debe iluminar con la tinta de la pluma. En nuestro ejemplo vamos a poner el parámetro directamente en forma binaria (identificada por el prefijo <strong>&amp;X</strong>); queremos que cada grupo de 8 pixels tenga cuatro pixels iluminados en el centro y dos apagados a cada lado. De esta forma las rectas serán de trazos, con cuatro pixels encendidos y cuatro apagados. Añada la línea siguiente: </p>
+<pre><code class="language-basic">90 MASK &amp;X00111100
+run
+</code></pre>
+<p>Pero vemos que el enlace en los rincones no es como nos gustaría. Lo que ocurre es que los pixels de las esquinas se dibujan dos veces: una al final de una recta y otra al principio de la siguiente. Una forma un tanto torpe de resolver este problema es incluir las líneas: </p>
+<pre><code class="language-basic">115 MOVE 180,22
+125 MOVE 178,180
+135 MOVE 20,178
+RUN
+</code></pre>
+<p>Pero es más fácil poner <strong>&quot;,0&quot;</strong> como segundo parámetro de <strong>MASK</strong> para indicar que no se debe dibujar el primer punto de cada línea. Modifique la línea 90: </p>
+<pre><code class="language-basic">90 MASK &amp;X00111100,0
+</code></pre>
+<p>y borre las que ya no necesitamos: </p>
+<pre><code class="language-basic">115
+125
+135
+</code></pre>
+<p>Ejecute el programa y observe que el cuadrado vuelve a ser simétrico. Si hubiéramos puesto <strong>&quot;,1&quot;</strong> como segundo parámetro de <strong>MASK</strong>, todas las rectas serían de trazo continuo con el primer pixel encendido.</p>
+<p>Ahora observe los huecos entre trazos. En el triángulo inferior derecho hay algo que no está en el otro: es el papel gráfico, al que se ha dado el número <strong>2</strong> con la orden <strong>CLG 2</strong> de la línea 50, pero que es invisible en el triángulo superior porque es del mismo color que el fondo. Modifique la línea 50: </p>
+<pre><code class="language-basic">50 CLG 2:GRAPHICS PAPER 0
+</code></pre>
+<p>y vuelva a ejecutar el programa. El papel ya es visible en todos los bordes del cuadrado.</p>
+<p>Podemos hacer que el papel gráfico sea invisible (&quot;transparente&quot;). Esto significa que cuando dibujemos líneas de trazos, los huecos no taparán lo que haya debajo. Los dibujos se hacen transparentes añadiendo <strong>&quot;,1&quot;</strong> a la orden <strong>GRAPHICS PEN</strong>. (Para hacer los opacos el parámetro debe ser <strong>&quot;,0&quot;</strong>). Modifique la línea 70:</p>
+<pre><code class="language-basic">70 GRAPHICS PEN 1,1
+run
+</code></pre>
+<p>y observe el resultado.</p>
+<p>Además de dibujar rectas (y puntos sueltos), podemos escribir textos en la posición del cursor gráfico. La ventaja con respecto al método normal de escritura de textos es que así podemos situar los textos con mayor precisión (justamente en el pixel deseado, en vez de a saltos de 8 pixels).</p>
+<p>Para escribir caracteres por este método, el cursor se pone en el lugar en el que queremos que quede el punto superior izquierdo del carácter, después ejecutamos la orden <strong>TAG</strong> (o <strong>TAG</strong> #x para otros canales) seguida de las órdenes <strong>PRINT</strong> normales. El cursor gráfico avanza automáticamente 8 pixels hacia la derecha cada vez que se escribe un carácter. Añada las siguientes líneas: </p>
+<pre><code class="language-basic">160 MOVE 64,108
+170 TAG
+180 PRINT &quot;ELENA&quot;
+190 TAGOFF
+run
+</code></pre>
+<p>(BASIC envía siempre sus mensajes a la ventana de texto, cualquiera que sea la situación del conmutador <strong>TAG/TAGOFF</strong>, pero es una buena costumbre cancelar <strong>TAG</strong> en cuanto se haya terminado de escribir en la pantalla gráfica.)</p>
+<p>Pero ¿qué son las flechas que han salido a la derecha del nombre? Muy sencillo: el código de retorno del carro, <strong>CHR$(13)</strong>, y el de avance de línea, <strong>CHR$(10)</strong>, en versión gráfica. Las rutinas del firmware que escriben en la pantalla gráfica traducen los 32 primeros caracteres ASCII a sus versiones gráficas [igual que si se los enviara a la pantalla de texto precedidos de <strong>CHR$(1)</strong>]. La razón es que los 32 códigos de control normalmente sólo tienen utilidad en la pantalla de texto; por lo mismo, si sobrepasamos el borde derecho al escribir en la pantalla gráfica, el ordenador lo permite y no salta automáticamente a la línea siguiente.</p>
+<p>Los signos de retorno del carro y de avance de línea se suprimen poniendo un punto y coma al final de la instrucción <strong>PRINT</strong>:</p>
+<pre><code class="language-basic">180 PRINT &quot;ELENA&quot;;
+run
+</code></pre>
+<p>El texto enviado a la pantalla gráfica usando <strong>TAG</strong> depende de las mismas órdenes <strong>GRAPHICS PEN</strong> que los dibujos. Así, en el ejemplo, el nombre lo escribe <strong>GRAPHICS PEN 1</strong>, y es transparente. La orden </p>
+<pre><code class="language-basic">150 GRAPHICS PEN 1,0
+run
+</code></pre>
+<p>selecciona papel opaco, mientras que </p>
+<pre><code class="language-basic">150 GRAPHICS PEN 0,1
+RUN
+</code></pre>
+<p>escribe con pluma número <strong>0</strong> en modo transparente.</p>
+<p>Borre la línea 150 y ejecute el programa. La pluma gráfica vuelve a ser <strong>1</strong> en modo transparente (línea 70). </p>
+<h3 id="caracteres-transparentes"><a class="header" href="#caracteres-transparentes">Caracteres transparentes</a></h3>
+<p>Hay un código de control que permite escribir caracteres en la pantalla de texto en modo transparente. Añada las siguientes líneas:</p>
+<pre><code class="language-basic">200 PRINT#2,CHR$(22);CHR$(1)
+210 LOCATE #2,32,14:PRINT#2,&quot;******&quot;
+220 LOCATE #2,32,14:PRINT#2,&quot;______&quot;
+230 PRINT#2,CHR$(22);CHR$(0)
+run
+</code></pre>
+<p>La línea 200 pone el canal <strong>#2</strong> en modo transparente. Observe que los signos de subrayar se funden con los asteriscos sin borrarlos. De esta manera se pueden formar caracteres compuestos, incluso en varios colores. La línea 230 vuelve a poner el canal <strong>#2</strong> en modo opaco. </p>
+<h3 id="modos-de-tinta"><a class="header" href="#modos-de-tinta">Modos de tinta</a></h3>
+<p>Es posible dibujar gráficos de tal modo que la tinta con la que se dibuja interaccione con la ya presente en la pantalla. El número de tinta final para cada punto se calcula realizando una operación lógica con la antigua tinta del pixel y la tinta de la pluma gráfica. La operación puede ser <strong>AND</strong>, <strong>OR</strong> o <strong>XOR</strong>. El modo de tinta se puede especificar como cuarto parámetro en las instrucciones <strong>DRAW/DRAWR</strong>, <strong>PLOT/PLOTR</strong> o <strong>MOVE/MOVER</strong>, o bien enviando a la pantalla los códigos de control <strong>CHR$(23)</strong>+<strong>CHR$(&lt;modo&gt;)</strong>. En cualquier caso, el modo es <strong>1</strong> para <strong>XOR</strong>, <strong>2</strong> para <strong>AND</strong> y <strong>3</strong> para <strong>OR</strong>. El valor <strong>0</strong> restaura el modo normal, en el que se dibuja sin interacción.</p>
+<p>En el siguiente ejemplo ilustramos la combinación <strong>XOR</strong>. Este modo se utiliza habitualmente en los denominados &quot;gráficos de tortuga&quot;, porque tiene la propiedad de que si se dibuja algo dos veces se restaura la situación original. La rutina que dibuja el cuadrado se ejecuta dos veces (en las líneas 110 y 130), así como la escritura con <strong>TAG</strong> (líneas 170 y 190). Las órdenes <strong>FRAME</strong> introducen un retardo suficiente como para que el efecto sea visible. Nótese que las órdenes de la línea 90 no llevan primer parámetro. Esto es correcto tratándose de estas órdenes concretas; lo hemos hecho así para no modificar las características correspondientes.</p>
+<p>El tercer parámetro (<strong>,1</strong>) de la orden <strong>MOVE</strong> de la línea 220 selecciona la pluma gráfica número 1, anulando así la <strong>&quot;3&quot;</strong> seleccionada en la línea 60. El modo <strong>XOR</strong> se establece en el cuarto parámetro de la orden <strong>DRAWR</strong> de la línea 230. Obsérvese que también aquí hemos omitido un parámetro.</p>
+<p>Podemos observar una consecuencia del efecto del segundo parámetro de <strong>MASK</strong> suprimiendo esta orden de la línea 90. Los rincones del cuadrado desaparecen porque se dibujan dos veces (al final de una recta y al principio de la siguiente) con <strong>XOR</strong>.</p>
+<pre><code class="language-basic">10 REM modos de tinta XOR
+20 MODE 1:INK 2,10:INK 3,4
+30 ORIGIN 440,100,440,640,100,300
+40 WINDOW 1,26,1,25
+50 CLG 2: GRAPHICS PAPER 0
+60 DRAW 200,200,3
+70 MOVE 2,0:FILL 3
+80 ORIGIN 440,0,440,640,0,400
+90 GRAPHICS PEN ,1:MASK ,0
+100 FOR y=60 TO 318 STEP 2
+110 GOSUB 220
+120 FRAME:FRAME
+130 GOSUB 220
+140 NEXT
+150 TAG
+160 FOR y=60 TO 318 STEP 2
+170 MOVE 96,y:PRINT CHR$(224);
+180 FRAME:FRAME
+190 MOVE 96,y:PRINT CHR$(224);
+200 NEXT
+210 END
+220 MOVE 90,y,1
+230 DRAWR 20,0,,1
+240 DRAWR 0,20
+250 DRAWR -20,0
+260 DRAWR 0,-20
+270 RETURN
+run
+</code></pre>
+<h3 id="animación"><a class="header" href="#animación">Animación</a></h3>
+<p>Se puede dar ilusión de movimiento cambiando adecuadamente los colores asignados a las tintas. Aunque el contenido de la memoria de la pantalla no se modifica, los dibujos parecen moverse. Se da un ejemplo de este método en el programa de demostración que se suministra con el disco maestro del sistema (<strong>RUN&quot;disc&quot;</strong>). Sin embargo, el simple cambio de colores de ese ejemplo no es suficiente cuando las formas móviles tienen que solaparse. En el siguiente ejemplo recurrimos al modo OR para escribir los números 1 al 4 en la pantalla. (La forma se determina examinando el carácter que está en el extremo inferior izquierdo de la pantalla y ampliando lo que allí se encuentra.) Los números se escriben sucesivamente con las tintas 1, 2, 4 y 8 y con el modo OR activado (en este caso mediante una sucesión de códigos de control, línea 50).</p>
+<p>El bucle que empieza en la línea 160 realiza una rotación de los colores de la paleta mediante una fórmula matemática que hace que se ilumine un número cada vez. Las tintas se establecen inspeccionándolas sucesivamente y determinando si contienen el componente binario que estamos buscando. Por ejemplo, el 3 fue dibujado con tinta 4; por lo tanto, para visualizar el número 3 debemos dar un color visible a todas las tintas cuyo número contenga un 4 binario. Esas tintas son: </p>
+<pre><code>4(0100), 5(0101), 6(0110), 7(0111), 12(1100), 13(1101), 14(1110), 15(1111)
+</code></pre>
+<p>En una aplicación práctica se calcularía qué tintas se deberían cambiar en cada etapa, y las líneas 180 a 200 se sustituirían por una rutina más rápida. </p>
+<pre><code class="language-basic">10 REM animacion con tintas
+20 ON BREAK GOSUB 220
+30 FOR i=1 TO 15:INK i,26:NEXT
+40 m(1)=1:m(2)=2:m(3)=4:m(4)=8
+50 MODE 0:PRINT CHR$(23);CHR$(3);:TAG
+60 FOR p=1 TO 4
+70 GRAPHICS PEN m(p),1
+80 LOCATE #1,1,25:PRINT#1,CHR$(48+p);
+90 FOR x=0 TO 7
+100 FOR y=0 TO 14 STEP 2
+110 IF TEST(x*4,y)=0 THEN 140
+120 MOVE (x+6)*32,(y+6)*16:PRINT CHR$(143);
+130 MOVE (x+6)*32,(y+7)*16:PRINT CHR$(143);
+140 NEXT y,x,p
+150 LOCATE #1,1,25:PRINT#1,&quot; &quot;;
+160 FOR p=1 TO 4
+170 FOR i=1 TO 25:FRAME:NEXT
+180 FOR i=0 TO 15
+190 IF (i AND m(p))=0 THEN INK i,0 ELSE INK i,26
+200 NEXT i,p
+210 GOTO 160
+220 INK 1,26
+run
+</code></pre>
+<h3 id="sprites"><a class="header" href="#sprites">Sprites</a></h3>
+<p>En el ejemplo anterior hemos visto cómo se da ilusión de movimiento cambiando los colores después de escribir con las tintas 1, 2, 4 y 8. Un efecto muy distinto se consigue si se utilizan las mismas tintas pero se manejan los colores de forma diferente. Este efecto se conoce con el nombre de &quot;planos de color&quot;; lo ilustramos en el siguiente ejemplo.</p>
+<pre><code class="language-basic">10 REM montañas
+20 DEFINT a-s,u-Z
+30 INK 0,1:INK 1,26
+40 INK 2,6:INK 3,6
+50 FOR i=4 TO 7:INK i,9:NEXT
+60 FOR i=8 TO 15:INK i,20:NEXT
+70 MODE 0:DEG:ORIGIN 0,150:CLG:MOVE 0,150
+80 FOR x=16 TO 640 STEP 16
+90 DRAW x,COS(x)*150+RND*100,4
+100 NEXT
+110 MOVE 0,0:FILL 4
+120 cx=175:GOSUB 320
+130 cx=525:GOSUB 320
+140 SYMBOL 252,0,0,&amp;C,&amp;1F,&amp;30,&amp;7F,&amp;FF
+150 SYMBOL 253,0,6,&amp;E,&amp;F2,2,&amp;F2,&amp;FE
+160 SYMBOL 254,0,&amp;60,&amp;70,&amp;7F,&amp;7F,&amp;7F,&amp;7F
+170 SYMBOL 255,0,0,0,&amp;F8,&amp;EC,&amp;FE,&amp;FF
+180 pr$=CHR$(254)+CHR$(255)
+190 pl$=CHR$(252)+CHR$(253)
+200 TAG:t=TIME
+210 FOR x=-32 TO 640 STEP 4
+220 x2=((608-x)*2) MOD 640:hl=RND*10:hr=50*SIN(x)
+230 GRAPHICS PEN 8,1:MOVE x,100+hr,,3:PRINT pr$;
+240 GRAPHICS PEN 2,1:MOVE x2,115+hl,,3:PRINT pl$;
+250 IF (TEST(X2-2,115+hl-12) AND 8)=8 THEN 380
+260 IF TIME-t&lt;30 THEN 260
+270 FRAME:t=TIME
+280 GRAPHICS PEN 7,1:MOVE x,100+hr,,2:PRINT pr$;
+290 GRAPHICS PEN 13,1:MOVE x2,115+hl,,2:PRINT pl$;
+300 NEXT
+310 GOTO 210
+320 MOVE cx,100
+330 FOR x=0 TO 360 STEP 10
+340 DRAW cx+SIN(x)*50+10*RND,100+COS(x)*25+10*RND,1
+350 NEXT
+360 DRAW cx,100:MOVE cx,90:FILL 1
+370 RETURN
+380 ENT -1,1,1,1
+390 SOUND 1,25,400,15,,1,15
+400 FOR y=100+hr TO -132 STEP -2
+410 GRAPHICS PEN 7,1:MOVE x,y,,2:PRINT pr$;
+420 GRAPHICS PEN 8,1:MOVE x,y-2,,3:PRINT pr$;
+430 NEXT
+440 GOTO 70
+</code></pre>
+<p>Para explicar cómo funciona, una vez más tenemos que expresar los números de <strong>INK</strong> en binario. Empezando por el número máximo (el 15), asignamos el color cyan a todas las tintas que tienen activo el bit del &quot;8&quot; (de la 15 a la 8). Después damos el color verde a todas las que tienen activado el bit del &quot;4&quot; (de la 7 a la 4). Las tintas <strong>2</strong> y <strong>3</strong> tienen a 1 el bit del &quot;2&quot; y les asignamos el color rojo. Finalmente, asignamos el color blanco a la tinta 1 y dejamos la tinta <strong>0</strong> en azul. </p>
+<p>Los gráficos se envían a la pantalla en modo OR (líneas 230 y 240). El color que se ve en la pantalla en cada pixel está determinado por el bit más significativo del resultan te en ese punto. Así pues, una imagen que esté en un plano &quot;más significativo&quot; predomina sobre otra que esté en un plano &quot;menos significativo&quot;, pero el fondo se conserva y vuelve a ser visible si se retira la imagen &quot;más significativa&quot;. La forma de retirar la imagen consiste en dibujarla en modo <strong>AND</strong>: las tintas 7, 11, 13 y 14 borran las tintas 8, 4, 2 y 1, respectivamente (líneas 280 y 290).</p>
+<h3 id="gráficos-con-el-segundo-banco-de-64k-de-ram"><a class="header" href="#gráficos-con-el-segundo-banco-de-64k-de-ram">Gráficos con el segundo banco de 64K de RAM</a></h3>
+<p>Para concluir este capítulo ofrecemos un programa &quot;diseñador de pantallas gráficas&quot; que utilizan los 64K adicionales de RAM. </p>
+<pre><code class="language-basic">10 'Diseñador de pantallas, por David Radisic
+20 ' copyright (c) AMSOFT 1985
+30 '
+40 'No olvide ejecutar BANKMAN antes que este programa
+50 ' **************************************************
+60 '
+70 ON ERROR GOTO 2740
+80 DEFINT a-x
+90 MODE 1:ch=127:ord=1:pn(0)=0:pn(1)=26:pn(2)=15:pn(3)=6:pn(4)=0:pn=1:norx=1:menu=1:zzz=HIMEM
+100 DIM orden$(22)
+110 norx$(0)=&quot;Normal&quot;:norx$(1)=&quot;XOR   &quot;:norx$(2)=&quot;Transp&quot;:norx$(3)=&quot;XOR   &quot;
+120 RESTORE:READ ords$(1),ords$(2):ord$=CHR$(16)+CHR$(&amp;7F)+ords$(1)+ords$(2)
+130 READ ordnum:FOR i=1 TO ordnum:READ orden$(i):NEXT
+140 READ parar$:IF parar$&lt;&gt;&quot;**&quot; THEN ord$(ord)=parar$:ord=ord+1:GOTO 140
+150 WINDOW #0,1,40,1,3:PAPER #0,0:PEN #0,1:CLS #0
+160 WINDOW #1,1,40,4,4:PAPER #1,3:PEN #1,1:CLS #1
+170 ORIGIN 0,0,0,640,0,334
+180 x=320:y=200:MOVE x,y
+190 BORDER pn(4):FOR i=0 TO 3:INK i,pn(i):NEXT
+200 MASK 255,0:PAPER 0:PEN 1:PAPER #1,3:PEN #1,1:GRAPHICS PEN pn,norx
+210 IF ind&lt;&gt;5 THEN 280
+220 IF pn&lt;2 THEN flecha$=CHR$(240):px=(pn+1)*13 ELSE IF pn&lt;4 THEN flecha$=CHR$(241):px=(pn-1)*13 ELSE flecha$=CHR$(243):px=37
+230 LOCATE px,2:PRINT flecha$;
+240 LOCATE 1,1:PRINT USING&quot;   PEN 0 : ##   PEN 1 : ##&quot;;pn(0);pn(1);
+250 LOCATE 29,2:PRINT USING&quot;Border : ##&quot;;pn(4)
+260 LOCATE 1,3:PRINT USING&quot;   PEN 2 : ##   PEN 3 : ##&quot;;pn(2);pn(3);
+270 LOCATE px,2:PRINT&quot; &quot;;
+280 LOCATE #1,1,1:PRINT #1,USING&quot;X :####  Y :####  &quot;;x;y;:PRINT#1,&quot;Modo de tinta: &quot;;norx$(norx+(borrar*2));&quot; &quot;;
+290 IF ind=0 THEN GOSUB 2260
+300 '
+310 GOSUB 970
+320 '
+330 IF ind&gt;0 THEN 390
+340 IF i$=&quot;&quot; THEN 390
+350 ord=INSTR(ord$,i$):IF ord=0 THEN 390
+360 IF ord=1 THEN CLG:x=320:y=200:GOTO 390
+370 IF ord=2 THEN RUN 70
+380 ON ord-2 GOSUB 1240,1410,1520,1640,1840,1860,1950,2020,2090,2120,2170,2200,2660,2660,2660,2660,2390,2330,2200
+390 IF tx=0 AND ty=0 THEN 200
+400 IF ind&gt;0 THEN 440
+410 GOSUB 630
+420 GOSUB 680:FRAME:GOSUB 680
+430 GOTO 200
+440 MOVE tempx,tempy,pn,1
+450 ON ind GOSUB 470,490,550,640
+460 GOTO 200
+470 PLOT x,y:GOSUB 630:PLOT x,y
+480 RETURN
+490 DRAW tempx+x,tempy:DRAW tempx+x,tempy+y
+500 DRAW tempx,tempy+y:DRAW tempx,tempy
+510 GOSUB 630
+520 DRAW tempx+x,tempy:DRAW tempx+x,tempy+y
+530 DRAW tempx,tempy+y:DRAW tempx,tempy
+540 RETURN
+550 MOVE tempx,tempy:DRAWR x,y
+560 IF treslados=0 THEN 580
+570 DRAW tempxx,tempyy:DRAW tempx,tempy
+580 GOSUB 630
+590 MOVE tempx,tempy:DRAW tempx+x,tempy+y
+600 IF treslados=0 THEN RETURN
+610 DRAW tempxx,tempyy:DRAW tempx,tempy
+620 RETURN
+630 x=x+tx:y=y+ty:RETURN
+640 MOVE tempx,tempy:DRAW x,y
+650 GOSUB 630
+660 MOVE tempx,tempy:DRAW x,y
+670 RETURN
+680 ' dibujar y borrar cursor
+690 IF ind=5 THEN RETURN
+700 MASK 255,1
+710 IF ind&gt;1 THEN xx=tempx+x:yy=tempy+y ELSE xx=x:yy=y
+720 IF ind=4 THEN xx=x:yy=y
+730 IF ind=1 THEN xx=x:yy=y
+740 IF borrar=1 THEN 820
+750 GOSUB 790
+760 MASK 255,0
+770 IF i$=&quot; &quot; THEN GOSUB 2150:i$=&quot;&quot;
+780 RETURN
+790 MOVE xx-4,yy,pn,1:DRAW xx+4,yy
+800 MOVE xx,yy-4:DRAW xx,yy+4
+810 MOVE xx,yy,,xorn:RETURN
+820 nx=1:GOSUB 1220
+830 FRAME:GOSUB 1220
+840 IF i$=&quot; &quot; THEN nx=norx:GRAPHICS PEN pn,1:GOSUB 1220
+850 i$=&quot;&quot;
+860 IF ind&lt;&gt;6 THEN 760
+870 IF movido=0 AND j$&lt;&gt;&quot;&quot; AND (j$&lt;CHR$(240) OR j$&gt;CHR$(247)) THEN ch=ASC(j$):movido=1
+880 IF movido=0 THEN RETURN
+890 LOCATE 5,2
+900 FOR i=ch-5 TO ch+5
+910 PEN ABS(i&lt;&gt;ch)+1
+920 ch$=CHR$(1)+CHR$(ABS(i+256) MOD 256)
+930 IF ch=i THEN PRINT&quot; &quot;ch$&quot; &quot;; ELSE PRINT ch$;
+940 NEXT
+950 PEN 1:PRINT&quot;   = &quot;ch&quot;  &quot;;
+960 GOTO 760
+970 ty=0:tx=0:GOSUB 680:FRAME:GOSUB 680
+980 IF INKEY(0)&lt;&gt;-1 OR INKEY(72)&lt;&gt;-1 THEN ty=16
+990 IF INKEY(2)&lt;&gt;-1 OR INKEY(73)&lt;&gt;-1 THEN ty=-16
+1000 IF INKEY(8)&lt;&gt;-1 OR INKEY(74)&lt;&gt;-1 THEN tx=-16
+1010 IF INKEY(1)&lt;&gt;-1 OR INKEY(75)&lt;&gt;-1 THEN tx=16
+1020 IF INKEY(21)&lt;&gt;-1 OR INKEY(76)&lt;&gt;-1 THEN tx=tx/8:ty=ty/8
+1030 IF tx=0 AND ty=0 THEN movido=0 ELSE movido=1
+1040 j$=INKEY$:i$=UPPER$(j$)
+1050 IF (i$=&quot; &quot; OR i$=CHR$(13)) AND ind&gt;0 THEN 1090
+1060 IF ind=5 THEN 1120
+1070 IF ind=6 THEN 1170
+1080 RETURN
+1090 ON ind GOSUB 1240,1410,1640,1860,1950,2020
+1100 i$=&quot;&quot;
+1110 RETURN
+1120 IF movido=0 THEN RETURN
+1130 IF tx&gt;2 THEN pn=(pn+1) MOD 5 ELSE IF tx&lt;-2 THEN pn=ABS((pn&lt;1))*5-1+pn
+1140 IF ty&gt;2 THEN pn(pn)=(pn(pn)+1) MOD 27 ELSE IF ty&lt;-2 THEN pn(pn)=ABS((pn(pn)&lt;1))*27-1+pn(pn)
+1150 GRAPHICS PEN pn:PEN #1,pn
+1160 tx=0:ty=0:BORDER pn(pn):RETURN
+1170 IF tx&lt;0 THEN ch=ABS(ch+255) MOD 256
+1180 IF ty&lt;0 THEN ch=ABS(ch+246) MOD 256
+1190 IF tx&gt;0 THEN ch=(ch+1) MOD 256
+1200 IF ty&gt;0 THEN ch=(ch+10) MOD 256
+1210 tx=0:ty=0:RETURN
+1220 TAG:MOVE xx-8,yy+6,pn,nx:PRINT CHR$(ch);:TAGOFF
+1230 RETURN
+1240 ' C
+1250 IF ind=1 THEN 1290
+1260 ro=1:GOSUB 2240
+1270 tempx=x:tempy=y:ind=1
+1280 RETURN
+1290 IF tempx=x AND tempy=y THEN 1390
+1300 PLOT x,y,,1
+1310 tix=MAX(x,tempx)-MIN(tempx,x):tiy=MAX(y,tempy)-MIN(tempy,y)
+1320 ti=SQR((tix^2)+(tiy^2))
+1330 ORIGIN tempx,tempy
+1340 PLOT 0,0,pn,0:MOVE 0,-ti
+1350 FOR z=0 TO PI*2+0.01 STEP PI/(ti/2)
+1360 DRAW SIN(z+PI)*ti,COS(z+PI)*ti,pn,norx
+1370 NEXT z
+1380 ORIGIN 0,0
+1390 x=tempx:y=tempy:tempx=0:tempy=0:ind=0
+1400 RETURN
+1410 ' R
+1420 IF ind=2 THEN 1470
+1430 ro=2:GOSUB 2240
+1440 tempx=x:tempy=y:ind=2
+1450 x=0:y=0
+1460 RETURN
+1470 IF norx=1 THEN 1500
+1480 MOVE tempx,tempy:DRAW tempx+x,tempy,,norx
+1490 DRAW tempx+x,tempy+y:DRAW tempx,tempy+y:DRAW tempx,tempy
+1500 x=tempx:y=tempy:ind=0
+1510 RETURN
+1520 ' . (rellenar)
+1530 ro=3:GOSUB 2240
+1540 GOSUB 1620:IF i$=&quot; &quot; THEN 1600
+1550 colorlim=VAL(i$)
+1560 ro=4:GOSUB 2240
+1570 GOSUB 1620:IF i$=&quot; &quot; THEN 1600
+1580 rellenador=VAL(i$)
+1590 MOVE x,y,colorlim:FILL rellenador
+1600 ind=0:i$=&quot;&quot;
+1610 RETURN
+1620 i$=INKEY$:IF (i$&lt;&quot;0&quot; OR i$&gt;&quot;3&quot;) AND i$&lt;&gt;&quot; &quot; THEN 1620
+1630 RETURN
+1640 ' T
+1650 IF ind=3 THEN 1700
+1660 ind=3:ro=5:GOSUB 2240
+1670 tempx=x:tempy=y
+1680 x=0:y=0
+1690 RETURN
+1700 IF treslados&lt;&gt;0 THEN 1770
+1710 ro=6:GOSUB 2240
+1720 MOVE 0,0,pn,1:GOSUB 590
+1730 tempxx=tempx+x:tempyy=tempy+y:x=x/2:y=20
+1740 treslados=1
+1750 GOSUB 550:GOSUB 590
+1760 RETURN
+1770 IF norx=1 THEN 1800
+1780 MOVE tempxx,tempyy,,norx:DRAW tempx,tempy
+1790 DRAW tempx+x,tempy+y:DRAW tempxx,tempyy
+1800 tempxx=0:tempyy=0
+1810 x=tempx:y=tempy:treslados=0
+1820 tempx=0:tempy=0:ind=0
+1830 RETURN
+1840 ' @
+1850 norx=1:borrar=borrar XOR 1:RETURN
+1860 ' \ (linea recta)
+1870 IF ind=4 THEN 1910
+1880 ro=7:GOSUB 2240
+1890 tempx=x:tempy=y:ind=4
+1900 RETURN
+1910 IF norx=1 THEN 1930
+1920 MOVE tempx,tempy,,norx:DRAW x,y
+1930 x=tempx:y=tempy:ind=0
+1940 RETURN
+1950 ' I
+1960 IF ind=5 THEN ind=0:CLS:INK 3,coltemp:INK pn,col:GOTO 1990
+1970 CLS:ind=5:BORDER pn(pn)
+1980 RETURN
+1990 FOR i=0 TO 3:INK i,pn(i):NEXT:BORDER pn(4)
+2000 IF pn=4 THEN pn=1
+2010 CLS:RETURN
+2020 ' A
+2030 IF ind=6 THEN 2070
+2040 tempx=0:tempy=0:CLS
+2050 borrar=1:ind=6:norx=1:movido=1
+2060 RETURN
+2070 ind=0
+2080 RETURN
+2090 ' N
+2100 norx=0
+2110 RETURN
+2120 ' B
+2130 GRAPHICS PEN pn,0:TAG:MOVE xx-8,yy+6,,0:PRINT&quot; &quot;;:TAGOFF
+2140 RETURN
+2150 ' &lt;BARRA ESPACIADORA&gt;
+2160 PLOT x,y,pn,norx:RETURN
+2170 ' X
+2180 norx=1
+2190 RETURN
+2200 ' M
+2210 menu=menu MOD 2+1
+2220 GOSUB 2260:RETURN
+2230 i$=UPPER$(INKEY$):IF i$=&quot;&quot; OR INSTR(gri$,i$)=0 THEN 2230 ELSE RETURN
+2240 CLS:borrar=0:PRINT ord$(ro);:LOCATE 1,3:PRINT&quot;&lt;BARRA&gt; &quot;;:IF ro=3 OR ro=4 THEN PRINT&quot;para terminar&quot;
+2250 RETURN
+2260 CLS:ind=-1
+2270 FOR i=1 TO LEN(ords$(menu))
+2280 ps=i+ABS(menu=2)*LEN(ords$(1))
+2290 PEN 1:PRINT&quot;&lt;&quot;MID$(ords$(menu),i,1)&quot;&gt;&quot;MID$(orden$(ps),2,4)&quot; &quot;;
+2300 NEXT
+2310 PRINT&quot;&lt;CLR&gt;   &lt;DEL&gt;   &lt;BARRA&gt;&quot;;
+2320 RETURN
+2330 ' G
+2340 GOSUB 2460:IF nombrefichero$=&quot;&quot; THEN 2370
+2350 GOSUB 2550
+2360 SAVE nombrefichero$,b,&amp;c000,&amp;4000
+2370 GOSUB 2260
+2380 RETURN
+2390 ' L
+2400 GOSUB 2460:IF nombrefichero$=&quot;&quot; THEN 2440
+2410 GOSUB 2730
+2420 LOAD nombrefichero$,&amp;c000
+2430 GOSUB 2570
+2440 GOSUB 2260
+2450 RETURN
+2460 CLS:LOCATE 10,3:PRINT&quot;&lt;RETURN&gt; para abandonar!&quot;;
+2470 LOCATE 1,1:PRINT&quot;Nombre del fichero? &quot;;
+2480 INPUT &quot;&quot;,nombrefichero$:IF nombrefichero$=&quot;&quot; THEN RETURN
+2490 n=INSTR(nombrefichero$,&quot;.&quot;):IF n=0 THEN 2520
+2500 IF n=1 THEN 2460
+2510 nombrefichero$=LEFT$(nombrefichero$,n-1)
+2520 nombrefichero$=LEFT$(nombrefichero$,8)+&quot;.pan&quot;
+2530 CLS
+2540 RETURN
+2550 FOR i=0 TO 4:POKE &amp;c000+i,pn(i):NEXT
+2560 RETURN
+2570 FOR i=0 TO 4:pn(i)=PEEK(&amp;c000+i) MOD 27:NEXT
+2580 cn=0:FOR i=0 TO 2:IF pn(i)=pn(i+1) THEN cn=cn+1
+2590 NEXT:IF cn=3 THEN 2630
+2600 FOR i=0 TO 3:INK i,pn(i):NEXT
+2610 BORDER pn(4):pn=1:GRAPHICS PEN pn
+2620 RETURN
+2630 pn(0)=0:pn(1)=26:pn(2)=15:pn(3)=6:pn(4)=0
+2640 GOTO 2600
+2650 ' 1, 2, 3 y 4
+2660 CLS:PRINT&quot;Quiere &lt;G&gt;uardar&quot;:PRINT TAB(8)&quot;&lt;R&gt;ecuperar&quot;:PRINT TAB(6)&quot;o &lt;I&gt;intercambiar la pantalla?&quot;;
+2670 gri$=&quot;GRI&quot;+CHR$(13):GOSUB 2230:IF i$=CHR$(13) THEN 2260
+2680 bnk2=(ord-13):bnk1=1
+2690 IF i$=&quot;G&quot; THEN CLS:GOSUB 2550:|SCREENCOPY,bnk2,bnk1
+2700 IF i$=&quot;R&quot; THEN GOSUB 2730:|SCREENCOPY,bnk1,bnk2:GOSUB 2570
+2710 IF i$=&quot;I&quot; THEN CLS:GOSUB 2730:GOSUB 2550:|SCREENSWAP,bnk2,bnk1:GOSUB 2570
+2720 GOSUB 2260:RETURN
+2730 FOR i=0 TO 3:INK i,0:NEXT:BORDER 0:RETURN
+2740 CLS:GOSUB 2600:RESUME 2260
+2750 DATA &quot;CR.T@\IANBXM&quot;,&quot;1234LGM&quot;
+2760 DATA 19,Circunferencia,Recuadro,&quot;.rellenar&quot;,Triangulo,Alternar,\recta,&quot;Inks &quot;,ASCII,Normal,Borrar,&quot;Xor  &quot;,&quot;Menu &quot;,&quot;1     &quot;,&quot;2    &quot;,&quot;3    &quot;,&quot;4     &quot;,&quot;Leer &quot;,Grabar,&quot;Menu &quot;
+2770 DATA Circunferencia,Recuadro,Color del limite,Color para rellenar,Triangulo 1,Triangulo 2,Linea recta,**
+</code></pre>
+<p>Las dos órdenes <strong>|SCREENCOPY</strong> y <strong>|SCREENSWAP</strong> se cargan con el programa <strong>BANKMAN</strong> (cara 1 del juego de discos del sistema). Estas órdenes copian e intercambian imágenes de pantalla entre los diversos bloques de 16K de memoria y entre los dos bancos de 64K.</p>
+<p>Antes de probar el programa &quot;diseñador de pantallas&quot; es necesario ejecutar el &quot;gestor de bancos&quot;. Inserte en la unidad la cara 1 del juego de discos del sistema y escriba lo siguiente:</p>
+<pre><code class="language-basic">run&quot;bankman&quot;
+</code></pre>
+<p>A continuación ejecute el programa &quot;diseñador de pantallas&quot;. En el monitor aparecerá un menú y un cursor gráfico parpadeante. Pulse la tecla correspondiente a la opción elegida.</p>
+<p>Por ejemplo, para dibujar una circunferencia pulse </p>
+<pre><code>C
+</code></pre>
+<p>y luego la tecla <strong>[↑]</strong> hasta que el cursor pulsátil esté a unos dos o tres centímetros por encima del centro de la pantalla. </p>
+<p>Finalmente, pulse la barra espaciadora para ejecutar la función &quot;Circunferencia&quot;, después de lo cual el programa vuelve al menú.</p>
+<p>Si se teclea una <strong>M</strong> (de &quot;M&quot;enú) se obtiene un segundo menú que ofrece las opciones de &quot;G&quot;uardar y &quot;R&quot;ecuperar pantallas y de manipular el contenido de las pantallas &quot;l&quot;, &quot;2&quot;, &quot;3&quot; y &quot;4&quot; (que están en el segundo banco de 64K de RAM).</p>
+<p>Para utilizar estas funciones, escriba el &quot;número de memoria&quot; (<strong>1</strong>, <strong>2</strong>, <strong>3</strong> o <strong>4</strong>); aparecerá otro menú, en el cual se puede elegir: </p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Opción</th><th>Acción</th></tr></thead><tbody>
+<tr><td style="text-align: center"><strong>G</strong></td><td>Almacenar una pantalla</td></tr>
+<tr><td style="text-align: center"><strong>R</strong></td><td>Recuperar una pantalla</td></tr>
+<tr><td style="text-align: center"><strong>I</strong></td><td>Intercambiar pantallas</td></tr>
+<tr><td style="text-align: center"><strong>[RETURN]</strong></td><td>Abandonar este menú</td></tr>
+</tbody></table>
+</div>
+<p>Por ejemplo, para almacenar la pantalla actual en la memoria 2, pulse el <strong>&quot;2&quot;</strong> seguido de la <strong>&quot;G&quot;</strong>.</p>
+<p>Si se sale de este menú, pulsando <strong>&quot;M&quot;</strong> puede volver a él.</p>
+<p>El programa &quot;diseñador de pantallas&quot; realiza diversas funciones: rectángulos, circunferencias, triángulos, rectas, encendido y apagado de puntos, rellenado de recintos y dibujo de caracteres.</p>
+<p>Cuando se ha terminado el diseño de una pantalla, se la puede grabar en disco para su posterior recuperación. </p>
+<p>Con esto termina el último capítulo del manual. Probando y analizando los programas que le hemos ofrecido en estas páginas, y experimentando con ellos, es de esperar que usted haya llegado a conocer con bastante profundidad el BASIC de Amstrad y el propio CPC6128.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="9.01.-En-términos-generales.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="10.0.-Para-más-información.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="9.01.-En-términos-generales.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="10.0.-Para-más-información.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>
