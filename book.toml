@@ -1,0 +1,24 @@
+[book]
+title = "Amstrad CPC6128 Manual del Usuario"
+description = "Manual de usuario del micro ordenenador Amstrad modelo CPC6128"
+authors = ["Ivor Spital", "Emilio Benito Santos"]
+language = "es"
+multilingual = false
+src = "src"
+
+[build]
+build-dir = "html"                # the directory where the output is placed
+create-missing = false            # whether or not to create missing pages
+
+[output.html]
+site-url = "https://latchdevel.github.io/Amstrad-CPC6128-Manual-del-Usuario/"
+git-repository-url = "https://github.com/latchdevel/Amstrad-CPC6128-Manual-del-Usuario"
+
+[output.html.search]
+limit-results = 20
+use-boolean-and = true
+boost-title = 2
+boost-hierarchy = 2
+boost-paragraph = 1
+expand = true
+heading-split-level = 2
