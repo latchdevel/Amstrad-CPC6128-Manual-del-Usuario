@@ -59,6 +59,8 @@
 
 - [Para más información](10.0.-Para-más-información.md)
 
+-----------
+
 # Apéndice 1
 - [Digital Research y AMSTRAD](A01.-Digital-Research-y-AMSTRAD.md).
   
@@ -74,4 +76,5 @@
 - [Guante blanco](A03.-Que-usted-lo-disfrute.-Guante-blanco.md).
 
 # Apéndice 4
-- [Índice](A04.-Indice.md).
+-----------
+[Índice](A04.-Indice.md).
