@@ -161,7 +161,7 @@
 </code></pre>
 <p>establece la longitud de registro e inicializa el &quot;número de registro actual&quot; (a 0), pero <strong>no borra memoria</strong>.</p>
 <p>La orden</p>
-<pre><code>|BANKWRITE,@&lt;codigo generado&gt;,&lt;expresion literal&gt;[,&lt;mumero de registro&gt;] 
+<pre><code>|BANKWRITE,@&lt;código generado&gt;,&lt;expresión literal&gt;[,&lt;número de registro&gt;] 
 </code></pre>
 <p>escribe la &lt;expresión literal&gt; en el fichero. El &lt;número de registro&gt; especifica en qué registro se debe escribir. Si se omite este parámetro, se escribe en el número de registro actual. Finalmente, se actualiza este número (sumándole 1). </p>
 <p>Si la &lt;expresión literal&gt; no llena el registro, los caracteres antiguos sobre los que no se ha escrito seguirán estando en el registro. Si la &lt;expresión literal&gt; es demasiado larga, se ignoran los caracteres restantes para no &quot;corromper&quot; el registro siguiente.</p>
@@ -176,7 +176,7 @@
   |BANKWRITE,@r%,w$
 </code></pre>
 <p>La orden</p>
-<pre><code>  |BANKREAD,@&lt;codigo generado&gt;,@&lt;variable literal&gt;[,&lt;numero de registro&gt;]
+<pre><code>  |BANKREAD,@&lt;código generado&gt;,@&lt;variable literal&gt;[,&lt;número de registro&gt;]
 </code></pre>
 <p>lee un registro y asigna su contenido a la &lt;variable literal&gt;. </p>
 <p>El &lt;número de registro&gt; especifica en qué registro se debe leer. Si se omite este parámetro, se lee en el número de registro actual. Finalmente, se actualiza este número (sumándole 1). Si el contenido del registro no llena completamente la &lt;variable literal&gt;, los caracteres antiguos sobre los que no se ha escrito seguirán estando en la &lt;variable literal&gt;. Si el contenido del registro es más largo que la &lt;variable literal&gt;, se ignoran los caracteres restantes, ya que no es posible aumentar la longitud de la variable mediante una orden externa.</p>
@@ -190,7 +190,7 @@
 </code></pre>
 <h3 id="búsquedas"><a class="header" href="#búsquedas">Búsquedas</a></h3>
 <p>Se puede recorrer el fichero en busca de un dato determinado. La orden</p>
-<pre><code>|BANKFIND,@&lt;codigo generado&gt;,&lt;cadena buscada&gt;[,&lt;numero de registro inicial&gt;[,&lt;numero de registro final&gt;]]
+<pre><code>|BANKFIND,@&lt;código generado&gt;,&lt;cadena buscada&gt;[,&lt;número de registro inicial&gt;[,&lt;número de registro final&gt;]]
 </code></pre>
 <p>examina los registros especificados. El &lt;número de registro inicial&gt; especifica el registro a partir del cual debe comenzar la búsqueda. Si se omite este parámetro, se toma por defecto el número de registros actual.</p>
 <p>La búsqueda continúa, a saltos de &lt;longitud de registro&gt;, hasta que se encuentra la cadena o hasta que se agotan los 64K.</p>

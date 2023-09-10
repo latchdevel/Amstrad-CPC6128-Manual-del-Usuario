@@ -380,13 +380,13 @@ PRINT SPC(x*3)&quot;hola&quot;
 hola                    - ventana 0
 </code></pre>
 <pre><code class="language-basic">PRINT #0,&quot;hola&quot;
-hola                    - tambien ventana 0
+hola                    - también ventana 0
 </code></pre>
 <pre><code class="language-basic">PRINT #4,&quot;hola&quot;
-hola                    - ventana 4 (primera linea de la pantalla)
+hola                    - ventana 4 (primera línea de la pantalla)
 </code></pre>
 <pre><code class="language-basic">PRINT #8,&quot;hola&quot;
-hola                    - en la impresora (si esta conectada)
+hola                    - en la impresora (si está conectada)
 </code></pre>
 <p>Con <strong>TAB</strong> y <strong>SPC</strong> se pueden controlar los formatos más sencillos, pero en cuanto el formato deseado sea un poco más complejo habrá que utilizar <strong>PRINT USING</strong> y una &quot;plantilla&quot; adecuada. Una plantilla de formato es una expresión literal que contiene caracteres especiales, cada uno de los cuales especifica un formato determinado. Estos caracteres, denominados &quot;especificadores de formato&quot;, están explicados en detalle en la descripción de <strong>PRINT USING</strong> (<a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#print-using">capítulo 3</a>). Aquí vamos a dar algunos ejemplos.</p>
 <p>En primer lugar, he aquí los formatos disponibles para escribir cadenas literales: </p>
@@ -400,12 +400,12 @@ c
 </code></pre>
 <p>Pero el formato literal más útil es seguramente <strong>&quot;&amp;&quot;</strong>. Con él se anula una función de BASIC por la cual, si una cadena es demasiado larga como para caber en la línea actual, el ordenador la escribe al principio de la línea siguiente. <strong>PRINT USING &quot;&amp;&quot;</strong>; desactiva esa función. (En el siguiente ejemplo ponga <strong>BORDER 0</strong> para hacer visibles los bordes del papel.) </p>
 <pre><code class="language-basic">MODE 1:LOCATE 39,1:PRINT &quot;demasiado&quot;
-                                    -- linea 1 
-demasiado                           -- linea 2
+                                    -- línea 1 
+demasiado                           -- línea 2
                                      
 MODE 1:LOCATE 39,1:PRINT USING &quot;&amp;&quot;;&quot;demasiado&quot;
-                                 de -- linea 1
-masiado                             -- linea 2
+                                 de -- línea 1
+masiado                             -- línea 2
 </code></pre>
 <p>Para los números se dispone de gran variedad de plantillas. La más sencilla es <strong>PRINT USING</strong> &quot;#####&quot;, en la que cada # reserva espacio para un dígito: </p>
 <pre><code class="language-basic">PRINT USING &quot;######&quot;;123

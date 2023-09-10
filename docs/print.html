@@ -621,7 +621,7 @@ Retry, Ignore or Cancel?
 <p>A estas alturas ya sabemos qué podemos y qué no podemos hacer con el ordenador, así como la forma de conectarle periféricos. Sabemos para qué sirven algunas teclas del ordenador y cómo cargar programas. Ahora vamos a ver algunas de la órdenes e instrucciones que usted puede teclear para que empiecen a ocurrir cosas.</p>
 <p>Al ordenador le ocurre lo que a los humanos: sólo puede entender instrucciones que se le dan en el lenguaje que él conoce. En el caso del ordenador, ese lenguaje es BASIC (siglas de <em>Beginners' All-purpose Symbolic Instruction Code</em>, &quot;código de instrucciones simbólicas de uso general para principiantes&quot;). Las palabras del vocabulario de BASIC son la llamadas &quot;palabras clave&quot;, &quot;palabras reservadas&quot; o &quot;palabras de instrucción&quot;. Cada una de ellas ordena a la máquina que realice una determinada función. Todos los lenguajes tienen sus reglas gramaticales, y BASIC no es la excepción. Aquí, el concepto de gramática se reduce al de &quot;sintaxis&quot;; de ahí que el ordenador tenga la amabilidad de decirnos de vez en cuando que hemos cometido un error de sintaxis: <strong>Syntax error</strong>. </p>
 <h2 id="introducción-a-las-palabras-clave-del-basic-de-amstrad"><a class="header" href="#introducción-a-las-palabras-clave-del-basic-de-amstrad">Introducción a las palabras clave del BASIC de AMSTRAD</a></h2>
-<p>En el tercer capítulo, titulado &quot;Lista completa de las palabras clave del BASIC de ASMTRAD&quot;, daremos una descripción de todas las palabras del dialecto de BASIC que entiende este ordenador. En esta sección vamos a presentar sólo las que se utilizan con mayor frecuencia. </p>
+<p>En el tercer capítulo, titulado &quot;Lista completa de las palabras clave del BASIC de AMSTRAD&quot;, daremos una descripción de todas las palabras del dialecto de BASIC que entiende este ordenador. En esta sección vamos a presentar sólo las que se utilizan con mayor frecuencia. </p>
 <h3 id="cls"><a class="header" href="#cls">CLS</a></h3>
 <p>Para borrar la pantalla escriba: </p>
 <pre><code>cls [RETURN]
@@ -1067,7 +1067,7 @@ run [RETURN]
 <p>Par dar un breve repaso a algunas órdenes de CP/M, escriba: </p>
 <pre><code>dir [RETURN]
 </code></pre>
-<p>En la pantalla aparece una lista del contenido del disco, incluidas algunas órdenes tran sitorias. Una de ellas es <strong>DISCKIT3</strong>. Escriba: </p>
+<p>En la pantalla aparece una lista del contenido del disco, incluidas algunas órdenes transitorias. Una de ellas es <strong>DISCKIT3</strong>. Escriba: </p>
 <pre><code>disckit3 [RETURN]
 </code></pre>
 <p>Al cabo de unos instantes verá aparecer en la pantalla el mensaje de presentación de DISCKIT3, seguido de: </p>
@@ -1838,7 +1838,7 @@ run
 </code></pre>
 <p>Acaba de oír la nota DO media, que ha sonado durante 0.2 segundos. ¿No ha oído nada? Suba el control de volumen del ordenador y vuelva a ejecutar el programa. </p>
 <h4 id="duración"><a class="header" href="#duración">Duración</a></h4>
-<p>Este parámetro especifica la duración del sonido. Las unidades son de centésimas de segundo (0.01 s). Si no se especifica duración, el ordenador toma el valor implícito para este pará metro, que es <strong>20</strong>; por eso la nota que acaba de oír ha durado 0.01 x 20=0.2 segundos. </p>
+<p>Este parámetro especifica la duración del sonido. Las unidades son de centésimas de segundo (0.01 s). Si no se especifica duración, el ordenador toma el valor implícito para este parámetro, que es <strong>20</strong>; por eso la nota que acaba de oír ha durado 0.01 x 20=0.2 segundos. </p>
 <p>Si queremos que la nota dure 1 segundo, el valor del parámetro tendrá que ser <strong>100</strong>; para dos segundos, <strong>200</strong>; etc. Escriba lo siguiente: </p>
 <pre><code class="language-basic">10 sound 1,239,200
 run
@@ -1987,7 +1987,7 @@ EOF
 INPUT #9
 LINE INPUT #9
 LIST #9
-FRINT #9
+PRINT #9
 WRITE #9
 </code></pre>
 <p>así como de diversas órdenes para el manejo de discos.</p>
@@ -2173,7 +2173,7 @@ AL COPIAR SOBRE UN DISCO SE BORRA SU CONTENIDO ANTERIOR
 </ul>
 <hr />
 <h3 id="el-segundo-bloque-de-64k-de-memoria"><a class="header" href="#el-segundo-bloque-de-64k-de-memoria">El segundo bloque de 64K de memoria</a></h3>
-<p>EI CPC6128 está dotado de 128K de RAM (random acces memory, memoria de acceso aleatorio) divididos en dos bloques de 64K cada uno. CP/M Plus utiliza todos los 128K, pero en cambio BASIC normalmente no se sirve más que de los 64K primeros. Sería una pena no aprovechar los otros 64K en los programas de BASIC, así que hemos incluido un programa que proporciona órdenes gracias a las cuales se puede utilizar esa memoria con dos usos específicos: como almacén de imágenes de pantalla o como espacio para almacenar cadenas de caracteres.</p>
+<p>EI CPC6128 está dotado de 128K de RAM (random access memory, memoria de acceso aleatorio) divididos en dos bloques de 64K cada uno. CP/M Plus utiliza todos los 128K, pero en cambio BASIC normalmente no se sirve más que de los 64K primeros. Sería una pena no aprovechar los otros 64K en los programas de BASIC, así que hemos incluido un programa que proporciona órdenes gracias a las cuales se puede utilizar esa memoria con dos usos específicos: como almacén de imágenes de pantalla o como espacio para almacenar cadenas de caracteres.</p>
 <p>El programa se llama &quot;gestor de bancos&quot; (&quot;banco&quot; es un término técnico que significa &quot;bloque de memoria&quot;). </p>
 <h3 id="control-de-imágenes-de-pantalla-con-el-gestor-de-bancos"><a class="header" href="#control-de-imágenes-de-pantalla-con-el-gestor-de-bancos">Control de imágenes de pantalla con el gestor de bancos</a></h3>
 <p>El ordenador 6128 visualiza y mantiene constantemente actualizada una imagen de pantalla. Para ello necesita 16K de memoria en la que almacenar información acerca del color y el brillo de todos los pixels (puntos) de la pantalla. En la memoria del 6128 hay espacio suficiente para almacenar información sobre seis imágenes de pantalla simultáneamente (16K para cada una). El gestor de bancos proporciona las órdenes necesaria para manipular y visualizar desde BASIC cinco de las pantallas posibles.</p>
@@ -3622,7 +3622,7 @@ run
 </tbody></table>
 </div>
 <p>(El fondo transparente afecta al papel gráfico de los caracteres escritos con <strong>TAG</strong> y a los espacios que quedan entre los trazos de las líneas discontinuas.)</p>
-<p>Se puede omitir cualquiera de los dos parámetros, pero no ambos. Si se omite un pará metro, la característica controlada por él permanece inalterada.</p>
+<p>Se puede omitir cualquiera de los dos parámetros, pero no ambos. Si se omite un parámetro, la característica controlada por él permanece inalterada.</p>
 <p>Palabras clave asociadas: <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#graphics-paper"><strong>GRAPHICS PAPER</strong></a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#ink"><strong>INK</strong></a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#mask"><strong>MASK</strong></a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#tag"><strong>TAG</strong></a>, <a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#tagoff"><strong>TAGOFF</strong></a>. </p>
 <h3 id="hex"><a class="header" href="#hex">HEX$</a></h3>
 <p><strong>HEX$(</strong>&lt;expresión entera&gt;[,&lt;anchura del campo&gt;]<strong>)</strong></p>
@@ -5295,7 +5295,7 @@ LANGUAGE 3
 <p>Todos los mensajes de error relativos a los mecanismos de las unidades de disco se visualizan en la línea 25, en forma de cinta &quot;sin fin&quot;. Los programas solamente utilizan las primeras 24 líneas de la pantalla.</p>
 <p>Cuando solamente se dispone de la unidad de disco incorporada al ordenador, en la última línea de la pantalla aparece también el mensaje &quot;<strong>Drive is A:</strong>&quot; o &quot;<strong>Drive is B:</strong>&quot; (&quot;la unidad es ...&quot;). De esta forma CP/M Plus permite utilizar un sólo dispositivo físico como si se tratase de dos. Cuando sea necesario, el usuario tendrá que intercambiar los discos; el ordenador pedirá en cada momento el disco requerido por el programa. Este sistema hace que no sea imprescindible comprar la segunda unidad de disco, pero no puede evitar la necesidad de intercambiar los discos, a veces muy frecuentemente, lo que representa una considerable pérdida de tiempo y un riesgo de error humano.</p>
 <h3 id="copia-de-ficheros-de-un-disco-a-otro"><a class="header" href="#copia-de-ficheros-de-un-disco-a-otro">Copia de ficheros de un disco a otro</a></h3>
-<p>El programa de ayuda <strong>PIP</strong> (abreviatura de <em>Periferal Interchange Program</em>, &quot;programa de intercambio entre periféricos&quot;) permite, entre otras cosas, copiar ficheros de un disco a otro:</p>
+<p>El programa de ayuda <strong>PIP</strong> (abreviatura de <em>Peripheral Interchange Program</em>, &quot;programa de intercambio entre periféricos&quot;) permite, entre otras cosas, copiar ficheros de un disco a otro:</p>
 <p>Para cargar <strong>PIP</strong>, inserte en la unidad la cara 1 y escriba, tras el mensaje <strong>A&gt;</strong>, lo siguiente:</p>
 <pre><code>PIP
 </code></pre>
@@ -5817,7 +5817,7 @@ run
 <em>Orden</em>. Carga un sistema operativo de disco. Los sistemas operativos suministrados con el ordenador son CP/M Plus y CP/M 2.2.</p>
 <p>La ejecución de esta orden no se puede completar si en la unidad no hay instalado un disco de sistema con CP/M. En concreto, CP/M Plus se carga con una copia de la cara 1 de los discos maestros suministrados con el ordenador; CP/M 2.2, con una copia de la cara 4.</p>
 <h3 id="dir"><a class="header" href="#dir">|DIR</a></h3>
-<p><strong>|DIR</strong> [,&lt;expresion literal&gt;]</p>
+<p><strong>|DIR</strong> [,&lt;expresión literal&gt;]</p>
 <pre><code class="language-basic">|DIR,&quot;*.BAS&quot;
 </code></pre>
 <p><em>Orden</em>. Escribe en la pantalla el directorio del disco (al estilo de CP/M) y el espacio libre. Si se omite el parámetro, se supone *.*.</p>
@@ -5831,17 +5831,17 @@ run
 <p><strong>|DISC.OUT</strong>
 Especifica que las operaciones de escritura se deben hacer con el disco. </p>
 <h3 id="drive"><a class="header" href="#drive">|DRIVE</a></h3>
-<p><strong>|DRIVE,&lt;expresion literal&gt;</strong></p>
+<p><strong>|DRIVE,&lt;expresión literal&gt;</strong></p>
 <pre><code class="language-basic">|DRIVE,&quot;A&quot;
 </code></pre>
 <p><em>Orden</em>. Establece qué unidad de disco se debe considerar como implícita en lo sucesivo. Esta orden fallará si AMSDOS no consigue leer en la unidad especificada.</p>
 <h3 id="era"><a class="header" href="#era">|ERA</a></h3>
-<p><strong>|ERA,&lt;expresion literal&gt;</strong></p>
+<p><strong>|ERA,&lt;expresión literal&gt;</strong></p>
 <pre><code class="language-basic">|ERA,&quot;*.BAK&quot;
 </code></pre>
 <p><em>Orden</em>. Borra todos los ficheros que concuerden con la &lt;expresión literal&gt; y no sean de sólo lectura. Admite símbolos comodín. </p>
 <h3 id="ren"><a class="header" href="#ren">|REN</a></h3>
-<p><strong>|REN,&lt;expresion literal&gt;,&lt;expresion literal&gt;</strong></p>
+<p><strong>|REN,&lt;expresión literal&gt;,&lt;expresión literal&gt;</strong></p>
 <pre><code class="language-basic">REN,&quot;FICHNUEV.BAS&quot;,&quot;FICHANTI.BAS&quot;
 </code></pre>
 <p><em>Orden</em>. Da un nuevo nombre a un fichero ya existente en el disco. No puede haber otro fichero con el nombre nuevo. No admite símbolos comodín.</p>
@@ -5859,7 +5859,7 @@ Especifica que las operaciones de escritura se deben hacer con el disco. </p>
 <p><strong>|TAPE.OUT</strong>
 <em>Orden</em>. Especifica que las operaciones de escritura se deben hacer con la cinta. Solamente actúa si está conectado un magnetófono externo. </p>
 <h3 id="user"><a class="header" href="#user">|USER</a></h3>
-<p><strong>USER,&lt;expresion entera&gt;</strong></p>
+<p><strong>USER,&lt;expresión entera&gt;</strong></p>
 <pre><code class="language-basic">|USER,3
 </code></pre>
 <p><em>Orden</em>. Determina con cuál de las 16 secciones del directorio (áreas de usuario, del 0 al 15) deben actuar ciertas órdenes de manejo de disco (<strong>CAT</strong>, <strong>LOAD</strong>, <strong>DIR</strong>, etc.).</p>
@@ -5929,7 +5929,7 @@ Especifica que las operaciones de escritura se deben hacer con el disco. </p>
 <p>No queda espacio en el directorio para una nueva reseña. </p>
 <p><strong>Drive &lt;unidad&gt;: disc full</strong></p>
 <p>No queda espacio en el disco para grabar nuevos datos.</p>
-<p><strong>Drive &lt;unidad&gt;: disc changed, closing &lt;nonbre de fichero&gt;</strong></p>
+<p><strong>Drive &lt;unidad&gt;: disc changed, closing &lt;nombre de fichero&gt;</strong></p>
 <p>Se ha cambiado el disco antes de cerrar el fichero; el ordenador lo cierra.</p>
 <p><strong>&lt;nombre de fichero&gt; is read only</strong></p>
 <p>El fichero no se puede modificar porque es de &quot;sólo lectura&quot;. Los ficheros solamente se pueden caracterizar como de sólo lectura o de lectura/escritura desde CP/M.</p>
@@ -6131,10 +6131,10 @@ Los ficheros que hayan sido grabados en &quot;usuario <strong>0</strong>&quot; y
 <pre><code>SETLST &lt;nombrefichero&gt;
 </code></pre>
 <p>donde &lt;nombrefichero&gt; contiene la cadena de códigos que se debe enviar a la impresora. Al igual que en los ficheros de <strong>SETKEYS</strong>, los códigos de control se pueden representar por:</p>
-<pre><code>^&lt;caracter&gt;
+<pre><code>^&lt;carácter&gt;
 </code></pre>
 <p>o por</p>
-<pre><code>^'&lt;valor del caracter&gt;'
+<pre><code>^'&lt;valor del carácter&gt;'
 </code></pre>
 <p>o bien por</p>
 <pre><code>^'&lt;nombre del código de control&gt;'
@@ -6599,7 +6599,7 @@ cs dibujo
 </ul>
 <p>Cuando esté introduciendo órdenes o procedimientos nuevos, corrija el texto de la línea actual con las teclas descritas. Todos los caracteres que teclee, a excepción de los mencionados, serán insertados en la posición del cursor.</p>
 <p>Para editar un procedimiento definido previamente, utilice la orden <strong>ed</strong>. Dr. LOGO escribe la versión antigua del procedimiento y permite que se utilicen los recursos descritos para mover el cursor por la pantalla y modificar lo que se desee. Modifique el procedimiento dibujo tecleando </p>
-<p>Cuando esté introduciendo órdenes o procedimientos nuevos, corrija el texto de la línea actual con las teclas descritas. Todos los caracteres que teclee, a excepción de los men cionados, serán insertados en la posición del cursor. Para editar un procedimiento definido previamente, utilice la orden ed. Dr. LOGO escribe la versión antigua del procedimiento y permite que se utilicen los recursos descritos para mover el cursor por la pantalla y modificar lo que se desee.</p>
+<p>Cuando esté introduciendo órdenes o procedimientos nuevos, corrija el texto de la línea actual con las teclas descritas. Todos los caracteres que teclee, a excepción de los mencionados, serán insertados en la posición del cursor. Para editar un procedimiento definido previamente, utilice la orden ed. Dr. LOGO escribe la versión antigua del procedimiento y permite que se utilicen los recursos descritos para mover el cursor por la pantalla y modificar lo que se desee.</p>
 <p>Modifique el procedimiento <strong>dibujo</strong> tecleando</p>
 <pre><code>ed &quot;dibujo
 </code></pre>
@@ -8677,7 +8677,7 @@ PRINT #8,CHR$(&amp;A0)
 <p>Los caracteres definidos por el usuario están inicialmente inmediatamente por encima de HIMEM. Este valor se puede modificar mediante una orden <strong>MEMORY</strong>; además se reduce en 4K automáticamente para crear un tampón cada vez que se abre un fichero. El número de caracteres definibles por el usuario (controlado por la orden <strong>SYMBOL AFTER</strong> de BASIC) sólo se puede modificar si HIMEM no ha variado desde la última vez que aquél fue establecido (o si en esa ocasión se estableció en cero, con <strong>SYMBOL AFTER 256</strong>). Cuando se entra en BASIC, el número de caracteres definibles por el usuario se establece como si se hubiera ejecutado la orden <strong>SYMBOL AFTER 240</strong>.</p>
 <p>Por consiguiente, antes de cambiar permanentemente HIMEM, es prudente reducir a cero la zona de memoria dedicada a los caracteres definibles; después se modifica HIMEM y finalmente se restablece la zona de caracteres definibles al tamaño deseado. De esta manera los siguientes programas podrán ejecutar nuevas órdenes <strong>SYMBOL AFTER</strong> sin problemas.</p>
 <p>El siguiente ejemplo ilustra este método, aplicado a la carga de una RSX: </p>
-<pre><code class="language-basic">100 SYMBOL AFTER 256 ' anular memoria para caracteres definibles por el ususario
+<pre><code class="language-basic">100 SYMBOL AFTER 256 ' anular memoria para caracteres definibles por el usuario
 110 direccionrsx=HIMEM-longitudrsx
 120 MEMORY direccionrsx-1
 130 LOAD &quot;codigrsx&quot;,direccionrsx
@@ -8814,10 +8814,10 @@ PRINT #8,CHR$(&amp;A0)
 <center>Conmutación de bancos por hardware</center>
 El gestor de bancos dispone de dos órdenes externas con las que se pueden transferir pantallas completas de un bloque a otro; estas órdenes conmutan automáticamente los bloques 4 a 7 cuando es necesario y dejan restablecido el bloque 1.
 <p>La orden </p>
-<pre><code>|SCREENSWAP,[&lt;seccion de pantalla&gt;,]&lt;numero de pantalla&gt;,&lt;numero de pantalla&gt;
+<pre><code>|SCREENSWAP,[&lt;sección de pantalla&gt;,]&lt;número de pantalla&gt;,&lt;número de pantalla&gt;
 </code></pre>
 <p>intercambia el contenido de dos bloques, mientras que</p>
-<pre><code>|SCREENCOPY,[&lt;seccion de pantalla&gt;],&lt;numero de pantalla destino&gt;,&lt;numero de pantalla fuente&gt;
+<pre><code>|SCREENCOPY,[&lt;sección de pantalla&gt;],&lt;número de pantalla destino&gt;,&lt;número de pantalla fuente&gt;
 </code></pre>
 <p>copia el contenido de un bloque en otro.</p>
 <p>El parámetro opcional &lt;sección de pantalla&gt; hace que la transferencia de información se realice por tramos de 1/64 de pantalla (256 bytes del total de 16K). Así pues, el parámetro puede tener cualquier valor comprendido entre 0 y 63. Este método de operación es útil cuando se necesita mezclar alguna otra tarea con la de transferencia de pantallas. El tiempo de ejecución de un intercambio de pantallas es de aproximadamente 150/300 segundos (150 unidades de la variable <strong>TIME</strong>).</p>
@@ -8859,7 +8859,7 @@ CLS
 </code></pre>
 <p>establece la longitud de registro e inicializa el &quot;número de registro actual&quot; (a 0), pero <strong>no borra memoria</strong>.</p>
 <p>La orden</p>
-<pre><code>|BANKWRITE,@&lt;codigo generado&gt;,&lt;expresion literal&gt;[,&lt;mumero de registro&gt;] 
+<pre><code>|BANKWRITE,@&lt;código generado&gt;,&lt;expresión literal&gt;[,&lt;número de registro&gt;] 
 </code></pre>
 <p>escribe la &lt;expresión literal&gt; en el fichero. El &lt;número de registro&gt; especifica en qué registro se debe escribir. Si se omite este parámetro, se escribe en el número de registro actual. Finalmente, se actualiza este número (sumándole 1). </p>
 <p>Si la &lt;expresión literal&gt; no llena el registro, los caracteres antiguos sobre los que no se ha escrito seguirán estando en el registro. Si la &lt;expresión literal&gt; es demasiado larga, se ignoran los caracteres restantes para no &quot;corromper&quot; el registro siguiente.</p>
@@ -8874,7 +8874,7 @@ CLS
   |BANKWRITE,@r%,w$
 </code></pre>
 <p>La orden</p>
-<pre><code>  |BANKREAD,@&lt;codigo generado&gt;,@&lt;variable literal&gt;[,&lt;numero de registro&gt;]
+<pre><code>  |BANKREAD,@&lt;código generado&gt;,@&lt;variable literal&gt;[,&lt;número de registro&gt;]
 </code></pre>
 <p>lee un registro y asigna su contenido a la &lt;variable literal&gt;. </p>
 <p>El &lt;número de registro&gt; especifica en qué registro se debe leer. Si se omite este parámetro, se lee en el número de registro actual. Finalmente, se actualiza este número (sumándole 1). Si el contenido del registro no llena completamente la &lt;variable literal&gt;, los caracteres antiguos sobre los que no se ha escrito seguirán estando en la &lt;variable literal&gt;. Si el contenido del registro es más largo que la &lt;variable literal&gt;, se ignoran los caracteres restantes, ya que no es posible aumentar la longitud de la variable mediante una orden externa.</p>
@@ -8888,7 +8888,7 @@ CLS
 </code></pre>
 <h3 id="búsquedas"><a class="header" href="#búsquedas">Búsquedas</a></h3>
 <p>Se puede recorrer el fichero en busca de un dato determinado. La orden</p>
-<pre><code>|BANKFIND,@&lt;codigo generado&gt;,&lt;cadena buscada&gt;[,&lt;numero de registro inicial&gt;[,&lt;numero de registro final&gt;]]
+<pre><code>|BANKFIND,@&lt;código generado&gt;,&lt;cadena buscada&gt;[,&lt;número de registro inicial&gt;[,&lt;número de registro final&gt;]]
 </code></pre>
 <p>examina los registros especificados. El &lt;número de registro inicial&gt; especifica el registro a partir del cual debe comenzar la búsqueda. Si se omite este parámetro, se toma por defecto el número de registros actual.</p>
 <p>La búsqueda continúa, a saltos de &lt;longitud de registro&gt;, hasta que se encuentra la cadena o hasta que se agotan los 64K.</p>
@@ -9352,13 +9352,13 @@ PRINT SPC(x*3)&quot;hola&quot;
 hola                    - ventana 0
 </code></pre>
 <pre><code class="language-basic">PRINT #0,&quot;hola&quot;
-hola                    - tambien ventana 0
+hola                    - también ventana 0
 </code></pre>
 <pre><code class="language-basic">PRINT #4,&quot;hola&quot;
-hola                    - ventana 4 (primera linea de la pantalla)
+hola                    - ventana 4 (primera línea de la pantalla)
 </code></pre>
 <pre><code class="language-basic">PRINT #8,&quot;hola&quot;
-hola                    - en la impresora (si esta conectada)
+hola                    - en la impresora (si está conectada)
 </code></pre>
 <p>Con <strong>TAB</strong> y <strong>SPC</strong> se pueden controlar los formatos más sencillos, pero en cuanto el formato deseado sea un poco más complejo habrá que utilizar <strong>PRINT USING</strong> y una &quot;plantilla&quot; adecuada. Una plantilla de formato es una expresión literal que contiene caracteres especiales, cada uno de los cuales especifica un formato determinado. Estos caracteres, denominados &quot;especificadores de formato&quot;, están explicados en detalle en la descripción de <strong>PRINT USING</strong> (<a href="3.01.-Lista-completa-de-las-palabras-clave-del-BASIC-de-AMSTRAD.html#print-using">capítulo 3</a>). Aquí vamos a dar algunos ejemplos.</p>
 <p>En primer lugar, he aquí los formatos disponibles para escribir cadenas literales: </p>
@@ -9372,12 +9372,12 @@ c
 </code></pre>
 <p>Pero el formato literal más útil es seguramente <strong>&quot;&amp;&quot;</strong>. Con él se anula una función de BASIC por la cual, si una cadena es demasiado larga como para caber en la línea actual, el ordenador la escribe al principio de la línea siguiente. <strong>PRINT USING &quot;&amp;&quot;</strong>; desactiva esa función. (En el siguiente ejemplo ponga <strong>BORDER 0</strong> para hacer visibles los bordes del papel.) </p>
 <pre><code class="language-basic">MODE 1:LOCATE 39,1:PRINT &quot;demasiado&quot;
-                                    -- linea 1 
-demasiado                           -- linea 2
+                                    -- línea 1 
+demasiado                           -- línea 2
                                      
 MODE 1:LOCATE 39,1:PRINT USING &quot;&amp;&quot;;&quot;demasiado&quot;
-                                 de -- linea 1
-masiado                             -- linea 2
+                                 de -- línea 1
+masiado                             -- línea 2
 </code></pre>
 <p>Para los números se dispone de gran variedad de plantillas. La más sencilla es <strong>PRINT USING</strong> &quot;#####&quot;, en la que cada # reserva espacio para un dígito: </p>
 <pre><code class="language-basic">PRINT USING &quot;######&quot;;123
@@ -10421,7 +10421,7 @@ run
 <hr />
 <table>
 <tr><td>
-<b>ADVERTENCIA AL USUARIO: POR FAVOR, LEA ATENTAMENTE ESTA NOTA. NO ABRA LAS CAJAS DE LOS DISCOS MIENTRAS NO HAYA LEIDO ESTE CONTRATO.</b><br /><br />
+<b>ADVERTENCIA AL USUARIO: POR FAVOR, LEA ATENTAMENTE ESTA NOTA. NO ABRA LAS CAJAS DE LOS DISCOS MIENTRAS NO HAYA LEÍDO ESTE CONTRATO.</b><br /><br />
 <b>POR EL HECHO DE ABRIR LA CAJA USTED RECONOCE QUE ACEPTA LAS CLAUSULAS Y CONDICIONES SIGUIENTES.</b>
 </td></tr>
 </table>

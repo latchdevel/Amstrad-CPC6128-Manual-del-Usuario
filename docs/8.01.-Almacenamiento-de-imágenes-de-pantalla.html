@@ -156,10 +156,10 @@
 <center>Conmutación de bancos por hardware</center>
 El gestor de bancos dispone de dos órdenes externas con las que se pueden transferir pantallas completas de un bloque a otro; estas órdenes conmutan automáticamente los bloques 4 a 7 cuando es necesario y dejan restablecido el bloque 1.
 <p>La orden </p>
-<pre><code>|SCREENSWAP,[&lt;seccion de pantalla&gt;,]&lt;numero de pantalla&gt;,&lt;numero de pantalla&gt;
+<pre><code>|SCREENSWAP,[&lt;sección de pantalla&gt;,]&lt;número de pantalla&gt;,&lt;número de pantalla&gt;
 </code></pre>
 <p>intercambia el contenido de dos bloques, mientras que</p>
-<pre><code>|SCREENCOPY,[&lt;seccion de pantalla&gt;],&lt;numero de pantalla destino&gt;,&lt;numero de pantalla fuente&gt;
+<pre><code>|SCREENCOPY,[&lt;sección de pantalla&gt;],&lt;número de pantalla destino&gt;,&lt;número de pantalla fuente&gt;
 </code></pre>
 <p>copia el contenido de un bloque en otro.</p>
 <p>El parámetro opcional &lt;sección de pantalla&gt; hace que la transferencia de información se realice por tramos de 1/64 de pantalla (256 bytes del total de 16K). Así pues, el parámetro puede tener cualquier valor comprendido entre 0 y 63. Este método de operación es útil cuando se necesita mezclar alguna otra tarea con la de transferencia de pantallas. El tiempo de ejecución de un intercambio de pantallas es de aproximadamente 150/300 segundos (150 unidades de la variable <strong>TIME</strong>).</p>

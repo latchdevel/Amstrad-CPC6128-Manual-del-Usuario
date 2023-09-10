@@ -160,7 +160,7 @@
 <p>Los caracteres definidos por el usuario están inicialmente inmediatamente por encima de HIMEM. Este valor se puede modificar mediante una orden <strong>MEMORY</strong>; además se reduce en 4K automáticamente para crear un tampón cada vez que se abre un fichero. El número de caracteres definibles por el usuario (controlado por la orden <strong>SYMBOL AFTER</strong> de BASIC) sólo se puede modificar si HIMEM no ha variado desde la última vez que aquél fue establecido (o si en esa ocasión se estableció en cero, con <strong>SYMBOL AFTER 256</strong>). Cuando se entra en BASIC, el número de caracteres definibles por el usuario se establece como si se hubiera ejecutado la orden <strong>SYMBOL AFTER 240</strong>.</p>
 <p>Por consiguiente, antes de cambiar permanentemente HIMEM, es prudente reducir a cero la zona de memoria dedicada a los caracteres definibles; después se modifica HIMEM y finalmente se restablece la zona de caracteres definibles al tamaño deseado. De esta manera los siguientes programas podrán ejecutar nuevas órdenes <strong>SYMBOL AFTER</strong> sin problemas.</p>
 <p>El siguiente ejemplo ilustra este método, aplicado a la carga de una RSX: </p>
-<pre><code class="language-basic">100 SYMBOL AFTER 256 ' anular memoria para caracteres definibles por el ususario
+<pre><code class="language-basic">100 SYMBOL AFTER 256 ' anular memoria para caracteres definibles por el usuario
 110 direccionrsx=HIMEM-longitudrsx
 120 MEMORY direccionrsx-1
 130 LOAD &quot;codigrsx&quot;,direccionrsx

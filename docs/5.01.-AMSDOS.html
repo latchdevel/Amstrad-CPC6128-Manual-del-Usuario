@@ -329,7 +329,7 @@ run
 <em>Orden</em>. Carga un sistema operativo de disco. Los sistemas operativos suministrados con el ordenador son CP/M Plus y CP/M 2.2.</p>
 <p>La ejecución de esta orden no se puede completar si en la unidad no hay instalado un disco de sistema con CP/M. En concreto, CP/M Plus se carga con una copia de la cara 1 de los discos maestros suministrados con el ordenador; CP/M 2.2, con una copia de la cara 4.</p>
 <h3 id="dir"><a class="header" href="#dir">|DIR</a></h3>
-<p><strong>|DIR</strong> [,&lt;expresion literal&gt;]</p>
+<p><strong>|DIR</strong> [,&lt;expresión literal&gt;]</p>
 <pre><code class="language-basic">|DIR,&quot;*.BAS&quot;
 </code></pre>
 <p><em>Orden</em>. Escribe en la pantalla el directorio del disco (al estilo de CP/M) y el espacio libre. Si se omite el parámetro, se supone *.*.</p>
@@ -343,17 +343,17 @@ run
 <p><strong>|DISC.OUT</strong>
 Especifica que las operaciones de escritura se deben hacer con el disco. </p>
 <h3 id="drive"><a class="header" href="#drive">|DRIVE</a></h3>
-<p><strong>|DRIVE,&lt;expresion literal&gt;</strong></p>
+<p><strong>|DRIVE,&lt;expresión literal&gt;</strong></p>
 <pre><code class="language-basic">|DRIVE,&quot;A&quot;
 </code></pre>
 <p><em>Orden</em>. Establece qué unidad de disco se debe considerar como implícita en lo sucesivo. Esta orden fallará si AMSDOS no consigue leer en la unidad especificada.</p>
 <h3 id="era"><a class="header" href="#era">|ERA</a></h3>
-<p><strong>|ERA,&lt;expresion literal&gt;</strong></p>
+<p><strong>|ERA,&lt;expresión literal&gt;</strong></p>
 <pre><code class="language-basic">|ERA,&quot;*.BAK&quot;
 </code></pre>
 <p><em>Orden</em>. Borra todos los ficheros que concuerden con la &lt;expresión literal&gt; y no sean de sólo lectura. Admite símbolos comodín. </p>
 <h3 id="ren"><a class="header" href="#ren">|REN</a></h3>
-<p><strong>|REN,&lt;expresion literal&gt;,&lt;expresion literal&gt;</strong></p>
+<p><strong>|REN,&lt;expresión literal&gt;,&lt;expresión literal&gt;</strong></p>
 <pre><code class="language-basic">REN,&quot;FICHNUEV.BAS&quot;,&quot;FICHANTI.BAS&quot;
 </code></pre>
 <p><em>Orden</em>. Da un nuevo nombre a un fichero ya existente en el disco. No puede haber otro fichero con el nombre nuevo. No admite símbolos comodín.</p>
@@ -371,7 +371,7 @@ Especifica que las operaciones de escritura se deben hacer con el disco. </p>
 <p><strong>|TAPE.OUT</strong>
 <em>Orden</em>. Especifica que las operaciones de escritura se deben hacer con la cinta. Solamente actúa si está conectado un magnetófono externo. </p>
 <h3 id="user"><a class="header" href="#user">|USER</a></h3>
-<p><strong>USER,&lt;expresion entera&gt;</strong></p>
+<p><strong>USER,&lt;expresión entera&gt;</strong></p>
 <pre><code class="language-basic">|USER,3
 </code></pre>
 <p><em>Orden</em>. Determina con cuál de las 16 secciones del directorio (áreas de usuario, del 0 al 15) deben actuar ciertas órdenes de manejo de disco (<strong>CAT</strong>, <strong>LOAD</strong>, <strong>DIR</strong>, etc.).</p>
@@ -441,7 +441,7 @@ Especifica que las operaciones de escritura se deben hacer con el disco. </p>
 <p>No queda espacio en el directorio para una nueva reseña. </p>
 <p><strong>Drive &lt;unidad&gt;: disc full</strong></p>
 <p>No queda espacio en el disco para grabar nuevos datos.</p>
-<p><strong>Drive &lt;unidad&gt;: disc changed, closing &lt;nonbre de fichero&gt;</strong></p>
+<p><strong>Drive &lt;unidad&gt;: disc changed, closing &lt;nombre de fichero&gt;</strong></p>
 <p>Se ha cambiado el disco antes de cerrar el fichero; el ordenador lo cierra.</p>
 <p><strong>&lt;nombre de fichero&gt; is read only</strong></p>
 <p>El fichero no se puede modificar porque es de &quot;sólo lectura&quot;. Los ficheros solamente se pueden caracterizar como de sólo lectura o de lectura/escritura desde CP/M.</p>
