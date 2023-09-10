@@ -22,3 +22,10 @@ boost-hierarchy = 2
 boost-paragraph = 1
 expand = true
 heading-split-level = 2
+
+# Experimental mdbook backend for creating EPUB documents
+# https://github.com/Michael-F-Bryan/mdbook-epub
+[output.epub]
+cover-image = "png/portada.jpg"
+no-section-label = true
+curly-quotes = true
